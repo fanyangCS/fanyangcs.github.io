@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href="https://www.microsoft.com/en-us/research/people/fanyang/">Research Manager, MSRA</a>. Personal Contact':' yang DOT fan AT 163 DOT com
+subtitle: <a href="https://www.microsoft.com/en-us/research/people/fanyang/">Research Manager, MSRA</a>. Personal Contact. yang DOT fan AT 163 DOT com
 
 profile:
   align: right
@@ -17,6 +17,8 @@ news: false # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
+
+
 
 I am currently a systems researcher and research manager of the <a href="https://www.microsoft.com/en-us/research/group/systems-research-group-asia/">Systems Research Group</a> at <a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-asia/">Microsoft Research Asia</a> (MSR-Asia). I joined MSR-Asia after receiving my doctoral degree and bachelor's degree in <a href="http://cs.nju.edu.cn/">computer science</a> at Nanjing University.
 

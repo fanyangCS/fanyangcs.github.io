@@ -18,6 +18,8 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
+
+
 I am currently a systems researcher and research manager of the <a href="https://www.microsoft.com/en-us/research/group/systems-research-group-asia/">Systems Research Group</a> at <a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-asia/">Microsoft Research Asia</a> (MSR-Asia). I joined MSR-Asia after receiving my doctoral degree and bachelor's degree in <a href="http://cs.nju.edu.cn/">computer science</a> at Nanjing University.
 
 My research passion is on computer system. Recently I have been exploring the fundamental principles behind the systems that support emerging applications, e.g., machine learning based intelligent tasks. I am an architect of the machine learning systems <a href="https://github.com/microsoft/pai">OpenPAI</a>, <a href="https://github.com/microsoft/nnfusion">NNFusion</a>, and <a href="https://github.com/microsoft/nni">NNI</a>, which have been used by Microsoft products like Bing and Azure. As open-source projects, these systems also have a growing number of external users across the world.

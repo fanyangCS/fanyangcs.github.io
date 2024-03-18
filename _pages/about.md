@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href="https://www.microsoft.com/en-us/research/people/fanyang/">Research Manager, MSRA</a>. Personal Contact':' yang DOT fan AT 163 DOT com
+subtitle: <a href="https://www.microsoft.com/en-us/research/people/fanyang/">Research Manager, MSRA</a>. Personal Contact. yang DOT fan AT 163 DOT com
 
 profile:
   align: right

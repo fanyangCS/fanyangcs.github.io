@@ -1,8 +1,8 @@
 ---
 layout: page
 permalink: /publications/
-title: selected publications
-description: Please find the complete list in <a href="https://scholar.google.com/citations?user=aoVS9EkAAAAJ">here</a>.
+title: publications
+description: Selected publications shown here. Please find the complete list [here](https://scholar.google.com/citations?user=aoVS9EkAAAAJ).
 nav: true
 nav_order: 2
 ---

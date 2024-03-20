@@ -2,12 +2,12 @@
 layout: page
 permalink: /publications/
 title: publications
-description: Selected publications shown below. 
+description:  
 nav: true
 nav_order: 2
 ---
 
-Please find the complete list [here](https://scholar.google.com/citations?user=aoVS9EkAAAAJ).
+Please find the complete list [here](https://scholar.google.com/citations?user=aoVS9EkAAAAJ). Recent publications are shown below.
 
 <!-- _pages/publications.md -->
 <div class="publications">

@@ -71,7 +71,7 @@ og_image: # The site-wide (default for all links) Open Graph preview image
 # Social integration
 # -----------------------------------------------------------------------------
 
-acm_id: dl.acm.org/profile/99659510387 # your dl.acm.org/profile/id
+acm_id: 99659510387 # your dl.acm.org/profile/id
 blogger_url: # your blogger URL
 bluesky_url: # your bluesky URL
 dblp_url: https://dblp.org/pid/29/3081-24.html # your DBLP profile url

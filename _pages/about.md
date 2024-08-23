@@ -9,8 +9,8 @@ profile:
   image: my_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>BJW/2</p>
-    <p>No.5 Danling Street</p>
+    <p>BJW-2,</p>
+    <p>No.5 Danling Street,</p>
     <p>Beijing, China</p>
 
 news: false # includes a list of news items

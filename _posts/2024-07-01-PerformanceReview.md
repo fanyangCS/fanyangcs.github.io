@@ -14,3 +14,4 @@ In the year of 1905, the person being reviewed was given an overall rating of 3 
 
 As a matter of fact, in the year of 1905, the person published 5 papers. One paper, "On a heuristic viewpoint concerning the production and transformation of light", eventually led to Nobel Prize in Physics in 1921. And this is not even his best result in that year! (The other being Relativity).
 
+From his manager's point of view, this was an average year for Albert Einstein. For Physics and Human Being, this was a revolutionary year.

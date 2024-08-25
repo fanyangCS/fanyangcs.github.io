@@ -9,7 +9,8 @@ profile:
   image: my_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>email: yang DOT fan AT 163 DOT com </p>
+    <p>email: </p>
+    <p>yang DOT fan AT 163 DOT com </p>
 
 news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"

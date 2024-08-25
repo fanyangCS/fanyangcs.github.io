@@ -5,7 +5,7 @@ date: 2024-07-01 12:00:00
 description: 
 tags: 
 categories: 
-featured: true
+featured: false
 ---
 
 I find this [annual performance review](https://www.norvig.com/performance-review.html) amusing. It happened in '05. Not 2005, but 1905. 

@@ -12,6 +12,6 @@ I find this [annual performance review](https://www.norvig.com/performance-revie
 
 In the year of 1905, the person being reviewed was given an overall rating of 3 out of 5, i.e., an average score. His manager commented that the person devoted his time to "publishing a series of outside papers" and "he has done reasonably well". 
 
-As a matter of fact, in the year of 1905, the person published 5 papers. One paper, "On a heuristic viewpoint concerning the production and transformation of light", eventually led to Nobel Prize in Physics in 1921. And this was not even his best result in that year! The other being Relativity.
+As a matter of fact, in 1905, the person published 5 papers. One of them, "On a heuristic viewpoint concerning the production and transformation of light", eventually led to the Nobel Prize in Physics in 1921. And this wasn't even his best result that year -- the other being his theory on Relativity.
 
-From his manager's perspective, this was an average year for Albert Einstein. For Physics and Human Being, this was a revolutionary year.
+From his manager's perspective, this was an average year for Albert Einstein. For Physics and Human Being, however, this was a revolutionary year.

@@ -12,4 +12,4 @@ As researchers, we are all encouraged to work on important problems, presumably 
  
 However, history tells us that disruptive ideas are often not welcome, at least in the beginning.
  
-And [here](assets/pdf/reject.pdf) is an living example.
+And [here](/assets/pdf/reject.pdf) is a perfect example.

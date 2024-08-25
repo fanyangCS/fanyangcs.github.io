@@ -1,6 +1,6 @@
 "OSDI":
   url: https://www.usenix.org/conferences/byname/179
-  color: "#00369f"
+  color: "#7B640A" 
 
 "SOSP":
   url: https://www.sosp.org/
@@ -20,6 +20,7 @@
 
 "EuroSys":
   url: https://www.eurosys.org/
+  color: "#00369f"
 
 "HPCA":
   url: https://hpca-conf.org/

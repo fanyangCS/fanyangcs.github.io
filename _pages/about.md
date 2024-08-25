@@ -2,16 +2,14 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href="https://www.microsoft.com/en-us/research/people/fanyang/">My MSR Home</a>. Personal Contact. yang DOT fan AT 163 DOT com
+subtitle: Systems researcher, <a href="https://www.microsoft.com/en-us/research/people/fanyang/">Research Manager</a> of the Systems Research Group@MSR-Asia
 
 profile:
   align: right
   image: my_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>BJW-2,</p>
-    <p>No.5 Danling Street, </p>
-    <p>Haidian, Beijing, China</p>
+    <p> Personal Contact. yang DOT fan AT 163 DOT com </p>
 
 news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"

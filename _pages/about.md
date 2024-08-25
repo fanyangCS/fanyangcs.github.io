@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Systems researcher, <a href="https://www.microsoft.com/en-us/research/people/fanyang/">Research Manager</a> of the Systems Research Group@MSR-Asia
+subtitle: Systems researcher, <a href="https://www.microsoft.com/en-us/research/people/fanyang/">Research Manager</a> of the Systems Research Group @ MSR-Asia
 
 profile:
   align: right

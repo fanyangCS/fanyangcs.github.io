@@ -455,48 +455,48 @@
 }
 
 @inproceedings{10.1145/3477495.3531799,
-abbr         = {SIGIR},
-bibtex_show  = {true}, 
-author = {Xiao, Shitao and Liu, Zheng and Han, Weihao and Zhang, Jianjin and Lian, Defu and Gong, Yeyun and Chen, Qi and Yang, Fan and Sun, Hao and Shao, Yingxia and Xie, Xing},
-title = {Distill-VQ: Learning Retrieval Oriented Vector Quantization By Distilling Knowledge from Dense Embeddings},
-year = {2022},
-isbn = {9781450387323},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-html = {https://doi.org/10.1145/3477495.3531799},
-doi = {10.1145/3477495.3531799},
-abstract = {Vector quantization (VQ) based ANN indexes, such as Inverted File System (IVF) and Product Quantization (PQ), have been widely applied to embedding based document retrieval thanks to the competitive time and memory efficiency. Originally, VQ is learned to minimize the reconstruction loss, i.e., the distortions between the original dense embeddings and the reconstructed embeddings after quantization. Unfortunately, such an objective is inconsistent with the goal of selecting ground-truth documents for the input query, which may cause severe loss of retrieval quality. Recent works identify such a defect, and propose to minimize the retrieval loss through contrastive learning. However, these methods intensively rely on queries with ground-truth documents, whose performance is limited by the insufficiency of labeled data. In this paper, we propose Distill-VQ, which unifies the learning of IVF and PQ within a knowledge distillation framework. In Distill-VQ, the dense embeddings are leveraged as "teachers'', which predict the query's relevance to the sampled documents. The VQ modules are treated as the "students'', which are learned to reproduce the predicted relevance, such that the reconstructed embeddings may fully preserve the retrieval result of the dense embeddings. By doing so, Distill-VQ is able to derive substantial training signals from the massive unlabeled data, which significantly contributes to the retrieval quality. We perform comprehensive explorations for the optimal conduct of knowledge distillation, which may provide useful insights for the learning of VQ based ANN index. We also experimentally show that the labeled data is no longer a necessity for high-quality vector quantization, which indicates Distill-VQ's strong applicability in practice. The evaluations are performed on MS MARCO and Natural Questions benchmarks, where Distill-VQ notably outperforms the SOTA VQ methods in Recall and MRR. Our code is avaliable at https://github.com/staoxiao/LibVQ.},
-booktitle = {Proceedings of the 45th International ACM SIGIR Conference on Research and Development in Information Retrieval},
-pages = {1513–1523},
-numpages = {11},
-keywords = {approximate nearest neighbour search, embedding based retrieval, knowledge distillation, vector quantization},
-location = {Madrid, Spain},
-series = {SIGIR '22}
+  abbr         = {SIGIR},
+  bibtex_show  = {true}, 
+  author = {Xiao, Shitao and Liu, Zheng and Han, Weihao and Zhang, Jianjin and Lian, Defu and Gong, Yeyun and Chen, Qi and Yang, Fan and Sun, Hao and Shao, Yingxia and Xie, Xing},
+  title = {Distill-VQ: Learning Retrieval Oriented Vector Quantization By Distilling Knowledge from Dense Embeddings},
+  year = {2022},
+  isbn = {9781450387323},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  html = {https://doi.org/10.1145/3477495.3531799},
+  doi = {10.1145/3477495.3531799},
+  abstract = {Vector quantization (VQ) based ANN indexes, such as Inverted File System (IVF) and Product Quantization (PQ), have been widely applied to embedding based document retrieval thanks to the competitive time and memory efficiency. Originally, VQ is learned to minimize the reconstruction loss, i.e., the distortions between the original dense embeddings and the reconstructed embeddings after quantization. Unfortunately, such an objective is inconsistent with the goal of selecting ground-truth documents for the input query, which may cause severe loss of retrieval quality. Recent works identify such a defect, and propose to minimize the retrieval loss through contrastive learning. However, these methods intensively rely on queries with ground-truth documents, whose performance is limited by the insufficiency of labeled data. In this paper, we propose Distill-VQ, which unifies the learning of IVF and PQ within a knowledge distillation framework. In Distill-VQ, the dense embeddings are leveraged as "teachers'', which predict the query's relevance to the sampled documents. The VQ modules are treated as the "students'', which are learned to reproduce the predicted relevance, such that the reconstructed embeddings may fully preserve the retrieval result of the dense embeddings. By doing so, Distill-VQ is able to derive substantial training signals from the massive unlabeled data, which significantly contributes to the retrieval quality. We perform comprehensive explorations for the optimal conduct of knowledge distillation, which may provide useful insights for the learning of VQ based ANN index. We also experimentally show that the labeled data is no longer a necessity for high-quality vector quantization, which indicates Distill-VQ's strong applicability in practice. The evaluations are performed on MS MARCO and Natural Questions benchmarks, where Distill-VQ notably outperforms the SOTA VQ methods in Recall and MRR. Our code is avaliable at https://github.com/staoxiao/LibVQ.},
+  booktitle = {Proceedings of the 45th International ACM SIGIR Conference on Research and Development in Information Retrieval},
+  pages = {1513–1523},
+  numpages = {11},
+  keywords = {approximate nearest neighbour search, embedding based retrieval, knowledge distillation, vector quantization},
+  location = {Madrid, Spain},
+  series = {SIGIR '22}
 }
 
 @InProceedings{10.1007/978-3-031-19787-1_41,
-  abbr         = {ECCB},
+  abbr         = {ECCV},
   bibtex_show  = {true},
-author="Wu, Chenfei
-and Liang, Jian
-and Ji, Lei
-and Yang, Fan
-and Fang, Yuejian
-and Jiang, Daxin
-and Duan, Nan",
-editor="Avidan, Shai
-and Brostow, Gabriel
-and Ciss{\'e}, Moustapha
-and Farinella, Giovanni Maria
-and Hassner, Tal",
-title="N{\"U}WA: Visual Synthesis Pre-training for Neural visUal World creAtion",
-booktitle="Computer Vision -- ECCV 2022",
-year="2022",
-publisher="Springer Nature Switzerland",
-address="Cham",
-pages="720--736",
-abstract="This paper presents a unified multimodal pre-trained model called N{\"U}WA that can generate new or manipulate existing visual data (i.e., images and videos) for various visual synthesis tasks. To cover language, image, and video at the same time for different scenarios, a 3D transformer encoder-decoder framework is designed, which can not only deal with videos as 3D data but also adapt to texts and images as 1D and 2D data, respectively. A 3D Nearby Attention (3DNA) mechanism is also proposed to consider the nature of the visual data and reduce the computational complexity. We evaluate N{\"U}WA on 8 downstream tasks. Compared to several strong baselines, N{\"U}WA achieves state-of-the-art results on text-to-image generation, text-to-video generation, video prediction, etc. Furthermore, it also shows surprisingly good zero-shot capabilities on text-guided image and video manipulation tasks.",
-isbn="978-3-031-19787-1"
+  author="Wu, Chenfei
+  and Liang, Jian
+  and Ji, Lei
+  and Yang, Fan
+  and Fang, Yuejian
+  and Jiang, Daxin
+  and Duan, Nan",
+  editor="Avidan, Shai
+  and Brostow, Gabriel
+  and Ciss{\'e}, Moustapha
+  and Farinella, Giovanni Maria
+  and Hassner, Tal",
+  title="N{\"U}WA: Visual Synthesis Pre-training for Neural visUal World creAtion",
+  booktitle="Computer Vision -- ECCV 2022",
+  year="2022",
+  publisher="Springer Nature Switzerland",
+  address="Cham",
+  pages="720--736",
+  abstract="This paper presents a unified multimodal pre-trained model called N{\"U}WA that can generate new or manipulate existing visual data (i.e., images and videos) for various visual synthesis tasks. To cover language, image, and video at the same time for different scenarios, a 3D transformer encoder-decoder framework is designed, which can not only deal with videos as 3D data but also adapt to texts and images as 1D and 2D data, respectively. A 3D Nearby Attention (3DNA) mechanism is also proposed to consider the nature of the visual data and reduce the computational complexity. We evaluate N{\"U}WA on 8 downstream tasks. Compared to several strong baselines, N{\"U}WA achieves state-of-the-art results on text-to-image generation, text-to-video generation, video prediction, etc. Furthermore, it also shows surprisingly good zero-shot capabilities on text-guided image and video manipulation tasks.",
+  isbn="978-3-031-19787-1"
 }
 
 @inproceedings{DBLP:conf/asplos/PengSD0MXYQ20,

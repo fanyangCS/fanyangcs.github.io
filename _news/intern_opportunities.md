@@ -6,7 +6,7 @@ inline: false
 related_posts: false
 ---
 
-Systems research group at Microsoft Research Asia is recruiting interns the whole year. Please find details below.
+Systems research group at Microsoft Research Asia is recruiting interns the whole year. Please find details below ([Chinese version](https://www.msra.cn/zh-cn/jobs/interns/systems-research-group-research-intern)).
 
 ---
 #### Introduction

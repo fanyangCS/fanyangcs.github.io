@@ -197,10 +197,13 @@ external_sources:
      published_date: 2024-07-25
    - url: https://www.msra.cn/zh-cn/news/features/low-bit-quantization
      published_date: 2024-08-21
- - name: Zhihu (Chinese)
+ - name: Jiqizhixin (Chinese)
    posts:   
-   - url: https://zhuanlan.zhihu.com/p/275837455
-     published_date: 2020-11-07     
+   - url: https://www.jiqizhixin.com/articles/2020-11-13-4
+     published_date: 2020-11-13
+   - url: https://www.jiqizhixin.com/articles/2024-08-16
+     published_date: 2024-08-16
+     
        
 # -----------------------------------------------------------------------------
 # Newsletter

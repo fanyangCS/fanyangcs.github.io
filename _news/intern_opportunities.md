@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Internship opportunities in Systems Research Group at Microsoft Research Asia
-date: 2024-08-26 12:11:00-0400
+title: Internship opportunities at SRG
+date: 2024-08-26
 inline: false
 related_posts: false
 ---
 
-Systems research group at Microsoft Research Asia is recruiting interns the whole year. Please find details below ([Chinese version](https://www.msra.cn/zh-cn/jobs/interns/systems-research-group-research-intern)).
+Systems research group at Microsoft Research Asia is recruiting interns the whole year. Please find details below (<a href="https://www.msra.cn/zh-cn/jobs/interns/systems-research-group-research-intern">Chinese version</a>).
 
 ---
 #### Introduction
@@ -44,8 +44,8 @@ Interns will participate in research projects in various ways, including but not
 #### Work Time Requirements
 
 Must obtain the approval from your supervisor and ensure at least a three-month internship, with preference given to those who can intern full-time for more than six months.
-Please be sure to download and complete the ([Internship Application Form](https://www.msra.cn/wp-content/uploads/2017/07/internship_application_form.xlsx)) and send it along with a complete Chinese and English resume (in PDF/Word format) to: MSRAih@microsoft.com or msra-srg-hire AT microsoft dot com, with "Systems Research Group Internship" in the email subject.
+Please be sure to download and complete the <a href="https://www.msra.cn/wp-content/uploads/2017/07/internship_application_form.xlsx">Internship Application Form</a> and send it along with a complete Chinese and English resume (in PDF/Word format) to: MSRAih@microsoft.com or msra-srg-hire AT microsoft dot com, with "Systems Research Group Internship" in the email subject.
 
-For more information about the "Tomorrow Stars Internship Program," please visit: [Tomorrow Stars](https://www.msra.cn/zh-cn/connections/academic-programs/tomorrowstars)
+For more information about the "Tomorrow Stars Internship Program," please visit: <a href="https://www.msra.cn/zh-cn/connections/academic-programs/tomorrowstars">Tomorrow Stars</a>
 
 

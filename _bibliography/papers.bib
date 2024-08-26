@@ -1,6 +1,16 @@
 ---
 ---
 
+@inproceedings{zhang2024irgengenerativemodelingimage,
+      abbr={ECCV},
+      bibtex_show  = {true},
+      title={IRGen: Generative Modeling for Image Retrieval}, 
+      author={Yidan Zhang and Ting Zhang and Dong Chen and Yujing Wang and Qi Chen and Xing Xie and Hao Sun and Weiwei Deng and Qi Zhang and Fan Yang and Mao Yang and Qingmin Liao and Jingdong Wang and Baining Guo},
+      year={2024},
+      booktitle={ECCV},
+      html={https://arxiv.org/abs/2303.10126} 
+}
+
 @inproceedings{10.1145/3589335.3648338,
   abbr         = {WWW},
   bibtex_show  = {true},
@@ -415,6 +425,35 @@
  year = {2023}
 }
 
+@inproceedings{yin2023nuwa-xl,
+  abbr={ACL},
+  bibtex_show  = {true},
+  author = {Yin, Shengming and Wu, Chenfei and Yang, Huan and Wang, Jianfeng and Wang, Xiaodong and Ni, Minheng and Yang, Zhengyuan and Li, Linjie and Liu, Shuguang and Yang, Fan and Fu, Jianlong and Gong (YIMING), Ming and Wang, Lijuan and Liu, Zicheng and Li, Houqiang and Duan, Nan},
+  title = {NUWA-XL: Diffusion over Diffusion for eXtremely Long Video Generation},
+  booktitle = {ACL 2023},
+  year = {2023},
+  month = {July},
+  abstract = {In this paper, we propose NUWA-XL, a novel Diffusion over Diffusion architecture for eXtremely Long video generation. Most current work generates long videos segment by segment sequentially, which normally leads to the gap between training on short videos and inferring long videos, and the sequential generation is inefficient. Instead, our approach adopts a ``coarse-to-fine'' process, in which the video can be generated in parallel at the same granularity. A global diffusion model is applied to generate the keyframes across the entire time range, and then local diffusion models recursively fill in the content between nearby frames. This simple yet effective strategy allows us to directly train on long videos (3376 frames) to reduce the training-inference gap, and makes it possible to generate all segments in parallel. To evaluate our model, we build FlintstonesHD dataset, a new benchmark for long video generation. Experiments show that our model not only generates high-quality long videos with both global and local coherence, but also decreases the average inference time from 7.55min to 26s (by 94.26\%) at the same hardware setting when generating 1024 frames. The homepage link is https://msra-nuwa.azurewebsites.net/#/.},
+  html = {https://www.microsoft.com/en-us/research/publication/nuwa-xl-diffusion-over-diffusion-for-extremely-long-video-generation/},
+}
+
+@inproceedings{10.24963/ijcai.2023/167,
+  abbr={IJCAI},
+  bibtex_show  = {true},  
+  author = {Wang, Xiaodong and Wu, Chenfei and Yin, Shengming and Ni, Minheng and Wang, Jianfeng and Li, Linjie and Yang, Zhengyuan and Yang, Fan and Wang, Lijuan and Liu, Zicheng and Fang, Yuejian and Duan, Nan},
+  title = {Learning 3D photography videos via self-supervised diffusion on single images},
+  year = {2023},
+  isbn = {978-1-956792-03-4},
+  url = {https://doi.org/10.24963/ijcai.2023/167},
+  doi = {10.24963/ijcai.2023/167},
+  abstract = {3D photography renders a static image into a video with appealing 3D visual effects. Existing approaches typically first conduct monocular depth estimation, then render the input frame to subsequent frames with various viewpoints, and finally use an inpainting model to fill those missing/ occluded regions. The inpainting model plays a crucial role in rendering quality, but it is normally trained on out-of-domain data. To reduce the training and inference gap, we propose a novel self-supervised diffusion model as the inpainting module. Given a single input image, we automatically construct a training pair of the masked occluded image and the ground-truth image with random cycle rendering. The constructed training samples are closely aligned to the testing instances, without the need for data annotation. To make full use of the masked images, we designed a Masked Enhanced Block (MEB), which can be easily plugged into the UNet and enhance the semantic conditions. Towards real-world animation, we present a novel task: out-animation, which extends the space and time of input objects. Extensive experiments on real datasets show that our method achieves competitive results with existing SOTA methods.},
+  booktitle = {Proceedings of the Thirty-Second International Joint Conference on Artificial Intelligence},
+  articleno = {167},
+  numpages = {9},
+  location = {Macao, P.R.China},
+  series = {IJCAI '23}
+}
+
 @inproceedings{DBLP:conf/iclr/0003QLGZLY0G22,
   abbr         = {ICLR},
   bibtex_show  = {true},
@@ -433,6 +472,17 @@
   year         = {2022}
 }
 
+@INPROCEEDINGS{9978319,
+  abbr         = {ICCD},
+  bibtex_show  = {true},
+  author={Guo, Cong and Qiu, Yuxian and Leng, Jingwen and Zhang, Chen and Cao, Ying and Zhang, Quanlu and Liu, Yunxin and Yang, Fan and Guo, Minyi},
+  booktitle={2022 IEEE 40th International Conference on Computer Design (ICCD)}, 
+  title={Nesting Forward Automatic Differentiation for Memory-Efficient Deep Neural Network Training}, 
+  year={2022},
+  pages={738-745},
+  html={https://ieeexplore.ieee.org/abstract/document/9978319}
+}
+
 @inproceedings{DBLP:conf/micro/00030LL0LG022,
   abbr         = {MICRO},
   bibtex_show  = {true},
@@ -449,7 +499,7 @@
   html={https://www.microsoft.com/en-us/research/publication/ant-exploiting-adaptive-numerical-data-type-for-low-bit-deep-neural-network-quantization/},
   award={Highlighted as an IEEE Micro Top Picks Honorable Mention in the [July/August special edition](https://ieeexplore.ieee.org/document/10167515) of IEEE Micro 2023},
   award_name={IEEE Micro Top Picks 2023 Honorable Mention},
-  year         = {2022}
+  year = {2022}
 }
 
 @inproceedings{DBLP:conf/osdi/ZhuWDKLZXMXC0YZ22,

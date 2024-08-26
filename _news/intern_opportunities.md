@@ -19,7 +19,7 @@ We welcome students interested in systems research to join us and conduct resear
 - Privacy and/or verifiable computing in the intelligent era
 - Next-generation computing and network software/hardware architectures
 - Development and debugging tools for next-generation intelligent systems
-- System research topics not mentioned above
+- Systems research topics not mentioned above
 
 
 #### Job Responsibilities:

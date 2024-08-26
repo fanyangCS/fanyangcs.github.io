@@ -326,6 +326,35 @@
   title = {Model-enhanced Vector Index},
   year = {2023}
 }
+
+@inproceedings{MLSYS2023_5616d34c,
+  abbr         = {MLSys},
+  bibtex_show  = {true},
+  author = {Hwang, Changho and Cui, Wei and Xiong, Yifan and Yang, Ziyue and Liu, Ze and Hu, Han and Wang, Zilong and Salas, Rafael and Jose, Jithin and Ram, Prabhat and Chau, HoYuen and Cheng, Peng and Yang, Fan and Yang, Mao and Xiong, Yongqiang},
+  booktitle = {Proceedings of Machine Learning and Systems, {MLSys}},
+  editor = {D. Song and M. Carbin and T. Chen},
+  pages = {269--287},
+  publisher = {Curan},
+  title = {Tutel: Adaptive Mixture-of-Experts at Scale},
+  html = {https://proceedings.mlsys.org/paper_files/paper/2023/file/5616d34cf8ff73942cfd5aa922842556-Paper-mlsys2023.pdf},
+  volume = {5},
+  year = {2023}
+}
+
+@inproceedings{MLSYS2023_a10deb4d,
+  abbr         = {MLSys},
+  bibtex_show  = {true},
+ author = {Lin, Bin and Zheng, Ningxin and Wang, Lei and Cao, Shijie and Ma, Lingxiao and Zhang, Quanlu and Zhu, Yi and Cao, Ting and Xue, Jilong and Yang, Yuqing and Yang, Fan},
+ booktitle = {Proceedings of Machine Learning and Systems},
+ editor = {D. Song and M. Carbin and T. Chen},
+ pages = {513--525},
+ publisher = {Curan},
+ title = {Efficient GPU Kernels for N:M-Sparse Weights in Deep Learning},
+ html = {https://proceedings.mlsys.org/paper_files/paper/2023/file/a10deb4d5227a8ea307ea8ff3cb712f4-Paper-mlsys2023.pdf},
+ volume = {5},
+ year = {2023}
+}
+
 @inproceedings{DBLP:conf/iclr/0003QLGZLY0G22,
   abbr         = {ICLR},
   bibtex_show  = {true},
@@ -423,6 +452,26 @@
   booktitle    = {16th {USENIX} Symposium on Operating Systems Design and Implementation, {OSDI}},  
   html={https://www.microsoft.com/en-us/research/publication/sparta-deep-learning-model-sparsity-via-tensor-with-sparsity-attribute/},
   year         = {2022}
+}
+
+@inproceedings{10.1145/3477495.3531799,
+abbr         = {SIGIR},
+bibtex_show  = {true}, 
+author = {Xiao, Shitao and Liu, Zheng and Han, Weihao and Zhang, Jianjin and Lian, Defu and Gong, Yeyun and Chen, Qi and Yang, Fan and Sun, Hao and Shao, Yingxia and Xie, Xing},
+title = {Distill-VQ: Learning Retrieval Oriented Vector Quantization By Distilling Knowledge from Dense Embeddings},
+year = {2022},
+isbn = {9781450387323},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+html = {https://doi.org/10.1145/3477495.3531799},
+doi = {10.1145/3477495.3531799},
+abstract = {Vector quantization (VQ) based ANN indexes, such as Inverted File System (IVF) and Product Quantization (PQ), have been widely applied to embedding based document retrieval thanks to the competitive time and memory efficiency. Originally, VQ is learned to minimize the reconstruction loss, i.e., the distortions between the original dense embeddings and the reconstructed embeddings after quantization. Unfortunately, such an objective is inconsistent with the goal of selecting ground-truth documents for the input query, which may cause severe loss of retrieval quality. Recent works identify such a defect, and propose to minimize the retrieval loss through contrastive learning. However, these methods intensively rely on queries with ground-truth documents, whose performance is limited by the insufficiency of labeled data. In this paper, we propose Distill-VQ, which unifies the learning of IVF and PQ within a knowledge distillation framework. In Distill-VQ, the dense embeddings are leveraged as "teachers'', which predict the query's relevance to the sampled documents. The VQ modules are treated as the "students'', which are learned to reproduce the predicted relevance, such that the reconstructed embeddings may fully preserve the retrieval result of the dense embeddings. By doing so, Distill-VQ is able to derive substantial training signals from the massive unlabeled data, which significantly contributes to the retrieval quality. We perform comprehensive explorations for the optimal conduct of knowledge distillation, which may provide useful insights for the learning of VQ based ANN index. We also experimentally show that the labeled data is no longer a necessity for high-quality vector quantization, which indicates Distill-VQ's strong applicability in practice. The evaluations are performed on MS MARCO and Natural Questions benchmarks, where Distill-VQ notably outperforms the SOTA VQ methods in Recall and MRR. Our code is avaliable at https://github.com/staoxiao/LibVQ.},
+booktitle = {Proceedings of the 45th International ACM SIGIR Conference on Research and Development in Information Retrieval},
+pages = {1513–1523},
+numpages = {11},
+keywords = {approximate nearest neighbour search, embedding based retrieval, knowledge distillation, vector quantization},
+location = {Madrid, Spain},
+series = {SIGIR '22}
 }
 
 @inproceedings{DBLP:conf/asplos/PengSD0MXYQ20,
@@ -530,4 +579,85 @@
   title        = {Gandiva: Introspective Cluster Scheduling for Deep Learning},
   booktitle    = {13th {USENIX} Symposium on Operating Systems Design and Implementation, {OSDI}},
   year         = {2018}
+}
+
+@inproceedings{10.1145/2806777.2806849,
+abbr         = {SoCC},
+bibtex_show  = {true},
+author = {Wu, Ming and Yang, Fan and Xue, Jilong and Xiao, Wencong and Miao, Youshan and Wei, Lan and Lin, Haoxiang and Dai, Yafei and Zhou, Lidong},
+title = {GraM: scaling graph computation to the trillions},
+year = {2015},
+isbn = {9781450336512},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+html = {https://doi.org/10.1145/2806777.2806849},
+doi = {10.1145/2806777.2806849},
+abstract = {GraM is an efficient and scalable graph engine for a large class of widely used graph algorithms. It is designed to scale up to multicores on a single server, as well as scale out to multiple servers in a cluster, offering significant, often over an order-of-magnitude, improvement over existing distributed graph engines on evaluated graph algorithms. GraM is also capable of processing graphs that are significantly larger than previously reported. In particular, using 64 servers (1,024 physical cores), it performs a PageRank iteration in 140 seconds on a synthetic graph with over one trillion edges, setting a new milestone for graph engines.GraM's efficiency and scalability comes from a judicious architectural design that exploits the benefits of multi-core and RDMA. GraM uses a simple message-passing based scaling architecture for both scaling up and scaling out to expose inherent parallelism. It further benefits from a specially designed multi-core aware RDMA-based communication stack that preserves parallelism in a balanced way and allows overlapping of communication and computation. A high degree of parallelism often comes at the cost of lower efficiency due to resource fragmentation. GraM is equipped with an adaptive mechanism that evaluates the cost and benefit of parallelism to decide the appropriate configuration. Combined, these mechanisms allow GraM to scale up and out with high efficiency.},
+booktitle = {Proceedings of the Sixth ACM Symposium on Cloud Computing, {SoCC}},
+pages = {408–421},
+numpages = {14},
+keywords = {RDMA, graph computation engine, scalability},
+location = {Kohala Coast, Hawaii},
+series = {SoCC '15}
+}
+
+@article{10.1145/2700302,
+abbr         = {ToS},
+bibtex_show  = {true},
+author = {Miao, Youshan and Han, Wentao and Li, Kaiwei and Wu, Ming and Yang, Fan and Zhou, Lidong and Prabhakaran, Vijayan and Chen, Enhong and Chen, Wenguang},
+title = {ImmortalGraph: A System for Storage and Analysis of Temporal Graphs},
+year = {2015},
+issue_date = {July 2015},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {11},
+number = {3},
+issn = {1553-3077},
+html = {https://doi.org/10.1145/2700302},
+doi = {10.1145/2700302},
+abstract = {Temporal graphs that capture graph changes over time are attracting increasing interest from research communities, for functions such as understanding temporal characteristics of social interactions on a time-evolving social graph. ImmortalGraph is a storage and execution engine designed and optimized specifically for temporal graphs. Locality is at the center of ImmortalGraph’s design: temporal graphs are carefully laid out in both persistent storage and memory, taking into account data locality in both time and graph-structure dimensions. ImmortalGraph introduces the notion of locality-aware batch scheduling in computation, so that common “bulk” operations on temporal graphs are scheduled to maximize the benefit of in-memory data locality. The design of ImmortalGraph explores an interesting interplay among locality, parallelism, and incremental computation in supporting common mining tasks on temporal graphs. The result is a high-performance temporal-graph system that is up to 5 times more efficient than existing database solutions for graph queries. The locality optimizations in ImmortalGraph offer up to an order of magnitude speedup for temporal iterative graph mining compared to a straightforward application of existing graph engines on a series of snapshots.},
+journal = {ACM Trans. Storage},
+month = {jul},
+articleno = {14},
+numpages = {34},
+keywords = {temporal graph, graph algorithms, Concurrent computing}
+}
+
+@inproceedings{10.1145/2592798.2592799,
+abbr         = {EuroSys},
+bibtex_show  = {true},
+author = {Han, Wentao and Miao, Youshan and Li, Kaiwei and Wu, Ming and Yang, Fan and Zhou, Lidong and Prabhakaran, Vijayan and Chen, Wenguang and Chen, Enhong},
+title = {Chronos: a graph engine for temporal graph analysis},
+year = {2014},
+isbn = {9781450327046},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+html = {https://doi.org/10.1145/2592798.2592799},
+doi = {10.1145/2592798.2592799},
+abstract = {Temporal graphs capture changes in graphs over time and are becoming a subject that attracts increasing interest from the research communities, for example, to understand temporal characteristics of social interactions on a time-evolving social graph. Chronos is a storage and execution engine designed and optimized specifically for running in-memory iterative graph computation on temporal graphs. Locality is at the center of the Chronos design, where the in-memory layout of temporal graphs and the scheduling of the iterative computation on temporal graphs are carefully designed, so that common "bulk" operations on temporal graphs are scheduled to maximize the benefit of in-memory data locality. The design of Chronos further explores the interesting interplay among locality, parallelism, and incremental computation in supporting common mining tasks on temporal graphs. The result is a high-performance temporal-graph system that offers up to an order of magnitude speedup for temporal iterative graph mining compared to a straightforward application of existing graph engines on a series of snapshots.},
+booktitle = {Proceedings of the Ninth European Conference on Computer Systems},
+articleno = {1},
+numpages = {14},
+location = {Amsterdam, The Netherlands},
+series = {EuroSys '14}
+}
+
+@inproceedings{10.1145/2168836.2168846,
+abbr         = {EuroSys},
+bibtex_show  = {true},
+author = {Cheng, Raymond and Hong, Ji and Kyrola, Aapo and Miao, Youshan and Weng, Xuetian and Wu, Ming and Yang, Fan and Zhou, Lidong and Zhao, Feng and Chen, Enhong},
+title = {Kineograph: taking the pulse of a fast-changing and connected world},
+year = {2012},
+isbn = {9781450312233},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+html = {https://doi.org/10.1145/2168836.2168846},
+doi = {10.1145/2168836.2168846},
+abstract = {Kineograph is a distributed system that takes a stream of incoming data to construct a continuously changing graph, which captures the relationships that exist in the data feed. As a computing platform, Kineograph further supports graph-mining algorithms to extract timely insights from the fast-changing graph structure. To accommodate graph-mining algorithms that assume a static underlying graph, Kineograph creates a series of consistent snapshots, using a novel and efficient epoch commit protocol. To keep up with continuous updates on the graph, Kineograph includes an incremental graph-computation engine. We have developed three applications on top of Kineograph to analyze Twitter data: user ranking, approximate shortest paths, and controversial topic detection. For these applications, Kineograph takes a live Twitter data feed and maintains a graph of edges between all users and hashtags. Our evaluation shows that with 40 machines processing 100K tweets per second, Kineograph is able to continuously compute global properties, such as user ranks, with less than 2.5-minute timeliness guarantees. This rate of traffic is more than 10 times the reported peak rate of Twitter as of October 2011.},
+booktitle = {Proceedings of the 7th ACM European Conference on Computer Systems},
+pages = {85–98},
+numpages = {14},
+keywords = {distributed storage, graph processing},
+location = {Bern, Switzerland},
+series = {EuroSys '12}
 }

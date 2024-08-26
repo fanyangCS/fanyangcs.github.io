@@ -1,6 +1,66 @@
 ---
 ---
 
+@inproceedings{10.1145/3589335.3648338,
+  abbr         = {WWW},
+  bibtex_show  = {true},
+  author = {Chen, Yaoqi and Zheng, Ruicheng and Chen, Qi and Xu, Shuotao and Zhang, Qianxi and Wu, Xue and Han, Weihao and Yuan, Hua and Li, Mingqin and Wang, Yujing and Li, Jason and Yang, Fan and Sun, Hao and Deng, Weiwei and Sun, Feng and Zhang, Qi and Yang, Mao},
+  title = {OneSparse: A Unified System for Multi-index Vector Search},
+  year = {2024},
+  isbn = {9798400701726},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  html = {https://doi.org/10.1145/3589335.3648338},
+  doi = {10.1145/3589335.3648338},
+  abstract = {Multi-index vector search has become the cornerstone for many applications, such as recommendation systems. Efficient search in such a multi-modal hybrid vector space is challenging since no single index design performs well for all kinds of vector data. Existing approaches to processing multi-index hybrid queries either suffer from algorithmic limitations or processing inefficiency. In this paper, we propose OneSparse, a unified multi-vector index query system that incorporates multiple posting-based vector indices, which enables highly efficient retrieval of multi-modal data-sets. OneSparse introduces a novel multi-index query engine design of inter-index intersection push-down. It also optimizes the vector posting format to expedite multi-index queries. Our experiments show OneSparse achieves more than 6x search performance improvement while maintaining comparable accuracy. OneSparse has already been integrated into Microsoft online web search and advertising systems with 5x+ latency gain for Bing web search and 2.0\% Revenue Per Mille (RPM) gain for Bing sponsored search.},
+  booktitle = {Companion Proceedings of the ACM Web Conference 2024},
+  pages = {393–402},
+  numpages = {10},
+  keywords = {approximate nearest neighbor search, multi-index search, retrieval system, sparse and dense search},
+  location = {Singapore, Singapore},
+  series = {WWW '24}
+}
+
+@inproceedings{10.1145/3589335.3648327,
+  abbr         = {WWW},
+  bibtex_show  = {true},
+  author = {Chen, Qi and Geng, Xiubo and Rosset, Corby and Buractaon, Carolyn and Lu, Jingwen and Shen, Tao and Zhou, Kun and Xiong, Chenyan and Gong, Yeyun and Bennett, Paul and Craswell, Nick and Xie, Xing and Yang, Fan and Tower, Bryan and Rao, Nikhil and Dong, Anlei and Jiang, Wenqi and Liu, Zheng and Li, Mingqin and Liu, Chuanjie and Li, Zengzhong and Majumder, Rangan and Neville, Jennifer and Oakley, Andy and Risvik, Knut Magne and Simhadri, Harsha Vardhan and Varma, Manik and Wang, Yujing and Yang, Linjun and Yang, Mao and Zhang, Ce},
+  title = {MS MARCO Web Search: A Large-scale Information-rich Web Dataset with Millions of Real Click Labels},
+  year = {2024},
+  isbn = {9798400701726},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  html = {https://doi.org/10.1145/3589335.3648327},
+  doi = {10.1145/3589335.3648327},
+  abstract = {Recent breakthroughs in large models have highlighted the critical significance of data scale, labels and modals. In this paper, we introduce MS MARCO Web Search, the first large-scale information-rich web dataset, featuring millions of real clicked query-document labels. This dataset closely mimics real-world web document and query distribution, provides rich information for various kinds of downstream tasks and encourages research in various areas, such as generic end-to-end neural indexer models, generic embedding models, and next generation information access system with large language models. MS MARCO Web Search offers a retrieval benchmark with three web retrieval challenge tasks that demands innovations in both machine learning and information retrieval system research domains. As the first dataset that meets large, real and rich data requirements, MS MARCO Web Search paves the way for future advancements in AI and system research. MS MARCO Web Search dataset is available at: https://github.com/microsoft/MS-MARCO-Web-Search.},
+  booktitle = {Companion Proceedings of the ACM Web Conference 2024},
+  pages = {292–301},
+  numpages = {10},
+  keywords = {dataset, information retrieval, web search},
+  location = {Singapore, Singapore},
+  series = {WWW '24}
+}
+
+@inproceedings{10.1145/3637528.3671650,
+  abbr         = {KDD},
+  bibtex_show  = {true},
+  author = {Xing, Mingzhe and Zhang, Rongkai and Xue, Hui and Chen, Qi and Yang, Fan and Xiao, Zhen},
+  title = {Understanding the Weakness of Large Language Model Agents within a Complex Android Environment},
+  year = {2024},
+  isbn = {9798400704901},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  html = {https://doi.org/10.1145/3637528.3671650},
+  doi = {10.1145/3637528.3671650},
+  abstract = {Large language models (LLMs) have empowered intelligent agents to execute intricate tasks within domain-specific software such as browsers and games. However, when applied to general-purpose software systems like operating systems, LLM agents face three primary challenges. Firstly, the action space is vast and dynamic, posing difficulties for LLM agents to maintain an up-to-date understanding and deliver accurate responses. Secondly, real-world tasks often require inter-application cooperation, demanding farsighted planning from LLM agents. Thirdly, agents need to identify optimal solutions aligning with user constraints, such as security concerns and preferences. These challenges motivate AndroidArena, an environment and benchmark designed to evaluate LLM agents on a modern operating system. To address high-cost of manpower, we design a scalable and semi-automated method to construct the benchmark. In the task evaluation, AndroidArena incorporates accurate and adaptive metrics to address the issue of non-unique solutions. Our findings reveal that even state-of-the-art LLM agents struggle in cross-APP scenarios and adhering to specific constraints. Additionally, we identify a lack of four key capabilities, i.e. understanding, reasoning, exploration, and reflection, as primary reasons for the failure of LLM agents. Furthermore, we provide empirical analysis on the failure of reflection, and improve the success rate by 27\% with our proposed exploration strategy. This work is the first to present valuable insights in understanding fine-grained weakness of LLM agents, and offers a path forward for future research in this area. Environment, benchmark, prompt, and evaluation code for AndroidArena are released at https://github.com/AndroidArenaAgent/AndroidArena.},
+  booktitle = {Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining},
+  pages = {6061–6072},
+  numpages = {12},
+  keywords = {ai agent, large language model, task planning},
+  location = {Barcelona, Spain},
+  series = {KDD '24}
+}
+
 @inproceedings{FractalTensorSosp24,
   abbr         = {SOSP},
   bibtex_show  = {true},
@@ -495,8 +555,19 @@
   publisher="Springer Nature Switzerland",
   address="Cham",
   pages="720--736",
+  html={https://arxiv.org/abs/2111.12417},
   abstract="This paper presents a unified multimodal pre-trained model called N{\"U}WA that can generate new or manipulate existing visual data (i.e., images and videos) for various visual synthesis tasks. To cover language, image, and video at the same time for different scenarios, a 3D transformer encoder-decoder framework is designed, which can not only deal with videos as 3D data but also adapt to texts and images as 1D and 2D data, respectively. A 3D Nearby Attention (3DNA) mechanism is also proposed to consider the nature of the visual data and reduce the computational complexity. We evaluate N{\"U}WA on 8 downstream tasks. Compared to several strong baselines, N{\"U}WA achieves state-of-the-art results on text-to-image generation, text-to-video generation, video prediction, etc. Furthermore, it also shows surprisingly good zero-shot capabilities on text-guided image and video manipulation tasks.",
   isbn="978-3-031-19787-1"
+}
+
+@article{wu2021godivageneratingopendomainvideos,
+      abbr         = {ArXiv},
+      bibtex_show  = {true},
+      title={GODIVA: Generating Open-DomaIn Videos from nAtural Descriptions}, 
+      author={Chenfei Wu and Lun Huang and Qianxi Zhang and Binyang Li and Lei Ji and Fan Yang and Guillermo Sapiro and Nan Duan},
+      year={2021},      
+      booktitle={arXiv},      
+      html={https://arxiv.org/abs/2104.14806} 
 }
 
 @inproceedings{DBLP:conf/asplos/PengSD0MXYQ20,
@@ -583,6 +654,7 @@
   title        = {Analysis of Large-Scale Multi-Tenant {GPU} Clusters for {DNN} Training
                   Workloads},
   booktitle    = {2019 {USENIX} Annual Technical Conference, {USENIX} {ATC}},
+  html         = {https://dl.acm.org/doi/10.5555/3358807.3358888},
   year         = {2019} 
 }
 
@@ -603,6 +675,7 @@
                   Lidong Zhou},
   title        = {Gandiva: Introspective Cluster Scheduling for Deep Learning},
   booktitle    = {13th {USENIX} Symposium on Operating Systems Design and Implementation, {OSDI}},
+  html         = {https://www.usenix.org/conference/osdi18/presentation/xiao},
   year         = {2018}
 }
 

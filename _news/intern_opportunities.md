@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Internship opportunities at SRG
+title: Internship Opportunities at SRG
 date: 2024-08-26
 inline: false
 related_posts: false

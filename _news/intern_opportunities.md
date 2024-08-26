@@ -6,10 +6,10 @@ inline: false
 related_posts: false
 ---
 
-Systems research group at Microsoft Research Asia is recruiting interns the whole year. Please find details below (<a href="https://www.msra.cn/zh-cn/jobs/interns/systems-research-group-research-intern">Chinese version</a>).
+Systems research group (SRG) at Microsoft Research Asia is recruiting interns the whole year. Please find details below (<a href="https://www.msra.cn/zh-cn/jobs/interns/systems-research-group-research-intern">Chinese version</a>).
 
 ---
-#### Introduction
+#### Introduction to SRG
 Computer systems are the core driving force in the era of artificial intelligence. The Systems Research Group (SRG) at Microsoft Research Asia conducts foundational and applied research in the field of computer systems, aiming to drive breakthrough advancements in computer systems. The SRG@MSRA has long been committed to high-calibre systems research, winning top research awards such as Best Paper, Distinguished Paper, and Test-of-Time Paper at leading conferences in systems and related fields, including OSDI 2020, NSDI 2024, EuroSys 2008/2012, MobiSys 2021, SenSys 2022, ICSE 2013/2020, MICRO 2022, and NeurIPS 2022. Many of these research achievements have been applied to Microsoft's products, including Azure, M365, and Bing. The SRG also maintains long-term collaborations with research institutions around the world and is a founding member of ChinaSys, the Chinese computer systems research community.
 
 We welcome students interested in systems research to join us and conduct research in the following areas:

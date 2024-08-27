@@ -48,7 +48,7 @@ rss_icon: false
 navbar_fixed: true
 footer_fixed: false
 search_enabled: true
-socials_in_search: true
+socials_in_search: false
 bib_search: true
 
 # Dimensions
@@ -141,8 +141,8 @@ pagination:
   enabled: true
 
 related_blog_posts:
-  enabled: false
-  max_related: 5
+  enabled: true
+  max_related: 3
 
 # Giscus comments (RECOMMENDED)
 # Follow instructions on https://giscus.app/ to setup for your repo to fill out the information below.

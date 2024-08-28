@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How disruptive ideas were treated?
-date: 2024-07-02 12:00:00
+date: 2023-07-02 12:00:00
 description: 
 tags: 
 categories: 

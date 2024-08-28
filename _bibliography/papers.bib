@@ -1,1159 +1,859 @@
 ---
 ---
-
 @inproceedings{FractalTensorSosp24,
-  abbr         = {SOSP},
-  bibtex_show  = {true},
-  author       = {Siran Liu and Chengxiang Qi and Ying Cao and Chao Yang and Weifang Hu and Xuanhua Shi and Fan Yang and Mao Yang },
-  title        = {Uncovering Nested Data Parallelism and Data Reuse in DNN Computation with FractalTensor},
-  booktitle    = {{SOSP}},
-  selected     = {true},
-  year         = {2024}
+	title        = {Uncovering Nested Data Parallelism and Data Reuse in DNN Computation with FractalTensor},
+	author       = {Siran Liu and Chengxiang Qi and Ying Cao and Chao Yang and Weifang Hu and Xuanhua Shi and Fan Yang and Mao Yang},
+	year         = 2024,
+	booktitle    = {{SOSP}},
+	abbr         = {SOSP},
+	bibtex_show  = {true},
+	selected     = {true}
 }
-
 @inproceedings{zhang2024irgengenerativemodelingimage,
-      abbr={ECCV},
-      bibtex_show  = {true},
-      title={IRGen: Generative Modeling for Image Retrieval}, 
-      author={Yidan Zhang and Ting Zhang and Dong Chen and Yujing Wang and Qi Chen and Xing Xie and Hao Sun and Weiwei Deng and Qi Zhang and Fan Yang and Mao Yang and Qingmin Liao and Jingdong Wang and Baining Guo},
-      year={2024},
-      booktitle={ECCV},
-      html={https://arxiv.org/abs/2303.10126} 
+	title        = {IRGen: Generative Modeling for Image Retrieval},
+	author       = {Yidan Zhang and Ting Zhang and Dong Chen and Yujing Wang and Qi Chen and Xing Xie and Hao Sun and Weiwei Deng and Qi Zhang and Fan Yang and Mao Yang and Qingmin Liao and Jingdong Wang and Baining Guo},
+	year         = 2024,
+	booktitle    = {ECCV},
+	abbr         = {ECCV},
+	bibtex_show  = {true},
+	html         = {https://arxiv.org/abs/2303.10126}
 }
-
 @inproceedings{10.1145/3589335.3648338,
-  abbr         = {WWW},
-  bibtex_show  = {true},
-  author = {Chen, Yaoqi and Zheng, Ruicheng and Chen, Qi and Xu, Shuotao and Zhang, Qianxi and Wu, Xue and Han, Weihao and Yuan, Hua and Li, Mingqin and Wang, Yujing and Li, Jason and Yang, Fan and Sun, Hao and Deng, Weiwei and Sun, Feng and Zhang, Qi and Yang, Mao},
-  title = {OneSparse: A Unified System for Multi-index Vector Search},
-  year = {2024},
-  isbn = {9798400701726},
-  publisher = {Association for Computing Machinery},
-  address = {New York, NY, USA},
-  html = {https://doi.org/10.1145/3589335.3648338},
-  doi = {10.1145/3589335.3648338},
-  abstract = {Multi-index vector search has become the cornerstone for many applications, such as recommendation systems. Efficient search in such a multi-modal hybrid vector space is challenging since no single index design performs well for all kinds of vector data. Existing approaches to processing multi-index hybrid queries either suffer from algorithmic limitations or processing inefficiency. In this paper, we propose OneSparse, a unified multi-vector index query system that incorporates multiple posting-based vector indices, which enables highly efficient retrieval of multi-modal data-sets. OneSparse introduces a novel multi-index query engine design of inter-index intersection push-down. It also optimizes the vector posting format to expedite multi-index queries. Our experiments show OneSparse achieves more than 6x search performance improvement while maintaining comparable accuracy. OneSparse has already been integrated into Microsoft online web search and advertising systems with 5x+ latency gain for Bing web search and 2.0\% Revenue Per Mille (RPM) gain for Bing sponsored search.},
-  booktitle = {Companion Proceedings of the ACM Web Conference 2024},
-  pages = {393–402},
-  numpages = {10},
-  keywords = {approximate nearest neighbor search, multi-index search, retrieval system, sparse and dense search},
-  location = {Singapore, Singapore},
-  series = {WWW '24}
+	title        = {OneSparse: A Unified System for Multi-index Vector Search},
+	author       = {Chen, Yaoqi and Zheng, Ruicheng and Chen, Qi and Xu, Shuotao and Zhang, Qianxi and Wu, Xue and Han, Weihao and Yuan, Hua and Li, Mingqin and Wang, Yujing and Li, Jason and Yang, Fan and Sun, Hao and Deng, Weiwei and Sun, Feng and Zhang, Qi and Yang, Mao},
+	year         = 2024,
+	booktitle    = {Companion Proceedings of the ACM Web Conference 2024},
+	location     = {Singapore, Singapore},
+	publisher    = {Association for Computing Machinery},
+	address      = {New York, NY, USA},
+	series       = {WWW '24},
+	pages        = {393–402},
+	doi          = {10.1145/3589335.3648338},
+	isbn         = 9798400701726,
+	abbr         = {WWW},
+	bibtex_show  = {true},
+	html         = {https://doi.org/10.1145/3589335.3648338},
+	abstract     = {Multi-index vector search has become the cornerstone for many applications, such as recommendation systems. Efficient search in such a multi-modal hybrid vector space is challenging since no single index design performs well for all kinds of vector data. Existing approaches to processing multi-index hybrid queries either suffer from algorithmic limitations or processing inefficiency. In this paper, we propose OneSparse, a unified multi-vector index query system that incorporates multiple posting-based vector indices, which enables highly efficient retrieval of multi-modal data-sets. OneSparse introduces a novel multi-index query engine design of inter-index intersection push-down. It also optimizes the vector posting format to expedite multi-index queries. Our experiments show OneSparse achieves more than 6x search performance improvement while maintaining comparable accuracy. OneSparse has already been integrated into Microsoft online web search and advertising systems with 5x+ latency gain for Bing web search and 2.0\% Revenue Per Mille (RPM) gain for Bing sponsored search.},
+	numpages     = 10,
+	keywords     = {approximate nearest neighbor search, multi-index search, retrieval system, sparse and dense search}
 }
-
 @inproceedings{10.1145/3589335.3648327,
-  abbr         = {WWW},
-  bibtex_show  = {true},
-  author = {Chen, Qi and Geng, Xiubo and Rosset, Corby and Buractaon, Carolyn and Lu, Jingwen and Shen, Tao and Zhou, Kun and Xiong, Chenyan and Gong, Yeyun and Bennett, Paul and Craswell, Nick and Xie, Xing and Yang, Fan and Tower, Bryan and Rao, Nikhil and Dong, Anlei and Jiang, Wenqi and Liu, Zheng and Li, Mingqin and Liu, Chuanjie and Li, Zengzhong and Majumder, Rangan and Neville, Jennifer and Oakley, Andy and Risvik, Knut Magne and Simhadri, Harsha Vardhan and Varma, Manik and Wang, Yujing and Yang, Linjun and Yang, Mao and Zhang, Ce},
-  title = {MS MARCO Web Search: A Large-scale Information-rich Web Dataset with Millions of Real Click Labels},
-  year = {2024},
-  isbn = {9798400701726},
-  publisher = {Association for Computing Machinery},
-  address = {New York, NY, USA},
-  html = {https://doi.org/10.1145/3589335.3648327},
-  doi = {10.1145/3589335.3648327},
-  abstract = {Recent breakthroughs in large models have highlighted the critical significance of data scale, labels and modals. In this paper, we introduce MS MARCO Web Search, the first large-scale information-rich web dataset, featuring millions of real clicked query-document labels. This dataset closely mimics real-world web document and query distribution, provides rich information for various kinds of downstream tasks and encourages research in various areas, such as generic end-to-end neural indexer models, generic embedding models, and next generation information access system with large language models. MS MARCO Web Search offers a retrieval benchmark with three web retrieval challenge tasks that demands innovations in both machine learning and information retrieval system research domains. As the first dataset that meets large, real and rich data requirements, MS MARCO Web Search paves the way for future advancements in AI and system research. MS MARCO Web Search dataset is available at: https://github.com/microsoft/MS-MARCO-Web-Search.},
-  booktitle = {Companion Proceedings of the ACM Web Conference 2024},
-  pages = {292–301},
-  numpages = {10},
-  keywords = {dataset, information retrieval, web search},
-  location = {Singapore, Singapore},
-  series = {WWW '24}
+	title        = {MS MARCO Web Search: A Large-scale Information-rich Web Dataset with Millions of Real Click Labels},
+	author       = {Chen, Qi and Geng, Xiubo and Rosset, Corby and Buractaon, Carolyn and Lu, Jingwen and Shen, Tao and Zhou, Kun and Xiong, Chenyan and Gong, Yeyun and Bennett, Paul and Craswell, Nick and Xie, Xing and Yang, Fan and Tower, Bryan and Rao, Nikhil and Dong, Anlei and Jiang, Wenqi and Liu, Zheng and Li, Mingqin and Liu, Chuanjie and Li, Zengzhong and Majumder, Rangan and Neville, Jennifer and Oakley, Andy and Risvik, Knut Magne and Simhadri, Harsha Vardhan and Varma, Manik and Wang, Yujing and Yang, Linjun and Yang, Mao and Zhang, Ce},
+	year         = 2024,
+	booktitle    = {Companion Proceedings of the ACM Web Conference 2024},
+	location     = {Singapore, Singapore},
+	publisher    = {Association for Computing Machinery},
+	address      = {New York, NY, USA},
+	series       = {WWW '24},
+	pages        = {292–301},
+	doi          = {10.1145/3589335.3648327},
+	isbn         = 9798400701726,
+	abbr         = {WWW},
+	bibtex_show  = {true},
+	html         = {https://doi.org/10.1145/3589335.3648327},
+	abstract     = {Recent breakthroughs in large models have highlighted the critical significance of data scale, labels and modals. In this paper, we introduce MS MARCO Web Search, the first large-scale information-rich web dataset, featuring millions of real clicked query-document labels. This dataset closely mimics real-world web document and query distribution, provides rich information for various kinds of downstream tasks and encourages research in various areas, such as generic end-to-end neural indexer models, generic embedding models, and next generation information access system with large language models. MS MARCO Web Search offers a retrieval benchmark with three web retrieval challenge tasks that demands innovations in both machine learning and information retrieval system research domains. As the first dataset that meets large, real and rich data requirements, MS MARCO Web Search paves the way for future advancements in AI and system research. MS MARCO Web Search dataset is available at: https://github.com/microsoft/MS-MARCO-Web-Search.},
+	numpages     = 10,
+	keywords     = {dataset, information retrieval, web search}
 }
-
 @inproceedings{10.1145/3637528.3671650,
-  abbr         = {KDD},
-  bibtex_show  = {true},
-  author = {Xing, Mingzhe and Zhang, Rongkai and Xue, Hui and Chen, Qi and Yang, Fan and Xiao, Zhen},
-  title = {Understanding the Weakness of Large Language Model Agents within a Complex Android Environment},
-  year = {2024},
-  isbn = {9798400704901},
-  publisher = {Association for Computing Machinery},
-  address = {New York, NY, USA},
-  html = {https://doi.org/10.1145/3637528.3671650},
-  doi = {10.1145/3637528.3671650},
-  abstract = {Large language models (LLMs) have empowered intelligent agents to execute intricate tasks within domain-specific software such as browsers and games. However, when applied to general-purpose software systems like operating systems, LLM agents face three primary challenges. Firstly, the action space is vast and dynamic, posing difficulties for LLM agents to maintain an up-to-date understanding and deliver accurate responses. Secondly, real-world tasks often require inter-application cooperation, demanding farsighted planning from LLM agents. Thirdly, agents need to identify optimal solutions aligning with user constraints, such as security concerns and preferences. These challenges motivate AndroidArena, an environment and benchmark designed to evaluate LLM agents on a modern operating system. To address high-cost of manpower, we design a scalable and semi-automated method to construct the benchmark. In the task evaluation, AndroidArena incorporates accurate and adaptive metrics to address the issue of non-unique solutions. Our findings reveal that even state-of-the-art LLM agents struggle in cross-APP scenarios and adhering to specific constraints. Additionally, we identify a lack of four key capabilities, i.e. understanding, reasoning, exploration, and reflection, as primary reasons for the failure of LLM agents. Furthermore, we provide empirical analysis on the failure of reflection, and improve the success rate by 27\% with our proposed exploration strategy. This work is the first to present valuable insights in understanding fine-grained weakness of LLM agents, and offers a path forward for future research in this area. Environment, benchmark, prompt, and evaluation code for AndroidArena are released at https://github.com/AndroidArenaAgent/AndroidArena.},
-  booktitle = {Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining},
-  pages = {6061–6072},
-  numpages = {12},
-  keywords = {ai agent, large language model, task planning},
-  location = {Barcelona, Spain},
-  series = {KDD '24}
+	title        = {Understanding the Weakness of Large Language Model Agents within a Complex Android Environment},
+	author       = {Xing, Mingzhe and Zhang, Rongkai and Xue, Hui and Chen, Qi and Yang, Fan and Xiao, Zhen},
+	year         = 2024,
+	booktitle    = {Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining},
+	location     = {Barcelona, Spain},
+	publisher    = {Association for Computing Machinery},
+	address      = {New York, NY, USA},
+	series       = {KDD '24},
+	pages        = {6061–6072},
+	doi          = {10.1145/3637528.3671650},
+	isbn         = 9798400704901,
+	abbr         = {KDD},
+	bibtex_show  = {true},
+	html         = {https://doi.org/10.1145/3637528.3671650},
+	abstract     = {Large language models (LLMs) have empowered intelligent agents to execute intricate tasks within domain-specific software such as browsers and games. However, when applied to general-purpose software systems like operating systems, LLM agents face three primary challenges. Firstly, the action space is vast and dynamic, posing difficulties for LLM agents to maintain an up-to-date understanding and deliver accurate responses. Secondly, real-world tasks often require inter-application cooperation, demanding farsighted planning from LLM agents. Thirdly, agents need to identify optimal solutions aligning with user constraints, such as security concerns and preferences. These challenges motivate AndroidArena, an environment and benchmark designed to evaluate LLM agents on a modern operating system. To address high-cost of manpower, we design a scalable and semi-automated method to construct the benchmark. In the task evaluation, AndroidArena incorporates accurate and adaptive metrics to address the issue of non-unique solutions. Our findings reveal that even state-of-the-art LLM agents struggle in cross-APP scenarios and adhering to specific constraints. Additionally, we identify a lack of four key capabilities, i.e. understanding, reasoning, exploration, and reflection, as primary reasons for the failure of LLM agents. Furthermore, we provide empirical analysis on the failure of reflection, and improve the success rate by 27\% with our proposed exploration strategy. This work is the first to present valuable insights in understanding fine-grained weakness of LLM agents, and offers a path forward for future research in this area. Environment, benchmark, prompt, and evaluation code for AndroidArena are released at https://github.com/AndroidArenaAgent/AndroidArena.},
+	numpages     = 12,
+	keywords     = {ai agent, large language model, task planning}
 }
-
 @article{qi2024mutualreasoningmakessmaller,
-      abbr={ArXiv},
-      bibtex_show={true},      
-      title={Mutual Reasoning Makes Smaller LLMs Stronger Problem-Solvers}, 
-      author={Zhenting Qi and Mingyuan Ma and Jiahang Xu and Li Lyna Zhang and Fan Yang and Mao Yang},
-      year={2024}, 
-      journal={ArXiv},      
-      html={https://arxiv.org/abs/2408.06195},
-      code={https://github.com/zhentingqi/rStar},
-      award_name={Hugging Face Daily Papers},
-      award={Selected as Hugging Face [daily papers](https://huggingface.co/papers?date=2024-08-13) (2024-08-13).}
+	title        = {Mutual Reasoning Makes Smaller LLMs Stronger Problem-Solvers},
+	author       = {Zhenting Qi and Mingyuan Ma and Jiahang Xu and Li Lyna Zhang and Fan Yang and Mao Yang},
+	year         = 2024,
+	journal      = {ArXiv},
+	abbr         = {ArXiv},
+	bibtex_show  = {true},
+	html         = {https://arxiv.org/abs/2408.06195},
+	code         = {https://github.com/zhentingqi/rStar},
+	award_name   = {Hugging Face Daily Papers},
+	award        = {Selected as Hugging Face [daily papers](https://huggingface.co/papers?date=2024-08-13) (2024-08-13).}
 }
-
 @inproceedings{ding2024longrope,
-  abbr={ICML},
-  bibtex_show={true},
-  author = {Ding, Yiran and Zhang, Li Lyna and Zhang, Chengruidong and Xu, Yuanyuan and Shang, Ning and Xu, Jiahang and Yang, Fan and Yang, Mao},
-  title = {LongRoPE: Extending LLM Context Window Beyond 2 Million Tokens},
-  booktitle = {ICML 2024},
-  year = {2024},
-  code={https://github.com/microsoft/LongRoPE},
-  poster={https://icml.cc/media/icml-2024/Slides/34166.pdf},
-  award={Selected as Hugging Face daily papers: [#1 paper of the day](https://huggingface.co/papers?date=2024-02-22) (2024-02-22).},
-  award_name={Hugging Face Daily Papers},
-  html = {https://www.microsoft.com/en-us/research/publication/longrope-extending-llm-context-window-beyond-2-million-tokens/}
+	title        = {LongRoPE: Extending LLM Context Window Beyond 2 Million Tokens},
+	author       = {Ding, Yiran and Zhang, Li Lyna and Zhang, Chengruidong and Xu, Yuanyuan and Shang, Ning and Xu, Jiahang and Yang, Fan and Yang, Mao},
+	year         = 2024,
+	booktitle    = {ICML 2024},
+	abbr         = {ICML},
+	bibtex_show  = {true},
+	code         = {https://github.com/microsoft/LongRoPE},
+	poster       = {https://icml.cc/media/icml-2024/Slides/34166.pdf},
+	award        = {Selected as Hugging Face daily papers: [#1 paper of the day](https://huggingface.co/papers?date=2024-02-22) (2024-02-22).},
+	award_name   = {Hugging Face Daily Papers},
+	html         = {https://www.microsoft.com/en-us/research/publication/longrope-extending-llm-context-window-beyond-2-million-tokens/}
 }
-
 @article{Abdin2024Phi3TR,
-  abbr={ArXiv},
-  bibtex_show={true},
-  title={Phi-3 Technical Report: A Highly Capable Language Model Locally on Your Phone},
-  author={Marah Abdin and Sam Ade Jacobs and Ammar Ahmad Awan and Jyoti Aneja and Ahmed Awadallah and Hany Hassan Awadalla and Nguyen Bach and Amit Bahree and Arash Bakhtiari and Harkirat Singh Behl and Alon Benhaim and Misha Bilenko and Johan Bjorck and S{\'e}bastien Bubeck and Martin Cai and Caio C'esar Teodoro Mendes and Weizhu Chen and Vishrav Chaudhary and Parul Chopra and Allison Del Giorno and Gustavo de Rosa and Matthew Dixon and Ronen Eldan and Dan Iter and Abhishek Goswami and Suriya Gunasekar and Emman Haider and Junheng Hao and Russell J. Hewett and Jamie Huynh and Mojan Javaheripi and Xin Jin and Piero Kauffmann and Nikos Karampatziakis and Dongwoo Kim and Mahoud Khademi and Lev Kurilenko and James R. Lee and Yin Tat Lee and Yuanzhi Li and Chen Liang and Weishung Liu and Eric Lin and Zeqi Lin and Piyush Madan and Arindam Mitra and Hardik Modi and Anh Nguyen and Brandon Norick and Barun Patra and Daniel Perez-Becker and Thomas Portet and Reid Pryzant and Heyang Qin and Marko Radmilac and Corby Rosset and Sambudha Roy and Olli Saarikivi and Amin Saied and Adil Salim and Michael Santacroce and Shital Shah and Ning Shang and Hiteshi Sharma and Xianmin Song and Olatunji Ruwase and Xin Wang and Rachel Ward and Guanhua Wang and Philipp Witte and Michael Wyatt and Can Xu and Jiahang Xu and Sonali Yadav and Fan Yang and Ziyi Yang and Donghan Yu and Cheng-Yuan Zhang and Cyril Zhang and Jianwen Zhang and Li Lyna Zhang and Yi Zhang and Yunan Zhang and Xiren Zhou},
-  journal={ArXiv},
-  code={https://huggingface.co/collections/microsoft/phi-3-6626e15e9585a200d2d761e3},
-  additional_info={. (Applying [LongRoPE](https://www.microsoft.com/en-us/research/publication/longrope-extending-llm-context-window-beyond-2-million-tokens/) to [Phi-3](https://azure.microsoft.com/en-us/blog/introducing-phi-3-redefining-whats-possible-with-slms/))},
-  google_scholar_id={tkaPQYYpVKoC},
-  year={2024}, 
-  selected={true},
-  html={https://arxiv.org/abs/2404.14219}
+	title        = {Phi-3 Technical Report: A Highly Capable Language Model Locally on Your Phone},
+	author       = {Marah Abdin and Sam Ade Jacobs and Ammar Ahmad Awan and Jyoti Aneja and Ahmed Awadallah and Hany Hassan Awadalla and Nguyen Bach and Amit Bahree and Arash Bakhtiari and Harkirat Singh Behl and Alon Benhaim and Misha Bilenko and Johan Bjorck and S{\'e}bastien Bubeck and Martin Cai and Caio C'esar Teodoro Mendes and Weizhu Chen and Vishrav Chaudhary and Parul Chopra and Allison Del Giorno and Gustavo de Rosa and Matthew Dixon and Ronen Eldan and Dan Iter and Abhishek Goswami and Suriya Gunasekar and Emman Haider and Junheng Hao and Russell J. Hewett and Jamie Huynh and Mojan Javaheripi and Xin Jin and Piero Kauffmann and Nikos Karampatziakis and Dongwoo Kim and Mahoud Khademi and Lev Kurilenko and James R. Lee and Yin Tat Lee and Yuanzhi Li and Chen Liang and Weishung Liu and Eric Lin and Zeqi Lin and Piyush Madan and Arindam Mitra and Hardik Modi and Anh Nguyen and Brandon Norick and Barun Patra and Daniel Perez-Becker and Thomas Portet and Reid Pryzant and Heyang Qin and Marko Radmilac and Corby Rosset and Sambudha Roy and Olli Saarikivi and Amin Saied and Adil Salim and Michael Santacroce and Shital Shah and Ning Shang and Hiteshi Sharma and Xianmin Song and Olatunji Ruwase and Xin Wang and Rachel Ward and Guanhua Wang and Philipp Witte and Michael Wyatt and Can Xu and Jiahang Xu and Sonali Yadav and Fan Yang and Ziyi Yang and Donghan Yu and Cheng-Yuan Zhang and Cyril Zhang and Jianwen Zhang and Li Lyna Zhang and Yi Zhang and Yunan Zhang and Xiren Zhou},
+	year         = 2024,
+	journal      = {ArXiv},
+	abbr         = {ArXiv},
+	bibtex_show  = {true},
+	code         = {https://huggingface.co/collections/microsoft/phi-3-6626e15e9585a200d2d761e3},
+	additional_info = {. (Applying [LongRoPE](https://www.microsoft.com/en-us/research/publication/longrope-extending-llm-context-window-beyond-2-million-tokens/) to [Phi-3](https://azure.microsoft.com/en-us/blog/introducing-phi-3-redefining-whats-possible-with-slms/))},
+	google_scholar_id = {tkaPQYYpVKoC},
+	selected     = {true},
+	html         = {https://arxiv.org/abs/2404.14219}
 }
-
 @inproceedings{nnscaler24,
-  abbr         = {OSDI},  
-  bibtex_show  = {true},
-  author       = {Lin, Zhiqi and Miao, Youshan and Zhang, Quanlu and Yang, Fan and Zhu, Yi and Li, Cheng and Maleki, Saeed and Cao, Xu and Shang, Ning and Yang, Yilei and Xu, Weijiang and Yang, Mao and Zhang, Lintao and Zhou, Lidong},
-  title        = {nnScaler: Constraint-Guided Parallelization Plan Generation for Deep Learning Training},
-  booktitle    = {18th {USENIX} Symposium on Operating Systems Design and Implementation, {OSDI}},
-  html         = {https://www.microsoft.com/en-us/research/publication/nnscaler-constraint-guided-parallelization-plan-generation-for-deep-learning-training/},
-  slides       = {https://www.microsoft.com/en-us/research/uploads/prodnew/2024/07/nnscaler_osdi24.pdf},
-  code         = {https://github.com/microsoft/nnscaler},
-  selected     = {true},
-  year         = {2024}
+	title        = {nnScaler: Constraint-Guided Parallelization Plan Generation for Deep Learning Training},
+	author       = {Lin, Zhiqi and Miao, Youshan and Zhang, Quanlu and Yang, Fan and Zhu, Yi and Li, Cheng and Maleki, Saeed and Cao, Xu and Shang, Ning and Yang, Yilei and Xu, Weijiang and Yang, Mao and Zhang, Lintao and Zhou, Lidong},
+	year         = 2024,
+	booktitle    = {18th {USENIX} Symposium on Operating Systems Design and Implementation, {OSDI}},
+	abbr         = {OSDI},
+	bibtex_show  = {true},
+	html         = {https://www.microsoft.com/en-us/research/publication/nnscaler-constraint-guided-parallelization-plan-generation-for-deep-learning-training/},
+	slides       = {https://www.microsoft.com/en-us/research/uploads/prodnew/2024/07/nnscaler_osdi24.pdf},
+	code         = {https://github.com/microsoft/nnscaler},
+	selected     = {true}
 }
-
 @inproceedings{parrot24,
-  abbr         = {OSDI},
-  bibtex_show  = {true},
-  author       = {Lin, Chaofan and Han, Zhenhua and Zhang, Chengruidong and Yang, Yuqing and Yang, Fan and Chen, Chen and Qiu, Lili},
-  title        = {Parrot: Efficient Serving of LLM-based Applications with Semantic Variable},
-  booktitle    = {18th {USENIX} Symposium on Operating Systems Design and Implementation, {OSDI}},
-  slides       = {https://www.microsoft.com/en-us/research/uploads/prodnew/2024/06/Parrot-OSDI24.pdf},
-  code         = {https://github.com/microsoft/ParrotServe},
-  html         = {https://www.microsoft.com/en-us/research/publication/parrot-efficient-serving-of-llm-based-applications-with-semantic-variable/},
-  selected     = {true},
-  year         = {2024}
+	title        = {Parrot: Efficient Serving of LLM-based Applications with Semantic Variable},
+	author       = {Lin, Chaofan and Han, Zhenhua and Zhang, Chengruidong and Yang, Yuqing and Yang, Fan and Chen, Chen and Qiu, Lili},
+	year         = 2024,
+	booktitle    = {18th {USENIX} Symposium on Operating Systems Design and Implementation, {OSDI}},
+	abbr         = {OSDI},
+	bibtex_show  = {true},
+	slides       = {https://www.microsoft.com/en-us/research/uploads/prodnew/2024/06/Parrot-OSDI24.pdf},
+	code         = {https://github.com/microsoft/ParrotServe},
+	html         = {https://www.microsoft.com/en-us/research/publication/parrot-efficient-serving-of-llm-based-applications-with-semantic-variable/},
+	selected     = {true}
 }
-
 @inproceedings{ladder24,
-  abbr         = {OSDI},
-  bibtex_show  = {true},
-  author       = {Wang, Lei and Ma, Lingxiao and Cao, Shijie and Zhang, Quanlu and Xue, Jilong and Shi, Yining and Zheng, Ningxin and Miao, Ziming and Yang, Fan and Cao, Ting and Yang, Yuqing and Yang, Mao},
-  title        = {Ladder: Enabling Efficient Low-Precision Deep Learning Computing through Hardware-aware Tensor Transformation},
-  booktitle    = {18th {USENIX} Symposium on Operating Systems Design and Implementation, {OSDI}},
-  code         = {https://github.com/microsoft/BitBLAS},
-  html         = {https://www.microsoft.com/en-us/research/publication/ladder-enabling-efficient-low-precision-deep-learning-computing-through-hardware-aware-tensor-transformation/},
-  year         = {2024}
+	title        = {Ladder: Enabling Efficient Low-Precision Deep Learning Computing through Hardware-aware Tensor Transformation},
+	author       = {Wang, Lei and Ma, Lingxiao and Cao, Shijie and Zhang, Quanlu and Xue, Jilong and Shi, Yining and Zheng, Ningxin and Miao, Ziming and Yang, Fan and Cao, Ting and Yang, Yuqing and Yang, Mao},
+	year         = 2024,
+	booktitle    = {18th {USENIX} Symposium on Operating Systems Design and Implementation, {OSDI}},
+	abbr         = {OSDI},
+	bibtex_show  = {true},
+	code         = {https://github.com/microsoft/BitBLAS},
+	html         = {https://www.microsoft.com/en-us/research/publication/ladder-enabling-efficient-low-precision-deep-learning-computing-through-hardware-aware-tensor-transformation/}
 }
-
 @inproceedings{10.1145/3617232.3624864,
-  abbr         = {ASPLOS},
-  bibtex_show  = {true},
-  author       = {Guan, Yue and Qiu, Yuxian and Leng, Jingwen and Yang, Fan and Yu, Shuo and Liu, Yunxin and Feng, Yu and Zhu, Yuhao and Zhou, Lidong and Liang, Yun and Zhang, Chen and Li, Chao and Guo, Minyi},
-  title        = {Amanda: Unified Instrumentation Framework for Deep Neural Networks},  
-  booktitle    = {Proceedings of the 29th ACM International Conference on Architectural Support for Programming Languages and Operating Systems, ASPLOS'24},
-  html         = {https://dl.acm.org/doi/10.1145/3617232.3624864},
-  year         = {2024}
+	title        = {Amanda: Unified Instrumentation Framework for Deep Neural Networks},
+	author       = {Guan, Yue and Qiu, Yuxian and Leng, Jingwen and Yang, Fan and Yu, Shuo and Liu, Yunxin and Feng, Yu and Zhu, Yuhao and Zhou, Lidong and Liang, Yun and Zhang, Chen and Li, Chao and Guo, Minyi},
+	year         = 2024,
+	booktitle    = {Proceedings of the 29th ACM International Conference on Architectural Support for Programming Languages and Operating Systems, ASPLOS'24},
+	abbr         = {ASPLOS},
+	bibtex_show  = {true},
+	html         = {https://dl.acm.org/doi/10.1145/3617232.3624864}
 }
-
-
 @inproceedings{conf/eurosys/LMLSMYBW00Y24,
-  abbr         = {EuroSys},
-  bibtex_show  = {true},
-  author       = {Guodong Liu and Youshan Miao and Zhiqi Lin and Xiaoxiang Shi and Saeed Maleki and Fan Yang and Yungang Bao and Sa Wang},
-  title        = {Aceso: Efficient Parallel DNN Training through Iterative Bottleneck Alleviation},
-  booktitle    = {Proceedings of the Nineteenth European Conference on Computer Systems, {EuroSys}},
-  html         = {https://dl.acm.org/doi/10.1145/3627703.3629554},
-  year         = {2024}
+	title        = {Aceso: Efficient Parallel DNN Training through Iterative Bottleneck Alleviation},
+	author       = {Guodong Liu and Youshan Miao and Zhiqi Lin and Xiaoxiang Shi and Saeed Maleki and Fan Yang and Yungang Bao and Sa Wang},
+	year         = 2024,
+	booktitle    = {Proceedings of the Nineteenth European Conference on Computer Systems, {EuroSys}},
+	abbr         = {EuroSys},
+	bibtex_show  = {true},
+	html         = {https://dl.acm.org/doi/10.1145/3627703.3629554}
 }
-
 @inproceedings{conf/hpca/LMXLOMF00Y24,
-  abbr         = {HPCA},
-  bibtex_show  = {true},
-  author       = {Zhiqi Lin and Youshan Miao and Guanbin Xu and Cheng Li and Olli Saarikivi and Saeed Maleki and Fan Yang },
-  title        = {Tessel: Boosting Distributed DNN Execution with Flexible Schedule Search},
-  booktitle    = {30th International Symposium on High-Performance Computer Architecture, {HPCA}},
-  html         = {https://ieeexplore.ieee.org/document/10476399},
-  year         = {2024}
+	title        = {Tessel: Boosting Distributed DNN Execution with Flexible Schedule Search},
+	author       = {Zhiqi Lin and Youshan Miao and Guanbin Xu and Cheng Li and Olli Saarikivi and Saeed Maleki and Fan Yang},
+	year         = 2024,
+	booktitle    = {30th International Symposium on High-Performance Computer Architecture, {HPCA}},
+	abbr         = {HPCA},
+	bibtex_show  = {true},
+	html         = {https://ieeexplore.ieee.org/document/10476399}
 }
-
 @misc{zhang2023integerfloatingpointnew,
-      abbr         = {ArXiv},
-      bibtex_show  = {true},
-      title={Integer or Floating Point? New Outlooks for Low-Bit Quantization on Large Language Models}, 
-      author={Yijia Zhang and Lingran Zhao and Shijie Cao and Wenqiang Wang and Ting Cao and Fan Yang and Mao Yang and Shanghang Zhang and Ningyi Xu},
-      year={2023},
-      eprint={2305.12356},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG},
-      html={https://arxiv.org/abs/2305.12356}, 
+	title        = {Integer or Floating Point? New Outlooks for Low-Bit Quantization on Large Language Models},
+	author       = {Yijia Zhang and Lingran Zhao and Shijie Cao and Wenqiang Wang and Ting Cao and Fan Yang and Mao Yang and Shanghang Zhang and Ningyi Xu},
+	year         = 2023,
+	abbr         = {ArXiv},
+	bibtex_show  = {true},
+	eprint       = {2305.12356},
+	archiveprefix = {arXiv},
+	primaryclass = {cs.LG},
+	html         = {https://arxiv.org/abs/2305.12356}
 }
-
 @misc{zhang2023adamaccumulationreducememory,
-      abbr         = {ArXiv},
-      bibtex_show  = {true},
-      title={Adam Accumulation to Reduce Memory Footprints of both Activations and Gradients for Large-scale DNN Training}, 
-      author={Yijia Zhang and Yibo Han and Shijie Cao and Guohao Dai and Youshan Miao and Ting Cao and Fan Yang and Ningyi Xu},
-      year={2023},
-      eprint={2305.19982},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG},
-      html={https://arxiv.org/abs/2305.19982}, 
+	title        = {Adam Accumulation to Reduce Memory Footprints of both Activations and Gradients for Large-scale DNN Training},
+	author       = {Yijia Zhang and Yibo Han and Shijie Cao and Guohao Dai and Youshan Miao and Ting Cao and Fan Yang and Ningyi Xu},
+	year         = 2023,
+	abbr         = {ArXiv},
+	bibtex_show  = {true},
+	eprint       = {2305.19982},
+	archiveprefix = {arXiv},
+	primaryclass = {cs.LG},
+	html         = {https://arxiv.org/abs/2305.19982}
 }
-
 @misc{lin2023superscalersupportingflexiblednn,
-      abbr         = {ArXiv},
-      bibtex_show  = {true},
-      title={SuperScaler: Supporting Flexible DNN Parallelization via a Unified Abstraction}, 
-      author={Zhiqi Lin and Youshan Miao and Guodong Liu and Xiaoxiang Shi and Quanlu Zhang and Fan Yang and Saeed Maleki and Yi Zhu and Xu Cao and Cheng Li and Mao Yang and Lintao Zhang and Lidong Zhou},
-      year={2023},
-      eprint={2301.08984},
-      archivePrefix={arXiv},
-      primaryClass={cs.DC},
-      html={https://arxiv.org/abs/2301.08984}, 
+	title        = {SuperScaler: Supporting Flexible DNN Parallelization via a Unified Abstraction},
+	author       = {Zhiqi Lin and Youshan Miao and Guodong Liu and Xiaoxiang Shi and Quanlu Zhang and Fan Yang and Saeed Maleki and Yi Zhu and Xu Cao and Cheng Li and Mao Yang and Lintao Zhang and Lidong Zhou},
+	year         = 2023,
+	abbr         = {ArXiv},
+	bibtex_show  = {true},
+	eprint       = {2301.08984},
+	archiveprefix = {arXiv},
+	primaryclass = {cs.DC},
+	html         = {https://arxiv.org/abs/2301.08984}
 }
-
 @inproceedings{DBLP:conf/osdi/ZhangXCSXCCH00Y23,
-  abbr         = {OSDI},
-  bibtex_show  = {true},
-  author       = {Qianxi Zhang and
-                  Shuotao Xu and
-                  Qi Chen and
-                  Guoxin Sui and
-                  Jiadong Xie and
-                  Zhizhen Cai and
-                  Yaoqi Chen and
-                  Yinxuan He and
-                  Yuqing Yang and
-                  Fan Yang and
-                  Mao Yang and
-                  Lidong Zhou},
-  title        = {{VBASE:} Unifying Online Vector Similarity Search and Relational Queries via Relaxed Monotonicity},
-  booktitle    = {17th {USENIX} Symposium on Operating Systems Design and Implementation, {OSDI}},
-  html         = {https://www.usenix.org/conference/osdi23/presentation/zhang-qianxi},
-  selected     = {true},
-  year         = {2023}
+	title        = {{VBASE:} Unifying Online Vector Similarity Search and Relational Queries via Relaxed Monotonicity},
+	author       = {Qianxi Zhang and Shuotao Xu and Qi Chen and Guoxin Sui and Jiadong Xie and Zhizhen Cai and Yaoqi Chen and Yinxuan He and Yuqing Yang and Fan Yang and Mao Yang and Lidong Zhou},
+	year         = 2023,
+	booktitle    = {17th {USENIX} Symposium on Operating Systems Design and Implementation, {OSDI}},
+	abbr         = {OSDI},
+	bibtex_show  = {true},
+	html         = {https://www.usenix.org/conference/osdi23/presentation/zhang-qianxi},
+	selected     = {true}
 }
-
 @inproceedings{DBLP:conf/osdi/ZhangMXSM0Z0Y23,
-  abbr         = {OSDI},
-  bibtex_show  = {true},
-  author       = {Chen Zhang and
-                  Lingxiao Ma and
-                  Jilong Xue and
-                  Yining Shi and
-                  Ziming Miao and
-                  Fan Yang and
-                  Jidong Zhai and
-                  Zhi Yang and
-                  Mao Yang},
-  title        = {Cocktailer: Analyzing and Optimizing Dynamic Control Flow in Deep Learning},
-  html         = {https://www.microsoft.com/en-us/research/publication/cocktailer-analyzing-and-optimizing-dynamic-control-flow-in-deep-learning/},
-  booktitle    = {17th {USENIX} Symposium on Operating Systems Design and Implementation, {OSDI}},
-  year         = {2023}
+	title        = {Cocktailer: Analyzing and Optimizing Dynamic Control Flow in Deep Learning},
+	author       = {Chen Zhang and Lingxiao Ma and Jilong Xue and Yining Shi and Ziming Miao and Fan Yang and Jidong Zhai and Zhi Yang and Mao Yang},
+	year         = 2023,
+	booktitle    = {17th {USENIX} Symposium on Operating Systems Design and Implementation, {OSDI}},
+	abbr         = {OSDI},
+	bibtex_show  = {true},
+	html         = {https://www.microsoft.com/en-us/research/publication/cocktailer-analyzing-and-optimizing-dynamic-control-flow-in-deep-learning/}
 }
-
 @inproceedings{DBLP:conf/osdi/00010XMXMG0Z23,
-  abbr         = {OSDI},
-  bibtex_show  = {true},
-  author       = {Yining Shi and
-                  Zhi Yang and
-                  Jilong Xue and
-                  Lingxiao Ma and
-                  Yuqing Xia and
-                  Ziming Miao and
-                  Yuxiao Guo and
-                  Fan Yang and
-                  Lidong Zhou},
-  title        = {Welder: Scheduling Deep Learning Memory Access via Tile-graph},
-  booktitle    = {17th {USENIX} Symposium on Operating Systems Design and Implementation, {OSDI}},
-  html         = {https://www.microsoft.com/en-us/research/publication/welder-scheduling-deep-learning-memory-access-via-tile-graph/},
-  year         = {2023}
+	title        = {Welder: Scheduling Deep Learning Memory Access via Tile-graph},
+	author       = {Yining Shi and Zhi Yang and Jilong Xue and Lingxiao Ma and Yuqing Xia and Ziming Miao and Yuxiao Guo and Fan Yang and Lidong Zhou},
+	year         = 2023,
+	booktitle    = {17th {USENIX} Symposium on Operating Systems Design and Implementation, {OSDI}},
+	abbr         = {OSDI},
+	bibtex_show  = {true},
+	html         = {https://www.microsoft.com/en-us/research/publication/welder-scheduling-deep-learning-memory-access-via-tile-graph/}
 }
-
 @inproceedings{DBLP:conf/osdi/CuiHOWZM00XQZ0T23,
-  abbr         = {OSDI},
-  bibtex_show  = {true},
-  author       = {Weihao Cui and
-                  Zhenhua Han and
-                  Lingji Ouyang and
-                  Yichuan Wang and
-                  Ningxin Zheng and
-                  Lingxiao Ma and
-                  Yuqing Yang and
-                  Fan Yang and
-                  Jilong Xue and
-                  Lili Qiu and
-                  Lidong Zhou and
-                  Quan Chen and
-                  Haisheng Tan and
-                  Minyi Guo},
-  title        = {Optimizing Dynamic Neural Networks with Brainstorm},
-  booktitle    = {17th {USENIX} Symposium on Operating Systems Design and Implementation, {OSDI}},
-  html         = {https://www.microsoft.com/en-us/research/publication/optimizing-dynamic-neural-networks-with-brainstorm/},
-  year         = {2023}
+	title        = {Optimizing Dynamic Neural Networks with Brainstorm},
+	author       = {Weihao Cui and Zhenhua Han and Lingji Ouyang and Yichuan Wang and Ningxin Zheng and Lingxiao Ma and Yuqing Yang and Fan Yang and Jilong Xue and Lili Qiu and Lidong Zhou and Quan Chen and Haisheng Tan and Minyi Guo},
+	year         = 2023,
+	booktitle    = {17th {USENIX} Symposium on Operating Systems Design and Implementation, {OSDI}},
+	abbr         = {OSDI},
+	bibtex_show  = {true},
+	html         = {https://www.microsoft.com/en-us/research/publication/optimizing-dynamic-neural-networks-with-brainstorm/}
 }
-
 @inproceedings{DBLP:conf/sosp/ZhengJZHM0YZQYZ23,
-  abbr         = {SOSP},
-  bibtex_show  = {true},
-  author       = {Ningxin Zheng and
-                  Huiqiang Jiang and
-                  Quanlu Zhang and
-                  Zhenhua Han and
-                  Lingxiao Ma and
-                  Yuqing Yang and
-                  Fan Yang and
-                  Chengruidong Zhang and
-                  Lili Qiu and
-                  Mao Yang and
-                  Lidong Zhou},
-  title        = {{PIT:} Optimization of Dynamic Sparse Deep Learning Models via Permutation Invariant Transformation},
-  html         = {https://www.microsoft.com/en-us/research/publication/pit-optimization-of-dynamic-sparse-deep-learning-models-via-permutation-invariant-transformation/},
-  booktitle    = {Proceedings of the 29th Symposium on Operating Systems Principles, {SOSP}},
-  year         = {2023}}
-
-
+	title        = {{PIT:} Optimization of Dynamic Sparse Deep Learning Models via Permutation Invariant Transformation},
+	author       = {Ningxin Zheng and Huiqiang Jiang and Quanlu Zhang and Zhenhua Han and Lingxiao Ma and Yuqing Yang and Fan Yang and Chengruidong Zhang and Lili Qiu and Mao Yang and Lidong Zhou},
+	year         = 2023,
+	booktitle    = {Proceedings of the 29th Symposium on Operating Systems Principles, {SOSP}},
+	abbr         = {SOSP},
+	bibtex_show  = {true},
+	html         = {https://www.microsoft.com/en-us/research/publication/pit-optimization-of-dynamic-sparse-deep-learning-models-via-permutation-invariant-transformation/}
+}
 @inproceedings{DBLP:conf/sosp/XuLLXCZLYYYCY23,
-  abbr         = {SOSP},
-  bibtex_show  = {true},
-  author       = {Yuming Xu and
-                  Hengyu Liang and
-                  Jin Li and
-                  Shuotao Xu and
-                  Qi Chen and
-                  Qianxi Zhang and
-                  Cheng Li and
-                  Ziyue Yang and
-                  Fan Yang and
-                  Yuqing Yang and
-                  Peng Cheng and
-                  Mao Yang},
-  title        = {SPFresh: Incremental In-Place Update for Billion-Scale Vector Search},
-  html         = {https://www.microsoft.com/en-us/research/publication/spfresh-incremental-in-place-update-for-billion-scale-vector-search/},
-  booktitle    = {Proceedings of the 29th Symposium on Operating Systems Principles, {SOSP}},
-  year         = {2023}
+	title        = {SPFresh: Incremental In-Place Update for Billion-Scale Vector Search},
+	author       = {Yuming Xu and Hengyu Liang and Jin Li and Shuotao Xu and Qi Chen and Qianxi Zhang and Cheng Li and Ziyue Yang and Fan Yang and Yuqing Yang and Peng Cheng and Mao Yang},
+	year         = 2023,
+	booktitle    = {Proceedings of the 29th Symposium on Operating Systems Principles, {SOSP}},
+	abbr         = {SOSP},
+	bibtex_show  = {true},
+	html         = {https://www.microsoft.com/en-us/research/publication/spfresh-incremental-in-place-update-for-billion-scale-vector-search/}
 }
-
 @inproceedings{DBLP:conf/eurosys/ZhaoHYZ0YZL0QZZ23,
-  abbr         = {EuroSys},
-  bibtex_show  = {true},
-  author       = {Hanyu Zhao and
-                  Zhenhua Han and
-                  Zhi Yang and
-                  Quanlu Zhang and
-                  Mingxia Li and
-                  Fan Yang and
-                  Qianxi Zhang and
-                  Binyang Li and
-                  Yuqing Yang and
-                  Lili Qiu and
-                  Lintao Zhang and
-                  Lidong Zhou},
-  title        = {SiloD: {A} Co-design of Caching and Scheduling for Deep Learning Clusters},
-  html         = {https://www.microsoft.com/en-us/research/publication/silod-a-co-design-of-caching-and-scheduling-for-deep-learning-clusters/},
-  booktitle    = {Proceedings of the Eighteenth European Conference on Computer Systems, {EuroSys}},
-  year         = {2023}  
+	title        = {SiloD: {A} Co-design of Caching and Scheduling for Deep Learning Clusters},
+	author       = {Hanyu Zhao and Zhenhua Han and Zhi Yang and Quanlu Zhang and Mingxia Li and Fan Yang and Qianxi Zhang and Binyang Li and Yuqing Yang and Lili Qiu and Lintao Zhang and Lidong Zhou},
+	year         = 2023,
+	booktitle    = {Proceedings of the Eighteenth European Conference on Computer Systems, {EuroSys}},
+	abbr         = {EuroSys},
+	bibtex_show  = {true},
+	html         = {https://www.microsoft.com/en-us/research/publication/silod-a-co-design-of-caching-and-scheduling-for-deep-learning-clusters/}
 }
-
 @inproceedings{DBLP:conf/asplos/GuZZXHCYHJL23,
-  abbr         = {ASPLOS},
-  bibtex_show  = {true},
-  author       = {Diandian Gu and
-                  Yihao Zhao and
-                  Yinmin Zhong and
-                  Yifan Xiong and
-                  Zhenhua Han and
-                  Peng Cheng and
-                  Fan Yang and
-                  Gang Huang and
-                  Xin Jin and
-                  Xuanzhe Liu},
-  title        = {ElasticFlow: An Elastic Serverless Training Platform for Distributed Deep Learning},
-  html={https://www.microsoft.com/en-us/research/publication/elasticflow-an-elastic-serverless-training-platform-for-distributed-deep-learning/},
-  booktitle    = {Proceedings of the 28th {ACM} International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 2, {ASPLOS}},
-  year         = {2023}
+	title        = {ElasticFlow: An Elastic Serverless Training Platform for Distributed Deep Learning},
+	author       = {Diandian Gu and Yihao Zhao and Yinmin Zhong and Yifan Xiong and Zhenhua Han and Peng Cheng and Fan Yang and Gang Huang and Xin Jin and Xuanzhe Liu},
+	year         = 2023,
+	booktitle    = {Proceedings of the 28th {ACM} International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 2, {ASPLOS}},
+	abbr         = {ASPLOS},
+	bibtex_show  = {true},
+	html         = {https://www.microsoft.com/en-us/research/publication/elasticflow-an-elastic-serverless-training-platform-for-distributed-deep-learning/}
 }
-
 @inproceedings{DBLP:conf/isca/0003THL00LG023,
-  abbr         = {ISCA},
-  bibtex_show  = {true},
-  author       = {Cong Guo and
-                  Jiaming Tang and
-                  Weiming Hu and
-                  Jingwen Leng and
-                  Chen Zhang and
-                  Fan Yang and
-                  Yunxin Liu and
-                  Minyi Guo and
-                  Yuhao Zhu},
-  title        = {OliVe: Accelerating Large Language Models via Hardware-friendly Outlier-Victim Pair Quantization},
-  html={https://www.microsoft.com/en-us/research/publication/olive-accelerating-large-language-models-via-hardware-friendly-outlier-victim-pair-quantization/},
-  booktitle    = {Proceedings of the 50th Annual International Symposium on Computer Architecture, {ISCA}},
-  year         = {2023}
+	title        = {OliVe: Accelerating Large Language Models via Hardware-friendly Outlier-Victim Pair Quantization},
+	author       = {Cong Guo and Jiaming Tang and Weiming Hu and Jingwen Leng and Chen Zhang and Fan Yang and Yunxin Liu and Minyi Guo and Yuhao Zhu},
+	year         = 2023,
+	booktitle    = {Proceedings of the 50th Annual International Symposium on Computer Architecture, {ISCA}},
+	abbr         = {ISCA},
+	bibtex_show  = {true},
+	html         = {https://www.microsoft.com/en-us/research/publication/olive-accelerating-large-language-models-via-hardware-friendly-outlier-victim-pair-quantization/}
 }
-
 @inproceedings{DBLP:conf/nsdi/LiangFXYLZYZ23,
-  abbr         = {NSDI},
-  bibtex_show  = {true},
-  author       = {Chieh{-}Jan Mike Liang and
-                  Zilin Fang and
-                  Yuqing Xie and
-                  Fan Yang and
-                  Zhao Lucis Li and
-                  Li Lyna Zhang and
-                  Mao Yang and
-                  Lidong Zhou},
-  title        = {On Modular Learning of Distributed Systems for Predicting End-to-End Latency},
-  html={https://www.microsoft.com/en-us/research/publication/on-modular-learning-of-distributed-systems-for-predicting-end-to-end-latency/},
-  booktitle    = {20th {USENIX} Symposium on Networked Systems Design and Implementation, {NSDI}},
-  year         = {2023} 
+	title        = {On Modular Learning of Distributed Systems for Predicting End-to-End Latency},
+	author       = {Chieh{-}Jan Mike Liang and Zilin Fang and Yuqing Xie and Fan Yang and Zhao Lucis Li and Li Lyna Zhang and Mao Yang and Lidong Zhou},
+	year         = 2023,
+	booktitle    = {20th {USENIX} Symposium on Networked Systems Design and Implementation, {NSDI}},
+	abbr         = {NSDI},
+	bibtex_show  = {true},
+	html         = {https://www.microsoft.com/en-us/research/publication/on-modular-learning-of-distributed-systems-for-predicting-end-to-end-latency/}
 }
-
 @inproceedings{NEURIPS2023_ac112e8f,
-  abbr         = {NeurIPS},
-  bibtex_show  = {true},
-  author = {Zhang, Hailin and Wang, Yujing and Chen, Qi and Chang, Ruiheng and Zhang, Ting and Miao, Ziming and Hou, Yingyan and Ding, Yang and Miao, Xupeng and Wang, Haonan and Pang, Bochen and Zhan, Yuefeng and Sun, Hao and Deng, Weiwei and Zhang, Qi and Yang, Fan and Xie, Xing and Yang, Mao and CUI, Bin},
-  booktitle = {Advances in Neural Information Processing Systems, {NeurIPS}},
-  html={https://www.microsoft.com/en-us/research/publication/model-enhanced-vector-index/},
-  title = {Model-enhanced Vector Index},
-  year = {2023}
+	title        = {Model-enhanced Vector Index},
+	author       = {Zhang, Hailin and Wang, Yujing and Chen, Qi and Chang, Ruiheng and Zhang, Ting and Miao, Ziming and Hou, Yingyan and Ding, Yang and Miao, Xupeng and Wang, Haonan and Pang, Bochen and Zhan, Yuefeng and Sun, Hao and Deng, Weiwei and Zhang, Qi and Yang, Fan and Xie, Xing and Yang, Mao and CUI, Bin},
+	year         = 2023,
+	booktitle    = {Advances in Neural Information Processing Systems, {NeurIPS}},
+	abbr         = {NeurIPS},
+	bibtex_show  = {true},
+	html         = {https://www.microsoft.com/en-us/research/publication/model-enhanced-vector-index/}
 }
-
 @inproceedings{MLSYS2023_5616d34c,
-  abbr         = {MLSys},
-  bibtex_show  = {true},
-  author = {Hwang, Changho and Cui, Wei and Xiong, Yifan and Yang, Ziyue and Liu, Ze and Hu, Han and Wang, Zilong and Salas, Rafael and Jose, Jithin and Ram, Prabhat and Chau, HoYuen and Cheng, Peng and Yang, Fan and Yang, Mao and Xiong, Yongqiang},
-  booktitle = {Proceedings of Machine Learning and Systems, {MLSys}},
-  editor = {D. Song and M. Carbin and T. Chen},
-  pages = {269--287},
-  publisher = {Curan},
-  title = {Tutel: Adaptive Mixture-of-Experts at Scale},
-  html = {https://proceedings.mlsys.org/paper_files/paper/2023/file/5616d34cf8ff73942cfd5aa922842556-Paper-mlsys2023.pdf},
-  volume = {5},
-  year = {2023}
+	title        = {Tutel: Adaptive Mixture-of-Experts at Scale},
+	author       = {Hwang, Changho and Cui, Wei and Xiong, Yifan and Yang, Ziyue and Liu, Ze and Hu, Han and Wang, Zilong and Salas, Rafael and Jose, Jithin and Ram, Prabhat and Chau, HoYuen and Cheng, Peng and Yang, Fan and Yang, Mao and Xiong, Yongqiang},
+	year         = 2023,
+	booktitle    = {Proceedings of Machine Learning and Systems, {MLSys}},
+	publisher    = {Curan},
+	volume       = 5,
+	pages        = {269--287},
+	abbr         = {MLSys},
+	bibtex_show  = {true},
+	editor       = {D. Song and M. Carbin and T. Chen},
+	html         = {https://proceedings.mlsys.org/paper_files/paper/2023/file/5616d34cf8ff73942cfd5aa922842556-Paper-mlsys2023.pdf}
 }
-
 @inproceedings{MLSYS2023_a10deb4d,
-  abbr         = {MLSys},
-  bibtex_show  = {true},
- author = {Lin, Bin and Zheng, Ningxin and Wang, Lei and Cao, Shijie and Ma, Lingxiao and Zhang, Quanlu and Zhu, Yi and Cao, Ting and Xue, Jilong and Yang, Yuqing and Yang, Fan},
- booktitle = {Proceedings of Machine Learning and Systems},
- editor = {D. Song and M. Carbin and T. Chen},
- pages = {513--525},
- publisher = {Curan},
- title = {Efficient GPU Kernels for N:M-Sparse Weights in Deep Learning},
- html = {https://proceedings.mlsys.org/paper_files/paper/2023/file/a10deb4d5227a8ea307ea8ff3cb712f4-Paper-mlsys2023.pdf},
- volume = {5},
- year = {2023}
+	title        = {Efficient GPU Kernels for N:M-Sparse Weights in Deep Learning},
+	author       = {Lin, Bin and Zheng, Ningxin and Wang, Lei and Cao, Shijie and Ma, Lingxiao and Zhang, Quanlu and Zhu, Yi and Cao, Ting and Xue, Jilong and Yang, Yuqing and Yang, Fan},
+	year         = 2023,
+	booktitle    = {Proceedings of Machine Learning and Systems},
+	publisher    = {Curan},
+	volume       = 5,
+	pages        = {513--525},
+	abbr         = {MLSys},
+	bibtex_show  = {true},
+	editor       = {D. Song and M. Carbin and T. Chen},
+	html         = {https://proceedings.mlsys.org/paper_files/paper/2023/file/a10deb4d5227a8ea307ea8ff3cb712f4-Paper-mlsys2023.pdf}
 }
-
 @inproceedings{yin2023nuwa-xl,
-  abbr={ACL},
-  bibtex_show  = {true},
-  author = {Yin, Shengming and Wu, Chenfei and Yang, Huan and Wang, Jianfeng and Wang, Xiaodong and Ni, Minheng and Yang, Zhengyuan and Li, Linjie and Liu, Shuguang and Yang, Fan and Fu, Jianlong and Gong (YIMING), Ming and Wang, Lijuan and Liu, Zicheng and Li, Houqiang and Duan, Nan},
-  title = {NUWA-XL: Diffusion over Diffusion for eXtremely Long Video Generation},
-  booktitle = {ACL 2023},
-  year = {2023},
-  month = {July},
-  abstract = {In this paper, we propose NUWA-XL, a novel Diffusion over Diffusion architecture for eXtremely Long video generation. Most current work generates long videos segment by segment sequentially, which normally leads to the gap between training on short videos and inferring long videos, and the sequential generation is inefficient. Instead, our approach adopts a ``coarse-to-fine'' process, in which the video can be generated in parallel at the same granularity. A global diffusion model is applied to generate the keyframes across the entire time range, and then local diffusion models recursively fill in the content between nearby frames. This simple yet effective strategy allows us to directly train on long videos (3376 frames) to reduce the training-inference gap, and makes it possible to generate all segments in parallel. To evaluate our model, we build FlintstonesHD dataset, a new benchmark for long video generation. Experiments show that our model not only generates high-quality long videos with both global and local coherence, but also decreases the average inference time from 7.55min to 26s (by 94.26\%) at the same hardware setting when generating 1024 frames. The homepage link is https://msra-nuwa.azurewebsites.net/#/.},
-  html = {https://www.microsoft.com/en-us/research/publication/nuwa-xl-diffusion-over-diffusion-for-extremely-long-video-generation/},
+	title        = {NUWA-XL: Diffusion over Diffusion for eXtremely Long Video Generation},
+	author       = {Yin, Shengming and Wu, Chenfei and Yang, Huan and Wang, Jianfeng and Wang, Xiaodong and Ni, Minheng and Yang, Zhengyuan and Li, Linjie and Liu, Shuguang and Yang, Fan and Fu, Jianlong and Gong (YIMING), Ming and Wang, Lijuan and Liu, Zicheng and Li, Houqiang and Duan, Nan},
+	year         = 2023,
+	month        = {July},
+	booktitle    = {ACL 2023},
+	abbr         = {ACL},
+	bibtex_show  = {true},
+	abstract     = {In this paper, we propose NUWA-XL, a novel Diffusion over Diffusion architecture for eXtremely Long video generation. Most current work generates long videos segment by segment sequentially, which normally leads to the gap between training on short videos and inferring long videos, and the sequential generation is inefficient. Instead, our approach adopts a ``coarse-to-fine'' process, in which the video can be generated in parallel at the same granularity. A global diffusion model is applied to generate the keyframes across the entire time range, and then local diffusion models recursively fill in the content between nearby frames. This simple yet effective strategy allows us to directly train on long videos (3376 frames) to reduce the training-inference gap, and makes it possible to generate all segments in parallel. To evaluate our model, we build FlintstonesHD dataset, a new benchmark for long video generation. Experiments show that our model not only generates high-quality long videos with both global and local coherence, but also decreases the average inference time from 7.55min to 26s (by 94.26\%) at the same hardware setting when generating 1024 frames. The homepage link is https://msra-nuwa.azurewebsites.net/#/.},
+	html         = {https://www.microsoft.com/en-us/research/publication/nuwa-xl-diffusion-over-diffusion-for-extremely-long-video-generation/}
 }
-
 @inproceedings{10.24963/ijcai.2023/167,
-  abbr={IJCAI},
-  bibtex_show  = {true},  
-  author = {Wang, Xiaodong and Wu, Chenfei and Yin, Shengming and Ni, Minheng and Wang, Jianfeng and Li, Linjie and Yang, Zhengyuan and Yang, Fan and Wang, Lijuan and Liu, Zicheng and Fang, Yuejian and Duan, Nan},
-  title = {Learning 3D photography videos via self-supervised diffusion on single images},
-  year = {2023},
-  isbn = {978-1-956792-03-4},
-  url = {https://doi.org/10.24963/ijcai.2023/167},
-  doi = {10.24963/ijcai.2023/167},
-  abstract = {3D photography renders a static image into a video with appealing 3D visual effects. Existing approaches typically first conduct monocular depth estimation, then render the input frame to subsequent frames with various viewpoints, and finally use an inpainting model to fill those missing/ occluded regions. The inpainting model plays a crucial role in rendering quality, but it is normally trained on out-of-domain data. To reduce the training and inference gap, we propose a novel self-supervised diffusion model as the inpainting module. Given a single input image, we automatically construct a training pair of the masked occluded image and the ground-truth image with random cycle rendering. The constructed training samples are closely aligned to the testing instances, without the need for data annotation. To make full use of the masked images, we designed a Masked Enhanced Block (MEB), which can be easily plugged into the UNet and enhance the semantic conditions. Towards real-world animation, we present a novel task: out-animation, which extends the space and time of input objects. Extensive experiments on real datasets show that our method achieves competitive results with existing SOTA methods.},
-  booktitle = {Proceedings of the Thirty-Second International Joint Conference on Artificial Intelligence},
-  articleno = {167},
-  numpages = {9},
-  location = {Macao, P.R.China},
-  series = {IJCAI '23}
+	title        = {Learning 3D photography videos via self-supervised diffusion on single images},
+	author       = {Wang, Xiaodong and Wu, Chenfei and Yin, Shengming and Ni, Minheng and Wang, Jianfeng and Li, Linjie and Yang, Zhengyuan and Yang, Fan and Wang, Lijuan and Liu, Zicheng and Fang, Yuejian and Duan, Nan},
+	year         = 2023,
+	booktitle    = {Proceedings of the Thirty-Second International Joint Conference on Artificial Intelligence},
+	location     = {Macao, P.R.China},
+	series       = {IJCAI '23},
+	doi          = {10.24963/ijcai.2023/167},
+	isbn         = {978-1-956792-03-4},
+	url          = {https://doi.org/10.24963/ijcai.2023/167},
+	abbr         = {IJCAI},
+	bibtex_show  = {true},
+	abstract     = {3D photography renders a static image into a video with appealing 3D visual effects. Existing approaches typically first conduct monocular depth estimation, then render the input frame to subsequent frames with various viewpoints, and finally use an inpainting model to fill those missing/ occluded regions. The inpainting model plays a crucial role in rendering quality, but it is normally trained on out-of-domain data. To reduce the training and inference gap, we propose a novel self-supervised diffusion model as the inpainting module. Given a single input image, we automatically construct a training pair of the masked occluded image and the ground-truth image with random cycle rendering. The constructed training samples are closely aligned to the testing instances, without the need for data annotation. To make full use of the masked images, we designed a Masked Enhanced Block (MEB), which can be easily plugged into the UNet and enhance the semantic conditions. Towards real-world animation, we present a novel task: out-animation, which extends the space and time of input objects. Extensive experiments on real datasets show that our method achieves competitive results with existing SOTA methods.},
+	articleno    = 167,
+	numpages     = 9
 }
-
 @inproceedings{DBLP:conf/iclr/0003QLGZLY0G22,
-  abbr         = {ICLR},
-  bibtex_show  = {true},
-  author       = {Cong Guo and
-                  Yuxian Qiu and
-                  Jingwen Leng and
-                  Xiaotian Gao and
-                  Chen Zhang and
-                  Yunxin Liu and
-                  Fan Yang and
-                  Yuhao Zhu and
-                  Minyi Guo},
-  title        = {SQuant: On-the-Fly Data-Free Quantization via Diagonal Hessian Approximation},
-  booktitle    = {The Tenth International Conference on Learning Representations, {ICLR}},
-  html={https://www.microsoft.com/en-us/research/publication/squant-on-the-fly-data-free-quantization-via-diagonal-hessian-approximation/},
-  year         = {2022}
+	title        = {SQuant: On-the-Fly Data-Free Quantization via Diagonal Hessian Approximation},
+	author       = {Cong Guo and Yuxian Qiu and Jingwen Leng and Xiaotian Gao and Chen Zhang and Yunxin Liu and Fan Yang and Yuhao Zhu and Minyi Guo},
+	year         = 2022,
+	booktitle    = {The Tenth International Conference on Learning Representations, {ICLR}},
+	abbr         = {ICLR},
+	bibtex_show  = {true},
+	html         = {https://www.microsoft.com/en-us/research/publication/squant-on-the-fly-data-free-quantization-via-diagonal-hessian-approximation/}
 }
-
-@INPROCEEDINGS{9978319,
-  abbr         = {ICCD},
-  bibtex_show  = {true},
-  author={Guo, Cong and Qiu, Yuxian and Leng, Jingwen and Zhang, Chen and Cao, Ying and Zhang, Quanlu and Liu, Yunxin and Yang, Fan and Guo, Minyi},
-  booktitle={2022 IEEE 40th International Conference on Computer Design (ICCD)}, 
-  title={Nesting Forward Automatic Differentiation for Memory-Efficient Deep Neural Network Training}, 
-  year={2022},
-  pages={738-745},
-  html={https://ieeexplore.ieee.org/abstract/document/9978319}
+@inproceedings{9978319,
+	title        = {Nesting Forward Automatic Differentiation for Memory-Efficient Deep Neural Network Training},
+	author       = {Guo, Cong and Qiu, Yuxian and Leng, Jingwen and Zhang, Chen and Cao, Ying and Zhang, Quanlu and Liu, Yunxin and Yang, Fan and Guo, Minyi},
+	year         = 2022,
+	booktitle    = {2022 IEEE 40th International Conference on Computer Design (ICCD)},
+	pages        = {738--745},
+	abbr         = {ICCD},
+	bibtex_show  = {true},
+	html         = {https://ieeexplore.ieee.org/abstract/document/9978319}
 }
-
 @inproceedings{DBLP:conf/micro/00030LL0LG022,
-  abbr         = {MICRO},
-  bibtex_show  = {true},
-  author       = {Cong Guo and
-                  Chen Zhang and
-                  Jingwen Leng and
-                  Zihan Liu and
-                  Fan Yang and
-                  Yunxin Liu and
-                  Minyi Guo and
-                  Yuhao Zhu},
-  title        = {{ANT:} Exploiting Adaptive Numerical Data Type for Low-bit Deep Neural Network Quantization},
-  booktitle    = {55th {IEEE/ACM} International Symposium on Microarchitecture, {MICRO}},
-  html={https://www.microsoft.com/en-us/research/publication/ant-exploiting-adaptive-numerical-data-type-for-low-bit-deep-neural-network-quantization/},
-  award={Highlighted as an IEEE Micro Top Picks Honorable Mention in the [July/August special edition](https://ieeexplore.ieee.org/document/10167515) of IEEE Micro 2023},
-  award_name={IEEE Micro Top Picks 2023 Honorable Mention},
-  year = {2022}
+	title        = {{ANT:} Exploiting Adaptive Numerical Data Type for Low-bit Deep Neural Network Quantization},
+	author       = {Cong Guo and Chen Zhang and Jingwen Leng and Zihan Liu and Fan Yang and Yunxin Liu and Minyi Guo and Yuhao Zhu},
+	year         = 2022,
+	booktitle    = {55th {IEEE/ACM} International Symposium on Microarchitecture, {MICRO}},
+	abbr         = {MICRO},
+	bibtex_show  = {true},
+	html         = {https://www.microsoft.com/en-us/research/publication/ant-exploiting-adaptive-numerical-data-type-for-low-bit-deep-neural-network-quantization/},
+	award        = {Highlighted as an IEEE Micro Top Picks Honorable Mention in the [July/August special edition](https://ieeexplore.ieee.org/document/10167515) of IEEE Micro 2023},
+	award_name   = {IEEE Micro Top Picks 2023 Honorable Mention}
 }
-
 @inproceedings{DBLP:conf/osdi/ZhuWDKLZXMXC0YZ22,
-  abbr         = {OSDI},
-  bibtex_show  = {true},
-  author       = {Hongyu Zhu and
-                  Ruofan Wu and
-                  Yijia Diao and
-                  Shanbin Ke and
-                  Haoyu Li and
-                  Chen Zhang and
-                  Jilong Xue and
-                  Lingxiao Ma and
-                  Yuqing Xia and
-                  Wei Cui and
-                  Fan Yang and
-                  Mao Yang and
-                  Lidong Zhou and
-                  Asaf Cidon and
-                  Gennady Pekhimenko},
-  title        = {{ROLLER:} Fast and Efficient Tensor Compilation for Deep Learning},
-  html={https://www.microsoft.com/en-us/research/publication/roller-fast-and-efficient-tensor-compilation-for-deep-learning/},
-  booktitle    = {16th {USENIX} Symposium on Operating Systems Design and Implementation, {OSDI}},
-  year         = {2022}
+	title        = {{ROLLER:} Fast and Efficient Tensor Compilation for Deep Learning},
+	author       = {Hongyu Zhu and Ruofan Wu and Yijia Diao and Shanbin Ke and Haoyu Li and Chen Zhang and Jilong Xue and Lingxiao Ma and Yuqing Xia and Wei Cui and Fan Yang and Mao Yang and Lidong Zhou and Asaf Cidon and Gennady Pekhimenko},
+	year         = 2022,
+	booktitle    = {16th {USENIX} Symposium on Operating Systems Design and Implementation, {OSDI}},
+	abbr         = {OSDI},
+	bibtex_show  = {true},
+	html         = {https://www.microsoft.com/en-us/research/publication/roller-fast-and-efficient-tensor-compilation-for-deep-learning/}
 }
-
 @inproceedings{DBLP:conf/usenix/0149CH000SYG22,
-  abbr         = {USENIX ATC},
-  bibtex_show  = {true},
-  author       = {Wei Zhang and
-                  Binghao Chen and
-                  Zhenhua Han and
-                  Quan Chen and
-                  Peng Cheng and
-                  Fan Yang and
-                  Ran Shu and
-                  Yuqing Yang and
-                  Minyi Guo},
-
-  title        = {PilotFish: Harvesting Free Cycles of Cloud Gaming with Deep Learning
-                  Training},
-  booktitle    = {2022 {USENIX} Annual Technical Conference, {USENIX} {ATC}},
-  html={https://www.microsoft.com/en-us/research/publication/pilotfish-harvesting-free-cycles-of-cloud-gaming-with-deep-learning-training/},
-  year         = {2022}
+	title        = {PilotFish: Harvesting Free Cycles of Cloud Gaming with Deep Learning Training},
+	author       = {Wei Zhang and Binghao Chen and Zhenhua Han and Quan Chen and Peng Cheng and Fan Yang and Ran Shu and Yuqing Yang and Minyi Guo},
+	year         = 2022,
+	booktitle    = {2022 {USENIX} Annual Technical Conference, {USENIX} {ATC}},
+	abbr         = {USENIX ATC},
+	bibtex_show  = {true},
+	html         = {https://www.microsoft.com/en-us/research/publication/pilotfish-harvesting-free-cycles-of-cloud-gaming-with-deep-learning-training/}
 }
-
 @inproceedings{DBLP:conf/osdi/ZhengLZMY0WYZ22,
-  abbr         = {OSDI},
-  bibtex_show  = {true},
-  author       = {Ningxin Zheng and
-                  Bin Lin and
-                  Quanlu Zhang and
-                  Lingxiao Ma and
-                  Yuqing Yang and
-                  Fan Yang and
-                  Yang Wang and
-                  Mao Yang and
-                  Lidong Zhou},
-  title        = {Spar{TA}: Deep-Learning Model Sparsity via Tensor-with-Sparsity-Attribute},
-  booktitle    = {16th {USENIX} Symposium on Operating Systems Design and Implementation, {OSDI}},  
-  html={https://www.microsoft.com/en-us/research/publication/sparta-deep-learning-model-sparsity-via-tensor-with-sparsity-attribute/},
-  year         = {2022}
+	title        = {Spar{TA}: Deep-Learning Model Sparsity via Tensor-with-Sparsity-Attribute},
+	author       = {Ningxin Zheng and Bin Lin and Quanlu Zhang and Lingxiao Ma and Yuqing Yang and Fan Yang and Yang Wang and Mao Yang and Lidong Zhou},
+	year         = 2022,
+	booktitle    = {16th {USENIX} Symposium on Operating Systems Design and Implementation, {OSDI}},
+	abbr         = {OSDI},
+	bibtex_show  = {true},
+	html         = {https://www.microsoft.com/en-us/research/publication/sparta-deep-learning-model-sparsity-via-tensor-with-sparsity-attribute/}
 }
-
 @inproceedings{10.1145/3477495.3531799,
-  abbr         = {SIGIR},
-  bibtex_show  = {true}, 
-  author = {Xiao, Shitao and Liu, Zheng and Han, Weihao and Zhang, Jianjin and Lian, Defu and Gong, Yeyun and Chen, Qi and Yang, Fan and Sun, Hao and Shao, Yingxia and Xie, Xing},
-  title = {Distill-VQ: Learning Retrieval Oriented Vector Quantization By Distilling Knowledge from Dense Embeddings},
-  year = {2022},
-  isbn = {9781450387323},
-  publisher = {Association for Computing Machinery},
-  address = {New York, NY, USA},
-  html = {https://doi.org/10.1145/3477495.3531799},
-  doi = {10.1145/3477495.3531799},
-  abstract = {Vector quantization (VQ) based ANN indexes, such as Inverted File System (IVF) and Product Quantization (PQ), have been widely applied to embedding based document retrieval thanks to the competitive time and memory efficiency. Originally, VQ is learned to minimize the reconstruction loss, i.e., the distortions between the original dense embeddings and the reconstructed embeddings after quantization. Unfortunately, such an objective is inconsistent with the goal of selecting ground-truth documents for the input query, which may cause severe loss of retrieval quality. Recent works identify such a defect, and propose to minimize the retrieval loss through contrastive learning. However, these methods intensively rely on queries with ground-truth documents, whose performance is limited by the insufficiency of labeled data. In this paper, we propose Distill-VQ, which unifies the learning of IVF and PQ within a knowledge distillation framework. In Distill-VQ, the dense embeddings are leveraged as "teachers'', which predict the query's relevance to the sampled documents. The VQ modules are treated as the "students'', which are learned to reproduce the predicted relevance, such that the reconstructed embeddings may fully preserve the retrieval result of the dense embeddings. By doing so, Distill-VQ is able to derive substantial training signals from the massive unlabeled data, which significantly contributes to the retrieval quality. We perform comprehensive explorations for the optimal conduct of knowledge distillation, which may provide useful insights for the learning of VQ based ANN index. We also experimentally show that the labeled data is no longer a necessity for high-quality vector quantization, which indicates Distill-VQ's strong applicability in practice. The evaluations are performed on MS MARCO and Natural Questions benchmarks, where Distill-VQ notably outperforms the SOTA VQ methods in Recall and MRR. Our code is avaliable at https://github.com/staoxiao/LibVQ.},
-  booktitle = {Proceedings of the 45th International ACM SIGIR Conference on Research and Development in Information Retrieval},
-  pages = {1513–1523},
-  numpages = {11},
-  keywords = {approximate nearest neighbour search, embedding based retrieval, knowledge distillation, vector quantization},
-  location = {Madrid, Spain},
-  series = {SIGIR '22}
+	title        = {Distill-VQ: Learning Retrieval Oriented Vector Quantization By Distilling Knowledge from Dense Embeddings},
+	author       = {Xiao, Shitao and Liu, Zheng and Han, Weihao and Zhang, Jianjin and Lian, Defu and Gong, Yeyun and Chen, Qi and Yang, Fan and Sun, Hao and Shao, Yingxia and Xie, Xing},
+	year         = 2022,
+	booktitle    = {Proceedings of the 45th International ACM SIGIR Conference on Research and Development in Information Retrieval},
+	location     = {Madrid, Spain},
+	publisher    = {Association for Computing Machinery},
+	address      = {New York, NY, USA},
+	series       = {SIGIR '22},
+	pages        = {1513–1523},
+	doi          = {10.1145/3477495.3531799},
+	isbn         = 9781450387323,
+	abbr         = {SIGIR},
+	bibtex_show  = {true},
+	html         = {https://doi.org/10.1145/3477495.3531799},
+	abstract     = {Vector quantization (VQ) based ANN indexes, such as Inverted File System (IVF) and Product Quantization (PQ), have been widely applied to embedding based document retrieval thanks to the competitive time and memory efficiency. Originally, VQ is learned to minimize the reconstruction loss, i.e., the distortions between the original dense embeddings and the reconstructed embeddings after quantization. Unfortunately, such an objective is inconsistent with the goal of selecting ground-truth documents for the input query, which may cause severe loss of retrieval quality. Recent works identify such a defect, and propose to minimize the retrieval loss through contrastive learning. However, these methods intensively rely on queries with ground-truth documents, whose performance is limited by the insufficiency of labeled data. In this paper, we propose Distill-VQ, which unifies the learning of IVF and PQ within a knowledge distillation framework. In Distill-VQ, the dense embeddings are leveraged as "teachers'', which predict the query's relevance to the sampled documents. The VQ modules are treated as the "students'', which are learned to reproduce the predicted relevance, such that the reconstructed embeddings may fully preserve the retrieval result of the dense embeddings. By doing so, Distill-VQ is able to derive substantial training signals from the massive unlabeled data, which significantly contributes to the retrieval quality. We perform comprehensive explorations for the optimal conduct of knowledge distillation, which may provide useful insights for the learning of VQ based ANN index. We also experimentally show that the labeled data is no longer a necessity for high-quality vector quantization, which indicates Distill-VQ's strong applicability in practice. The evaluations are performed on MS MARCO and Natural Questions benchmarks, where Distill-VQ notably outperforms the SOTA VQ methods in Recall and MRR. Our code is avaliable at https://github.com/staoxiao/LibVQ.},
+	numpages     = 11,
+	keywords     = {approximate nearest neighbour search, embedding based retrieval, knowledge distillation, vector quantization}
 }
-
-@InProceedings{10.1007/978-3-031-19787-1_41,
-  abbr         = {ECCV},
-  bibtex_show  = {true},
-  author="Wu, Chenfei
-  and Liang, Jian
-  and Ji, Lei
-  and Yang, Fan
-  and Fang, Yuejian
-  and Jiang, Daxin
-  and Duan, Nan",
-  editor="Avidan, Shai
-  and Brostow, Gabriel
-  and Ciss{\'e}, Moustapha
-  and Farinella, Giovanni Maria
-  and Hassner, Tal",
-  title="N{\"U}WA: Visual Synthesis Pre-training for Neural visUal World creAtion",
-  booktitle="Computer Vision -- ECCV 2022",
-  year="2022",
-  publisher="Springer Nature Switzerland",
-  address="Cham",
-  pages="720--736",
-  html={https://arxiv.org/abs/2111.12417},
-  award={Selected as an ECCV Oral presentation. Only 158 papers (2.7% of submitted papers) were selected for oral presentation.},
-  award_name={Oral},
-  abstract="This paper presents a unified multimodal pre-trained model called N{\"U}WA that can generate new or manipulate existing visual data (i.e., images and videos) for various visual synthesis tasks. To cover language, image, and video at the same time for different scenarios, a 3D transformer encoder-decoder framework is designed, which can not only deal with videos as 3D data but also adapt to texts and images as 1D and 2D data, respectively. A 3D Nearby Attention (3DNA) mechanism is also proposed to consider the nature of the visual data and reduce the computational complexity. We evaluate N{\"U}WA on 8 downstream tasks. Compared to several strong baselines, N{\"U}WA achieves state-of-the-art results on text-to-image generation, text-to-video generation, video prediction, etc. Furthermore, it also shows surprisingly good zero-shot capabilities on text-guided image and video manipulation tasks.",
-  isbn="978-3-031-19787-1"
+@inproceedings{10.1007/978-3-031-19787-1_41,
+	title        = {N{\"U}WA: Visual Synthesis Pre-training for Neural visUal World creAtion},
+	author       = {Wu, Chenfei and Liang, Jian and Ji, Lei and Yang, Fan and Fang, Yuejian and Jiang, Daxin and Duan, Nan},
+	year         = 2022,
+	booktitle    = {Computer Vision -- ECCV 2022},
+	publisher    = {Springer Nature Switzerland},
+	address      = {Cham},
+	pages        = {720--736},
+	isbn         = {978-3-031-19787-1},
+	abbr         = {ECCV},
+	bibtex_show  = {true},
+	editor       = {Avidan, Shai and Brostow, Gabriel and Ciss{\'e}, Moustapha and Farinella, Giovanni Maria and Hassner, Tal},
+	html         = {https://arxiv.org/abs/2111.12417},
+	award        = {Selected as an ECCV Oral presentation. Only 158 papers (2.7% of submitted papers) were selected for oral presentation.},
+	award_name   = {Oral},
+	abstract     = {This paper presents a unified multimodal pre-trained model called N{\"U}WA that can generate new or manipulate existing visual data (i.e., images and videos) for various visual synthesis tasks. To cover language, image, and video at the same time for different scenarios, a 3D transformer encoder-decoder framework is designed, which can not only deal with videos as 3D data but also adapt to texts and images as 1D and 2D data, respectively. A 3D Nearby Attention (3DNA) mechanism is also proposed to consider the nature of the visual data and reduce the computational complexity. We evaluate N{\"U}WA on 8 downstream tasks. Compared to several strong baselines, N{\"U}WA achieves state-of-the-art results on text-to-image generation, text-to-video generation, video prediction, etc. Furthermore, it also shows surprisingly good zero-shot capabilities on text-guided image and video manipulation tasks.}
 }
-
 @article{wu2021godivageneratingopendomainvideos,
-      abbr         = {ArXiv},
-      bibtex_show  = {true},
-      title={GODIVA: Generating Open-DomaIn Videos from nAtural Descriptions}, 
-      author={Chenfei Wu and Lun Huang and Qianxi Zhang and Binyang Li and Lei Ji and Fan Yang and Guillermo Sapiro and Nan Duan},
-      year={2021},      
-      journal={arXiv},      
-      html={https://arxiv.org/abs/2104.14806} 
+	title        = {GODIVA: Generating Open-DomaIn Videos from nAtural Descriptions},
+	author       = {Chenfei Wu and Lun Huang and Qianxi Zhang and Binyang Li and Lei Ji and Fan Yang and Guillermo Sapiro and Nan Duan},
+	year         = 2021,
+	journal      = {arXiv},
+	abbr         = {ArXiv},
+	bibtex_show  = {true},
+	html         = {https://arxiv.org/abs/2104.14806}
 }
-
 @inproceedings{liang-etal-2020-xglue,
-      abbr ={EMNLP},
-      bibtex_show  = {true},
-      title = "{XGLUE}: A New Benchmark Dataset for Cross-lingual Pre-training, Understanding and Generation",
-      author = "Liang, Yaobo  and
-      Duan, Nan  and
-      Gong, Yeyun  and
-      Wu, Ning  and
-      Guo, Fenfei  and
-      Qi, Weizhen  and
-      Gong, Ming  and
-      Shou, Linjun  and
-      Jiang, Daxin  and
-      Cao, Guihong  and
-      Fan, Xiaodong  and
-      Zhang, Ruofei  and
-      Agrawal, Rahul  and
-      Cui, Edward  and
-      Wei, Sining  and
-      Bharti, Taroon  and
-      Qiao, Ying  and
-      Chen, Jiun-Hung  and
-      Wu, Winnie  and
-      Liu, Shuguang  and
-      Yang, Fan  and
-      Campos, Daniel  and
-      Majumder, Rangan  and
-      Zhou, Ming",
-    editor = "Webber, Bonnie  and
-      Cohn, Trevor  and
-      He, Yulan  and
-      Liu, Yang",
-    booktitle = "Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)",
-    month = nov,
-    year = "2020",
-    address = "Online",
-    publisher = "Association for Computational Linguistics",
-    html = "https://aclanthology.org/2020.emnlp-main.484",
-    doi = "10.18653/v1/2020.emnlp-main.484",
-    pages = "6008--6018",
-    abstract = "In this paper, we introduce XGLUE, a new benchmark dataset to train large-scale cross-lingual pre-trained models using multilingual and bilingual corpora, and evaluate their performance across a diverse set of cross-lingual tasks. Comparing to GLUE (Wang et al.,2019), which is labeled in English and includes natural language understanding tasks only, XGLUE has three main advantages: (1) it provides two corpora with different sizes for cross-lingual pre-training; (2) it provides 11 diversified tasks that cover both natural language understanding and generation scenarios; (3) for each task, it provides labeled data in multiple languages. We extend a recent cross-lingual pre-trained model Unicoder (Huang et al., 2019) to cover both understanding and generation tasks, which is evaluated on XGLUE as a strong baseline. We also evaluate the base versions (12-layer) of Multilingual BERT, XLM and XLM-R for comparison.",
+	title        = {{XGLUE}: A New Benchmark Dataset for Cross-lingual Pre-training, Understanding and Generation},
+	author       = {Liang, Yaobo  and Duan, Nan  and Gong, Yeyun  and Wu, Ning  and Guo, Fenfei  and Qi, Weizhen  and Gong, Ming  and Shou, Linjun  and Jiang, Daxin  and Cao, Guihong  and Fan, Xiaodong  and Zhang, Ruofei  and Agrawal, Rahul  and Cui, Edward  and Wei, Sining  and Bharti, Taroon  and Qiao, Ying  and Chen, Jiun-Hung  and Wu, Winnie  and Liu, Shuguang  and Yang, Fan  and Campos, Daniel  and Majumder, Rangan  and Zhou, Ming},
+	year         = 2020,
+	month        = nov,
+	booktitle    = {Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+	publisher    = {Association for Computational Linguistics},
+	address      = {Online},
+	pages        = {6008--6018},
+	doi          = {10.18653/v1/2020.emnlp-main.484},
+	abbr         = {EMNLP},
+	bibtex_show  = {true},
+	editor       = {Webber, Bonnie  and Cohn, Trevor  and He, Yulan  and Liu, Yang},
+	html         = {https://aclanthology.org/2020.emnlp-main.484},
+	abstract     = {In this paper, we introduce XGLUE, a new benchmark dataset to train large-scale cross-lingual pre-trained models using multilingual and bilingual corpora, and evaluate their performance across a diverse set of cross-lingual tasks. Comparing to GLUE (Wang et al.,2019), which is labeled in English and includes natural language understanding tasks only, XGLUE has three main advantages: (1) it provides two corpora with different sizes for cross-lingual pre-training; (2) it provides 11 diversified tasks that cover both natural language understanding and generation scenarios; (3) for each task, it provides labeled data in multiple languages. We extend a recent cross-lingual pre-trained model Unicoder (Huang et al., 2019) to cover both understanding and generation tasks, which is evaluated on XGLUE as a strong baseline. We also evaluate the base versions (12-layer) of Multilingual BERT, XLM and XLM-R for comparison.}
 }
-
 @inproceedings{DBLP:conf/asplos/PengSD0MXYQ20,
-  abbr         = {ASPLOS},
-  bibtex_show  = {true},
-  author       = {Xuan Peng and
-                  Xuanhua Shi and
-                  Hulin Dai and
-                  Hai Jin and
-                  Weiliang Ma and
-                  Qian Xiong and
-                  Fan Yang and
-                  Xuehai Qian},
-  title        = {Capuchin: Tensor-based {GPU} Memory Management for Deep Learning},
-  booktitle    = {{ASPLOS} '20: Architectural Support for Programming Languages and Operating Systems, {ASPLOS}},
-  html={https://www.microsoft.com/en-us/research/publication/capuchin-tensor-based-gpu-memory-management-for-deep-learning/},
-  year         = {2020}
+	title        = {Capuchin: Tensor-based {GPU} Memory Management for Deep Learning},
+	author       = {Xuan Peng and Xuanhua Shi and Hulin Dai and Hai Jin and Weiliang Ma and Qian Xiong and Fan Yang and Xuehai Qian},
+	year         = 2020,
+	booktitle    = {{ASPLOS} '20: Architectural Support for Programming Languages and Operating Systems, {ASPLOS}},
+	abbr         = {ASPLOS},
+	bibtex_show  = {true},
+	html         = {https://www.microsoft.com/en-us/research/publication/capuchin-tensor-based-gpu-memory-management-for-deep-learning/}
 }
-
 @inproceedings{DBLP:conf/osdi/ZhaoHYZYZYLWXW20,
-  abbr         = {OSDI},
-  bibtex_show  = {true},
-  author       = {Hanyu Zhao and
-                  Zhenhua Han and
-                  Zhi Yang and
-                  Quanlu Zhang and
-                  Fan Yang and
-                  Lidong Zhou and
-                  Mao Yang and
-                  Francis C. M. Lau and
-                  Yuqi Wang and
-                  Yifan Xiong and
-                  Bin Wang},
-  title        = {Hive{D}: Sharing a {GPU} Cluster for Deep Learning with Guarantees},
-  booktitle    = {14th {USENIX} Symposium on Operating Systems Design and Implementation, {OSDI}},
-  html={https://www.microsoft.com/en-us/research/publication/hived-sharing-a-gpu-cluster-for-deep-learning-with-guarantees/},
-  year         = {2020}
+	title        = {Hive{D}: Sharing a {GPU} Cluster for Deep Learning with Guarantees},
+	author       = {Hanyu Zhao and Zhenhua Han and Zhi Yang and Quanlu Zhang and Fan Yang and Lidong Zhou and Mao Yang and Francis C. M. Lau and Yuqi Wang and Yifan Xiong and Bin Wang},
+	year         = 2020,
+	booktitle    = {14th {USENIX} Symposium on Operating Systems Design and Implementation, {OSDI}},
+	abbr         = {OSDI},
+	bibtex_show  = {true},
+	html         = {https://www.microsoft.com/en-us/research/publication/hived-sharing-a-gpu-cluster-for-deep-learning-with-guarantees/}
 }
-
 @inproceedings{DBLP:conf/osdi/MaXYXMCHYZZ20,
-  abbr         = {OSDI},
-  bibtex_show  = {true},
-  author       = {Lingxiao Ma and
-                  Zhiqiang Xie and
-                  Zhi Yang and
-                  Jilong Xue and
-                  Youshan Miao and
-                  Wei Cui and
-                  Wenxiang Hu and
-                  Fan Yang and
-                  Lintao Zhang and
-                  Lidong Zhou},
-  title        = {Rammer: Enabling Holistic Deep Learning Compiler Optimizations with rTasks},
-  booktitle    = {14th {USENIX} Symposium on Operating Systems Design and Implementation, {OSDI}},
-  html={https://www.microsoft.com/en-us/research/publication/rammer-enabling-holistic-deep-learning-compiler-optimizations-with-rtasks/},
-  year         = {2020} 
+	title        = {Rammer: Enabling Holistic Deep Learning Compiler Optimizations with rTasks},
+	author       = {Lingxiao Ma and Zhiqiang Xie and Zhi Yang and Jilong Xue and Youshan Miao and Wei Cui and Wenxiang Hu and Fan Yang and Lintao Zhang and Lidong Zhou},
+	year         = 2020,
+	booktitle    = {14th {USENIX} Symposium on Operating Systems Design and Implementation, {OSDI}},
+	abbr         = {OSDI},
+	bibtex_show  = {true},
+	html         = {https://www.microsoft.com/en-us/research/publication/rammer-enabling-holistic-deep-learning-compiler-optimizations-with-rtasks/}
 }
-
 @inproceedings{DBLP:conf/osdi/ZhangHYZLYZ20,
-  abbr         = {OSDI},
-  bibtex_show  = {true},
-  author       = {Quanlu Zhang and
-                  Zhenhua Han and
-                  Fan Yang and
-                  Yuge Zhang and
-                  Zhe Liu and
-                  Mao Yang and
-                  Lidong Zhou},
-  title        = {Retiarii: {A} Deep Learning Exploratory-Training Framework},
-  booktitle    = {14th {USENIX} Symposium on Operating Systems Design and Implementation, {OSDI}},
-  html={https://www.microsoft.com/en-us/research/publication/retiarii-a-deep-learning-exploratory-training-framework/},
-  year         = {2020}
+	title        = {Retiarii: {A} Deep Learning Exploratory-Training Framework},
+	author       = {Quanlu Zhang and Zhenhua Han and Fan Yang and Yuge Zhang and Zhe Liu and Mao Yang and Lidong Zhou},
+	year         = 2020,
+	booktitle    = {14th {USENIX} Symposium on Operating Systems Design and Implementation, {OSDI}},
+	abbr         = {OSDI},
+	bibtex_show  = {true},
+	html         = {https://www.microsoft.com/en-us/research/publication/retiarii-a-deep-learning-exploratory-training-framework/}
 }
-
 @inproceedings{DBLP:conf/usenix/JeonVPQXY19,
-  abbr         = {USENIX ATC},
-  bibtex_show  = {true},
-  author       = {Myeongjae Jeon and
-                  Shivaram Venkataraman and
-                  Amar Phanishayee and
-                  Junjie Qian and
-                  Wencong Xiao and
-                  Fan Yang},
-  title        = {Analysis of Large-Scale Multi-Tenant {GPU} Clusters for {DNN} Training
-                  Workloads},
-  booktitle    = {2019 {USENIX} Annual Technical Conference, {USENIX} {ATC}},
-  html         = {https://dl.acm.org/doi/10.5555/3358807.3358888},
-  year         = {2019} 
+	title        = {Analysis of Large-Scale Multi-Tenant {GPU} Clusters for {DNN} Training Workloads},
+	author       = {Myeongjae Jeon and Shivaram Venkataraman and Amar Phanishayee and Junjie Qian and Wencong Xiao and Fan Yang},
+	year         = 2019,
+	booktitle    = {2019 {USENIX} Annual Technical Conference, {USENIX} {ATC}},
+	abbr         = {USENIX ATC},
+	bibtex_show  = {true},
+	html         = {https://dl.acm.org/doi/10.5555/3358807.3358888}
 }
-
 @inproceedings{DBLP:conf/osdi/XiaoBRSKHPPZZYZ18,
-  abbr         = {OSDI},
-  bibtex_show  = {true},
-  author       = {Wencong Xiao and
-                  Romil Bhardwaj and
-                  Ramachandran Ramjee and
-                  Muthian Sivathanu and
-                  Nipun Kwatra and
-                  Zhenhua Han and
-                  Pratyush Patel and
-                  Xuan Peng and
-                  Hanyu Zhao and
-                  Quanlu Zhang and
-                  Fan Yang and
-                  Lidong Zhou},
-  title        = {Gandiva: Introspective Cluster Scheduling for Deep Learning},
-  booktitle    = {13th {USENIX} Symposium on Operating Systems Design and Implementation, {OSDI}},
-  html         = {https://www.usenix.org/conference/osdi18/presentation/xiao},
-  year         = {2018}
+	title        = {Gandiva: Introspective Cluster Scheduling for Deep Learning},
+	author       = {Wencong Xiao and Romil Bhardwaj and Ramachandran Ramjee and Muthian Sivathanu and Nipun Kwatra and Zhenhua Han and Pratyush Patel and Xuan Peng and Hanyu Zhao and Quanlu Zhang and Fan Yang and Lidong Zhou},
+	year         = 2018,
+	booktitle    = {13th {USENIX} Symposium on Operating Systems Design and Implementation, {OSDI}},
+	abbr         = {OSDI},
+	bibtex_show  = {true},
+	html         = {https://www.usenix.org/conference/osdi18/presentation/xiao}
 }
-
 @inproceedings{10.1145/3267809.3275445,
-abbr         = {Poster},
-bibtex_show  = {true},
-author = {Xiao, Wencong and Han, Zhenhua and Zhao, Hanyu and Peng, Xuan and Zhang, Quanlu and Yang, Fan and Zhou, Lidong},
-title = {Scheduling CPU for GPU-based Deep Learning Jobs},
-year = {2018},
-isbn = {9781450360111},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-url = {https://doi.org/10.1145/3267809.3275445},
-doi = {10.1145/3267809.3275445},
-booktitle = {Proceedings of the ACM Symposium on Cloud Computing (SoCC) Poster},
-pages = {503},
-numpages = {1},
-keywords = {resource scheduling, deep learning, CPU},
-location = {Carlsbad, CA, USA},
-series = {SoCC '18}
+	title        = {Scheduling CPU for GPU-based Deep Learning Jobs},
+	author       = {Xiao, Wencong and Han, Zhenhua and Zhao, Hanyu and Peng, Xuan and Zhang, Quanlu and Yang, Fan and Zhou, Lidong},
+	year         = 2018,
+	booktitle    = {Proceedings of the ACM Symposium on Cloud Computing (SoCC) Poster},
+	location     = {Carlsbad, CA, USA},
+	publisher    = {Association for Computing Machinery},
+	address      = {New York, NY, USA},
+	series       = {SoCC '18},
+	pages        = 503,
+	doi          = {10.1145/3267809.3275445},
+	isbn         = 9781450360111,
+	url          = {https://doi.org/10.1145/3267809.3275445},
+	abbr         = {Poster},
+	bibtex_show  = {true},
+	numpages     = 1,
+	keywords     = {resource scheduling, deep learning, CPU}
 }
-
 @inproceedings{10.1145/2806777.2806849,
-abbr         = {SoCC},
-bibtex_show  = {true},
-author = {Wu, Ming and Yang, Fan and Xue, Jilong and Xiao, Wencong and Miao, Youshan and Wei, Lan and Lin, Haoxiang and Dai, Yafei and Zhou, Lidong},
-title = {GraM: scaling graph computation to the trillions},
-year = {2015},
-isbn = {9781450336512},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-html = {https://doi.org/10.1145/2806777.2806849},
-doi = {10.1145/2806777.2806849},
-abstract = {GraM is an efficient and scalable graph engine for a large class of widely used graph algorithms. It is designed to scale up to multicores on a single server, as well as scale out to multiple servers in a cluster, offering significant, often over an order-of-magnitude, improvement over existing distributed graph engines on evaluated graph algorithms. GraM is also capable of processing graphs that are significantly larger than previously reported. In particular, using 64 servers (1,024 physical cores), it performs a PageRank iteration in 140 seconds on a synthetic graph with over one trillion edges, setting a new milestone for graph engines.GraM's efficiency and scalability comes from a judicious architectural design that exploits the benefits of multi-core and RDMA. GraM uses a simple message-passing based scaling architecture for both scaling up and scaling out to expose inherent parallelism. It further benefits from a specially designed multi-core aware RDMA-based communication stack that preserves parallelism in a balanced way and allows overlapping of communication and computation. A high degree of parallelism often comes at the cost of lower efficiency due to resource fragmentation. GraM is equipped with an adaptive mechanism that evaluates the cost and benefit of parallelism to decide the appropriate configuration. Combined, these mechanisms allow GraM to scale up and out with high efficiency.},
-booktitle = {Proceedings of the Sixth ACM Symposium on Cloud Computing, {SoCC}},
-pages = {408–421},
-numpages = {14},
-keywords = {RDMA, graph computation engine, scalability},
-location = {Kohala Coast, Hawaii},
-series = {SoCC '15}
+	title        = {GraM: scaling graph computation to the trillions},
+	author       = {Wu, Ming and Yang, Fan and Xue, Jilong and Xiao, Wencong and Miao, Youshan and Wei, Lan and Lin, Haoxiang and Dai, Yafei and Zhou, Lidong},
+	year         = 2015,
+	booktitle    = {Proceedings of the Sixth ACM Symposium on Cloud Computing, {SoCC}},
+	location     = {Kohala Coast, Hawaii},
+	publisher    = {Association for Computing Machinery},
+	address      = {New York, NY, USA},
+	series       = {SoCC '15},
+	pages        = {408–421},
+	doi          = {10.1145/2806777.2806849},
+	isbn         = 9781450336512,
+	abbr         = {SoCC},
+	bibtex_show  = {true},
+	html         = {https://doi.org/10.1145/2806777.2806849},
+	abstract     = {GraM is an efficient and scalable graph engine for a large class of widely used graph algorithms. It is designed to scale up to multicores on a single server, as well as scale out to multiple servers in a cluster, offering significant, often over an order-of-magnitude, improvement over existing distributed graph engines on evaluated graph algorithms. GraM is also capable of processing graphs that are significantly larger than previously reported. In particular, using 64 servers (1,024 physical cores), it performs a PageRank iteration in 140 seconds on a synthetic graph with over one trillion edges, setting a new milestone for graph engines.GraM's efficiency and scalability comes from a judicious architectural design that exploits the benefits of multi-core and RDMA. GraM uses a simple message-passing based scaling architecture for both scaling up and scaling out to expose inherent parallelism. It further benefits from a specially designed multi-core aware RDMA-based communication stack that preserves parallelism in a balanced way and allows overlapping of communication and computation. A high degree of parallelism often comes at the cost of lower efficiency due to resource fragmentation. GraM is equipped with an adaptive mechanism that evaluates the cost and benefit of parallelism to decide the appropriate configuration. Combined, these mechanisms allow GraM to scale up and out with high efficiency.},
+	numpages     = 14,
+	keywords     = {RDMA, graph computation engine, scalability}
 }
-
 @article{10.1145/2700302,
-abbr         = {ToS},
-bibtex_show  = {true},
-author = {Miao, Youshan and Han, Wentao and Li, Kaiwei and Wu, Ming and Yang, Fan and Zhou, Lidong and Prabhakaran, Vijayan and Chen, Enhong and Chen, Wenguang},
-title = {ImmortalGraph: A System for Storage and Analysis of Temporal Graphs},
-year = {2015},
-issue_date = {July 2015},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-volume = {11},
-number = {3},
-issn = {1553-3077},
-html = {https://doi.org/10.1145/2700302},
-doi = {10.1145/2700302},
-abstract = {Temporal graphs that capture graph changes over time are attracting increasing interest from research communities, for functions such as understanding temporal characteristics of social interactions on a time-evolving social graph. ImmortalGraph is a storage and execution engine designed and optimized specifically for temporal graphs. Locality is at the center of ImmortalGraph’s design: temporal graphs are carefully laid out in both persistent storage and memory, taking into account data locality in both time and graph-structure dimensions. ImmortalGraph introduces the notion of locality-aware batch scheduling in computation, so that common “bulk” operations on temporal graphs are scheduled to maximize the benefit of in-memory data locality. The design of ImmortalGraph explores an interesting interplay among locality, parallelism, and incremental computation in supporting common mining tasks on temporal graphs. The result is a high-performance temporal-graph system that is up to 5 times more efficient than existing database solutions for graph queries. The locality optimizations in ImmortalGraph offer up to an order of magnitude speedup for temporal iterative graph mining compared to a straightforward application of existing graph engines on a series of snapshots.},
-journal = {ACM Trans. Storage},
-month = {jul},
-articleno = {14},
-numpages = {34},
-keywords = {temporal graph, graph algorithms, Concurrent computing}
+	title        = {ImmortalGraph: A System for Storage and Analysis of Temporal Graphs},
+	author       = {Miao, Youshan and Han, Wentao and Li, Kaiwei and Wu, Ming and Yang, Fan and Zhou, Lidong and Prabhakaran, Vijayan and Chen, Enhong and Chen, Wenguang},
+	year         = 2015,
+	month        = {jul},
+	journal      = {ACM Trans. Storage},
+	publisher    = {Association for Computing Machinery},
+	address      = {New York, NY, USA},
+	volume       = 11,
+	number       = 3,
+	doi          = {10.1145/2700302},
+	issn         = {1553-3077},
+	abbr         = {ToS},
+	bibtex_show  = {true},
+	issue_date   = {July 2015},
+	html         = {https://doi.org/10.1145/2700302},
+	abstract     = {Temporal graphs that capture graph changes over time are attracting increasing interest from research communities, for functions such as understanding temporal characteristics of social interactions on a time-evolving social graph. ImmortalGraph is a storage and execution engine designed and optimized specifically for temporal graphs. Locality is at the center of ImmortalGraph’s design: temporal graphs are carefully laid out in both persistent storage and memory, taking into account data locality in both time and graph-structure dimensions. ImmortalGraph introduces the notion of locality-aware batch scheduling in computation, so that common “bulk” operations on temporal graphs are scheduled to maximize the benefit of in-memory data locality. The design of ImmortalGraph explores an interesting interplay among locality, parallelism, and incremental computation in supporting common mining tasks on temporal graphs. The result is a high-performance temporal-graph system that is up to 5 times more efficient than existing database solutions for graph queries. The locality optimizations in ImmortalGraph offer up to an order of magnitude speedup for temporal iterative graph mining compared to a straightforward application of existing graph engines on a series of snapshots.},
+	articleno    = 14,
+	numpages     = 34,
+	keywords     = {temporal graph, graph algorithms, Concurrent computing}
 }
-
 @inproceedings{10.1145/2592798.2592799,
-abbr         = {EuroSys},
-bibtex_show  = {true},
-author = {Han, Wentao and Miao, Youshan and Li, Kaiwei and Wu, Ming and Yang, Fan and Zhou, Lidong and Prabhakaran, Vijayan and Chen, Wenguang and Chen, Enhong},
-title = {Chronos: a graph engine for temporal graph analysis},
-year = {2014},
-isbn = {9781450327046},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-html = {https://doi.org/10.1145/2592798.2592799},
-doi = {10.1145/2592798.2592799},
-abstract = {Temporal graphs capture changes in graphs over time and are becoming a subject that attracts increasing interest from the research communities, for example, to understand temporal characteristics of social interactions on a time-evolving social graph. Chronos is a storage and execution engine designed and optimized specifically for running in-memory iterative graph computation on temporal graphs. Locality is at the center of the Chronos design, where the in-memory layout of temporal graphs and the scheduling of the iterative computation on temporal graphs are carefully designed, so that common "bulk" operations on temporal graphs are scheduled to maximize the benefit of in-memory data locality. The design of Chronos further explores the interesting interplay among locality, parallelism, and incremental computation in supporting common mining tasks on temporal graphs. The result is a high-performance temporal-graph system that offers up to an order of magnitude speedup for temporal iterative graph mining compared to a straightforward application of existing graph engines on a series of snapshots.},
-booktitle = {Proceedings of the Ninth European Conference on Computer Systems},
-articleno = {1},
-numpages = {14},
-location = {Amsterdam, The Netherlands},
-series = {EuroSys '14}
+	title        = {Chronos: a graph engine for temporal graph analysis},
+	author       = {Han, Wentao and Miao, Youshan and Li, Kaiwei and Wu, Ming and Yang, Fan and Zhou, Lidong and Prabhakaran, Vijayan and Chen, Wenguang and Chen, Enhong},
+	year         = 2014,
+	booktitle    = {Proceedings of the Ninth European Conference on Computer Systems},
+	location     = {Amsterdam, The Netherlands},
+	publisher    = {Association for Computing Machinery},
+	address      = {New York, NY, USA},
+	series       = {EuroSys '14},
+	doi          = {10.1145/2592798.2592799},
+	isbn         = 9781450327046,
+	abbr         = {EuroSys},
+	bibtex_show  = {true},
+	html         = {https://doi.org/10.1145/2592798.2592799},
+	abstract     = {Temporal graphs capture changes in graphs over time and are becoming a subject that attracts increasing interest from the research communities, for example, to understand temporal characteristics of social interactions on a time-evolving social graph. Chronos is a storage and execution engine designed and optimized specifically for running in-memory iterative graph computation on temporal graphs. Locality is at the center of the Chronos design, where the in-memory layout of temporal graphs and the scheduling of the iterative computation on temporal graphs are carefully designed, so that common "bulk" operations on temporal graphs are scheduled to maximize the benefit of in-memory data locality. The design of Chronos further explores the interesting interplay among locality, parallelism, and incremental computation in supporting common mining tasks on temporal graphs. The result is a high-performance temporal-graph system that offers up to an order of magnitude speedup for temporal iterative graph mining compared to a straightforward application of existing graph engines on a series of snapshots.},
+	articleno    = 1,
+	numpages     = 14
 }
-
 @techreport{guo2014arming,
-  abbr         = {TechReport},
-  bibtex_show  = {true},
-  author = {Guo, Zhenyu and Chen, Cheng and Lin, Haoxiang and McDirmid, Sean and Yang, Fan and Guo, Xueying and Yang, Mao and Zhou, Lidong},
-  title = {Arming Cloud Services with Task Aspects},
-  institution = {Microsoft},
-  year = {2014},
-  month = {November},
-  abstract = {Our cloud services are losing too many battles to faults like software bugs, resource interference, and hardware failures. Many tools can help us win these battles: model checkers to verify, fault injection to find bugs, replay to debug, and many more. Unfortunately, tools are currently afterthoughts in cloud service designs that must either be tediously tangled into service implementations or integrated transparently in ways that fail to effectively capture the service’s problematic non-deterministic (concurrent, asynchronous, and resource access) behavior. This paper makes tooling a first-class concern by having services encoded with tasks whose interactions reliably capture all non-deterministic behavior needed by tools. Task interactions are then exposed in aspects that are useful in encoding cross-cutting behavior; combined, tools encoded as task aspects can integrate with services effectively and transparently. We show how task aspects can be used to ease the development of an online production data service that runs on a hundred machines.},
-  html = {https://www.microsoft.com/en-us/research/publication/arming-cloud-services-with-task-aspects/},
-  number = {MSR-TR-2014-150},
+	title        = {Arming Cloud Services with Task Aspects},
+	author       = {Guo, Zhenyu and Chen, Cheng and Lin, Haoxiang and McDirmid, Sean and Yang, Fan and Guo, Xueying and Yang, Mao and Zhou, Lidong},
+	year         = 2014,
+	month        = {November},
+	number       = {MSR-TR-2014-150},
+	abbr         = {TechReport},
+	bibtex_show  = {true},
+	institution  = {Microsoft},
+	abstract     = {Our cloud services are losing too many battles to faults like software bugs, resource interference, and hardware failures. Many tools can help us win these battles: model checkers to verify, fault injection to find bugs, replay to debug, and many more. Unfortunately, tools are currently afterthoughts in cloud service designs that must either be tediously tangled into service implementations or integrated transparently in ways that fail to effectively capture the service’s problematic non-deterministic (concurrent, asynchronous, and resource access) behavior. This paper makes tooling a first-class concern by having services encoded with tasks whose interactions reliably capture all non-deterministic behavior needed by tools. Task interactions are then exposed in aspects that are useful in encoding cross-cutting behavior; combined, tools encoded as task aspects can integrate with services effectively and transparently. We show how task aspects can be used to ease the development of an online production data service that runs on a hundred machines.},
+	html         = {https://www.microsoft.com/en-us/research/publication/arming-cloud-services-with-task-aspects/}
 }
-
 @inproceedings{10.1145/2168836.2168846,
-  abbr         = {EuroSys},
-  bibtex_show  = {true},
-  author = {Cheng, Raymond and Hong, Ji and Kyrola, Aapo and Miao, Youshan and Weng, Xuetian and Wu, Ming and Yang, Fan and Zhou, Lidong and Zhao, Feng and Chen, Enhong},
-  title = {Kineograph: taking the pulse of a fast-changing and connected world},
-  year = {2012},
-  isbn = {9781450312233},
-  publisher = {Association for Computing Machinery},
-  address = {New York, NY, USA},
-  html = {https://doi.org/10.1145/2168836.2168846},
-  doi = {10.1145/2168836.2168846},
-  abstract = {Kineograph is a distributed system that takes a stream of incoming data to construct a continuously changing graph, which captures the relationships that exist in the data feed. As a computing platform, Kineograph further supports graph-mining algorithms to extract timely insights from the fast-changing graph structure. To accommodate graph-mining algorithms that assume a static underlying graph, Kineograph creates a series of consistent snapshots, using a novel and efficient epoch commit protocol. To keep up with continuous updates on the graph, Kineograph includes an incremental graph-computation engine. We have developed three applications on top of Kineograph to analyze Twitter data: user ranking, approximate shortest paths, and controversial topic detection. For these applications, Kineograph takes a live Twitter data feed and maintains a graph of edges between all users and hashtags. Our evaluation shows that with 40 machines processing 100K tweets per second, Kineograph is able to continuously compute global properties, such as user ranks, with less than 2.5-minute timeliness guarantees. This rate of traffic is more than 10 times the reported peak rate of Twitter as of October 2011.},
-  booktitle = {Proceedings of the 7th ACM European Conference on Computer Systems},
-  pages = {85–98},
-  numpages = {14},
-  keywords = {distributed storage, graph processing},
-  location = {Bern, Switzerland},
-  series = {EuroSys '12}
+	title        = {Kineograph: taking the pulse of a fast-changing and connected world},
+	author       = {Cheng, Raymond and Hong, Ji and Kyrola, Aapo and Miao, Youshan and Weng, Xuetian and Wu, Ming and Yang, Fan and Zhou, Lidong and Zhao, Feng and Chen, Enhong},
+	year         = 2012,
+	booktitle    = {Proceedings of the 7th ACM European Conference on Computer Systems},
+	location     = {Bern, Switzerland},
+	publisher    = {Association for Computing Machinery},
+	address      = {New York, NY, USA},
+	series       = {EuroSys '12},
+	pages        = {85–98},
+	doi          = {10.1145/2168836.2168846},
+	isbn         = 9781450312233,
+	abbr         = {EuroSys},
+	bibtex_show  = {true},
+	html         = {https://doi.org/10.1145/2168836.2168846},
+	abstract     = {Kineograph is a distributed system that takes a stream of incoming data to construct a continuously changing graph, which captures the relationships that exist in the data feed. As a computing platform, Kineograph further supports graph-mining algorithms to extract timely insights from the fast-changing graph structure. To accommodate graph-mining algorithms that assume a static underlying graph, Kineograph creates a series of consistent snapshots, using a novel and efficient epoch commit protocol. To keep up with continuous updates on the graph, Kineograph includes an incremental graph-computation engine. We have developed three applications on top of Kineograph to analyze Twitter data: user ranking, approximate shortest paths, and controversial topic detection. For these applications, Kineograph takes a live Twitter data feed and maintains a graph of edges between all users and hashtags. Our evaluation shows that with 40 machines processing 100K tweets per second, Kineograph is able to continuously compute global properties, such as user ranks, with less than 2.5-minute timeliness guarantees. This rate of traffic is more than 10 times the reported peak rate of Twitter as of October 2011.},
+	numpages     = 14,
+	keywords     = {distributed storage, graph processing}
 }
-
 @techreport{chen2012sonora,
-  abbr         = {TechReport},
-  bibtex_show  = {true},
-  author = {Chen, Xiuwei and Beschastnikh, Ivan and Zhuang, Li and Yang, Fan and Qian, Zhengping and Zhou, Lidong and Shen, Guobin and Shen, Jacky},
-  title = {Sonora: A Platform for Continuous Mobile-Cloud Computing},
-  year = {2012},
-  month = {March},
-  abstract = {This paper presents Sonora, a platform for mobile-cloud computing. Sonora is designed to support the development and execution of continuous mobile-cloud services. To this end, Sonora provides developers with stream-based programming interfaces that coherently integrate a broad range of existing techniques from mobile, database, and distributed systems. These range from support for disconnected operation to relational and event-driven models. Sonora's execution engine is a fault-tolerant distributed runtime that supports user-facing continuous sensing and processing services in the cloud. Key features of this engine are its dynamic load balancing mechanisms, and a novel failure recovery protocol that performs checkpoint-based partial rollback recovery with selective re-execution. To illustrate the relevance and power of the stream abstraction in describing complex mobile-cloud services we evaluate Sonora's design in the context of two services. We also validate Sonora's design, demonstrating that Sonora is efficient, scalable, and provides responsive fault tolerance.},
-  html = {https://www.microsoft.com/en-us/research/publication/sonora-a-platform-for-continuous-mobile-cloud-computing/},
-  number = {MSR-TR-2012-34},
+	title        = {Sonora: A Platform for Continuous Mobile-Cloud Computing},
+	author       = {Chen, Xiuwei and Beschastnikh, Ivan and Zhuang, Li and Yang, Fan and Qian, Zhengping and Zhou, Lidong and Shen, Guobin and Shen, Jacky},
+	year         = 2012,
+	month        = {March},
+	number       = {MSR-TR-2012-34},
+	abbr         = {TechReport},
+	bibtex_show  = {true},
+	abstract     = {This paper presents Sonora, a platform for mobile-cloud computing. Sonora is designed to support the development and execution of continuous mobile-cloud services. To this end, Sonora provides developers with stream-based programming interfaces that coherently integrate a broad range of existing techniques from mobile, database, and distributed systems. These range from support for disconnected operation to relational and event-driven models. Sonora's execution engine is a fault-tolerant distributed runtime that supports user-facing continuous sensing and processing services in the cloud. Key features of this engine are its dynamic load balancing mechanisms, and a novel failure recovery protocol that performs checkpoint-based partial rollback recovery with selective re-execution. To illustrate the relevance and power of the stream abstraction in describing complex mobile-cloud services we evaluate Sonora's design in the context of two services. We also validate Sonora's design, demonstrating that Sonora is efficient, scalable, and provides responsive fault tolerance.},
+	html         = {https://www.microsoft.com/en-us/research/publication/sonora-a-platform-for-continuous-mobile-cloud-computing/}
 }
-
-@ARTICLE{4138031,
-  abbr         = {VTC},
-  bibtex_show  = {true},  
-  author={Wang, Kun and Yang, Fan and Zhang, Qian and Wu, Dapeng Oliver and Xu, Yinlong},
-  journal={IEEE Transactions on Vehicular Technology}, 
-  title={Distributed Cooperative Rate Adaptation for Energy Efficiency in IEEE 802.11-Based Multihop Networks}, 
-  html={https://ieeexplore.ieee.org/document/4138031},
-  year={2007},
-  volume={56},
-  number={2},
-  pages={888-898},
-  keywords={Energy efficiency;Spread spectrum communication;Bit error rate;Power control;Physical layer;Throughput;Wireless LAN;Telecommunication traffic;NP-hard problem;Energy consumption;Cooperation;energy efficiency;IEEE 802.11;rate adaptation;wireless multihop network},
-  doi={10.1109/TVT.2007.891422}
+@article{4138031,
+	title        = {Distributed Cooperative Rate Adaptation for Energy Efficiency in IEEE 802.11-Based Multihop Networks},
+	author       = {Wang, Kun and Yang, Fan and Zhang, Qian and Wu, Dapeng Oliver and Xu, Yinlong},
+	year         = 2007,
+	journal      = {IEEE Transactions on Vehicular Technology},
+	volume       = 56,
+	number       = 2,
+	pages        = {888--898},
+	doi          = {10.1109/TVT.2007.891422},
+	abbr         = {VTC},
+	bibtex_show  = {true},
+	html         = {https://ieeexplore.ieee.org/document/4138031},
+	keywords     = {Energy efficiency;Spread spectrum communication;Bit error rate;Power control;Physical layer;Throughput;Wireless LAN;Telecommunication traffic;NP-hard problem;Energy consumption;Cooperation;energy efficiency;IEEE 802.11;rate adaptation;wireless multihop network}
 }
-
-@ARTICLE{4107915,
-  abbr={IEEENetwork},
-  bibtex_show  = {true},  
-  author={Zhang, Qian and Chen, Qing and Yang, Fan and Shen, Xuemin and Niu, Zhisheng},
-  journal={IEEE Network}, 
-  title={Cooperative and opportunistic transmission for wireless ad hoc networks}, 
-  html={https://ieeexplore.ieee.org/abstract/document/4107915},
-  year={2007},
-  volume={21},
-  number={1},
-  pages={14-20},
-  keywords={Mobile ad hoc networks;Ad hoc networks;Usability;Fading;Interchannel interference;Centralized control;Energy consumption;Time-varying channels;System performance;Throughput},
-  doi={10.1109/MNET.2007.314533}
+@article{4107915,
+	title        = {Cooperative and opportunistic transmission for wireless ad hoc networks},
+	author       = {Zhang, Qian and Chen, Qing and Yang, Fan and Shen, Xuemin and Niu, Zhisheng},
+	year         = 2007,
+	journal      = {IEEE Network},
+	volume       = 21,
+	number       = 1,
+	pages        = {14--20},
+	doi          = {10.1109/MNET.2007.314533},
+	abbr         = {IEEENetwork},
+	bibtex_show  = {true},
+	html         = {https://ieeexplore.ieee.org/abstract/document/4107915},
+	keywords     = {Mobile ad hoc networks;Ad hoc networks;Usability;Fading;Interchannel interference;Centralized control;Energy consumption;Time-varying channels;System performance;Throughput}
 }
-
-@ARTICLE{4100182,
-  abbr={TWC},
-  bibtex_show  = {true},  
-  author={Wang, Kun and Yang, Fan and Zhang, Qian and Xu, Yinlong},
-  journal={IEEE Transactions on Wireless Communications}, 
-  title={Modeling path capacity in multi-hop IEEE 802.11 networks for QoS services}, 
-  year={2007},
-  volume={6},
-  number={2},
-  pages={738-749},
-  html ={https://ieeexplore.ieee.org/abstract/document/4100182},
-  keywords={Spread spectrum communication;Telecommunication traffic;Traffic control;Interference;Communication system traffic control;Streaming media;Analytical models;Computer science;Bandwidth;Wireless mesh networks},
-  doi={10.1109/TWC.2007.05434}
+@article{4100182,
+	title        = {Modeling path capacity in multi-hop IEEE 802.11 networks for QoS services},
+	author       = {Wang, Kun and Yang, Fan and Zhang, Qian and Xu, Yinlong},
+	year         = 2007,
+	journal      = {IEEE Transactions on Wireless Communications},
+	volume       = 6,
+	number       = 2,
+	pages        = {738--749},
+	doi          = {10.1109/TWC.2007.05434},
+	abbr         = {TWC},
+	bibtex_show  = {true},
+	html         = {https://ieeexplore.ieee.org/abstract/document/4100182},
+	keywords     = {Spread spectrum communication;Telecommunication traffic;Traffic control;Interference;Communication system traffic control;Streaming media;Analytical models;Computer science;Bandwidth;Wireless mesh networks}
 }
-
-
 @inproceedings{10.1145/1185373.1185375,
-  abbr         = {QShine},
-  bibtex_show  = {true},  
-  author = {Wang, Kun and Yang, Fan and Zhang, Qian and Wu, Dapeng Oliver and Xu, Yinlong},
-  title = {Distributed cooperative rate adaptation for energy efficiency in IEEE 802.11-based multi-hop networks},
-  year = {2006},
-  isbn = {1595935371},
-  publisher = {Association for Computing Machinery},
-  address = {New York, NY, USA},
-  html = {https://doi.org/10.1145/1185373.1185375},
-  doi = {10.1145/1185373.1185375},
-  abstract = {In this paper we study the problem of using the rate adaptation technique to achieve energy efficiency in an IEEE 802.11-based multi-hop network. Specifically, we formulate it as an optimization problem, i.e., minimizing the total transmission power over transmission data rates, subject to the traffic requirements of all the nodes in a multi-hop network. Interestingly, we can show that this problem is actually a well-known multiple-choice knapsack problem, which is proven to be an NP-hard problem. So, instead of finding an optimal solution, which is NP-hard, we seek a sub-optimal solution. Our key technique to attack this problem is distributed cooperative rate adaptation. Here, we promote node cooperation due to our observation that the inequality in non-cooperative channel contention among nodes caused by hidden terminal phenomenon in a multi-hop network tends to result in energy inefficiency. Under this design philosophy, we propose a distributed cooperative rate adaptation (CRA) scheme and prove that it converges. Simulation results show that our CRA scheme can reduce the power consumption up to 86\% as compared to the existing (non-cooperative) algorithm.},
-  booktitle = {Proceedings of the 3rd International Conference on Quality of Service in Heterogeneous Wired/Wireless Networks, {QShine}},
-  pages = {1–es},
-  award_name  ={Best paper},
-  award={Best paper [award](https://dl.acm.org/doi/proceedings/10.1145/1185373)},
-  location = {Waterloo, Ontario, Canada},
-  series = {QShine '06}
+	title        = {Distributed cooperative rate adaptation for energy efficiency in IEEE 802.11-based multi-hop networks},
+	author       = {Wang, Kun and Yang, Fan and Zhang, Qian and Wu, Dapeng Oliver and Xu, Yinlong},
+	year         = 2006,
+	booktitle    = {Proceedings of the 3rd International Conference on Quality of Service in Heterogeneous Wired/Wireless Networks, {QShine}},
+	location     = {Waterloo, Ontario, Canada},
+	publisher    = {Association for Computing Machinery},
+	address      = {New York, NY, USA},
+	series       = {QShine '06},
+	pages        = {1–es},
+	doi          = {10.1145/1185373.1185375},
+	isbn         = 1595935371,
+	abbr         = {QShine},
+	bibtex_show  = {true},
+	html         = {https://doi.org/10.1145/1185373.1185375},
+	abstract     = {In this paper we study the problem of using the rate adaptation technique to achieve energy efficiency in an IEEE 802.11-based multi-hop network. Specifically, we formulate it as an optimization problem, i.e., minimizing the total transmission power over transmission data rates, subject to the traffic requirements of all the nodes in a multi-hop network. Interestingly, we can show that this problem is actually a well-known multiple-choice knapsack problem, which is proven to be an NP-hard problem. So, instead of finding an optimal solution, which is NP-hard, we seek a sub-optimal solution. Our key technique to attack this problem is distributed cooperative rate adaptation. Here, we promote node cooperation due to our observation that the inequality in non-cooperative channel contention among nodes caused by hidden terminal phenomenon in a multi-hop network tends to result in energy inefficiency. Under this design philosophy, we propose a distributed cooperative rate adaptation (CRA) scheme and prove that it converges. Simulation results show that our CRA scheme can reduce the power consumption up to 86\% as compared to the existing (non-cooperative) algorithm.},
+	award_name   = {Best paper},
+	award        = {Best paper [award](https://dl.acm.org/doi/proceedings/10.1145/1185373)}
 }
-
-@INPROCEEDINGS{4150846,
-  abbr         = {Globecom},
-  bibtex_show  = {true},  
-  author={Zhao, Jin and Yang, Fan and Zhang, Qian and Zhang, Zhensheng},
-  booktitle={IEEE Globecom 2006}, 
-  title={On Improving the Throughput of Media Delivery Applications in Heterogeneous Overlay Network}, 
-  year={2006},
-  volume={},
-  number={},
-  pages={1-6},
-  keywords={Throughput;Nonhomogeneous media;Network coding;Peer to peer computing;Bandwidth;Internet;Organizing;Mathematical programming;Asia;Heuristic algorithms},
-  doi={10.1109/GLOCOM.2006.216},
-  html={https://ieeexplore.ieee.org/abstract/document/4150846}
+@inproceedings{4150846,
+	title        = {On Improving the Throughput of Media Delivery Applications in Heterogeneous Overlay Network},
+	author       = {Zhao, Jin and Yang, Fan and Zhang, Qian and Zhang, Zhensheng},
+	year         = 2006,
+	booktitle    = {IEEE Globecom 2006},
+	volume       = {},
+	number       = {},
+	pages        = {1--6},
+	doi          = {10.1109/GLOCOM.2006.216},
+	abbr         = {Globecom},
+	bibtex_show  = {true},
+	keywords     = {Throughput;Nonhomogeneous media;Network coding;Peer to peer computing;Bandwidth;Internet;Organizing;Mathematical programming;Asia;Heuristic algorithms},
+	html         = {https://ieeexplore.ieee.org/abstract/document/4150846}
 }
-
-@ARTICLE{1717612,
-  abbr         = {JSAC},
-  bibtex_show  = {true}, 
-  author={Wu, H. and Yang, F. and Tan, K. and Chen, J. and Zhang, Q. and Zhang, Z.},
-  journal={IEEE Journal on Selected Areas in Communications}, 
-  title={Distributed Channel Assignment and Routing in Multiradio Multichannel Multihop Wireless Networks}, 
-  year={2006},
-  volume={24},
-  number={11},
-  pages={1972-1983},
-  html={https://ieeexplore.ieee.org/abstract/document/1717612},
-  keywords={Spread spectrum communication;Wireless networks;Interference;Costs;Routing protocols;Wireless application protocol;Hardware;Network interfaces;Telecommunication traffic;Coordinate measuring machines;Channel assignment;multihop;multiradio;routing;wireless network},
-  doi={10.1109/JSAC.2006.881638}
+@article{1717612,
+	title        = {Distributed Channel Assignment and Routing in Multiradio Multichannel Multihop Wireless Networks},
+	author       = {Wu, H. and Yang, F. and Tan, K. and Chen, J. and Zhang, Q. and Zhang, Z.},
+	year         = 2006,
+	journal      = {IEEE Journal on Selected Areas in Communications},
+	volume       = 24,
+	number       = 11,
+	pages        = {1972--1983},
+	doi          = {10.1109/JSAC.2006.881638},
+	abbr         = {JSAC},
+	bibtex_show  = {true},
+	html         = {https://ieeexplore.ieee.org/abstract/document/1717612},
+	keywords     = {Spread spectrum communication;Wireless networks;Interference;Costs;Routing protocols;Wireless application protocol;Hardware;Network interfaces;Telecommunication traffic;Coordinate measuring machines;Channel assignment;multihop;multiradio;routing;wireless network}
 }
-
 @article{wu2006next,
-  abbr         = {ChinaCom},
-  bibtex_show  = {true}, 
-  title={Next generation mobile multimedia communications: Media codec and media transport perspectives},
-  author={Wu, Feng and Shen, Guobin and Tan, Kun and Yang, Fan and Li, Shipeng},
-  journal={China Communications},
-  volume={3},
-  pages={30--44},
-  year={2006},
-  html={https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=a3e79de363553b51806334680908ab96a5c1ba7c},
-  publisher={Citeseer}
+	title        = {Next generation mobile multimedia communications: Media codec and media transport perspectives},
+	author       = {Wu, Feng and Shen, Guobin and Tan, Kun and Yang, Fan and Li, Shipeng},
+	year         = 2006,
+	journal      = {China Communications},
+	publisher    = {Citeseer},
+	volume       = 3,
+	pages        = {30--44},
+	abbr         = {ChinaCom},
+	bibtex_show  = {true},
+	html         = {https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=a3e79de363553b51806334680908ab96a5c1ba7c}
 }
-
-@ARTICLE{1703516,
-  abbr         = {ToM},
-  bibtex_show  = {true}, 
-  author={Zhao, J. and Yang, F. and Zhang, Q. and Zhang, Z. and Zhang, F.},
-  journal={IEEE Transactions on Multimedia}, 
-  title={LION: Layered Overlay Multicast With Network Coding}, 
-  year={2006},
-  volume={8},
-  number={5},
-  pages={1021-1032},
-  html={https://ieeexplore.ieee.org/abstract/document/1703516},
-  keywords={Network coding;Throughput;Bandwidth;Organizing;Computer science;Information theory;Mathematical programming;Heuristic algorithms;Network topology;Peer to peer computing;Heterogeneity;network coding;overlay multicast},
-  doi={10.1109/TMM.2006.879847}
+@article{1703516,
+	title        = {LION: Layered Overlay Multicast With Network Coding},
+	author       = {Zhao, J. and Yang, F. and Zhang, Q. and Zhang, Z. and Zhang, F.},
+	year         = 2006,
+	journal      = {IEEE Transactions on Multimedia},
+	volume       = 8,
+	number       = 5,
+	pages        = {1021--1032},
+	doi          = {10.1109/TMM.2006.879847},
+	abbr         = {ToM},
+	bibtex_show  = {true},
+	html         = {https://ieeexplore.ieee.org/abstract/document/1703516},
+	keywords     = {Network coding;Throughput;Bandwidth;Organizing;Computer science;Information theory;Mathematical programming;Heuristic algorithms;Network topology;Peer to peer computing;Heterogeneity;network coding;overlay multicast}
 }
-
-@INPROCEEDINGS{4025092,
-  abbr         = {ICC},
-  bibtex_show  = {true}, 
-  author={Peng, Cong and Yang, Fan and Zhang, Qian and Wu, Dapeng and Zhao, Ming and Yao, Yan},
-  booktitle={2006 IEEE International Conference on Communications}, 
-  title={Impact of Power and Rate Selection on the Throughput of Ad Hoc Networks}, 
-  year={2006},
-  volume={9},
-  number={},
-  pages={3897-3902},
-  html={https://ieeexplore.ieee.org/abstract/document/4025092},
-  keywords={Throughput;Ad hoc networks;Physical layer;Iterative algorithms;Wireless networks;Mobile ad hoc networks;Computer networks;Computational modeling;Power control;Communication system traffic control;Wireless ad hoc networks;capacity;transmission power control;rate adaptation},
-  doi={10.1109/ICC.2006.255690}
+@inproceedings{4025092,
+	title        = {Impact of Power and Rate Selection on the Throughput of Ad Hoc Networks},
+	author       = {Peng, Cong and Yang, Fan and Zhang, Qian and Wu, Dapeng and Zhao, Ming and Yao, Yan},
+	year         = 2006,
+	booktitle    = {2006 IEEE International Conference on Communications},
+	volume       = 9,
+	number       = {},
+	pages        = {3897--3902},
+	doi          = {10.1109/ICC.2006.255690},
+	abbr         = {ICC},
+	bibtex_show  = {true},
+	html         = {https://ieeexplore.ieee.org/abstract/document/4025092},
+	keywords     = {Throughput;Ad hoc networks;Physical layer;Iterative algorithms;Wireless networks;Mobile ad hoc networks;Computer networks;Computational modeling;Power control;Communication system traffic control;Wireless ad hoc networks;capacity;transmission power control;rate adaptation}
 }
-
 @article{zhang2005cross,
-  abbr         = {EURASIP},
-  bibtex_show  = {true}, 
-  title={Cross-layer QoS support for multimedia delivery over wireless Internet},
-  author={Zhang, Qian and Yang, Fan and Zhu, Wenwu},
-  journal={EURASIP Journal on Advances in Signal Processing},
-  volume={2005},
-  pages={1--13},
-  year={2005},
-  html={https://link.springer.com/article/10.1155/ASP.2005.207},
-  publisher={Springer}
+	title        = {Cross-layer QoS support for multimedia delivery over wireless Internet},
+	author       = {Zhang, Qian and Yang, Fan and Zhu, Wenwu},
+	year         = 2005,
+	journal      = {EURASIP Journal on Advances in Signal Processing},
+	publisher    = {Springer},
+	volume       = 2005,
+	pages        = {1--13},
+	abbr         = {EURASIP},
+	bibtex_show  = {true},
+	html         = {https://link.springer.com/article/10.1155/ASP.2005.207}
 }
-
-@INPROCEEDINGS{1494546,
-  abbr         = {ICC},
-  bibtex_show  = {true}, 
-  author={Rojviboonchai, K. and Fan Yang and Qian Zhang and Aida, H. and Wenwu Zhu},
-  booktitle={IEEE International Conference on Communications, 2005. ICC 2005. 2005}, 
-  title={AMTP: a multipath multimedia streaming protocol for mobile ad hoc networks}, 
-  year={2005},
-  volume={2},
-  number={},
-  pages={1246-1250 Vol. 2},
-  html={https://ieeexplore.ieee.org/abstract/document/1494546},
-  keywords={Streaming media;Mobile ad hoc networks;Ad hoc networks;Transport protocols;Aggregates;Throughput;Switches;Spread spectrum communication;Wireless networks;Network topology},
-  doi={10.1109/ICC.2005.1494546}
+@inproceedings{1494546,
+	title        = {AMTP: a multipath multimedia streaming protocol for mobile ad hoc networks},
+	author       = {Rojviboonchai, K. and Fan Yang and Qian Zhang and Aida, H. and Wenwu Zhu},
+	year         = 2005,
+	booktitle    = {IEEE International Conference on Communications, 2005. ICC 2005. 2005},
+	volume       = 2,
+	number       = {},
+	pages        = {1246--1250 Vol. 2},
+	doi          = {10.1109/ICC.2005.1494546},
+	abbr         = {ICC},
+	bibtex_show  = {true},
+	html         = {https://ieeexplore.ieee.org/abstract/document/1494546},
+	keywords     = {Streaming media;Mobile ad hoc networks;Ad hoc networks;Transport protocols;Aggregates;Throughput;Switches;Spread spectrum communication;Wireless networks;Network topology}
 }
-
-@ARTICLE{1295064,
-  abbr         = {JSAC},
-  bibtex_show  = {true}, 
-  author={Fan Yang and Qian Zhang and Wenwu Zhu and Ya-Qin Zhang},
-  journal={IEEE Journal on Selected Areas in Communications}, 
-  title={End-to-end TCP-friendly streaming protocol and bit allocation for scalable video over wireless Internet}, 
-  year={2004},
-  volume={22},
-  number={4},
-  pages={777-790},
-  html={https://ieeexplore.ieee.org/abstract/document/1295064},
-  keywords={Streaming media;Wireless application protocol;Bit rate;Internet;IP networks;Wireless networks;Convergence;Resource management;Information filtering;Information filters},
-  doi={10.1109/JSAC.2004.826008}
+@article{1295064,
+	title        = {End-to-end TCP-friendly streaming protocol and bit allocation for scalable video over wireless Internet},
+	author       = {Fan Yang and Qian Zhang and Wenwu Zhu and Ya-Qin Zhang},
+	year         = 2004,
+	journal      = {IEEE Journal on Selected Areas in Communications},
+	volume       = 22,
+	number       = 4,
+	pages        = {777--790},
+	doi          = {10.1109/JSAC.2004.826008},
+	abbr         = {JSAC},
+	bibtex_show  = {true},
+	html         = {https://ieeexplore.ieee.org/abstract/document/1295064},
+	keywords     = {Streaming media;Wireless application protocol;Bit rate;Internet;IP networks;Wireless networks;Convergence;Resource management;Information filtering;Information filters}
 }
-
-@INPROCEEDINGS{1354621,
-  abbr         = {INFOCOM},
-  bibtex_show  = {true}, 
-  author={Fan Yang and Qian Zhang and Wenwu Zhu and Ya-Qin Zhang},
-  booktitle={IEEE INFOCOM 2004}, 
-  title={Bit allocation for scalable video streaming over mobile wireless Internet}, 
-  year={2004},
-  volume={3},
-  number={https://ieeexplore.ieee.org/abstract/document/1354621},
-  pages={2142-2151 vol.3},
-  html={},
-  keywords={Bit rate;Streaming media;Internet;IP networks;Wireless networks;Wireless application protocol;Propagation losses;Convergence;Resource management;Smoothing methods},
-  doi={10.1109/INFCOM.2004.1354621}
+@inproceedings{1354621,
+	title        = {Bit allocation for scalable video streaming over mobile wireless Internet},
+	author       = {Fan Yang and Qian Zhang and Wenwu Zhu and Ya-Qin Zhang},
+	year         = 2004,
+	booktitle    = {IEEE INFOCOM 2004},
+	volume       = 3,
+	number       = {https://ieeexplore.ieee.org/abstract/document/1354621},
+	pages        = {2142--2151 vol.3},
+	doi          = {10.1109/INFCOM.2004.1354621},
+	abbr         = {INFOCOM},
+	bibtex_show  = {true},
+	html         = {},
+	keywords     = {Bit rate;Streaming media;Internet;IP networks;Wireless networks;Wireless application protocol;Propagation losses;Convergence;Resource management;Smoothing methods}
 }
-
-@INPROCEEDINGS{1221645,
-  abbr         = {ICME},
-  bibtex_show  = {true}, 
-  author={Fan Yang and Qian Zhang and Wenwu Zhu and Ya-Qin Zhang},
-  booktitle={2003 International Conference on Multimedia and Expo. ICME '03. Proceedings (Cat. No.03TH8698)}, 
-  title={An end-to-end TCP-friendly streaming protocol for multimedia over wireless Internet}, 
-  year={2003},
-  volume={2},
-  number={},
-  pages={II-429},
-  html={https://ieeexplore.ieee.org/abstract/document/1221645},
-  keywords={Streaming media;Wireless application protocol;Internet;Convergence;IP networks;Wireless networks;Information filtering;Information filters;Performance analysis;Analytical models},
-  doi={10.1109/ICME.2003.1221645}
+@inproceedings{1221645,
+	title        = {An end-to-end TCP-friendly streaming protocol for multimedia over wireless Internet},
+	author       = {Fan Yang and Qian Zhang and Wenwu Zhu and Ya-Qin Zhang},
+	year         = 2003,
+	booktitle    = {2003 International Conference on Multimedia and Expo. ICME '03. Proceedings (Cat. No.03TH8698)},
+	volume       = 2,
+	number       = {},
+	pages        = {II-429},
+	doi          = {10.1109/ICME.2003.1221645},
+	abbr         = {ICME},
+	bibtex_show  = {true},
+	html         = {https://ieeexplore.ieee.org/abstract/document/1221645},
+	keywords     = {Streaming media;Wireless application protocol;Internet;Convergence;IP networks;Wireless networks;Information filtering;Information filters;Performance analysis;Analytical models}
 }
-
 @inproceedings{yang2001efficient,
-  abbr         = {3GWireless},
-  bibtex_show  = {true},  
-  title={An efficient transport scheme for multimedia over wireless internet},
-  author={Yang, Fan and Zhang, Qian and Zhu, Wenwu and Zhang, Ya-Qin},
-  booktitle={Proceedings of 2001 IEEE International Conference on 3G Wireless and Beyond},
-  html={https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=b7352c29912e8e0aff6740754a1e02eccd681c69},
-  pages={651},
-  year={2001}
+	title        = {An efficient transport scheme for multimedia over wireless internet},
+	author       = {Yang, Fan and Zhang, Qian and Zhu, Wenwu and Zhang, Ya-Qin},
+	year         = 2001,
+	booktitle    = {Proceedings of 2001 IEEE International Conference on 3G Wireless and Beyond},
+	pages        = 651,
+	abbr         = {3GWireless},
+	bibtex_show  = {true},
+	html         = {https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=b7352c29912e8e0aff6740754a1e02eccd681c69}
 }

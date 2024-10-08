@@ -8,7 +8,7 @@ category: work
 related_publications: true
 ---
 
-I believe the nueral symbolic approach is the only way to realize truthworthy reasoning, thus achieving true intelligence. 
+I believe the neural symbolic approach is the only way to realize truthworthy reasoning, thus achieving true intelligence. 
 
 Here are some useful cases of the neural symbolic approach.
 - Synthesizing high-quality, verifiably correct reasoning steps on solving math problems. {% cite NEURIPS2024_NSMR %}.

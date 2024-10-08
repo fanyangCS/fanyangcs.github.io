@@ -10,5 +10,6 @@ related_publications: true
 
 I believe the nueral symbolic approach is the only way to realize truthworthy reasoning, thus achieving true intelligence. 
 
- {% cite NEURIPS2024_NSMR %}.
- {% cite NEURIPS2024_AutoFormalization %}.
+Here are some useful cases of the neural symbolic approach.
+- Synthesizing high-quality, verifiably correct reasoning steps on solving math problems. {% cite NEURIPS2024_NSMR %}.
+- Improving the autoformalization, a fundamental math capability of a neural model, through a hybrid neural-symbolic solution. {% cite NEURIPS2024_AutoFormalization %}.

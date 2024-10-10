@@ -4,7 +4,7 @@ title: AI compiler
 description: 
 img: assets/img/1.jpg
 importance: 1
-category: work
+category: current
 related_publications: true
 ---
 

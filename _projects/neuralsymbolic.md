@@ -4,7 +4,7 @@ title: Neural symbolic reasoning
 description: 
 img: assets/img/12.jpg
 importance: 1
-category: work
+category: current
 related_publications: true
 ---
 

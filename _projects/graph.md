@@ -3,8 +3,8 @@ layout: page
 title: Graph engine
 description: 
 img: assets/img/4.jpg
-importance: 1
-category: past projects
+importance: 10
+category: past
 related_publications: true
 ---
 

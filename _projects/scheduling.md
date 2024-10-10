@@ -4,7 +4,7 @@ title: Scheduler for AI workload
 description: 
 img: assets/img/3.jpg
 importance: 2
-category: current
+category: past
 related_publications: true
 ---
 

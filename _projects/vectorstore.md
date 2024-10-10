@@ -12,4 +12,5 @@ Vector store is an important storage system in the AI era. I believe it not only
 
 Here are some of our thoughts on vector store.
 - Integrating vector indices with relational databases using relaxed monotonicity. {% cite DBLP:conf/osdi/ZhangXCSXCCH00Y23 %}.
-- Updating a vector index incrementally. {% cite DBLP:conf/sosp/XuLLXCZLYYYCY23 %}. 
+- Updating a vector index incrementally. {% cite DBLP:conf/sosp/XuLLXCZLYYYCY23 %}.
+- Vector indices can be dense or sparse. Instead of represented with separated solutions, they can be unified with one generic design. {% cite 10.1145/3589335.3648338 %}.

@@ -4,7 +4,7 @@ title: Vector store
 description: 
 img: assets/img/9.jpg
 importance: 1
-category: work
+category: current
 related_publications: true
 ---
 

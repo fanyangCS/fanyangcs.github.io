@@ -10,7 +10,7 @@ related_publications: true
 
 AI workload differs significantly from conventional cloud workload (e.g., big data OLAP or OLTP workload). 
 In early 2017, I began to look into this problem and tried to understand the implication.
-With my colleagues, we investigated massive amount of AI workloads in Philly, Microsoft's early GPU cluster management system designed for deep learning training. 
+With my colleagues, we investigated a massive amount of AI workloads in Philly, Microsoft's early GPU cluster management system designed for deep learning training. 
 We shared our findings in {% cite DBLP:conf/usenix/JeonVPQXY19 %}. 
 We explained our thoughts on the scheduling primitives for training jobs {% cite DBLP:conf/osdi/XiaoBRSKHPPZZYZ18 %}, 
 and emphasized on the importance of topology aware scheduling {% cite DBLP:conf/osdi/ZhaoHYZYZYLWXW20 %} in the AI era. 

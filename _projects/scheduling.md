@@ -20,5 +20,5 @@ codesign of caching and scheduling {% cite DBLP:conf/eurosys/ZhaoHYZ0YZL0QZZ23 %
 Given the strategic importance of GPU cluster management, I led an engineering group to develop [OpenPAI](https://github.com/microsoft/pai), 
 a Kubernetes based open-source cluster management platform for deep learning training and inferencing. 
 OpenPAI is one of the earliest k8s systems capable of managing GPU clusters. It integrated several techniques mentioned above. Its key components like [framework controller](https://github.com/Microsoft/frameworkcontroller) have been adopted by Azure AI products.
-As far as I know, several external organizations also develop their training infrastructure based on OpenPAI.
+As far as I know, several external organizations also developed their training infrastructure based on OpenPAI.
 

@@ -9,6 +9,8 @@ related_publications: true
 ---
 
 Agent is an old name, but the importance of agent in this AI era has been well [recoganized](https://www.gatesnotes.com/AI-agents). 
-The implication of agent to future systems is important, but not yet clear. 
+An agent can definitely be viewed as a neural-symbolic approach, as discussed [here](https://fanyangcs.github.io/projects/neuralsymbolic/), but its implication goes far beyond this view.
+It is also worth noting that Agent will influence the future of systems. 
 For example, will the future LLM serving systems look more like Parrot {%cite parrot24 %}, or do we need to build new RL simulators like Android Arena {%cite 10.1145/3637528.3671650 %} to enable OS agent?
+
 

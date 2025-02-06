@@ -175,6 +175,8 @@ external_sources:
  #       published_date: 2024-05-14
  - name: Microsoft Research Blog
    posts:
+   - url: https://www.microsoft.com/en-us/research/blog/advances-to-low-bit-quantization-enable-llms-on-edge-devices/
+     published_date: 2025-02-05
    - url: https://www.microsoft.com/en-us/research/blog/unified-database-laying-the-foundation-for-large-language-model-vertical-applications/
      published_date: 2024-07-10
    - url: https://www.microsoft.com/en-us/research/blog/building-a-heavy-metal-quartet-of-ai-compilers/

@@ -10,15 +10,15 @@ Systems research group (SRG) at Microsoft Research Asia is recruiting interns th
 
 ---
 #### Introduction to SRG
-Computer systems are the core driving force in the era of artificial intelligence. The Systems Research Group (SRG) at Microsoft Research Asia conducts foundational and applied research in the field of computer systems, aiming to drive breakthrough advancements in computer systems. The SRG has committed to high-calibre systems research, winning top research awards such as Best Paper, Distinguished Paper, and Test-of-Time Paper at leading conferences in systems and related fields, including OSDI 2020, NSDI 2024, EuroSys 2008/2012, MobiSys 2021, SenSys 2022, ICSE 2013/2020, MICRO 2022, and NeurIPS 2022. Many of these research achievements have been applied to Microsoft's products, including Azure, M365, and Bing. The SRG also maintains long-term collaborations with research institutions around the world and is a founding member of ChinaSys, a community promoting systems research in China.
+Computer systems are the core driving force in the era of artificial intelligence. The Systems Research Group (SRG) at Microsoft Research Asia conducts foundational and applied research in the field of computer systems, aiming for breakthroughs in computer systems. The SRG has committed to high-calibre systems research, winning top research awards such as Best Paper, Distinguished Paper, and Test-of-Time Paper at leading conferences in systems and related fields, including OSDI 2020, NSDI 2024, EuroSys 2008/2012, MobiSys 2021, SenSys 2022, ICSE 2013/2020, MICRO 2022, and NeurIPS 2022. Many of these research achievements have been applied to Microsoft's products, including Azure, M365, and Bing. The SRG also maintains long-term collaborations with research institutions around the world and is a founding member of ChinaSys, a community promoting systems research in China.
 
 We welcome students interested in systems research to join us and conduct research in the following areas:
 
 - Artificial Intelligence and the supporting systems
-- Databases and storage systems in the intelligent era
-- Privacy and/or verifiable computing in the intelligent era
+- Databases and storage systems in the intelligence era
+- Privacy and/or verifiable computing in the intelligence era
 - Next-generation computing and network software/hardware architectures
-- Development and debugging tools for next-generation intelligent systems
+- Development and debugging tools for next-generation intelligence systems
 - Systems research topics not mentioned above
 
 

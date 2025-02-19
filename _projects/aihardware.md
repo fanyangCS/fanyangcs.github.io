@@ -15,4 +15,5 @@ The codesign of AI and hardware will become norm in the future.
 Here are some considerations on AI hardware.
 - An architecture considering activation outliers in LLM inferencing.  OliVe {% cite DBLP:conf/isca/0003THL00LG023 %}
 - Taking the low-bit trend of LLMs into account. An adaptive numerical data type: ANT {% cite DBLP:conf/micro/00030LL0LG022 %}. Replacing MAC with Lookup Table (LUT) {% cite molutcore2024 %}
+- Future AI chips will show stronger non-uniformity. Wafer scale LLM system is coming {% cite waferllm25 %}
 

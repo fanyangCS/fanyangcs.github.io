@@ -13,3 +13,4 @@ I believe a [neuro-symbolic](https://en.wikipedia.org/wiki/Neuro-symbolic_AI) ap
 Here are some useful cases of the neural symbolic approach. And I think the role of a neural-symbolic engine will become much more important in the near future. 
 - Synthesizing high-quality, verifiably correct reasoning steps on solving math problems. {% cite NEURIPS2024_NSMR %}.
 - Improving the autoformalization, a fundamental math capability of a neural model, through a hybrid neural-symbolic solution. {% cite NEURIPS2024_AutoFormalization %}.
+- Proving Olympiad inequalities through neuro-symbolic formal reasoning. {% cite inequalityiclr25 %}

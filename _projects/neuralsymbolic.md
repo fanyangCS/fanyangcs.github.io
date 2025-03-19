@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Neuro-symbolic AI
+title: Neuro-Symbolic AI
 description: 
 img: assets/img/12.jpg
 importance: 1

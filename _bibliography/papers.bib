@@ -113,8 +113,7 @@
 	year         = 2024,
 	booktitle    = {{SOSP}},
 	abbr         = {SOSP},
-	bibtex_show  = {true},
-	selected     = {true},
+	bibtex_show  = {true},	
 	abstract     = {To speed up computation, deep neural networks (DNNs) usually rely on highly optimized tensor operators. Despite the effectiveness, tensor operators are often defined empirically with ad hoc semantics. This hinders the analysis and optimization across operator boundaries. FractalTensor is a programming framework that addresses this challenge. At the core, FractalTensor is a nested list-based abstract data type (ADT), where each element is a tensor with static shape or another FractalTensor (i.e., nested). DNNs are then defined by high-order compute operators like map/reduce/scan and data access operators like window/stride on FractalTensor. This new way of DNN definition explicitly exposes nested data parallelism and fine-grained data access patterns, opening new opportunities for whole program analysis and optimization. To exploit these opportunities, from the FractalTensor-based code the compiler extracts a nested multi-dimensional dataflow graph called Extended Task Dependence Graph (ETDG), which provides a holistic view of data dependency across different granularity. The ETDG is then transformed into an efficient implementation through graph coarsening, data reordering, and access materialization. Evaluation on six representative DNNs like RNN and FlashAttention on NVIDIA A100 shows that FractalTensor achieves speedup by up to 5.44x and 1.97x on average through a unified solution for diverse optimizations.},
 	html	     = {https://www.microsoft.com/en-us/research/publication/uncovering-nested-data-parallelism-and-data-reuse-in-dnn-computation-with-fractaltensor/}
 }
@@ -206,8 +205,7 @@
 	bibtex_show  = {true},
 	code         = {https://huggingface.co/collections/microsoft/phi-3-6626e15e9585a200d2d761e3},
 	additional_info = {. (Applying [LongRoPE](https://www.microsoft.com/en-us/research/publication/longrope-extending-llm-context-window-beyond-2-million-tokens/) to [Phi-3](https://azure.microsoft.com/en-us/blog/introducing-phi-3-redefining-whats-possible-with-slms/))},
-	google_scholar_id = {tkaPQYYpVKoC},
-	selected     = {true},
+	google_scholar_id = {tkaPQYYpVKoC},	
 	html         = {https://arxiv.org/abs/2404.14219}
 }
 @inproceedings{nnscaler24,
@@ -231,8 +229,7 @@
 	bibtex_show  = {true},
 	slides       = {https://www.microsoft.com/en-us/research/uploads/prodnew/2024/06/Parrot-OSDI24.pdf},
 	code         = {https://github.com/microsoft/ParrotServe},
-	html         = {https://www.microsoft.com/en-us/research/publication/parrot-efficient-serving-of-llm-based-applications-with-semantic-variable/},
-	selected     = {true},
+	html         = {https://www.microsoft.com/en-us/research/publication/parrot-efficient-serving-of-llm-based-applications-with-semantic-variable/},	
         award_name   = {Hugging Face Daily Papers},
 	award        = {Selected as [Hugging Face daily papers](https://huggingface.co/papers?date=2024-5-31) (2024-05-31).}
 }

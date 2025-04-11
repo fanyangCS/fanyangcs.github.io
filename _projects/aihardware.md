@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Future AI hardware
+title: AI hardware
 description: 
 img: assets/img/7.jpg
 importance: 1

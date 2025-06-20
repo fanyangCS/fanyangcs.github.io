@@ -14,3 +14,4 @@ Here are some useful cases of the neural symbolic approach. And I think the role
 - Synthesizing high-quality, verifiably correct reasoning steps on solving math problems. {% cite NEURIPS2024_NSMR %}.
 - Improving the autoformalization, a fundamental math capability of a neural model, through a hybrid neural-symbolic solution. {% cite NEURIPS2024_AutoFormalization %}.
 - Proving Olympiad inequalities through neuro-symbolic formal reasoning. {% cite inequalityiclr25 %}
+- Spontaneous informal to formal reasoning. {% cite dspplus25 %}

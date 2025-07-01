@@ -46,6 +46,6 @@ Interns will participate in research projects in various ways, including but not
 Must obtain the approval from your supervisor and ensure at least a three-month internship, with preference given to those who can intern full-time for more than six months.
 Please be sure to download and complete the <a href="https://www.msra.cn/wp-content/uploads/2017/07/internship_application_form.xlsx">Internship Application Form</a> and send it along with a complete Chinese and English resume (in PDF/Word format) to: MSRAih@microsoft.com or msra-srg-hire AT microsoft dot com, with "Systems Research Group Internship" in the email subject.
 
-For more information about the "Tomorrow Stars Internship Program," please visit: <a href="https://www.msra.cn/zh-cn/connections/academic-programs/tomorrowstars">Tomorrow Stars</a>
+For more information about the "Stars of Tomorrow Internship Program," please visit: <a href="https://www.msra.cn/zh-cn/connections/academic-programs/tomorrowstars">Stars of Tomorrow</a>
 
 

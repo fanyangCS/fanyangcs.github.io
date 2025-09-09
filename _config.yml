@@ -182,11 +182,7 @@ external_sources:
    - url: https://www.microsoft.com/en-us/research/blog/unified-database-laying-the-foundation-for-large-language-model-vertical-applications/
      published_date: 2024-07-10
    - url: https://www.microsoft.com/en-us/research/blog/building-a-heavy-metal-quartet-of-ai-compilers/
-     published_date: 2023-08-30   
- - name: VentureBeat
-   posts:
-   - url: https://venturebeat.com/ai/microsofts-new-rstar-math-technique-upgrades-small-models-to-outperform-openais-o1-preview-at-math-problems/
-     published_date: 2025-01-09
+     published_date: 2023-08-30    
        
 # -----------------------------------------------------------------------------
 # Newsletter

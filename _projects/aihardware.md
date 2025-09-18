@@ -2,7 +2,7 @@
 layout: page
 title: AI hardware
 description: 
-img: assets/img/AI_HW.png
+img: assets/img/ai_hw.jpg
 importance: 1
 category: current
 related_publications: true

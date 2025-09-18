@@ -2,7 +2,7 @@
 layout: page
 title: Agentic AI
 description: 
-img: assets/img/5.jpg
+img: assets/img/agentic_ai.jpg
 importance: 1
 category: current
 related_publications: true

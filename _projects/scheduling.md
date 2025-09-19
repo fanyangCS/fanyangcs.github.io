@@ -2,7 +2,7 @@
 layout: page
 title: Scheduler for AI workload
 description: 
-img: assets/img/3.jpg
+img: assets/img/scheduler.jpg
 importance: 2
 category: past
 related_publications: true

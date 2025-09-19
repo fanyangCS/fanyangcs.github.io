@@ -2,7 +2,7 @@
 layout: page
 title: Neuro-Symbolic AI
 description: 
-img: assets/img/12.jpg
+img: assets/img/neurosymbolic.png
 importance: 1
 category: current
 related_publications: true

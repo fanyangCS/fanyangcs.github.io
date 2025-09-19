@@ -2,7 +2,7 @@
 layout: page
 title: Graph engine
 description: 
-img: assets/img/4.jpg
+img: assets/img/graphengine.jpg
 importance: 10
 category: past
 related_publications: true

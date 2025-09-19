@@ -2,7 +2,7 @@
 layout: page
 title: Vector store
 description: 
-img: assets/img/9.jpg
+img: assets/img/vectorstore.jpg
 importance: 1
 category: current
 related_publications: true

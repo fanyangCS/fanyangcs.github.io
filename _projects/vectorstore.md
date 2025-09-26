@@ -9,8 +9,8 @@ related_publications: true
 ---
 
 Vector store is an important storage system in the AI era. I believe it not only serves as an cache used to retrieve computation results from neural networks, but also becomes (or will become) a fundamental component at the core of neural models. 
-For example, we realized that attention, a fundamental mechanism in the Transform-like neural architecture, can be viewed as vector index traversal {% cite retrievalattention2024 %}. 
-This makes the computation of sparse attention much more efficient. In the case of LLMs with a long context window, the benefit can be of one or multiple orders of magnitude.
+For example, we realized that attention, a fundamental mechanism in the Transform-like neural architecture, can be viewed as vector index traversal {% cite retrievalattention2025 %}. 
+This makes the computation of sparse attention much more efficient. In the case of LLMs with a long context window, the benefit can be of one or multiple orders of magnitude. Recently, we have realized the connection between vector store and the long-term memory, similar to human's hippocampus. We observe that long-term memory plays a critical role in pushing the boundary of human intelligence. We will share more soon.
 
 Here are some of our thoughts on vector store.
 - Integrating vector indices with relational databases using relaxed monotonicity. {% cite DBLP:conf/osdi/ZhangXCSXCCH00Y23 %}.

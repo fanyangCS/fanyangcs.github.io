@@ -9,7 +9,7 @@ featured: false
 ---
 
 One of the interesting business models in AI right now is what I like to call the “dollar per token” business.
-It’s a bit like how cloud companies charge you per I/O request, except here, you’re paying for every **token**, a chunk of text your AI sends or receives.
+It’s a bit like how cloud companies charge you per I/O request, except here, you’re paying for every *token*, a chunk of text your AI sends or receives.
 
 The more tokens you use, the happier the seller.
 
@@ -20,7 +20,7 @@ And that sets up a little tension between users (who want quick, to-the-point an
 
 But where there’s tension, there’s opportunity.
 
-We might soon see a new kind of AI business emerge — one that charges per **task**, not per token.
+We might soon see a new kind of AI business emerge — one that charges per *task*, not per token.
 
 Imagine an AI help-desk service that bills you only when it actually solves your tech issue, not for every word it types along the way.
 That’s like how Walmart or Costco makes money by selling goods. Their incentive aligns with their customers, i.e., to keep the prices down.

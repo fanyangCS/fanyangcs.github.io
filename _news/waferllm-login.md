@@ -1,6 +1,7 @@
 ---
 layout: post
-title: USENIX ";login:" published our article on WaferLLM (OSDI'25) 
+title: | 
+  USENIX ;login: published our article on WaferLLM (OSDI'25) 
 date: 2025-10-01
 inline: false
 related_posts: false

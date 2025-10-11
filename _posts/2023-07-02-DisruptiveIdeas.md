@@ -2,7 +2,7 @@
 layout: post
 title: How disruptive ideas were treated?
 date: 2023-07-02 12:00:00
-description: 
+description: of course, no one likes disruptive ideas
 tags: 
 categories: 
 featured: false

@@ -2,7 +2,7 @@
 layout: post
 title: The “dollar per token” business
 date: 2025-10-08 12:00:00
-description: where there's tension, there's opportunity
+description: where there's tension, there's opportunity; the economics of AI
 tags: 
 categories: 
 featured: false

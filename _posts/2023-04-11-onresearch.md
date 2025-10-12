@@ -10,11 +10,11 @@ featured: false
 
 
 以下文字是我应邀为微软亚洲研究院“树洞计划”关于研究方面的问题提供回答的完整版。
+研究院公众号的[版本](https://www.microsoft.com/en-us/research/articles/ask-me-1/)有所删节。
+文中有关同事的一些轶事是基于我的记忆描写的，如有偏差请见谅。
 
 <hr>
 
-研究院公众号的[版本](https://www.microsoft.com/en-us/research/articles/ask-me-1/)有所删节。
-文中有关同事的一些轶事是基于我的记忆描写的，如有偏差请见谅。
 
 #### **提问：**
 

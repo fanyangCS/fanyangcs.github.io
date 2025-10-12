@@ -1,14 +1,14 @@
 ---
 layout: post
 title: My reading list
-date: 2023-04-11 12:00:00
+date: 2023-04-23 12:00:00
 description: 
 tags: 
 categories: 
 featured: false
 ---
 
-以下是2024年世界读书日我应微软亚洲研究院邀提供的书单。
+以下是2023年世界读书日(4.23)我应微软亚洲研究院之邀提供的书单。
 
 <hr>
 

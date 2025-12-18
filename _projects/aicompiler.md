@@ -2,7 +2,7 @@
 layout: page
 title: AI compiler
 description: 
-img: assets/img/1.jpg
+img: assets/img/aicompiler.png
 importance: 1
 category: current
 related_publications: true

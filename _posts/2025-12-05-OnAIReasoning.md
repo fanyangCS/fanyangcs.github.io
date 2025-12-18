@@ -2,7 +2,7 @@
 layout: post
 title: A podcast on AI reasoning
 date: 2025-12-05 12:00:00
-description: How to fill the seemingly insurmountable gap between “correlation” and “causality”?
+description: fill the seemingly insurmountable gap between correlation and causality
 tags: 
 categories: 
 featured: false

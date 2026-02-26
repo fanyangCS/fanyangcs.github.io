@@ -22,6 +22,5 @@ My research passion lies in Computer Systems. My recent focus is on exploring th
 
 As a researcher, I also engage in public academic services, including serving on the program committees of ASPLOS ([2022](https://www.asplos-conference.org/asplos2022/index.html%3Fp=44.html)), ChinaSys (19th), EuroSys ([2023](https://2023.eurosys.org/pc.html), [2025](https://2025.eurosys.org/pc.html), [2026](https://2026.eurosys.org/pc.html)), OSDI ([2026](https://www.usenix.org/conference/osdi26/call-for-papers)), SOSP ([2026](https://sigops.org/s/conferences/sosp/2026/organizers.html)). 
 
-##### **We have a few FTE openings. Please send me your resume if interested.**
 ##### **We are recruiting interns the whole year, details [here](https://fanyangcs.github.io/news/intern_opportunities/).**
 

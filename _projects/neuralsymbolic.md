@@ -15,3 +15,4 @@ Here are some useful cases of the neural symbolic approach. And by now neuro-sym
 - Improving the autoformalization, a fundamental math capability of a neural model, through a hybrid neural-symbolic solution. {% cite NEURIPS2024_AutoFormalization %}.
 - Proving Olympiad inequalities through neuro-symbolic formal reasoning. {% cite inequalityiclr25 %}
 - Spontaneous informal to formal reasoning. {% cite dspplus25 %}
+- A neuro-symbolic approach to improve reasoning {% cite loongRL26 %}

@@ -37,6 +37,8 @@ Conversely, infrastructure must be reimagined to serve AI as its first-class cit
 
 At the same time, frontier AI models now demonstrate a remarkable capability to understand and reason about complex system and networking concepts. This opens up a new frontier: AI-driven systems and networking innovation, where AI not only runs on infrastructure but co-designs and optimizes it, accelerating the evolution of computing itself.
 
+<hr>
+
 ## Hononary Scholar Program 2026
 
 Modern computing is entering a new phase where systems and AI co-evolve.

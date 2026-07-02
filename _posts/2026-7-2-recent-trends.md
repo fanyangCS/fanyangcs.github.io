@@ -12,6 +12,7 @@ I was invited to write a short note on recent computing trends in two different 
 
 You can find the difference yourself.
 
+<hr>
 
 ## StarTrack Scholar Program 2026
 

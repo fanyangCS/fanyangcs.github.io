@@ -8,9 +8,9 @@ middle_name: # R.
 last_name: Yang
 email: # you@example.com
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  
+
 footer_text: >
-    
+
 keywords: jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: icon.jpg #⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
@@ -111,7 +111,6 @@ youtube_id: # your youtube channel id (youtube.com/@<youtube_id>)
 zotero_username: # your zotero username
 
 contact_note: >
-   
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
@@ -167,19 +166,19 @@ disqus_shortname: # al-folio # put your disqus shortname
 # If you have blog posts published on medium.com or other external sources,
 # you can display them in your blog by adding a link to the RSS feed.
 external_sources:
- # - name: medium.com
- #   rss_url: https://medium.com/@al-folio/feed
- # - name: Google Blog
- #   posts:
- #     - url: https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/
- #       published_date: 2024-05-14
- # - name: Microsoft Research Blog
- #   posts:   
- #   - url: https://www.microsoft.com/en-us/research/blog/new-methods-boost-reasoning-in-small-and-large-language-models/
- #     published_date: 2025-06-17
- #   - url: https://www.microsoft.com/en-us/research/blog/advances-to-low-bit-quantization-enable-llms-on-edge-devices/
- #     published_date: 2025-02-05 
-       
+  # - name: medium.com
+  #   rss_url: https://medium.com/@al-folio/feed
+  # - name: Google Blog
+  #   posts:
+  #     - url: https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/
+  #       published_date: 2024-05-14
+  # - name: Microsoft Research Blog
+  #   posts:
+  #   - url: https://www.microsoft.com/en-us/research/blog/new-methods-boost-reasoning-in-small-and-large-language-models/
+  #     published_date: 2025-06-17
+  #   - url: https://www.microsoft.com/en-us/research/blog/advances-to-low-bit-quantization-enable-llms-on-edge-devices/
+  #     published_date: 2025-02-05
+
 # -----------------------------------------------------------------------------
 # Newsletter
 # -----------------------------------------------------------------------------
@@ -207,7 +206,6 @@ announcements:
   enabled: true
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
   limit: 5 # leave blank to include all the news in the `_news` folder
-  
 
 latest_posts:
   enabled: false
@@ -249,7 +247,7 @@ exclude:
   - package.json
   - package-lock.json
   - _pages/about_einstein.md
-  - _pages/cv.md  
+  - _pages/cv.md
   - _pages/dropdown.md
   - _pages/profiles.md
   - _pages/repositories.md

@@ -2,13 +2,13 @@
 layout: post
 title: Recent trends on computing
 date: 2026-07-02 12:00:00
-description: Some thoughs on the recent computing trends 
-tags: 
-categories: 
+description: Some thoughs on the recent computing trends
+tags:
+categories:
 featured: false
 ---
 
-I was invited to write a short note on recent computing trends in two different programs, [2026 StarTrack Scholars](https://www.microsoft.com/en-us/research/articles/microsoft-research-asia-startrack-scholars-2026-a-holistic-approach-to-systems-and-networking-in-the-ai-era/) and [2026 Honorary Scholars](https://www.microsoft.com/en-us/research/project/msrahonoraryscholars/), respectively. The two programs are 6 months apart. And the two versions have some noticeable difference. 
+I was invited to write a short note on recent computing trends in two different programs, [2026 StarTrack Scholars](https://www.microsoft.com/en-us/research/articles/microsoft-research-asia-startrack-scholars-2026-a-holistic-approach-to-systems-and-networking-in-the-ai-era/) and [2026 Honorary Scholars](https://www.microsoft.com/en-us/research/project/msrahonoraryscholars/), respectively. The two programs are 6 months apart. And the two versions have some noticeable difference.
 
 You can find the difference yourself.
 
@@ -61,16 +61,16 @@ We are particularly interested in ideas that challenge the static, GPU-centric, 
 Research Topics include, but are not limited to:
 
 - Self-Driving Systems Infrastructure
-(e.g., LLM-assisted fault diagnosis, autonomous configuration tuning, AI-driven capacity planning and anomaly detection)
+  (e.g., LLM-assisted fault diagnosis, autonomous configuration tuning, AI-driven capacity planning and anomaly detection)
 
 - Agentic AI Systems and Heterogeneous Execution (CPU/GPU Co-Design)
-(e.g., speculative tool execution for agent workloads, CPU/GPU co-scheduling, dynamic resource allocation for multi-step agent pipelines)
+  (e.g., speculative tool execution for agent workloads, CPU/GPU co-scheduling, dynamic resource allocation for multi-step agent pipelines)
 
 - AI-Assisted System Design, Debugging, and Verification
-(e.g., LLM-powered code review for kernel/driver patches, automated root cause analysis, AI-guided formal verification of distributed protocols or mathematical proofs)
+  (e.g., LLM-powered code review for kernel/driver patches, automated root cause analysis, AI-guided formal verification of distributed protocols or mathematical proofs)
 
 - Next-Generation Architectures for Scalable AI
-(e.g., disaggregated memory/compute architectures, new accelerator designs, near-data processing for training pipelines)
+  (e.g., disaggregated memory/compute architectures, new accelerator designs, near-data processing for training pipelines)
 
 - Storage, Communication, and Resource Management for Large-Scale AI Workloads
-(e.g., KV cache-aware storage tiering, RDMA/NVLink topology-aware scheduling, checkpoint optimization for trillion-parameter models
+  (e.g., KV cache-aware storage tiering, RDMA/NVLink topology-aware scheduling, checkpoint optimization for trillion-parameter models

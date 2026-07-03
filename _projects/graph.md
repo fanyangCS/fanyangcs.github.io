@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Graph engine
-description: 
+description:
 img: assets/img/graphengine.jpg
 importance: 10
 category: past

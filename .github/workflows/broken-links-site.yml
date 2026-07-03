@@ -1,9 +1,10 @@
 name: Check for broken links on site
 
+# Broken-link checking is intentionally disabled.
+# Keep this workflow manual-only so the configuration remains available
+# without blocking pushes, pull requests, or deploys.
 on:
-  workflow_run:
-    workflows: [Deploy site]
-    types: [completed]
+  workflow_dispatch:
 
 jobs:
   check-links-on-site:

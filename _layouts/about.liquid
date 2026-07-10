@@ -9,19 +9,16 @@ layout: default
     <a href="{{ '/publications/' | relative_url }}">Publications</a>
     <a href="{{ '/projects/' | relative_url }}">Projects</a>
   </nav>
-  <label class="sr-only" for="homepage-mobile-nav">Homepage navigation</label>
-  <select
-    id="homepage-mobile-nav"
-    class="homepage-mobile-nav"
-    aria-label="Homepage navigation"
-    onchange="if (this.value) window.location.href = this.value;"
-  >
-    <option value="#about-me" selected>About</option>
-    <option value="{{ '/blog/' | relative_url }}">Blog</option>
-    <option value="{{ '/news/' | relative_url }}">News</option>
-    <option value="{{ '/publications/' | relative_url }}">Publications</option>
-    <option value="{{ '/projects/' | relative_url }}">Projects</option>
-  </select>
+  <details class="homepage-mobile-menu">
+    <summary aria-label="Open homepage navigation"><span>Menu</span></summary>
+    <nav class="homepage-mobile-menu-panel" aria-label="Homepage navigation">
+      <a href="#about-me">About</a>
+      <a href="{{ '/blog/' | relative_url }}">Blog</a>
+      <a href="{{ '/news/' | relative_url }}">News</a>
+      <a href="{{ '/publications/' | relative_url }}">Publications</a>
+      <a href="{{ '/projects/' | relative_url }}">Projects</a>
+    </nav>
+  </details>
 
   <div class="row">
     <div class="side-bar col-md-4 col-sm-12 col-xs-12">

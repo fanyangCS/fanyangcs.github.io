@@ -26,10 +26,23 @@ $max-content-width: {{ site.max_width }};
   "tabler-icons/tabler-icons-outline.scss"
 ;
 
-// AI-assisted homepage preview override: keep the About Me heading unruled.
+// AI-assisted homepage preview override: keep section headings prominent and unruled.
 body.layout-about .section h3 {
   border-bottom: 0 !important;
   padding-bottom: 0 !important;
+  font-size: 26px;
+}
+
+@media print, screen and (max-width: 767px) {
+  body.layout-about .section h3 {
+    font-size: 24px;
+  }
+}
+
+@media print, screen and (max-width: 480px) {
+  body.layout-about .section h3 {
+    font-size: 22px;
+  }
 }
 
 // AI-assisted homepage preview override: keep the custom Victoria-style top panel unruled
@@ -192,7 +205,7 @@ body.layout-about .homepage-victoria .homepage-publications-list .links a.bibtex
   display: inline-flex !important;
   align-items: center;
   width: auto;
-  text-transform: lowercase;
+  text-transform: uppercase;
   cursor: pointer;
 }
 

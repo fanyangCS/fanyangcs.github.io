@@ -169,9 +169,8 @@ body.layout-about {
   }
 
   .homepage-top-nav a::before {
-    content: "▪";
-    margin-right: 8px;
-    font-size: 11px;
+    display: none;
+    content: none;
   }
 
   .homepage-top-nav a:hover,
@@ -411,7 +410,7 @@ body.layout-about {
     position: relative;
     margin: 0 0 18px;
     color: var(--homepage-ink);
-    font-size: 20px;
+    font-size: 26px;
     font-weight: 500;
     line-height: 1.2;
     scroll-margin-top: 84px;
@@ -621,7 +620,7 @@ body.layout-about {
     .section h3 {
       background: transparent;
       font-family: inherit;
-      font-size: 20px;
+      font-size: 24px;
       font-weight: 500;
       line-height: 1.2;
       scroll-margin-top: 80px;
@@ -641,7 +640,7 @@ body.layout-about {
     }
 
     .section h3 {
-      font-size: 18px;
+      font-size: 22px;
     }
 
     .homepage-news-list li {

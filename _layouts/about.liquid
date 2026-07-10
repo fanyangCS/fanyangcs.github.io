@@ -7,10 +7,6 @@ layout: default
       <div class="side-bar-panel">
         <div class="navbar">
           <h4>Navigation</h4>
-          <button class="nav-toggle" type="button" aria-controls="site-navigation" aria-expanded="false">
-            <i class="fa fa-bars" aria-hidden="true"></i>
-            <span class="sr-only">Navigation</span>
-          </button>
           <ul id="site-navigation" style="padding-left: 16px; list-style-type: none">
             <li class="li-relaxed"><a href="#about-me">About Me</a></li>
             <li class="li-relaxed"><a href="{{ '/publications/' | relative_url }}">Publications</a></li>
@@ -67,15 +63,3 @@ layout: default
     </div>
   </div>
 </div>
-<script>
-  (function () {
-    var toggle = document.querySelector('.homepage-victoria .nav-toggle');
-    var nav = document.querySelector('.homepage-victoria .navbar');
-    if (!toggle || !nav) return;
-    toggle.addEventListener('click', function () {
-      var isOpen = nav.classList.toggle('is-open');
-      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-      document.body.classList.toggle('nav-open', isOpen);
-    });
-  })();
-</script>

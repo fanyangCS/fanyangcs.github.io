@@ -1,72 +1,81 @@
 ---
 layout: default
 ---
-<div class="academic-home">
-  <aside class="academic-sidebar" aria-label="Homepage sidebar">
-    <nav class="academic-nav" aria-label="Homepage sections">
-      <div class="academic-nav-title">Navigation</div>
-      <a href="#about">About</a>
-      {% if page.news and site.announcements.enabled %}
-        <a href="#news">News</a>
-      {% endif %}
-      {% if page.selected_papers %}
-        <a href="#publications">Publications</a>
-      {% endif %}
-    </nav>
+<div class="homepage-victoria">
+  <div class="row">
+    <div class="side-bar col-md-4 col-sm-12 col-xs-12">
+      <div class="side-bar-panel">
+        <div class="navbar">
+          <h4>Navigation</h4>
+          <button class="nav-toggle" type="button" aria-controls="site-navigation" aria-expanded="false">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+            <span class="sr-only">Navigation</span>
+          </button>
+          <ul id="site-navigation" style="padding-left: 16px; list-style-type: none">
+            <li class="li-relaxed"><a href="#about-me">About Me</a></li>
+            <li class="li-relaxed"><a href="{{ '/publications/' | relative_url }}">Publications</a></li>
+            <li class="li-relaxed"><a href="{{ '/projects/' | relative_url }}">Projects</a></li>
+            <li class="li-relaxed"><a href="{{ '/cv/' | relative_url }}">CV</a></li>
+          </ul>
+        </div>
+      </div>
 
-    <section class="academic-identity" aria-label="Profile">
-      {% if page.profile and page.profile.image %}
-        {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-        <img class="academic-avatar" src="{{ profile_image_path | relative_url }}" alt="{{ site.first_name }} {{ site.last_name }}">
-      {% endif %}
-      <h1 class="academic-name">
-        {% if site.title == 'blank' %}
-          {{ site.first_name -}}
-          {%- if site.middle_name %} {{ site.middle_name }}{% endif %}
-          {{ site.last_name }}
-        {% else %}
-          {{ site.title }}
-        {% endif %}
-      </h1>
-      <p class="academic-subtitle">{{ page.subtitle }}</p>
-      {% if page.profile.more_info %}
-        <div class="academic-more-info">{{ page.profile.more_info }}</div>
-      {% endif %}
-      {% if page.social %}
-        <div class="academic-social" aria-label="Social links">{% include social.liquid %}</div>
-      {% endif %}
-    </section>
-  </aside>
+      <div class="identity-row">
+        <h1><span class="english-name">Fan Yang</span></h1>
+        <div class="contact-card">
+          {% if page.profile and page.profile.image %}
+            {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+            <img class="profile-avatar" src="{{ profile_image_path | relative_url }}" alt="Fan Yang">
+          {% endif %}
+          <div class="contacts">
+            <div class="title">
+              Systems Researcher<br>
+              Research Manager
+            </div>
+            <div class="address"><i class="fa fa-map-marker" aria-hidden="true"></i> MSR Asia</div>
+            <div class="email">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+              <span>yang DOT fan DOT acm DOT org</span>
+            </div>
+            <div class="social-networks" aria-label="Profile links">
+              <a href="https://www.microsoft.com/en-us/research/people/fanyang/" aria-label="Microsoft Research profile"
+                ><i class="fa fa-building-o" aria-hidden="true"></i
+              ></a>
+              <a href="https://scholar.google.com/citations?user={{ site.scholar_userid }}" aria-label="Google Scholar"
+                ><i class="ai ai-google-scholar" aria-hidden="true"></i
+              ></a>
+              <a href="https://github.com/fanyangCS" aria-label="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>
+              <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" aria-label="LinkedIn"
+                ><i class="fa fa-linkedin-square" aria-hidden="true"></i
+              ></a>
+              <a href="{{ '/cv/' | relative_url }}" aria-label="CV"><i class="ai ai-cv" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <main class="academic-main">
-    <section id="about" class="academic-section about-me-section">
-      <h2>About Me</h2>
-      <div class="academic-copy">{{ content }}</div>
-    </section>
-
-    {% if page.news and site.announcements.enabled %}
-      <section id="news" class="academic-section academic-news-section">
-        <h2>
-          <a href="{{ '/news/' | relative_url }}">News</a>
-        </h2>
-        {% include news.liquid limit=true %}
-      </section>
-    {% endif %}
-
-    {% if page.selected_papers %}
-      <section id="publications" class="academic-section academic-publications-section">
-        <h2>
-          <a href="{{ '/publications/' | relative_url }}">Selected Publications</a>
-        </h2>
-        <p class="publication-note">
-          A concise selection of recent work. See the full <a href="{{ '/publications/' | relative_url }}">publications page</a>
-          {%- if site.scholar_userid %}
-            or <a href="https://scholar.google.com/citations?user={{ site.scholar_userid }}">Google Scholar</a>
-          {%- endif %}
-          for more.
-        </p>
-        {% include selected_papers.liquid %}
-      </section>
-    {% endif %}
-  </main>
+    <div class="col-md-8 col-sm-12 col-xs-12 main-body">
+      <div>
+        <div class="section about-me-section">
+          <h3 id="about-me">
+            <a class="anchor" href="#about-me" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>About Me
+          </h3>
+          {{ content }}
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+<script>
+  (function () {
+    var toggle = document.querySelector('.homepage-victoria .nav-toggle');
+    var nav = document.querySelector('.homepage-victoria .navbar');
+    if (!toggle || !nav) return;
+    toggle.addEventListener('click', function () {
+      var isOpen = nav.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      document.body.classList.toggle('nav-open', isOpen);
+    });
+  })();
+</script>

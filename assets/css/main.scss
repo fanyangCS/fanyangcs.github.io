@@ -25,3 +25,9 @@ $max-content-width: {{ site.max_width }};
   "tabler-icons/tabler-icons-filled.scss",
   "tabler-icons/tabler-icons-outline.scss"
 ;
+
+// AI-assisted homepage preview override: keep the About Me heading unruled.
+body.layout-about .section h3 {
+  border-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}

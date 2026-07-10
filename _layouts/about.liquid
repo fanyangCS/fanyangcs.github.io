@@ -81,7 +81,48 @@ layout: default
           </h3>
           {{ content }}
         </div>
+        <div class="section homepage-news-section">
+          <h3 id="news">
+            <a class="anchor" href="#news" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>News
+          </h3>
+          {% if site.news != blank %}
+            {% assign homepage_news = site.news | reverse %}
+            {% if site.announcements.limit %}
+              {% assign homepage_news_limit = site.announcements.limit %}
+            {% else %}
+              {% assign homepage_news_limit = 5 %}
+            {% endif %}
+            <ul class="homepage-news-list">
+              {% for item in homepage_news limit: homepage_news_limit %}
+                <li>
+                  <time datetime="{{ item.date | date: '%Y-%m-%d' }}">{{ item.date | date: '%b %d, %Y' }}</time>
+                  <span>
+                    {% if item.inline %}
+                      {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
+                    {% else %}
+                      <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+                    {% endif %}
+                  </span>
+                </li>
+              {% endfor %}
+            </ul>
+            <p class="homepage-section-link"><a href="{{ '/news/' | relative_url }}">All news</a></p>
+          {% else %}
+            <p>No news so far...</p>
+          {% endif %}
+        </div>
+        <div class="section homepage-publications-section">
+          <h3 id="publications">
+            <a class="anchor" href="#publications" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Publications
+          </h3>
+          <div class="homepage-publications-list">
+            {% bibliography --group_by none --query @*[selected=true]* %}
+          </div>
+          <p class="homepage-section-link"><a href="{{ '/publications/' | relative_url }}">Complete publication list</a></p>
+        </div>
       </div>
     </div>
   </div>
+
+  <div class="homepage-footer">© All right reserved. Last updated on July 10, 2026</div>
 </div>

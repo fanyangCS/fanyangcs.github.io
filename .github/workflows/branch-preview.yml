@@ -1,0 +1,114 @@
+name: Deploy branch preview
+
+on:
+  push:
+    branches-ignore:
+      - master
+      - main
+      - gh-pages
+    paths:
+      - "assets/**"
+      - "**.bib"
+      - "**.html"
+      - "**.js"
+      - "**.liquid"
+      - "**/*.md"
+      - "**.yml"
+      - "Gemfile"
+      - "Gemfile.lock"
+      - "!.github/workflows/axe.yml"
+      - "!.github/workflows/broken-links.yml"
+      - "!.github/workflows/deploy-docker-tag.yml"
+      - "!.github/workflows/deploy-image.yml"
+      - "!.github/workflows/docker-slim.yml"
+      - "!.github/workflows/lighthouse-badger.yml"
+      - "!.github/workflows/prettier.yml"
+      - "!lighthouse_results/**"
+      - "!CONTRIBUTING.md"
+      - "!CUSTOMIZE.md"
+      - "!FAQ.md"
+      - "!INSTALL.md"
+      - "!README.md"
+  delete:
+
+permissions:
+  contents: write
+
+jobs:
+  deploy-preview:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    concurrency:
+      group: github-pages
+      cancel-in-progress: false
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.2.2"
+          bundler-cache: true
+      - name: Update _config.yml for preview ⚙️
+        uses: fjogeleit/yaml-update-action@main
+        with:
+          commitChange: false
+          valueFile: "_config.yml"
+          changes: |
+            {
+              "giscus.repo": "${{ github.repository }}",
+              "baseurl": "/previews/${{ github.ref_name }}"
+            }
+      - name: Install and Build 🔧
+        run: |
+          pip3 install --upgrade jupyter
+          export JEKYLL_ENV=production
+          bundle exec jekyll build
+      - name: Purge unused CSS 🧹
+        run: |
+          npm install -g purgecss
+          purgecss -c purgecss.config.js
+      - name: Deploy preview 🚀
+        uses: JamesIves/github-pages-deploy-action@v4.6.4
+        with:
+          folder: _site
+          branch: gh-pages
+          target-folder: previews/${{ github.ref_name }}
+          clean: true
+          commit-message: Deploy preview for ${{ github.ref_name }}
+      - name: Summarize preview URL
+        run: |
+          echo "Preview URL: https://fanyangcs.github.io/previews/${{ github.ref_name }}/" >> "$GITHUB_STEP_SUMMARY"
+
+  cleanup-preview:
+    if: github.event_name == 'delete' && github.event.ref_type == 'branch'
+    runs-on: ubuntu-latest
+    concurrency:
+      group: github-pages
+      cancel-in-progress: false
+    steps:
+      - name: Checkout gh-pages
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: gh-pages
+      - name: Remove deleted branch preview 🧹
+        env:
+          BRANCH_NAME: ${{ github.event.ref }}
+        run: |
+          set -euo pipefail
+          cd gh-pages
+          target="previews/${BRANCH_NAME}"
+          if [ ! -d "$target" ]; then
+            echo "No preview directory found for ${BRANCH_NAME}."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm -r --ignore-unmatch -- "$target"
+          if git diff --cached --quiet; then
+            echo "No preview files to remove."
+            exit 0
+          fi
+          git commit -m "Remove preview for ${BRANCH_NAME}"
+          git push origin gh-pages

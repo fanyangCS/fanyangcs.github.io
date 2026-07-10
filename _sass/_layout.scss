@@ -62,9 +62,7 @@ body.layout-about {
   --homepage-rule: #111111;
   --homepage-accent: #6b4f29;
   --homepage-faint: #eeeeee;
-  --homepage-sidebar: 315px;
-
-  padding: 38px 0 58px;
+  padding: 30px 0 56px;
   color: var(--homepage-ink);
   background: #fff;
   font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -79,8 +77,8 @@ body.layout-about {
   }
 
   > .container {
-    width: min(1060px, calc(100% - 56px));
-    max-width: 1060px;
+    width: min(1140px, calc(100% - 44px));
+    max-width: 1140px;
     margin-top: 0 !important;
     padding: 0;
   }
@@ -121,10 +119,11 @@ body.layout-about {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 12px 34px;
-    margin: 0 0 38px;
-    padding: 0 0 18px;
+    margin: 0;
+    padding: 13px 0 0;
+    border-top: 1px solid var(--homepage-rule);
     border-bottom: 1px solid var(--homepage-rule);
   }
 
@@ -230,25 +229,17 @@ body.layout-about {
   }
 
   .homepage-victoria > .row {
-    display: grid;
-    grid-template-columns: var(--homepage-sidebar) minmax(0, 1fr);
-    column-gap: 52px;
-    align-items: start;
+    display: block;
     margin: 0;
   }
 
-  .side-bar,
   .main-body {
     float: none;
-    width: auto;
-    max-width: none;
+    width: 100%;
+    max-width: 920px;
     min-width: 0;
+    margin: 0 auto;
     padding: 0;
-  }
-
-  .side-bar {
-    position: sticky;
-    top: 32px;
   }
 
   .nav-toggle {
@@ -256,12 +247,19 @@ body.layout-about {
   }
 
   .identity-row {
-    display: block;
-    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    max-width: 920px;
+    margin: 34px auto 32px;
   }
 
   h1 {
-    margin: 0 0 18px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin: 0;
     padding: 0;
     border: 0;
     color: var(--homepage-accent);
@@ -279,34 +277,37 @@ body.layout-about {
   }
 
   .contact-card {
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 22px;
   }
 
   .profile-avatar {
-    display: block;
-    width: 214px;
-    height: 214px;
-    margin: 0 0 18px;
+    width: 139px;
+    height: 139px;
+    flex: 0 0 auto;
     border-radius: 50%;
     object-fit: cover;
     object-position: center;
   }
 
   .contacts {
-    max-width: 270px;
+    max-width: 300px;
     margin: 0;
-    text-align: left;
+    text-align: right;
   }
 
   .contacts .title {
+    color: var(--homepage-ink);
+    font-family: inherit;
     font-size: 17px;
     font-weight: 700;
-    line-height: 1.35;
+    line-height: inherit;
   }
 
   .contacts .address,
   .contacts .email {
-    margin-top: 8px;
+    margin-top: 7px;
     color: var(--homepage-muted);
     font-size: 14px;
     line-height: 1.35;
@@ -318,10 +319,10 @@ body.layout-about {
 
   .contacts .social-networks {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
     gap: 9px;
-    margin: 12px 0 0;
+    margin: 10px 0 0;
   }
 
   .contacts .social-networks a {
@@ -343,10 +344,6 @@ body.layout-about {
   .contacts .social-networks i {
     font-size: 19px;
     line-height: 1;
-  }
-
-  .main-body {
-    padding-top: 4px;
   }
 
   .section {
@@ -385,51 +382,7 @@ body.layout-about {
 @media print, screen and (max-width: 991px) {
   body.layout-about {
     > .container {
-      width: min(100% - 32px, 760px);
-    }
-
-    .homepage-victoria > .row {
-      display: block;
-    }
-
-    .homepage-top-nav {
-      justify-content: center;
-      gap: 10px 24px;
-      margin-bottom: 32px;
-      padding-bottom: 16px;
-    }
-
-    .side-bar {
-      position: static;
-      margin-bottom: 34px;
-    }
-
-    .identity-row {
-      display: grid;
-      grid-template-columns: auto 1fr;
-      gap: 22px;
-      align-items: center;
-    }
-
-    h1 {
-      grid-column: 1 / -1;
-      margin-bottom: 0;
-    }
-
-    .contact-card {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-    }
-
-    .profile-avatar {
-      width: 132px;
-      height: 132px;
-      margin: 0;
-    }
-
-    .contacts {
-      max-width: none;
+      width: min(100% - 30px, 760px);
     }
 
     .about-me-section p {
@@ -443,7 +396,7 @@ body.layout-about {
   }
 }
 
-@media print, screen and (max-width: 560px) {
+@media print, screen and (max-width: 768px) {
   body.layout-about {
     padding: 20px 0 42px;
     font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -483,10 +436,11 @@ body.layout-about {
 
     .identity-row {
       display: block;
+      margin: 28px 0 30px;
     }
 
     h1 {
-      margin-bottom: 16px;
+      margin-bottom: 20px;
       color: var(--homepage-accent);
       font-family: inherit;
       font-size: 32px;
@@ -498,16 +452,21 @@ body.layout-about {
 
     .contact-card {
       align-items: flex-start;
-      gap: 14px;
+      justify-content: flex-start;
+      gap: 16px;
     }
 
     .profile-avatar {
-      width: 104px;
-      height: 104px;
+      width: 106px;
+      height: 106px;
     }
 
-    .contacts .title,
-    .contacts .email {
+    .contacts {
+      max-width: none;
+      text-align: left;
+    }
+
+    .contacts .title {
       color: var(--homepage-ink) !important;
     }
 
@@ -516,8 +475,9 @@ body.layout-about {
       color: inherit;
     }
 
-    .contacts .title {
-      font-size: 16px;
+    .contacts .social-networks {
+      flex-wrap: wrap;
+      justify-content: flex-start;
     }
 
     .about-me-section p {

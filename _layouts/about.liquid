@@ -24,55 +24,53 @@ layout: default
   </details>
 
   <div class="row">
-    <div class="side-bar col-md-4 col-sm-12 col-xs-12">
-      <div class="identity-row">
-        <h1><span class="english-name">Fan Yang</span></h1>
-        <div class="contact-card">
-          {% if page.profile and page.profile.image %}
-            {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-            <img class="profile-avatar" src="{{ profile_image_path | relative_url }}" alt="Fan Yang">
-          {% endif %}
-          <div class="contacts">
-            <div class="title">Systems Researcher</div>
-            <div class="email">
-              <i class="fa fa-envelope" aria-hidden="true"></i>
-              <span>yang DOT fan AT acm DOT org</span>
-            </div>
-            <div class="social-networks" aria-label="Profile links">
-              {% if site.work_url %}
-                <a href="{{ site.work_url }}" aria-label="Microsoft Research work page"><i class="fa-solid fa-briefcase" aria-hidden="true"></i></a>
-              {% endif %}
-              {% if site.scholar_userid %}
-                <a href="https://scholar.google.com/citations?user={{ site.scholar_userid }}" aria-label="Google Scholar"
-                  ><i class="ai ai-google-scholar" aria-hidden="true"></i
-                ></a>
-              {% endif %}
-              {% if site.orcid_id %}
-                <a href="https://orcid.org/{{ site.orcid_id }}" aria-label="ORCID"><i class="ai ai-orcid" aria-hidden="true"></i></a>
-              {% endif %}
-              {% if site.semanticscholar_id %}
-                <a href="https://www.semanticscholar.org/author/{{ site.semanticscholar_id }}" aria-label="Semantic Scholar"
-                  ><i class="ai ai-semantic-scholar" aria-hidden="true"></i
-                ></a>
-              {% endif %}
-              {% if site.dblp_url %}
-                <a href="{{ site.dblp_url }}" aria-label="DBLP"><i class="ai ai-dblp" aria-hidden="true"></i></a>
-              {% endif %}
-              {% if site.github_username %}
-                <a href="https://github.com/{{ site.github_username }}" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
-              {% endif %}
-              {% if site.linkedin_username %}
-                <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" aria-label="LinkedIn"
-                  ><i class="fa-brands fa-linkedin" aria-hidden="true"></i
-                ></a>
-              {% endif %}
-            </div>
+    <div class="identity-row">
+      <h1><span class="english-name">Fan Yang</span></h1>
+      <div class="contact-card">
+        {% if page.profile and page.profile.image %}
+          {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+          <img class="profile-avatar" src="{{ profile_image_path | relative_url }}" alt="Fan Yang">
+        {% endif %}
+        <div class="contacts">
+          <div class="title">Systems Researcher</div>
+          <div class="email">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+            <span>yang DOT fan AT acm DOT org</span>
+          </div>
+          <div class="social-networks" aria-label="Profile links">
+            {% if site.work_url %}
+              <a href="{{ site.work_url }}" aria-label="Microsoft Research work page"><i class="fa-solid fa-briefcase" aria-hidden="true"></i></a>
+            {% endif %}
+            {% if site.scholar_userid %}
+              <a href="https://scholar.google.com/citations?user={{ site.scholar_userid }}" aria-label="Google Scholar"
+                ><i class="ai ai-google-scholar" aria-hidden="true"></i
+              ></a>
+            {% endif %}
+            {% if site.orcid_id %}
+              <a href="https://orcid.org/{{ site.orcid_id }}" aria-label="ORCID"><i class="ai ai-orcid" aria-hidden="true"></i></a>
+            {% endif %}
+            {% if site.semanticscholar_id %}
+              <a href="https://www.semanticscholar.org/author/{{ site.semanticscholar_id }}" aria-label="Semantic Scholar"
+                ><i class="ai ai-semantic-scholar" aria-hidden="true"></i
+              ></a>
+            {% endif %}
+            {% if site.dblp_url %}
+              <a href="{{ site.dblp_url }}" aria-label="DBLP"><i class="ai ai-dblp" aria-hidden="true"></i></a>
+            {% endif %}
+            {% if site.github_username %}
+              <a href="https://github.com/{{ site.github_username }}" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+            {% endif %}
+            {% if site.linkedin_username %}
+              <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" aria-label="LinkedIn"
+                ><i class="fa-brands fa-linkedin" aria-hidden="true"></i
+              ></a>
+            {% endif %}
           </div>
         </div>
       </div>
     </div>
 
-    <div class="col-md-8 col-sm-12 col-xs-12 main-body">
+    <div class="main-body">
       <div>
         <div class="section about-me-section">
           <h3 id="about-me">

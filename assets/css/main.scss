@@ -182,8 +182,48 @@ body.layout-about .homepage-victoria .homepage-publications-list .links a.btn:ac
 
 body.layout-about .homepage-victoria .homepage-publications-list .links a.award,
 body.layout-about .homepage-victoria .homepage-publications-list .links a.abstract,
-body.layout-about .homepage-victoria .homepage-publications-list .links a.bibtex,
 body.layout-about .homepage-victoria .homepage-publications-list .badges,
-body.layout-about .homepage-victoria .homepage-publications-list .hidden {
+body.layout-about .homepage-victoria .homepage-publications-list .hidden:not(.bibtex) {
   display: none !important;
+}
+
+body.layout-about .homepage-victoria .homepage-publications-list .links a.bibtex.btn {
+  display: inline-flex;
+  align-items: center;
+  width: auto;
+  text-transform: lowercase;
+  cursor: pointer;
+}
+
+body.layout-about .homepage-victoria .homepage-publications-list div.bibtex.hidden {
+  display: block;
+  max-height: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 0 solid transparent;
+  background: #fbfaf8;
+  color: var(--homepage-ink);
+  text-align: left;
+  transition: max-height 0.18s ease, margin 0.18s ease, border-width 0.18s ease;
+}
+
+body.layout-about .homepage-victoria .homepage-publications-list div.bibtex.hidden.open {
+  max-height: 36rem;
+  margin-top: 9px;
+  border: 1px solid #e6e0d8;
+}
+
+body.layout-about .homepage-victoria .homepage-publications-list div.bibtex.hidden figure.highlight {
+  margin: 0;
+}
+
+body.layout-about .homepage-victoria .homepage-publications-list div.bibtex.hidden pre {
+  margin: 0;
+  padding: 10px 12px;
+  overflow-x: auto;
+  background: transparent;
+  color: var(--homepage-ink);
+  font-size: 12px;
+  line-height: 1.45;
+  white-space: pre-wrap;
 }

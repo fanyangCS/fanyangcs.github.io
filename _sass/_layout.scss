@@ -459,6 +459,14 @@ body.layout-about {
       font-family: inherit;
     }
 
+    .homepage-mobile-menu summary {
+      color: var(--homepage-ink) !important;
+    }
+
+    .homepage-menu-icon span {
+      background: var(--homepage-ink) !important;
+    }
+
     .homepage-mobile-menu-panel a {
       font-family: inherit;
       font-size: 15px;
@@ -483,6 +491,16 @@ body.layout-about {
     .profile-avatar {
       width: 104px;
       height: 104px;
+    }
+
+    .contacts .title,
+    .contacts .email {
+      color: var(--homepage-ink) !important;
+    }
+
+    .contacts .email i,
+    .contacts .email span {
+      color: inherit;
     }
 
     .contacts .title {

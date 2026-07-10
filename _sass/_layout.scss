@@ -115,16 +115,21 @@ body.layout-about {
     margin: 0 0 15px;
   }
 
+  .homepage-nav-panel {
+    margin: 0;
+    padding: 0 0 12px;
+    border-bottom: 3px solid var(--homepage-rule);
+  }
+
   .homepage-top-nav {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: 12px 34px;
-    margin: 0;
+    margin: 30px 0 0;
     padding: 13px 0 0;
     border-top: 1px solid var(--homepage-rule);
-    border-bottom: 1px solid var(--homepage-rule);
   }
 
   .homepage-top-nav a {
@@ -134,6 +139,12 @@ body.layout-about {
     letter-spacing: 0;
     line-height: 1;
     text-transform: uppercase;
+  }
+
+  .homepage-top-nav a::before {
+    content: "▪";
+    margin-right: 8px;
+    font-size: 11px;
   }
 
   .homepage-top-nav a:hover,
@@ -146,7 +157,7 @@ body.layout-about {
     position: relative;
     z-index: 20;
     min-height: 35px;
-    margin: 0 0 28px;
+    margin: 0;
     text-align: right;
   }
 
@@ -409,13 +420,27 @@ body.layout-about {
       width: calc(100% - 24px);
     }
 
+    .homepage-victoria {
+      padding-top: 92px;
+    }
+
+    .homepage-nav-panel {
+      position: fixed;
+      top: 0;
+      right: 11px;
+      left: 11px;
+      z-index: 20;
+      width: auto;
+      background: #fff;
+    }
+
     .homepage-top-nav {
       display: none;
     }
 
     .homepage-mobile-menu {
       display: block;
-      margin: 0 0 28px;
+      margin: 0;
       font-family: inherit;
     }
 
@@ -432,6 +457,10 @@ body.layout-about {
       font-size: 15px;
       font-weight: 400;
       line-height: 1;
+    }
+
+    .homepage-victoria:has(.homepage-mobile-menu[open]) {
+      padding-top: 188px;
     }
 
     .identity-row {

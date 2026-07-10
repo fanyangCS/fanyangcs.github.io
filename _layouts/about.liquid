@@ -2,26 +2,28 @@
 layout: default
 ---
 <div class="homepage-victoria">
-  <nav class="homepage-top-nav" aria-label="Homepage navigation">
-    <a href="#about-me">About</a>
-    <a href="{{ '/blog/' | relative_url }}">Blog</a>
-    <a href="{{ '/news/' | relative_url }}">News</a>
-    <a href="{{ '/publications/' | relative_url }}">Publications</a>
-    <a href="{{ '/projects/' | relative_url }}">Projects</a>
-  </nav>
-  <details class="homepage-mobile-menu">
-    {%- comment -%} Mobile hamburger menu mirrors the Victoria Lin reference. {%- endcomment -%}
-    <summary aria-label="Open homepage navigation">
-      <span class="homepage-menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
-    </summary>
-    <nav class="homepage-mobile-menu-panel" aria-label="Homepage navigation">
+  <div class="homepage-nav-panel">
+    <nav class="homepage-top-nav" aria-label="Homepage navigation">
       <a href="#about-me">About</a>
       <a href="{{ '/blog/' | relative_url }}">Blog</a>
       <a href="{{ '/news/' | relative_url }}">News</a>
       <a href="{{ '/publications/' | relative_url }}">Publications</a>
       <a href="{{ '/projects/' | relative_url }}">Projects</a>
     </nav>
-  </details>
+    <details class="homepage-mobile-menu">
+      {%- comment -%} Mobile hamburger menu mirrors the Victoria Lin reference. {%- endcomment -%}
+      <summary aria-label="Open homepage navigation">
+        <span class="homepage-menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+      </summary>
+      <nav class="homepage-mobile-menu-panel" aria-label="Homepage navigation">
+        <a href="#about-me">About</a>
+        <a href="{{ '/blog/' | relative_url }}">Blog</a>
+        <a href="{{ '/news/' | relative_url }}">News</a>
+        <a href="{{ '/publications/' | relative_url }}">Publications</a>
+        <a href="{{ '/projects/' | relative_url }}">Projects</a>
+      </nav>
+    </details>
+  </div>
 
   <div class="row">
     <div class="identity-row">

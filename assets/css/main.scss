@@ -193,18 +193,22 @@ body.layout-about .homepage-victoria .homepage-publications-list .links a.btn:ac
   text-decoration: none;
 }
 
-body.layout-about .homepage-victoria .homepage-publications-list .links a.btn:not(.bibtex),
+body.layout-about .homepage-victoria .homepage-publications-list .links a.abstract.btn,
+body.layout-about .homepage-victoria .homepage-publications-list .links a.award.btn,
 body.layout-about .homepage-victoria .homepage-publications-list .badges,
 body.layout-about .homepage-victoria .homepage-publications-list div.abstract.hidden,
 body.layout-about .homepage-victoria .homepage-publications-list div.award.hidden {
   display: none !important;
 }
 
-body.layout-about .homepage-victoria .homepage-publications-list .links a.bibtex,
-body.layout-about .homepage-victoria .homepage-publications-list .links a.bibtex.btn {
+body.layout-about .homepage-victoria .homepage-publications-list .links a.btn {
   display: inline-flex !important;
   align-items: center;
   width: auto;
+}
+
+body.layout-about .homepage-victoria .homepage-publications-list .links a.bibtex,
+body.layout-about .homepage-victoria .homepage-publications-list .links a.bibtex.btn {
   text-transform: uppercase;
   cursor: pointer;
 }
@@ -294,13 +298,16 @@ body.layout-about .homepage-victoria .homepage-publications-list .links {
   margin-top: 7px !important;
 }
 
-body.layout-about .homepage-victoria .homepage-publications-list .links a.bibtex.btn {
+body.layout-about .homepage-victoria .homepage-publications-list .links a.btn {
   display: inline-flex !important;
   visibility: visible !important;
   opacity: 1 !important;
   color: var(--homepage-accent) !important;
   font-size: 11px !important;
   letter-spacing: 0.06em !important;
+}
+
+body.layout-about .homepage-victoria .homepage-publications-list .links a.bibtex.btn {
   text-transform: uppercase !important;
 }
 

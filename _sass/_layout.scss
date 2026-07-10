@@ -51,3 +51,327 @@ body.sticky-bottom-footer {
 *****************************************************************************/
 
 // TODO: redefine projects layout.
+
+/****************************************************************************
+ * Victoria-inspired academic homepage
+ ****************************************************************************/
+
+body.layout-about {
+  padding-top: 0;
+  padding-bottom: 0;
+  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+  color: #111;
+  background: #fff;
+
+  > header,
+  > footer {
+    display: none;
+  }
+
+  > .container {
+    max-width: 1120px;
+    margin-top: 0 !important;
+    padding-top: 42px;
+    padding-bottom: 48px;
+  }
+
+  a {
+    color: #52718f;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: #2f536f;
+      text-decoration: underline;
+    }
+  }
+
+  .academic-home {
+    display: grid;
+    grid-template-columns: minmax(230px, 310px) minmax(0, 1fr);
+    gap: 54px;
+    align-items: start;
+  }
+
+  .academic-sidebar {
+    position: sticky;
+    top: 38px;
+  }
+
+  .academic-nav {
+    margin-bottom: 34px;
+    padding: 18px 20px;
+    border: 1px solid #ece7df;
+    background: #fcfaf6;
+  }
+
+  .academic-nav-title {
+    margin-bottom: 10px;
+    color: #777;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    font-weight: 600;
+  }
+
+  .academic-nav a {
+    display: block;
+    padding: 5px 0;
+    color: #577492;
+    font-size: 15px;
+  }
+
+  .academic-nav a::before {
+    content: "•";
+    margin-right: 10px;
+    color: #a9875a;
+  }
+
+  .academic-identity {
+    padding-right: 10px;
+  }
+
+  .academic-avatar {
+    display: block;
+    width: 184px;
+    max-width: 100%;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
+  }
+
+  .academic-name {
+    margin: 0 0 9px;
+    color: #222;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 31px;
+    font-weight: 500;
+    letter-spacing: -0.015em;
+    line-height: 1.15;
+  }
+
+  .academic-subtitle {
+    margin: 0 0 12px;
+    color: #444;
+    font-size: 16px;
+    font-weight: 300;
+  }
+
+  .academic-more-info {
+    color: #555;
+    font-size: 14px;
+
+    p {
+      margin-bottom: 10px;
+    }
+  }
+
+  .academic-social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+    margin-top: 12px;
+    font-size: 1.25rem;
+  }
+
+  .academic-main {
+    max-width: 760px;
+  }
+
+  .academic-section {
+    margin-bottom: 34px;
+  }
+
+  .academic-section h2 {
+    margin: 0 0 18px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid #eee7dc;
+    color: #4a4a4a;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+  .academic-section h2 a {
+    color: inherit;
+  }
+
+  .academic-copy p,
+  .academic-news-section p,
+  .publication-note {
+    margin-bottom: 18px;
+    color: #111;
+    font-weight: 300;
+  }
+
+  .academic-copy h5,
+  .academic-copy h4,
+  .academic-copy h3 {
+    margin: 20px 0 0;
+    color: #333;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .academic-news-section .table-responsive {
+    max-height: none !important;
+  }
+
+  .academic-news-section table {
+    margin-bottom: 0;
+  }
+
+  .academic-news-section th,
+  .academic-news-section td {
+    padding: 6px 0;
+    border-top: 0;
+    border-bottom: 1px solid #f0f0f0;
+    vertical-align: top;
+    font-size: 14.5px;
+  }
+
+  .academic-news-section th {
+    min-width: 112px;
+    padding-right: 22px;
+    color: #777;
+    font-weight: 400;
+    white-space: nowrap;
+  }
+
+  .academic-publications-section .publication-note {
+    margin-top: -4px;
+    color: #555;
+    font-size: 14.5px;
+    font-style: italic;
+  }
+
+  .academic-publications-section .publications {
+    margin-top: 8px;
+  }
+
+  .academic-publications-section ol.bibliography,
+  .academic-publications-section .bibliography {
+    padding-left: 0;
+    list-style: none;
+  }
+
+  .academic-publications-section .bibliography li {
+    margin: 0;
+    padding: 20px 0;
+    border-bottom: 1px solid #eeeeee;
+  }
+
+  .academic-publications-section .bibliography li:first-child {
+    padding-top: 8px;
+  }
+
+  .academic-publications-section .bibliography li:last-child {
+    border-bottom: 0;
+  }
+
+  .academic-publications-section .abbr,
+  .academic-publications-section .preview {
+    display: none;
+  }
+
+  .academic-publications-section .title {
+    display: block;
+    margin-bottom: 4px;
+    color: #111;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+
+  .academic-publications-section .author,
+  .academic-publications-section .periodical {
+    color: #6f6f6f;
+    font-size: 14.5px;
+    line-height: 1.45;
+  }
+
+  .academic-publications-section .periodical em {
+    color: #555;
+    font-style: normal;
+    font-weight: 500;
+  }
+
+  .academic-publications-section .links,
+  .academic-publications-section .badges {
+    margin-top: 8px;
+  }
+
+  .academic-publications-section .btn,
+  .academic-publications-section .badge {
+    border: 1px solid #d8d0c2;
+    border-radius: 0;
+    background: #fff;
+    color: #6f5430;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    box-shadow: none;
+  }
+
+  .academic-publications-section .btn:hover,
+  .academic-publications-section .badge:hover {
+    border-color: #6f5430;
+    background: #6f5430;
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 767.98px) {
+  body.layout-about {
+    > .container {
+      padding-top: 24px;
+      padding-bottom: 34px;
+    }
+
+    .academic-home {
+      display: block;
+    }
+
+    .academic-sidebar {
+      position: static;
+      margin-bottom: 28px;
+    }
+
+    .academic-nav {
+      margin-bottom: 22px;
+    }
+
+    .academic-avatar {
+      width: 142px;
+    }
+
+    .academic-name {
+      font-size: 28px;
+    }
+
+    .academic-main {
+      max-width: none;
+    }
+
+    .academic-section h2 {
+      font-size: 22px;
+    }
+
+    .academic-news-section th {
+      display: block;
+      min-width: 0;
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .academic-news-section td {
+      display: block;
+      padding-top: 1px;
+    }
+  }
+}

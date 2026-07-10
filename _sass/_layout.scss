@@ -155,8 +155,9 @@ body.layout-about {
     display: inline-flex;
     align-items: center;
     justify-content: flex-end;
-    min-width: 28px;
+    width: 28px;
     min-height: 35px;
+    margin-left: auto;
     padding: 10px 0 8px;
     border: 0;
     background: transparent;
@@ -171,18 +172,23 @@ body.layout-about {
     display: none;
   }
 
+  .homepage-mobile-menu summary::marker {
+    content: "";
+  }
+
   .homepage-menu-icon {
     display: inline-flex;
+    flex: 0 0 auto;
     flex-direction: column;
     justify-content: center;
-    gap: 4px;
-    width: 18px;
-    height: 18px;
+    gap: 3px;
+    width: 16px;
+    height: 16px;
   }
 
   .homepage-menu-icon span {
     display: block;
-    width: 18px;
+    width: 16px;
     height: 2px;
     border-radius: 999px;
     background: currentColor;
@@ -194,22 +200,16 @@ body.layout-about {
   }
 
   .homepage-mobile-menu-panel {
-    position: absolute;
-    top: calc(100% + 6px);
-    right: 0;
     display: grid;
-    min-width: 154px;
-    padding: 7px 0;
-    border: 1px solid var(--homepage-rule);
-    border-radius: 2px;
+    justify-items: end;
+    padding: 4px 0 11px;
     background: #fff;
-    box-shadow: 0 8px 18px rgb(0 0 0 / 0.08);
-    text-align: left;
+    text-align: right;
   }
 
   .homepage-mobile-menu-panel a {
     display: block;
-    padding: 6px 14px;
+    padding: 0 0 9px;
     color: var(--homepage-ink);
     font-size: 15px;
     font-weight: 400;
@@ -219,9 +219,12 @@ body.layout-about {
     white-space: nowrap;
   }
 
+  .homepage-mobile-menu-panel a:last-child {
+    padding-bottom: 0;
+  }
+
   .homepage-mobile-menu-panel a:hover,
   .homepage-mobile-menu-panel a:focus {
-    background: #f7f7f7;
     color: var(--homepage-accent);
     text-decoration: none;
   }
@@ -353,8 +356,6 @@ body.layout-about {
   .section h3 {
     position: relative;
     margin: 0 0 22px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid var(--homepage-rule);
     color: var(--homepage-ink);
     font-size: 20px;
     font-weight: 500;
@@ -437,7 +438,12 @@ body.layout-about {
 
 @media print, screen and (max-width: 560px) {
   body.layout-about {
-    padding: 24px 0 42px;
+    padding: 20px 0 42px;
+    font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15.5px;
+    font-weight: 400;
+    line-height: 1.52;
+    letter-spacing: 0.1px;
 
     > .container {
       width: calc(100% - 24px);
@@ -449,6 +455,15 @@ body.layout-about {
 
     .homepage-mobile-menu {
       display: block;
+      margin: 0 0 28px;
+      font-family: inherit;
+    }
+
+    .homepage-mobile-menu-panel a {
+      font-family: inherit;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 1;
     }
 
     .identity-row {
@@ -472,6 +487,13 @@ body.layout-about {
 
     .contacts .title {
       font-size: 16px;
+    }
+
+    .about-me-section p {
+      font-family: inherit;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.58;
     }
 
     .section h3 {

@@ -31,3 +31,34 @@ body.layout-about .section h3 {
   border-bottom: 0 !important;
   padding-bottom: 0 !important;
 }
+
+// AI-assisted homepage preview override: keep the custom Victoria-style top panel unruled
+// even though this file imports global/base styles after the homepage layout partial.
+body.layout-about .homepage-victoria .homepage-nav-panel,
+body.layout-about .homepage-victoria .homepage-top-nav,
+body.layout-about .homepage-victoria .homepage-mobile-menu,
+body.layout-about .homepage-victoria .homepage-mobile-menu summary,
+body.layout-about .homepage-victoria .homepage-mobile-menu-panel {
+  border: 0 !important;
+  border-top: 0 !important;
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+  background-image: none !important;
+}
+
+body.layout-about .homepage-victoria .homepage-nav-panel::before,
+body.layout-about .homepage-victoria .homepage-nav-panel::after,
+body.layout-about .homepage-victoria .homepage-top-nav::before,
+body.layout-about .homepage-victoria .homepage-top-nav::after,
+body.layout-about .homepage-victoria .homepage-mobile-menu::before,
+body.layout-about .homepage-victoria .homepage-mobile-menu::after,
+body.layout-about .homepage-victoria .homepage-mobile-menu summary::before,
+body.layout-about .homepage-victoria .homepage-mobile-menu summary::after,
+body.layout-about .homepage-victoria .homepage-mobile-menu-panel::before,
+body.layout-about .homepage-victoria .homepage-mobile-menu-panel::after {
+  display: none !important;
+  content: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  background: none !important;
+}

@@ -118,6 +118,9 @@ body.layout-about {
   .homepage-nav-panel {
     margin: 0;
     padding: 0 0 12px;
+    border: 0;
+    box-shadow: none;
+    background-image: none;
   }
 
   .homepage-top-nav {
@@ -128,6 +131,32 @@ body.layout-about {
     gap: 12px 34px;
     margin: 30px 0 0;
     padding: 13px 0 0;
+    border: 0;
+    box-shadow: none;
+    background-image: none;
+  }
+
+  .homepage-nav-panel,
+  .homepage-top-nav,
+  .homepage-mobile-menu,
+  .homepage-mobile-menu summary,
+  .homepage-mobile-menu-panel {
+    border-top: 0;
+    border-bottom: 0;
+  }
+
+  .homepage-nav-panel::before,
+  .homepage-nav-panel::after,
+  .homepage-top-nav::before,
+  .homepage-top-nav::after,
+  .homepage-mobile-menu::before,
+  .homepage-mobile-menu::after,
+  .homepage-mobile-menu summary::before,
+  .homepage-mobile-menu summary::after,
+  .homepage-mobile-menu-panel::before,
+  .homepage-mobile-menu-panel::after {
+    display: none;
+    content: none;
   }
 
   .homepage-top-nav a {
@@ -304,8 +333,9 @@ body.layout-about {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    justify-content: center;
-    min-height: 132px;
+    justify-content: space-between;
+    gap: 10px;
+    min-height: 136px;
     max-width: 300px;
     margin: 0;
     text-align: right;
@@ -316,22 +346,20 @@ body.layout-about {
     font-family: inherit;
     font-size: 17px;
     font-weight: 700;
-    line-height: 1.45;
+    line-height: 1.55;
   }
 
   .contacts .affiliation {
-    margin-top: 10px;
     color: var(--homepage-ink);
     font-size: 15px;
-    line-height: 1.45;
+    line-height: 1.55;
   }
 
   .contacts .address,
   .contacts .email {
-    margin-top: 13px;
     color: var(--homepage-muted);
     font-size: 14px;
-    line-height: 1.45;
+    line-height: 1.55;
   }
 
   .contacts .email span {
@@ -343,7 +371,7 @@ body.layout-about {
     flex-wrap: nowrap;
     justify-content: flex-end;
     gap: 9px;
-    margin: 14px 0 0;
+    margin: 0;
   }
 
   .contacts .social-networks a {
@@ -502,6 +530,8 @@ body.layout-about {
 
     .contacts {
       align-items: flex-start;
+      justify-content: flex-start;
+      gap: 8px;
       min-height: auto;
       max-width: none;
       text-align: left;

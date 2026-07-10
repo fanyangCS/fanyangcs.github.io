@@ -65,7 +65,9 @@ body.layout-about .homepage-victoria .homepage-mobile-menu-panel::after {
 
 // AI-assisted homepage preview override: keep the reintroduced News and
 // Publications sections compact and aligned with the Victoria reference after
-// the global publication styles are imported.
+// the global publication styles are imported. The bibliography template emits
+// Bootstrap columns/thumbnails for the full Publications page; flatten them only
+// on the homepage so desktop matches the already-compact mobile presentation.
 body.layout-about .homepage-victoria .homepage-publications-list .publications {
   margin-top: 0;
 }
@@ -95,18 +97,24 @@ body.layout-about .homepage-victoria .homepage-publications-list ol.bibliography
 }
 
 body.layout-about .homepage-victoria .homepage-publications-list ol.bibliography > li > .row {
+  display: block;
   margin: 0;
 }
 
-body.layout-about .homepage-victoria .homepage-publications-list .abbr {
-  display: none;
+body.layout-about .homepage-victoria .homepage-publications-list .abbr,
+body.layout-about .homepage-victoria .homepage-publications-list .preview {
+  display: none !important;
 }
 
+body.layout-about .homepage-victoria .homepage-publications-list .col,
+body.layout-about .homepage-victoria .homepage-publications-list .col-sm-2,
 body.layout-about .homepage-victoria .homepage-publications-list .col-sm-8,
 body.layout-about .homepage-victoria .homepage-publications-list .col-sm-10 {
+  display: block;
   width: 100%;
   max-width: none;
-  flex: 0 0 100%;
+  min-width: 0;
+  flex: none;
   padding: 0;
 }
 
@@ -119,6 +127,7 @@ body.layout-about .homepage-victoria .homepage-publications-list .title {
 }
 
 body.layout-about .homepage-victoria .homepage-publications-list .author {
+  margin: 0;
   color: var(--homepage-muted);
   font-size: 14.5px;
   line-height: 1.45;
@@ -133,6 +142,7 @@ body.layout-about .homepage-victoria .homepage-publications-list .author > span.
 }
 
 body.layout-about .homepage-victoria .homepage-publications-list .periodical {
+  margin: 1px 0 0;
   color: var(--homepage-muted);
   font-size: 14px;
   font-weight: 500;
@@ -170,7 +180,10 @@ body.layout-about .homepage-victoria .homepage-publications-list .links a.btn:ac
   text-decoration: none;
 }
 
+body.layout-about .homepage-victoria .homepage-publications-list .links a.award,
+body.layout-about .homepage-victoria .homepage-publications-list .links a.abstract,
+body.layout-about .homepage-victoria .homepage-publications-list .links a.bibtex,
 body.layout-about .homepage-victoria .homepage-publications-list .badges,
 body.layout-about .homepage-victoria .homepage-publications-list .hidden {
-  display: none;
+  display: none !important;
 }

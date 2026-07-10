@@ -27,12 +27,6 @@ pagination:
 
   <h1 class="victoria-secondary-title">Blog</h1>
 
-{% assign blog_description_size = site.blog_description | size %}
-{% if blog_description_size > 0 %}
-
-<p class="victoria-page-kicker">{{ site.blog_description }}</p>
-{% endif %}
-
 {% if page.pagination.enabled %}
 {% assign postlist = paginator.posts %}
 {% else %}

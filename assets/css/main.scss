@@ -436,8 +436,8 @@ body:has(.victoria-secondary-page) > .container {
   align-items: center;
   gap: 12px;
   margin: 0 0 18px;
-  padding: 0 0 16px;
-  border-bottom: 3px solid var(--victoria-rule);
+  padding: 0;
+  border-bottom: 0;
   color: var(--victoria-accent) !important;
   font-size: 26px;
   font-weight: 400;
@@ -447,11 +447,8 @@ body:has(.victoria-secondary-page) > .container {
 }
 
 .victoria-secondary-title::before {
-  content: "";
-  width: 8px;
-  height: 8px;
-  flex: 0 0 auto;
-  background: var(--victoria-ink);
+  display: none;
+  content: none;
 }
 
 .victoria-page-kicker {
@@ -469,11 +466,11 @@ body:has(.victoria-secondary-page) > .container {
 .victoria-resource-panel {
   margin: 0;
   padding: 22px 0 20px;
-  border-top: 1px solid var(--victoria-faint);
+  border-top: 0;
 }
 
-.victoria-resource-panel:first-child {
-  border-top-color: var(--victoria-rule);
+.victoria-resource-panel + .victoria-resource-panel {
+  border-top: 1px solid var(--victoria-faint);
 }
 
 .victoria-resource-panel > h2 {

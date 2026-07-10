@@ -3,12 +3,25 @@ layout: default
 ---
 <div class="homepage-victoria">
   <nav class="homepage-top-nav" aria-label="Homepage navigation">
-    <a href="#about-me">About Me</a>
-    <a href="{{ '/publications/' | relative_url }}">Publications</a>
-    <a href="{{ '/projects/' | relative_url }}">Projects</a>
+    <a href="#about-me">About</a>
     <a href="{{ '/blog/' | relative_url }}">Blog</a>
     <a href="{{ '/news/' | relative_url }}">News</a>
+    <a href="{{ '/publications/' | relative_url }}">Publications</a>
+    <a href="{{ '/projects/' | relative_url }}">Projects</a>
   </nav>
+  <label class="sr-only" for="homepage-mobile-nav">Homepage navigation</label>
+  <select
+    id="homepage-mobile-nav"
+    class="homepage-mobile-nav"
+    aria-label="Homepage navigation"
+    onchange="if (this.value) window.location.href = this.value;"
+  >
+    <option value="#about-me" selected>About</option>
+    <option value="{{ '/blog/' | relative_url }}">Blog</option>
+    <option value="{{ '/news/' | relative_url }}">News</option>
+    <option value="{{ '/publications/' | relative_url }}">Publications</option>
+    <option value="{{ '/projects/' | relative_url }}">Projects</option>
+  </select>
 
   <div class="row">
     <div class="side-bar col-md-4 col-sm-12 col-xs-12">
@@ -20,27 +33,40 @@ layout: default
             <img class="profile-avatar" src="{{ profile_image_path | relative_url }}" alt="Fan Yang">
           {% endif %}
           <div class="contacts">
-            <div class="title">
-              Systems Researcher<br>
-              Research Manager
-            </div>
+            <div class="title">Systems Researcher</div>
             <div class="address"><i class="fa fa-map-marker" aria-hidden="true"></i> MSR Asia</div>
             <div class="email">
               <i class="fa fa-envelope" aria-hidden="true"></i>
               <span>yang DOT fan DOT acm DOT org</span>
             </div>
             <div class="social-networks" aria-label="Profile links">
-              <a href="https://www.microsoft.com/en-us/research/people/fanyang/" aria-label="Microsoft Research profile"
-                ><i class="fa fa-building-o" aria-hidden="true"></i
-              ></a>
-              <a href="https://scholar.google.com/citations?user={{ site.scholar_userid }}" aria-label="Google Scholar"
-                ><i class="ai ai-google-scholar" aria-hidden="true"></i
-              ></a>
-              <a href="https://github.com/fanyangCS" aria-label="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>
-              <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" aria-label="LinkedIn"
-                ><i class="fa fa-linkedin-square" aria-hidden="true"></i
-              ></a>
-              <a href="{{ '/cv/' | relative_url }}" aria-label="CV"><i class="ai ai-cv" aria-hidden="true"></i></a>
+              {% if site.work_url %}
+                <a href="{{ site.work_url }}" aria-label="Microsoft Research work page"><i class="fa-solid fa-briefcase" aria-hidden="true"></i></a>
+              {% endif %}
+              {% if site.scholar_userid %}
+                <a href="https://scholar.google.com/citations?user={{ site.scholar_userid }}" aria-label="Google Scholar"
+                  ><i class="ai ai-google-scholar" aria-hidden="true"></i
+                ></a>
+              {% endif %}
+              {% if site.orcid_id %}
+                <a href="https://orcid.org/{{ site.orcid_id }}" aria-label="ORCID"><i class="ai ai-orcid" aria-hidden="true"></i></a>
+              {% endif %}
+              {% if site.semanticscholar_id %}
+                <a href="https://www.semanticscholar.org/author/{{ site.semanticscholar_id }}" aria-label="Semantic Scholar"
+                  ><i class="ai ai-semantic-scholar" aria-hidden="true"></i
+                ></a>
+              {% endif %}
+              {% if site.dblp_url %}
+                <a href="{{ site.dblp_url }}" aria-label="DBLP"><i class="ai ai-dblp" aria-hidden="true"></i></a>
+              {% endif %}
+              {% if site.github_username %}
+                <a href="https://github.com/{{ site.github_username }}" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+              {% endif %}
+              {% if site.linkedin_username %}
+                <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" aria-label="LinkedIn"
+                  ><i class="fa-brands fa-linkedin" aria-hidden="true"></i
+                ></a>
+              {% endif %}
             </div>
           </div>
         </div>

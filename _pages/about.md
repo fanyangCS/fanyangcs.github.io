@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Systems researcher and research manager, MSR Asia SRG
+subtitle: Systems Researcher
 profile:
   image: fan-yang-profile.png
   image_circular: true

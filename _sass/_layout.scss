@@ -264,15 +264,17 @@ body.layout-about {
     margin: 0 0 18px;
     padding: 0;
     border: 0;
-    color: var(--homepage-ink);
-    font-size: 32px;
-    font-weight: 500;
-    line-height: 1.12;
-    letter-spacing: -0.01em;
+    color: var(--homepage-accent);
+    font-family: inherit;
+    font-size: 44px;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: 0;
+    text-transform: uppercase;
   }
 
   .english-name {
-    color: var(--homepage-ink);
+    color: var(--homepage-accent);
     font-family: inherit;
   }
 
@@ -432,6 +434,11 @@ body.layout-about {
 
     .about-me-section p {
       max-width: none;
+      color: var(--homepage-ink);
+      font-family: inherit;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.58;
     }
   }
 }
@@ -480,7 +487,13 @@ body.layout-about {
 
     h1 {
       margin-bottom: 16px;
-      font-size: 30px;
+      color: var(--homepage-accent);
+      font-family: inherit;
+      font-size: 32px;
+      font-weight: 400;
+      line-height: 1.1;
+      letter-spacing: 0;
+      text-transform: uppercase;
     }
 
     .contact-card {
@@ -508,6 +521,7 @@ body.layout-about {
     }
 
     .about-me-section p {
+      color: var(--homepage-ink);
       font-family: inherit;
       font-size: 16px;
       font-weight: 400;

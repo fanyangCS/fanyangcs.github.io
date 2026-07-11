@@ -914,14 +914,21 @@ body:has(.victoria-secondary-page) > .container {
 }
 
 .victoria-publications-page .links button.award.btn {
-  padding: 4px 11px;
+  display: inline-flex;
+  align-items: center;
+  width: auto;
+  margin: 0;
+  padding: 4px 16px;
   border: 1px solid #b94f45;
-  border-radius: 2px;
+  border-radius: 0;
   background: #b94f45;
   color: #ffffff !important;
   font-family: inherit;
+  font-size: 11px;
   font-weight: 600;
+  line-height: 1.35;
   letter-spacing: 0.05em;
+  text-transform: uppercase;
   cursor: pointer;
   transition: background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
 }
@@ -982,8 +989,8 @@ body:has(.victoria-secondary-page) > .container {
   border: 1px solid #e6e0d8;
 }
 
-.victoria-publications-page div.award.hidden p,
-.victoria-publications-page div.abstract.hidden p {
+.victoria-publications-page ol.bibliography > li div.award.hidden p,
+.victoria-publications-page ol.bibliography > li div.abstract.hidden p {
   margin: 0;
   padding: 5px 12px;
   color: var(--victoria-ink);

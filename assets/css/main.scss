@@ -1879,18 +1879,18 @@ body.layout-about .homepage-victoria .homepage-publications-list .publications o
 
 // Keep author expansion text deterministic across Chromium's legacy bibliography
 // hover rules: muted at rest, then darker for pointer or keyboard interaction.
-body.layout-about .homepage-victoria .homepage-publications-list .publications ol.bibliography li .author,
-body.layout-about .homepage-victoria .homepage-publications-list .publications ol.bibliography li .author *,
+body.layout-about .homepage-victoria .homepage-publications-list ol.bibliography li .author,
+body.layout-about .homepage-victoria .homepage-publications-list ol.bibliography li .author *,
 .victoria-publications-page .publications ol.bibliography li .author,
 .victoria-publications-page .publications ol.bibliography li .author * {
   color: var(--victoria-muted) !important;
   opacity: 1 !important;
 }
 
-body.layout-about .homepage-victoria .homepage-publications-list .publications ol.bibliography li .author:hover,
-body.layout-about .homepage-victoria .homepage-publications-list .publications ol.bibliography li .author:hover *,
-body.layout-about .homepage-victoria .homepage-publications-list .publications ol.bibliography li .author:focus-within,
-body.layout-about .homepage-victoria .homepage-publications-list .publications ol.bibliography li .author:focus-within *,
+body.layout-about .homepage-victoria .homepage-publications-list ol.bibliography li .author:hover,
+body.layout-about .homepage-victoria .homepage-publications-list ol.bibliography li .author:hover *,
+body.layout-about .homepage-victoria .homepage-publications-list ol.bibliography li .author:focus-within,
+body.layout-about .homepage-victoria .homepage-publications-list ol.bibliography li .author:focus-within *,
 .victoria-publications-page .publications ol.bibliography li .author:hover,
 .victoria-publications-page .publications ol.bibliography li .author:hover *,
 .victoria-publications-page .publications ol.bibliography li .author:focus-within,

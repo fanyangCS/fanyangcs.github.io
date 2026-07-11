@@ -579,6 +579,249 @@ body:has(.victoria-secondary-page) > .container {
   opacity: 0.55;
 }
 
+.victoria-publications-page .victoria-page-kicker {
+  max-width: 720px;
+  margin-bottom: 18px;
+}
+
+.victoria-publications-page .bibsearch-form-input {
+  width: min(100%, 420px);
+  max-width: 420px;
+  margin: 0 0 24px;
+  padding: 8px 10px;
+  border: 1px solid var(--victoria-faint);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  color: var(--victoria-ink);
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.victoria-publications-page .bibsearch-form-input:focus {
+  border-color: var(--victoria-rule) !important;
+  outline: none;
+}
+
+.victoria-publications-page .publications {
+  margin-top: 0;
+}
+
+.victoria-publications-page .publications h1,
+.victoria-publications-page .publications h2,
+.victoria-publications-page .publications h2.bibliography {
+  margin: 30px 0 15px;
+  padding: 0;
+  border: 0;
+  color: var(--victoria-ink) !important;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.3;
+  text-align: left;
+}
+
+.victoria-publications-page .publications h2.bibliography {
+  padding-top: 17px;
+  border-top: 1px solid var(--victoria-rule);
+}
+
+.victoria-publications-page .publications h2.bibliography span {
+  color: inherit;
+  font-size: inherit;
+}
+
+.victoria-publications-page ol.bibliography {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.victoria-publications-page ol.bibliography > li {
+  margin: 0;
+  padding: 0 0 20px;
+  border-bottom: 1px solid var(--victoria-faint);
+  color: var(--victoria-ink);
+  font-family: inherit;
+  font-size: 14.5px;
+  line-height: 1.45;
+}
+
+.victoria-publications-page ol.bibliography > li + li {
+  padding-top: 20px;
+}
+
+.victoria-publications-page ol.bibliography > li:last-child {
+  border-bottom: 0;
+}
+
+.victoria-publications-page ol.bibliography > li > .row {
+  display: block;
+  margin: 0;
+}
+
+.victoria-publications-page .abbr,
+.victoria-publications-page .preview {
+  display: none !important;
+}
+
+.victoria-publications-page .col,
+.victoria-publications-page .col-sm-2,
+.victoria-publications-page .col-sm-8,
+.victoria-publications-page .col-sm-10 {
+  display: block;
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+  flex: none;
+  padding: 0;
+}
+
+.victoria-publications-page .title {
+  margin: 0 0 3px;
+  color: var(--victoria-ink);
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.32;
+}
+
+.victoria-publications-page .author {
+  margin: 0;
+  color: var(--victoria-muted);
+  font-family: inherit;
+  font-size: 13.75px;
+  line-height: 1.45;
+}
+
+.victoria-publications-page .author a,
+.victoria-publications-page .author > em,
+.victoria-publications-page .author > span.more-authors {
+  border-bottom: 0;
+  color: inherit;
+  font-style: normal;
+}
+
+.victoria-publications-page .author > span.more-authors {
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+.victoria-publications-page .periodical {
+  margin: 1px 0 0;
+  color: var(--victoria-muted);
+  font-family: inherit;
+  font-size: 13.5px;
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.victoria-publications-page .periodical:empty {
+  display: none;
+}
+
+.victoria-publications-page .links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin: 8px 0 0;
+}
+
+.victoria-publications-page .links a.btn {
+  display: inline-flex !important;
+  align-items: center;
+  width: auto;
+  margin: 0;
+  padding: 2px 7px;
+  border: 1px solid #d9d4cc;
+  border-radius: 0;
+  background: #ffffff;
+  box-shadow: none;
+  color: var(--victoria-accent) !important;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.victoria-publications-page .links a.btn:hover,
+.victoria-publications-page .links a.btn:focus,
+.victoria-publications-page .links a.btn:active {
+  border-color: var(--victoria-accent);
+  background: var(--victoria-accent);
+  color: #ffffff !important;
+  text-decoration: none;
+}
+
+.victoria-publications-page .badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  margin: 8px 0 0;
+  padding: 0;
+}
+
+.victoria-publications-page .badges span,
+.victoria-publications-page .badges a {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+}
+
+.victoria-publications-page div.award.hidden,
+.victoria-publications-page div.abstract.hidden,
+.victoria-publications-page div.bibtex.hidden {
+  max-height: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 0 solid transparent;
+  background: #fbfaf8;
+  color: var(--victoria-ink);
+  text-align: left;
+  transition: max-height 0.18s ease, margin 0.18s ease, border-width 0.18s ease;
+}
+
+.victoria-publications-page div.award.hidden.open,
+.victoria-publications-page div.abstract.hidden.open,
+.victoria-publications-page div.bibtex.hidden.open {
+  display: block !important;
+  max-height: 38rem;
+  margin-top: 9px;
+  border: 1px solid #e6e0d8;
+}
+
+.victoria-publications-page div.award.hidden p,
+.victoria-publications-page div.abstract.hidden p {
+  margin: 0;
+  padding: 10px 12px;
+  color: var(--victoria-ink);
+  font-size: 13.5px;
+  line-height: 1.5;
+}
+
+.victoria-publications-page div.bibtex.hidden figure.highlight {
+  margin: 0;
+}
+
+.victoria-publications-page div.bibtex.hidden pre {
+  margin: 0;
+  padding: 10px 12px;
+  overflow-x: auto;
+  background: transparent;
+  color: var(--victoria-ink);
+  font-size: 12px;
+  line-height: 1.45;
+  white-space: pre-wrap;
+}
+
 .victoria-back-link {
   margin: 26px 0 0;
 }

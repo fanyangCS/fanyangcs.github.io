@@ -340,6 +340,29 @@ body.layout-about .homepage-victoria .homepage-publications-list .links a.bibtex
   body.layout-about .homepage-victoria .section h3 {
     font-size: 25px !important;
   }
+
+  // Keep homepage publication actions equivalent to desktop on narrow screens.
+  // Explicit sizing and ordering prevents framework button rules from hiding or
+  // displacing the award when the publication text wraps more deeply on mobile.
+  body.layout-about .homepage-victoria .homepage-publications-list .links {
+    display: flex !important;
+    width: 100%;
+    max-width: 100%;
+    overflow: visible;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  body.layout-about .homepage-victoria .homepage-publications-list .links > a.btn,
+  body.layout-about .homepage-victoria .homepage-publications-list .links > button.award.btn {
+    flex: 0 0 auto;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  body.layout-about .homepage-victoria .homepage-publications-list .links > button.award.btn {
+    order: 999;
+  }
 }
 
 @media print, screen and (max-width: 480px) {

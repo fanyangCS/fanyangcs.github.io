@@ -1783,6 +1783,21 @@ body.layout-about .homepage-victoria .homepage-publications-list .publications o
   line-height: 1.55;
 }
 
+// Keep project-detail metadata and emphasis deterministic in Chromium. The
+// global element rules assign their own color to spans and em elements, so
+// relying on inherited project colors makes these small styles inconsistent.
+.victoria-project-entry-page .victoria-entry-meta span {
+  color: #3f3f3f !important;
+  font-weight: 700;
+  opacity: 1;
+}
+
+.victoria-project-entry-content em {
+  color: var(--victoria-ink) !important;
+  font-style: italic;
+  opacity: 1;
+}
+
 .victoria-project-entry-content img,
 .victoria-project-entry-page .card-img,
 .victoria-project-entry-page .card-img-top,
@@ -1800,9 +1815,8 @@ body.layout-about .homepage-victoria .homepage-publications-list .publications o
 
 .victoria-project-section-heading {
   margin: 0 0 15px;
-  padding: 17px 0 0;
+  padding: 0;
   border: 0;
-  border-top: 1px solid var(--victoria-rule);
   color: var(--victoria-ink) !important;
   font-family: inherit;
   font-size: 20px;

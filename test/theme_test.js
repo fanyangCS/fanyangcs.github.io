@@ -47,7 +47,7 @@ function loadTheme({ hasToggle = false, prefersDark = false } = {}) {
   };
   const localStorage = {
     getItem(key) {
-      return storage.get(key) ?? null;
+      return storage.has(key) ? storage.get(key) : null;
     },
     setItem(key, value) {
       storage.set(key, value);

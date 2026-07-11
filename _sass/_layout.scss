@@ -333,7 +333,7 @@ body.layout-about {
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
-    gap: 6px;
+    gap: 8px;
     min-height: auto;
     max-width: 300px;
     margin: 0;
@@ -345,20 +345,20 @@ body.layout-about {
     font-family: inherit;
     font-size: 17px;
     font-weight: 700;
-    line-height: 1.35;
+    line-height: 1.48;
   }
 
   .contacts .affiliation {
     color: var(--homepage-ink);
     font-size: 15px;
-    line-height: 1.35;
+    line-height: 1.48;
   }
 
   .contacts .address,
   .contacts .email {
     color: var(--homepage-muted);
     font-size: 14px;
-    line-height: 1.35;
+    line-height: 1.48;
   }
 
   .contacts .email span {
@@ -611,13 +611,13 @@ body.layout-about {
 
     .contacts .title {
       color: var(--homepage-ink) !important;
-      line-height: 1.45;
+      line-height: 1.55;
     }
 
     .contacts .affiliation,
     .contacts .address,
     .contacts .email {
-      line-height: 1.45;
+      line-height: 1.55;
     }
 
     .contacts .email i,

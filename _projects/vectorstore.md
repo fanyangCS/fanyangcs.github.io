@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: project
 title: Vector store
 description:
 img: assets/img/vectorstore.jpg

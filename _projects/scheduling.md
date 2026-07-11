@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: project
 title: Scheduler for AI workload
 description:
 img: assets/img/scheduler.jpg

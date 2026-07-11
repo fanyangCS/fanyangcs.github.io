@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: project
 title: project 4
 description: another without an image
 img:

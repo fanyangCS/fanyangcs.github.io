@@ -217,10 +217,8 @@ body.layout-about .homepage-victoria .homepage-publications-list .links a.btn:ac
 
 body.layout-about .homepage-victoria .homepage-publications-list .links a.abstract.btn,
 body.layout-about .homepage-victoria .homepage-publications-list .links a.award.btn,
-body.layout-about .homepage-victoria .homepage-publications-list .links button.award.btn,
 body.layout-about .homepage-victoria .homepage-publications-list .badges,
-body.layout-about .homepage-victoria .homepage-publications-list div.abstract.hidden,
-body.layout-about .homepage-victoria .homepage-publications-list div.award.hidden {
+body.layout-about .homepage-victoria .homepage-publications-list div.abstract.hidden {
   display: none !important;
 }
 
@@ -914,6 +912,7 @@ body:has(.victoria-secondary-page) > .container {
   padding: 0;
 }
 
+body.layout-about .homepage-victoria .homepage-publications-list .links button.award.btn,
 .victoria-publications-page .links button.award.btn {
   display: inline-flex;
   align-items: center;
@@ -934,27 +933,32 @@ body:has(.victoria-secondary-page) > .container {
   transition: background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
+body.layout-about .homepage-victoria .homepage-publications-list .links button.award.btn:hover,
 .victoria-publications-page .links button.award.btn:hover {
   border-color: #a7473d;
   background: #a7473d;
   color: #ffffff !important;
 }
 
+body.layout-about .homepage-victoria .homepage-publications-list .links button.award.btn:focus,
 .victoria-publications-page .links button.award.btn:focus {
   outline: 0;
 }
 
+body.layout-about .homepage-victoria .homepage-publications-list .links button.award.btn:focus-visible,
 .victoria-publications-page .links button.award.btn:focus-visible {
   outline: 0;
   box-shadow: 0 0 0 3px rgba(185, 79, 69, 0.32);
 }
 
+body.layout-about .homepage-victoria .homepage-publications-list .links button.award.btn[aria-expanded="true"],
 .victoria-publications-page .links button.award.btn[aria-expanded="true"] {
   border-color: #963f36;
   background: #963f36;
   box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.14);
 }
 
+body.layout-about .homepage-victoria .homepage-publications-list .links button.award.btn[aria-expanded="true"]:focus-visible,
 .victoria-publications-page .links button.award.btn[aria-expanded="true"]:focus-visible {
   box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.14), 0 0 0 3px rgba(150, 63, 54, 0.3);
 }
@@ -968,6 +972,7 @@ body:has(.victoria-secondary-page) > .container {
   vertical-align: middle;
 }
 
+body.layout-about .homepage-victoria .homepage-publications-list div.award.hidden,
 .victoria-publications-page div.award.hidden,
 .victoria-publications-page div.abstract.hidden,
 .victoria-publications-page div.bibtex.hidden {
@@ -981,6 +986,7 @@ body:has(.victoria-secondary-page) > .container {
   transition: max-height 0.18s ease, margin 0.18s ease, border-width 0.18s ease;
 }
 
+body.layout-about .homepage-victoria .homepage-publications-list div.award.hidden.open,
 .victoria-publications-page div.award.hidden.open,
 .victoria-publications-page div.abstract.hidden.open,
 .victoria-publications-page div.bibtex.hidden.open {
@@ -990,6 +996,7 @@ body:has(.victoria-secondary-page) > .container {
   border: 1px solid #e6e0d8;
 }
 
+body.layout-about .homepage-victoria .homepage-publications-list ol.bibliography > li div.award.hidden p,
 .victoria-publications-page ol.bibliography > li div.award.hidden p,
 .victoria-publications-page ol.bibliography > li div.abstract.hidden p {
   margin: 0;

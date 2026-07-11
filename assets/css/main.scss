@@ -602,6 +602,68 @@ body:has(.victoria-secondary-page) > .container {
   line-height: 1.55;
 }
 
+.victoria-not-found-page {
+  min-height: calc(100vh - 114px);
+}
+
+.victoria-not-found {
+  max-width: 620px;
+  margin: 14vh auto 0;
+  padding: 0 0 54px;
+  text-align: center;
+}
+
+.victoria-not-found-code {
+  margin: 0 0 15px;
+  color: var(--victoria-accent) !important;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.24em;
+}
+
+.victoria-not-found .victoria-secondary-title {
+  display: block;
+  margin-bottom: 16px;
+  font-size: 31px;
+  text-align: center;
+}
+
+.victoria-not-found-message {
+  max-width: 440px;
+  margin: 0 auto 27px;
+  color: var(--victoria-muted) !important;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.victoria-not-found-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 39px;
+  padding: 9px 17px 8px;
+  border: 1px solid var(--victoria-accent);
+  color: var(--victoria-accent) !important;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.victoria-not-found-action:hover,
+.victoria-not-found-action:focus {
+  background: var(--victoria-accent);
+  color: #ffffff !important;
+  text-decoration: none;
+}
+
+.victoria-not-found-action:focus-visible {
+  outline: 2px solid var(--victoria-accent);
+  outline-offset: 3px;
+}
+
 .victoria-resource-list {
   margin: 0;
   padding: 0;
@@ -1352,6 +1414,24 @@ body.layout-about .homepage-victoria .homepage-publications-list ol.bibliography
 
   .victoria-secondary-title {
     font-size: 23px;
+  }
+
+  .victoria-not-found-page {
+    min-height: calc(100vh - 62px);
+  }
+
+  .victoria-not-found {
+    margin-top: 12vh;
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+
+  .victoria-not-found .victoria-secondary-title {
+    font-size: 27px;
+  }
+
+  .victoria-not-found-message {
+    font-size: 15.5px;
   }
 
   .victoria-resource-panel > h2,

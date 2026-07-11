@@ -1572,12 +1572,14 @@ body.layout-about .homepage-victoria .homepage-publications-list .publications o
   margin-right: 0;
 }
 
-body.layout-about .homepage-victoria .homepage-publications-list .publications ol.bibliography li .author a:focus,
-body.layout-about .homepage-victoria .homepage-publications-list .publications ol.bibliography li .author > span.more-authors:focus,
-.victoria-publications-page .publications ol.bibliography li .author a:focus,
-.victoria-publications-page .publications ol.bibliography li .author > span.more-authors:focus {
-  outline: 2px solid currentColor;
-  outline-offset: 2px;
+// Pointer activation leaves this inline control focused. Suppress that focus ring
+// unless the browser identifies keyboard focus, so expanded names remain plain
+// publication text while keyboard users retain the focus-visible affordance above.
+body.layout-about .homepage-victoria .homepage-publications-list .publications ol.bibliography li .author a:focus:not(:focus-visible),
+body.layout-about .homepage-victoria .homepage-publications-list .publications ol.bibliography li .author > span.more-authors:focus:not(:focus-visible),
+.victoria-publications-page .publications ol.bibliography li .author a:focus:not(:focus-visible),
+.victoria-publications-page .publications ol.bibliography li .author > span.more-authors:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .victoria-projects-page .victoria-project-summary {

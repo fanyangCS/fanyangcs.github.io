@@ -128,7 +128,7 @@ body.layout-about {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 12px 34px;
+    gap: 12px 56px;
     margin: 30px 0 0;
     padding: 13px 0 0;
     border: 0;
@@ -329,12 +329,11 @@ body.layout-about {
   }
 
   .contacts {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
-    gap: 10px;
-    min-height: auto;
+    display: grid;
+    grid-auto-rows: 22px;
+    align-items: center;
+    justify-items: end;
+    gap: 9px;
     max-width: 300px;
     margin: 0;
     text-align: right;
@@ -345,20 +344,20 @@ body.layout-about {
     font-family: inherit;
     font-size: 17px;
     font-weight: 700;
-    line-height: 1.48;
+    line-height: 22px;
   }
 
   .contacts .affiliation {
     color: var(--homepage-ink);
     font-size: 15px;
-    line-height: 1.48;
+    line-height: 22px;
   }
 
   .contacts .address,
   .contacts .email {
     color: var(--homepage-muted);
     font-size: 14px;
-    line-height: 1.48;
+    line-height: 22px;
   }
 
   .contacts .email span {
@@ -601,23 +600,14 @@ body.layout-about {
     }
 
     .contacts {
-      align-items: flex-start;
-      justify-content: flex-start;
-      gap: 8px;
-      min-height: auto;
+      justify-items: start;
+      gap: 6px;
       max-width: none;
       text-align: left;
     }
 
     .contacts .title {
       color: var(--homepage-ink) !important;
-      line-height: 1.55;
-    }
-
-    .contacts .affiliation,
-    .contacts .address,
-    .contacts .email {
-      line-height: 1.55;
     }
 
     .contacts .email i,

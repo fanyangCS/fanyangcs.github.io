@@ -1088,7 +1088,7 @@ body.layout-about .homepage-victoria .homepage-publications-list .links button.a
 
 body.layout-about .homepage-victoria .homepage-publications-list ol.bibliography > li div.award.hidden,
 .victoria-publications-page ol.bibliography > li div.award.hidden,
-.victoria-publications-page div.abstract.hidden,
+.victoria-publications-page ol.bibliography > li div.abstract.hidden,
 .victoria-publications-page div.bibtex.hidden {
   max-height: 0;
   margin: 0;
@@ -1111,7 +1111,7 @@ body.layout-about .homepage-victoria .homepage-publications-list ol.bibliography
 
 body.layout-about .homepage-victoria .homepage-publications-list ol.bibliography > li div.award.hidden.open,
 .victoria-publications-page ol.bibliography > li div.award.hidden.open,
-.victoria-publications-page div.abstract.hidden.open,
+.victoria-publications-page ol.bibliography > li div.abstract.hidden.open,
 .victoria-publications-page div.bibtex.hidden.open {
   display: block !important;
   max-height: 38rem;
@@ -1133,7 +1133,8 @@ body.layout-about .homepage-victoria .homepage-publications-list ol.bibliography
   color: var(--homepage-muted);
 }
 
-.victoria-publications-page ol.bibliography > li div.award.hidden p {
+.victoria-publications-page ol.bibliography > li div.award.hidden p,
+.victoria-publications-page ol.bibliography > li div.abstract.hidden p {
   color: var(--victoria-muted);
 }
 

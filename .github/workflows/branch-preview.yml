@@ -76,6 +76,17 @@ jobs:
           target-folder: previews/${{ github.ref_name }}
           clean: true
           commit-message: Deploy preview for ${{ github.ref_name }}
+      - name: Prepare canonical preview 404
+        run: |
+          mkdir _preview-404
+          cp _site/404.html _preview-404/404.html
+      - name: Deploy canonical preview 404
+        uses: JamesIves/github-pages-deploy-action@v4.6.4
+        with:
+          folder: _preview-404
+          branch: gh-pages
+          clean: false
+          commit-message: Deploy canonical 404 for ${{ github.ref_name }}
       - name: Summarize preview URL
         run: |
           echo "Preview URL: https://fanyangcs.github.io/previews/${{ github.ref_name }}/" >> "$GITHUB_STEP_SUMMARY"

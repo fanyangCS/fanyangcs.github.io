@@ -165,6 +165,33 @@ body.layout-about .homepage-victoria .homepage-publications-list .author > span.
   cursor: pointer;
 }
 
+body.layout-about .homepage-victoria .homepage-publications-list .author,
+body.layout-about .homepage-victoria .homepage-publications-list .author a,
+body.layout-about .homepage-victoria .homepage-publications-list .author > em,
+body.layout-about .homepage-victoria .homepage-publications-list .author .author-self,
+body.layout-about .homepage-victoria .homepage-publications-list .author > span.more-authors,
+body.layout-about .homepage-victoria .homepage-publications-list .author > span.more-authors * {
+  color: var(--homepage-muted);
+  opacity: 1;
+  transition: color 0.15s ease;
+}
+
+body.layout-about .homepage-victoria .homepage-publications-list .author:hover,
+body.layout-about .homepage-victoria .homepage-publications-list .author:hover a,
+body.layout-about .homepage-victoria .homepage-publications-list .author:hover > em,
+body.layout-about .homepage-victoria .homepage-publications-list .author:hover .author-self,
+body.layout-about .homepage-victoria .homepage-publications-list .author:hover > span.more-authors,
+body.layout-about .homepage-victoria .homepage-publications-list .author:hover > span.more-authors *,
+body.layout-about .homepage-victoria .homepage-publications-list .author:focus-within,
+body.layout-about .homepage-victoria .homepage-publications-list .author:focus-within a,
+body.layout-about .homepage-victoria .homepage-publications-list .author:focus-within > em,
+body.layout-about .homepage-victoria .homepage-publications-list .author:focus-within .author-self,
+body.layout-about .homepage-victoria .homepage-publications-list .author:focus-within > span.more-authors,
+body.layout-about .homepage-victoria .homepage-publications-list .author:focus-within > span.more-authors * {
+  color: var(--homepage-ink);
+  opacity: 1;
+}
+
 body.layout-about .homepage-victoria .homepage-publications-list .author > span.more-authors.is-expanded,
 body.layout-about .homepage-victoria .homepage-publications-list .author > span.more-authors.is-expanded:hover,
 body.layout-about .homepage-victoria .homepage-publications-list .author > span.more-authors.is-expanded:focus {
@@ -928,6 +955,33 @@ body:has(.victoria-secondary-page) > .container {
 
 .victoria-publications-page .author > span.more-authors {
   cursor: pointer;
+}
+
+.victoria-publications-page .author,
+.victoria-publications-page .author a,
+.victoria-publications-page .author > em,
+.victoria-publications-page .author .author-self,
+.victoria-publications-page .author > span.more-authors,
+.victoria-publications-page .author > span.more-authors * {
+  color: var(--victoria-muted);
+  opacity: 1;
+  transition: color 0.15s ease;
+}
+
+.victoria-publications-page .author:hover,
+.victoria-publications-page .author:hover a,
+.victoria-publications-page .author:hover > em,
+.victoria-publications-page .author:hover .author-self,
+.victoria-publications-page .author:hover > span.more-authors,
+.victoria-publications-page .author:hover > span.more-authors *,
+.victoria-publications-page .author:focus-within,
+.victoria-publications-page .author:focus-within a,
+.victoria-publications-page .author:focus-within > em,
+.victoria-publications-page .author:focus-within .author-self,
+.victoria-publications-page .author:focus-within > span.more-authors,
+.victoria-publications-page .author:focus-within > span.more-authors * {
+  color: var(--victoria-ink);
+  opacity: 1;
 }
 
 .victoria-publications-page .author > span.more-authors:not(.is-expanded) {

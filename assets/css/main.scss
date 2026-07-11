@@ -1368,12 +1368,39 @@ body.layout-about .homepage-victoria .homepage-publications-list .publications o
   text-decoration-line: none !important;
 }
 
-body.layout-about .homepage-victoria .homepage-publications-list .publications ol.bibliography li .author a:focus-visible,
-body.layout-about .homepage-victoria .homepage-publications-list .publications ol.bibliography li .author > span.more-authors:focus-visible,
-.victoria-publications-page .publications ol.bibliography li .author a:focus-visible,
-.victoria-publications-page .publications ol.bibliography li .author > span.more-authors:focus-visible {
-  outline: 2px solid currentColor;
-  outline-offset: 2px;
+// The author expander is an inline span whose text is replaced with the full
+// author list. An outline on that span fragments around every wrapped line,
+// producing the large rectangular boxes reported after expansion. Keep the
+// control natively flat in every interaction state and limit the keyboard
+// affordance to a single underline while it is still collapsed.
+body.layout-about .homepage-victoria .homepage-publications-list .publications ol.bibliography li .author > span.more-authors,
+.victoria-publications-page .publications ol.bibliography li .author > span.more-authors {
+  appearance: none !important;
+  outline: none !important;
+  font: inherit;
+}
+
+body.layout-about .homepage-victoria .homepage-publications-list .publications ol.bibliography li .author > span.more-authors:not(.is-expanded):focus-visible,
+.victoria-publications-page .publications ol.bibliography li .author > span.more-authors:not(.is-expanded):focus-visible {
+  border-bottom: 1px solid currentColor !important;
+  outline: none !important;
+}
+
+body.layout-about .homepage-victoria .homepage-publications-list .publications ol.bibliography li .author > span.more-authors.is-expanded:focus-visible,
+.victoria-publications-page .publications ol.bibliography li .author > span.more-authors.is-expanded:focus-visible {
+  border: 0 !important;
+  outline: none !important;
+}
+
+body.layout-about .homepage-victoria .homepage-publications-list .publications ol.bibliography li .author > span.more-authors::before,
+body.layout-about .homepage-victoria .homepage-publications-list .publications ol.bibliography li .author > span.more-authors::after,
+.victoria-publications-page .publications ol.bibliography li .author > span.more-authors::before,
+.victoria-publications-page .publications ol.bibliography li .author > span.more-authors::after {
+  content: none !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  outline: none !important;
 }
 
 /****************************************************************************

@@ -52,7 +52,7 @@
 
 <details class="homepage-mobile-menu victoria-secondary-mobile-menu">
   {%- comment -%} Mobile hamburger menu mirrors the homepage Victoria-style menu. {%- endcomment -%}
-  <summary aria-label="Open site navigation">
+  <summary aria-label="Open site navigation" aria-expanded="false">
     <span class="homepage-menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
   </summary>
   <nav class="homepage-mobile-menu-panel" aria-label="Site navigation">
@@ -63,3 +63,25 @@
     <a href="{{ projects_url }}">Projects</a>
   </nav>
 </details>
+<script>
+  (() => {
+    const menu = document.currentScript.previousElementSibling;
+    const toggle = menu.querySelector('summary');
+    const setExpanded = () => toggle.setAttribute('aria-expanded', menu.open ? 'true' : 'false');
+    const closeMenu = () => {
+      menu.removeAttribute('open');
+      setExpanded();
+    };
+
+    menu.addEventListener('toggle', setExpanded);
+    document.addEventListener('click', (event) => {
+      if (menu.open && !menu.contains(event.target)) closeMenu();
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && menu.open) {
+        closeMenu();
+        toggle.focus();
+      }
+    });
+  })();
+</script>

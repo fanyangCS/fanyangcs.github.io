@@ -8,13 +8,7 @@ nav_order: 2
 ---
 
 <div class="victoria-secondary-page victoria-news-page">
-  <nav class="victoria-secondary-nav" aria-label="Site navigation">
-    <a href="{{ '/' | relative_url }}">About</a>
-    <a href="{{ '/blog/' | relative_url }}">Blog</a>
-    <a href="{{ '/news/' | relative_url }}" aria-current="page">News</a>
-    <a href="{{ '/publications/' | relative_url }}">Publications</a>
-    <a href="{{ '/projects/' | relative_url }}">Projects</a>
-  </nav>
+  {% include victoria_nav.liquid current="news" %}
 
   <h1 class="victoria-secondary-title">News</h1>
 

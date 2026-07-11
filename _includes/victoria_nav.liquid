@@ -1,0 +1,51 @@
+<nav class="victoria-secondary-nav" aria-label="Site navigation">
+  <a
+    href="{{ '/' | relative_url }}"
+    {% if include.current == 'about' %}
+      aria-current="page"
+    {% endif %}
+    >About</a
+  >
+  <a
+    href="{{ '/blog/' | relative_url }}"
+    {% if include.current == 'blog' %}
+      aria-current="page"
+    {% endif %}
+    >Blog</a
+  >
+  <a
+    href="{{ '/news/' | relative_url }}"
+    {% if include.current == 'news' %}
+      aria-current="page"
+    {% endif %}
+    >News</a
+  >
+  <a
+    href="{{ '/publications/' | relative_url }}"
+    {% if include.current == 'publications' %}
+      aria-current="page"
+    {% endif %}
+    >Publications</a
+  >
+  <a
+    href="{{ '/projects/' | relative_url }}"
+    {% if include.current == 'projects' %}
+      aria-current="page"
+    {% endif %}
+    >Projects</a
+  >
+</nav>
+
+<details class="homepage-mobile-menu victoria-secondary-mobile-menu">
+  {%- comment -%} Mobile hamburger menu mirrors the homepage Victoria-style menu. {%- endcomment -%}
+  <summary aria-label="Open site navigation">
+    <span class="homepage-menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+  </summary>
+  <nav class="homepage-mobile-menu-panel" aria-label="Site navigation">
+    <a href="{{ '/' | relative_url }}">About</a>
+    <a href="{{ '/blog/' | relative_url }}">Blog</a>
+    <a href="{{ '/news/' | relative_url }}">News</a>
+    <a href="{{ '/publications/' | relative_url }}">Publications</a>
+    <a href="{{ '/projects/' | relative_url }}">Projects</a>
+  </nav>
+</details>

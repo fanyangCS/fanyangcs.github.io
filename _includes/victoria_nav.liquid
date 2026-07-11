@@ -1,34 +1,48 @@
+{% if include.canonical_nav %}
+  {% assign home_url = '/' %}
+  {% assign blog_url = '/blog/' %}
+  {% assign news_url = '/news/' %}
+  {% assign publications_url = '/publications/' %}
+  {% assign projects_url = '/projects/' %}
+{% else %}
+  {% assign home_url = '/' | relative_url %}
+  {% assign blog_url = '/blog/' | relative_url %}
+  {% assign news_url = '/news/' | relative_url %}
+  {% assign publications_url = '/publications/' | relative_url %}
+  {% assign projects_url = '/projects/' | relative_url %}
+{% endif %}
+
 <nav class="victoria-secondary-nav" aria-label="Site navigation">
   <a
-    href="{{ '/' | relative_url }}"
+    href="{{ home_url }}"
     {% if include.current == 'about' %}
       aria-current="page"
     {% endif %}
     >About</a
   >
   <a
-    href="{{ '/blog/' | relative_url }}"
+    href="{{ blog_url }}"
     {% if include.current == 'blog' %}
       aria-current="page"
     {% endif %}
     >Blog</a
   >
   <a
-    href="{{ '/news/' | relative_url }}"
+    href="{{ news_url }}"
     {% if include.current == 'news' %}
       aria-current="page"
     {% endif %}
     >News</a
   >
   <a
-    href="{{ '/publications/' | relative_url }}"
+    href="{{ publications_url }}"
     {% if include.current == 'publications' %}
       aria-current="page"
     {% endif %}
     >Publications</a
   >
   <a
-    href="{{ '/projects/' | relative_url }}"
+    href="{{ projects_url }}"
     {% if include.current == 'projects' %}
       aria-current="page"
     {% endif %}
@@ -42,10 +56,10 @@
     <span class="homepage-menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
   </summary>
   <nav class="homepage-mobile-menu-panel" aria-label="Site navigation">
-    <a href="{{ '/' | relative_url }}">About</a>
-    <a href="{{ '/blog/' | relative_url }}">Blog</a>
-    <a href="{{ '/news/' | relative_url }}">News</a>
-    <a href="{{ '/publications/' | relative_url }}">Publications</a>
-    <a href="{{ '/projects/' | relative_url }}">Projects</a>
+    <a href="{{ home_url }}">About</a>
+    <a href="{{ blog_url }}">Blog</a>
+    <a href="{{ news_url }}">News</a>
+    <a href="{{ publications_url }}">Publications</a>
+    <a href="{{ projects_url }}">Projects</a>
   </nav>
 </details>

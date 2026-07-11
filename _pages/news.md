@@ -16,19 +16,19 @@ nav_order: 2
 {% if site.news != blank %}
 {% assign news = site.news | reverse %}
 
-<div class="victoria-resource-list">
+<div class="victoria-resource-list victoria-news-list">
 {% for item in news %}
 <article class="victoria-resource-panel victoria-news-item">
 <h2>
-<time datetime="{{ item.date | date: '%Y-%m-%d' }}">{{ item.date | date: '%b %d, %Y' }}</time>
-</h2>
-<div class="victoria-resource-copy">
 {% if item.inline %}
-{{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
+<span>{{ item.title }}</span>
 {% else %}
 <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
 {% endif %}
-</div>
+</h2>
+<p class="victoria-news-meta">
+<time datetime="{{ item.date | date: '%Y-%m-%d' }}">{{ item.date | date: '%B %d, %Y' }}</time>
+</p>
 </article>
 {% endfor %}
 </div>

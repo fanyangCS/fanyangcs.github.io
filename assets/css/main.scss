@@ -717,11 +717,43 @@ body:has(.victoria-secondary-page) > .container {
   margin: 0 0 6px;
 }
 
-.victoria-news-item time {
-  color: var(--victoria-ink);
-  font-size: 17px;
+.victoria-news-list .victoria-news-item {
+  padding: 26px 0 24px;
+}
+
+.victoria-news-list .victoria-news-item:first-child {
+  padding-top: 9px;
+}
+
+.victoria-news-list .victoria-news-item > h2 {
+  gap: 13px;
+  margin-bottom: 10px;
+  font-size: 22px;
+  line-height: 1.31;
+  letter-spacing: -0.006em;
+}
+
+.victoria-news-list .victoria-news-item > h2::before {
+  width: 8px;
+  height: 8px;
+}
+
+.victoria-news-list .victoria-news-item > h2 a {
+  color: var(--victoria-accent);
+}
+
+.victoria-news-meta {
+  margin: 0 0 0 21px;
+  color: var(--victoria-muted) !important;
+  font-size: 13px;
   font-weight: 600;
-  line-height: 1.32;
+  line-height: 1.35;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.victoria-news-meta time {
+  color: inherit;
 }
 
 .victoria-post-meta {
@@ -1434,9 +1466,17 @@ body.layout-about .homepage-victoria .homepage-publications-list ol.bibliography
     font-size: 15.5px;
   }
 
-  .victoria-resource-panel > h2,
-  .victoria-news-item time {
+  .victoria-resource-panel > h2 {
     font-size: 16px;
+  }
+
+  .victoria-news-list .victoria-news-item {
+    padding: 26px 0 25px;
+  }
+
+  .victoria-news-list .victoria-news-item > h2 {
+    font-size: 21px;
+    line-height: 1.38;
   }
 
   .victoria-entry-page .victoria-secondary-nav {
@@ -1468,6 +1508,15 @@ body.layout-about .homepage-victoria .homepage-publications-list ol.bibliography
   .victoria-resource-copy,
   .victoria-post-meta {
     padding-left: 0;
+  }
+
+  .victoria-news-list .victoria-news-item > h2 {
+    font-size: 17px;
+  }
+
+  .victoria-news-meta {
+    margin-left: 21px;
+    font-size: 12px;
   }
 
   .victoria-entry-header {

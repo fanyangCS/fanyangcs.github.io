@@ -936,20 +936,23 @@ body:has(.victoria-secondary-page) > .container {
   padding: 0;
 }
 
-// Shared restrained Award palette and interaction states for both publication
-// surfaces. Each state keeps WCAG AA contrast while hover visibly lightens the
-// coral and darkens the label.
+// Shared Award palette and interaction states for both publication surfaces.
+// Option B contrast: default 6.90:1; hover/expanded 9.43:1.
 body.layout-about .homepage-victoria .homepage-publications-list .links button.award.btn,
 .victoria-publications-page .links button.award.btn {
+  --award-bg: #86453f;
+  --award-text: #fffaf7;
+  --award-interactive-bg: #e7c5bf;
+  --award-interactive-text: #38201d;
   display: inline-flex;
   align-items: center;
   width: auto;
   margin: 0;
   padding: 4px 16px;
-  border: 1px solid #d8aaa4;
+  border: 1px solid var(--award-bg);
   border-radius: 0;
-  background: #d8aaa4;
-  color: #512824 !important;
+  background: var(--award-bg);
+  color: var(--award-text) !important;
   font-family: inherit;
   font-size: 11px;
   font-weight: 600;
@@ -968,9 +971,9 @@ body.layout-about .homepage-victoria .homepage-publications-list .links button.a
 
 body.layout-about .homepage-victoria .homepage-publications-list .links button.award.btn:hover,
 .victoria-publications-page .links button.award.btn:hover {
-  border-color: #eed3cf;
-  background: #eed3cf;
-  color: #3d1f1b !important;
+  border-color: var(--award-interactive-bg);
+  background: var(--award-interactive-bg);
+  color: var(--award-interactive-text) !important;
 }
 
 body.layout-about .homepage-victoria .homepage-publications-list .links button.award.btn:focus,
@@ -980,21 +983,24 @@ body.layout-about .homepage-victoria .homepage-publications-list .links button.a
 
 body.layout-about .homepage-victoria .homepage-publications-list .links button.award.btn:focus-visible,
 .victoria-publications-page .links button.award.btn:focus-visible {
-  outline: 2px solid rgba(81, 40, 36, 0.72);
+  border-color: var(--award-interactive-bg);
+  background: var(--award-interactive-bg);
+  color: var(--award-interactive-text) !important;
+  outline: 2px solid var(--award-interactive-text);
   outline-offset: 2px;
 }
 
 body.layout-about .homepage-victoria .homepage-publications-list .links button.award.btn[aria-expanded="true"],
 .victoria-publications-page .links button.award.btn[aria-expanded="true"] {
-  border-color: #e6c7c2;
-  background: #e6c7c2;
-  color: #3d1f1b !important;
-  box-shadow: inset 0 -2px 0 rgba(61, 31, 27, 0.14) !important;
+  border-color: var(--award-interactive-bg);
+  background: var(--award-interactive-bg);
+  color: var(--award-interactive-text) !important;
+  box-shadow: inset 0 -2px 0 rgba(56, 32, 29, 0.14) !important;
 }
 
 body.layout-about .homepage-victoria .homepage-publications-list .links button.award.btn[aria-expanded="true"]:focus-visible,
 .victoria-publications-page .links button.award.btn[aria-expanded="true"]:focus-visible {
-  outline-color: rgba(61, 31, 27, 0.72);
+  outline-color: var(--award-interactive-text);
 }
 
 .victoria-publications-page .badges span,

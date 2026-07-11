@@ -596,6 +596,226 @@ body:has(.victoria-secondary-page) > .container {
   text-transform: uppercase;
 }
 
+.victoria-entry-page {
+  max-width: 820px;
+  padding-bottom: 48px;
+}
+
+.victoria-entry-page .victoria-secondary-nav {
+  margin-bottom: 44px;
+}
+
+.victoria-entry-header {
+  margin: 0 0 30px;
+  padding: 0 0 24px;
+  border: 0;
+  border-bottom: 1px solid var(--victoria-faint);
+}
+
+.victoria-entry-kicker {
+  margin: 0 0 10px;
+  color: var(--victoria-muted) !important;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.victoria-entry-title,
+.victoria-entry-page .post-title {
+  display: block;
+  max-width: 760px;
+  margin: 0 0 13px;
+  padding: 0;
+  border: 0;
+  color: var(--victoria-accent) !important;
+  font-family: inherit;
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 1.16;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.victoria-entry-title::before,
+.victoria-entry-title::after,
+.victoria-entry-page .post-title::before,
+.victoria-entry-page .post-title::after {
+  display: none !important;
+  content: none !important;
+}
+
+.victoria-entry-meta,
+.victoria-entry-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px 12px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  color: var(--victoria-muted) !important;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.victoria-entry-tags {
+  margin-top: 11px;
+}
+
+.victoria-entry-meta span::before,
+.victoria-entry-tags a::before,
+.victoria-entry-tags span::before {
+  content: "·";
+  margin-right: 12px;
+  color: var(--victoria-muted);
+}
+
+.victoria-entry-tags a:first-child::before,
+.victoria-entry-tags span:first-child::before {
+  content: none;
+  margin-right: 0;
+}
+
+.victoria-entry-tags a,
+.victoria-entry-tags span {
+  color: var(--victoria-muted) !important;
+}
+
+.victoria-entry-tags a:hover,
+.victoria-entry-tags a:focus {
+  color: var(--victoria-accent) !important;
+}
+
+.victoria-entry-content {
+  max-width: 760px;
+  margin: 0;
+  color: var(--victoria-ink);
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.68;
+}
+
+.victoria-entry-content #markdown-content > :first-child {
+  margin-top: 0;
+}
+
+.victoria-entry-content p,
+.victoria-entry-content li {
+  color: var(--victoria-ink);
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.68;
+}
+
+.victoria-entry-content p {
+  margin: 0 0 18px;
+}
+
+.victoria-entry-content ul,
+.victoria-entry-content ol {
+  margin: 0 0 18px 1.25rem;
+  padding-left: 1.1rem;
+}
+
+.victoria-entry-content h2,
+.victoria-entry-content h3,
+.victoria-entry-content h4,
+.victoria-entry-content h5,
+.victoria-entry-content h6 {
+  margin: 30px 0 12px;
+  padding: 0;
+  border: 0;
+  color: var(--victoria-ink) !important;
+  font-family: inherit;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.28;
+}
+
+.victoria-entry-content h2 {
+  font-size: 22px;
+}
+
+.victoria-entry-content h3,
+.victoria-entry-content h4,
+.victoria-entry-content h5,
+.victoria-entry-content h6 {
+  font-size: 18px;
+}
+
+.victoria-entry-content h2::before,
+.victoria-entry-content h3::before,
+.victoria-entry-content h4::before,
+.victoria-entry-content h5::before,
+.victoria-entry-content h6::before,
+.victoria-entry-content h2::after,
+.victoria-entry-content h3::after,
+.victoria-entry-content h4::after,
+.victoria-entry-content h5::after,
+.victoria-entry-content h6::after {
+  display: none !important;
+  content: none !important;
+}
+
+.victoria-entry-content a {
+  color: var(--victoria-accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+.victoria-entry-content a:hover,
+.victoria-entry-content a:focus {
+  color: #2f536f;
+}
+
+.victoria-entry-content hr {
+  margin: 26px 0;
+  border: 0;
+  border-top: 1px solid var(--victoria-faint);
+}
+
+.victoria-entry-content blockquote {
+  margin: 22px 0;
+  padding: 0 0 0 18px;
+  border-left: 2px solid var(--victoria-rule);
+  color: var(--victoria-muted);
+}
+
+.victoria-entry-content pre,
+.victoria-entry-content code {
+  border-radius: 0;
+  background: #fbfaf8;
+  color: var(--victoria-ink);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+}
+
+.victoria-entry-content pre {
+  margin: 20px 0;
+  padding: 14px 16px;
+  border: 1px solid var(--victoria-faint);
+  background: #fbfaf8;
+  color: var(--victoria-ink);
+}
+
+.victoria-entry-page > h2,
+.victoria-entry-page .related-posts h2 {
+  margin-top: 34px;
+  color: var(--victoria-ink) !important;
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.victoria-entry-back-link {
+  margin-top: 34px;
+}
+
 @media print, screen and (max-width: 768px) {
   body:has(.victoria-secondary-page) {
     padding: 20px 0 42px;
@@ -629,6 +849,22 @@ body:has(.victoria-secondary-page) > .container {
   .victoria-news-item time {
     font-size: 16px;
   }
+
+  .victoria-entry-page .victoria-secondary-nav {
+    margin-bottom: 34px;
+  }
+
+  .victoria-entry-title,
+  .victoria-entry-page .post-title {
+    font-size: 28px;
+  }
+
+  .victoria-entry-content,
+  .victoria-entry-content p,
+  .victoria-entry-content li {
+    font-size: 15.5px;
+    line-height: 1.64;
+  }
 }
 
 @media print, screen and (max-width: 480px) {
@@ -649,5 +885,34 @@ body:has(.victoria-secondary-page) > .container {
   .victoria-resource-copy,
   .victoria-post-meta {
     padding-left: 0;
+  }
+
+  .victoria-entry-header {
+    margin-bottom: 24px;
+    padding-bottom: 20px;
+  }
+
+  .victoria-entry-title,
+  .victoria-entry-page .post-title {
+    font-size: 24px;
+    line-height: 1.22;
+  }
+
+  .victoria-entry-meta,
+  .victoria-entry-tags {
+    gap: 6px 9px;
+    font-size: 12px;
+  }
+
+  .victoria-entry-meta span::before,
+  .victoria-entry-tags a::before,
+  .victoria-entry-tags span::before {
+    margin-right: 9px;
+  }
+
+  .victoria-entry-content ul,
+  .victoria-entry-content ol {
+    margin-left: 0;
+    padding-left: 1.2rem;
   }
 }

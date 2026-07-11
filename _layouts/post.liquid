@@ -13,55 +13,83 @@ layout: default
 {% endif %}
 
 {% assign url_beginning = page.url | slice: 0, 6 %}
+{% assign entry_section = 'news' %}
+{% assign entry_label = 'News' %}
+{% assign entry_back_url = '/news/' | relative_url %}
+{% assign entry_back_label = 'Back to News' %}
+{% if url_beginning == '/blog/' %}
+  {% assign entry_section = 'blog' %}
+  {% assign entry_label = 'Blog' %}
+  {% assign entry_back_url = '/blog/' | relative_url %}
+  {% assign entry_back_label = 'Back to Blog' %}
+{% endif %}
 
-<div class="post">
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">
-      Created in {{ page.date | date: '%B %d, %Y' }}
-      {% if page.author %}by {{ page.author }}{% endif %}
-      {% if page.last_updated %}, last updated in {{ page.last_updated | date: '%B %d, %Y' }}{% endif %}
-      {% if page.meta %}• {{ page.meta }}{% endif %}
-    </p>
-    <p class="post-tags">
-      {% if url_beginning == '/blog/' %}
-        <a href="{{ year | prepend: '/blog/' | prepend: site.baseurl}}"> <i class="fa-solid fa-calendar fa-sm"></i> {{ year }} </a>
-      {% else %}
-        <i class="fa-solid fa-calendar fa-sm"></i> {{ year }}
+<div class="post victoria-secondary-page victoria-entry-page victoria-{{ entry_section }}-entry-page">
+  <nav class="victoria-secondary-nav" aria-label="Site navigation">
+    <a href="{{ '/' | relative_url }}">About</a>
+    <a
+      href="{{ '/blog/' | relative_url }}"
+      {% if entry_section == 'blog' %}
+        aria-current="page"
       {% endif %}
-      {% if tags != '' %}
-        &nbsp; &middot; &nbsp;
-        {% for tag in page.tags %}
-          {% if url_beginning == '/blog/' %}
-            <a href="{{ tag | slugify | prepend: '/blog/tag/' | prepend: site.baseurl}}"> <i class="fa-solid fa-hashtag fa-sm"></i> {{ tag }}</a>
-          {% else %}
-            <i class="fa-solid fa-hashtag fa-sm"></i> {{ tag }}
-          {% endif %}
-          {% unless forloop.last %}
-            &nbsp;
-          {% endunless %}
-        {% endfor %}
+      >Blog</a
+    >
+    <a
+      href="{{ '/news/' | relative_url }}"
+      {% if entry_section == 'news' %}
+        aria-current="page"
       {% endif %}
+      >News</a
+    >
+    <a href="{{ '/publications/' | relative_url }}">Publications</a>
+    <a href="{{ '/projects/' | relative_url }}">Projects</a>
+  </nav>
 
-      {% if categories != '' %}
-        &nbsp; &middot; &nbsp;
-        {% for category in page.categories %}
-          {% if url_beginning == '/blog/' %}
-            <a href="{{ category | slugify | prepend: '/blog/category/' | prepend: site.baseurl}}">
-              <i class="fa-solid fa-tag fa-sm"></i> {{ category -}}
-            </a>
-          {% else %}
-            <i class="fa-solid fa-tag fa-sm"></i> {{ category }}
-          {% endif %}
-          {% unless forloop.last %}
-            &nbsp;
-          {% endunless %}
-        {% endfor %}
-      {% endif %}
+  <header class="post-header victoria-entry-header">
+    <p class="victoria-entry-kicker">{{ entry_label }}</p>
+    <h1 class="post-title victoria-secondary-title victoria-entry-title">{{ page.title }}</h1>
+    <p class="post-meta victoria-entry-meta">
+      <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%B %d, %Y' }}</time>
+      {% if page.author -%}
+        <span>by {{ page.author }}</span>
+      {%- endif %}
+      {% if page.last_updated -%}
+        <span>updated {{ page.last_updated | date: '%B %d, %Y' }}</span>
+      {%- endif %}
+      {% if page.meta -%}
+        <span>{{ page.meta }}</span>
+      {%- endif %}
     </p>
+    {% if tags != '' or categories != '' %}
+      <p class="post-tags victoria-entry-tags">
+        {% if url_beginning == '/blog/' %}
+          <a href="{{ year | prepend: '/blog/' | prepend: site.baseurl }}">{{ year }}</a>
+        {% else %}
+          <span>{{ year }}</span>
+        {% endif %}
+        {% if tags != '' %}
+          {% for tag in page.tags %}
+            {% if url_beginning == '/blog/' %}
+              <a href="{{ tag | slugify | prepend: '/blog/tag/' | prepend: site.baseurl }}">#{{ tag }}</a>
+            {% else %}
+              <span>#{{ tag }}</span>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+        {% if categories != '' %}
+          {% for category in page.categories %}
+            {% if url_beginning == '/blog/' %}
+              <a href="{{ category | slugify | prepend: '/blog/category/' | prepend: site.baseurl }}">{{ category }}</a>
+            {% else %}
+              <span>{{ category }}</span>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+      </p>
+    {% endif %}
   </header>
 
-  <article class="post-content">
+  <article class="post-content victoria-entry-content">
     {% if page.toc and page.toc.beginning %}
       <div id="table-of-contents">
         {% toc %}
@@ -96,4 +124,8 @@ layout: default
   {% if site.giscus and page.giscus_comments %}
     {% include giscus.liquid %}
   {% endif %}
+
+  <p class="victoria-back-link victoria-entry-back-link">
+    <a href="{{ entry_back_url }}">&larr; {{ entry_back_label }}</a>
+  </p>
 </div>

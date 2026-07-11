@@ -26,6 +26,60 @@ $max-content-width: {{ site.max_width }};
   "tabler-icons/tabler-icons-outline.scss"
 ;
 
+// Homepage contrast: the base typography rules below assign --global-text-color
+// directly to spans, emphasis, and strong text. Reassert the homepage palette on
+// these exact components so they do not depend on inherited-color behavior.
+body.layout-about .homepage-victoria {
+  .contacts .email,
+  .contacts .email i,
+  .contacts .email .contact-email-link,
+  .contacts .email .contact-email-link:visited {
+    color: var(--homepage-muted);
+    opacity: 1;
+  }
+
+  .contacts .email .contact-email-link:hover,
+  .contacts .email .contact-email-link:focus {
+    color: var(--homepage-accent);
+    text-decoration: underline;
+  }
+
+  .contacts .social-networks a,
+  .contacts .social-networks a:visited,
+  .contacts .social-networks .openreview-badge {
+    color: var(--homepage-ink);
+    opacity: 1;
+  }
+
+  .contacts .social-networks .openreview-badge {
+    border-width: 2px;
+  }
+
+  .about-me-section em {
+    color: var(--homepage-ink);
+    opacity: 1;
+    font-style: italic;
+  }
+
+  .about-me-section .recruitment-notice,
+  .about-me-section .recruitment-notice strong {
+    color: var(--homepage-ink);
+    opacity: 1;
+  }
+
+  .about-me-section .recruitment-link,
+  .about-me-section .recruitment-link:visited {
+    color: var(--homepage-accent);
+    opacity: 1;
+    text-decoration: underline;
+  }
+
+  .about-me-section .recruitment-link:hover,
+  .about-me-section .recruitment-link:focus {
+    color: #2f536f;
+  }
+}
+
 // AI-assisted homepage preview override: keep section headings prominent and unruled.
 // The desktop masthead contact spacing (10px gap) lives in _sass/_layout.scss.
 body.layout-about .section h3 {

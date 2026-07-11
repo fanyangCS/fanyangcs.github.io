@@ -767,17 +767,20 @@ body:has(.victoria-secondary-page) > .container {
   text-transform: uppercase;
 }
 
-.victoria-blog-page .victoria-pagination {
+.victoria-blog-page .victoria-pagination,
+.victoria-news-page .victoria-pagination {
   margin-top: 24px;
 }
 
-.victoria-blog-page .victoria-pagination .pagination {
+.victoria-blog-page .victoria-pagination .pagination,
+.victoria-news-page .victoria-pagination .pagination {
   gap: 8px;
   justify-content: flex-start;
   margin: 0;
 }
 
-.victoria-blog-page .victoria-pagination .page-link {
+.victoria-blog-page .victoria-pagination .page-link,
+.victoria-news-page .victoria-pagination .page-link {
   min-width: 34px;
   padding: 6px 10px;
   border: 1px solid var(--victoria-faint) !important;
@@ -794,7 +797,9 @@ body:has(.victoria-secondary-page) > .container {
 }
 
 .victoria-blog-page .victoria-pagination .page-link:hover,
-.victoria-blog-page .victoria-pagination .page-link:focus {
+.victoria-blog-page .victoria-pagination .page-link:focus,
+.victoria-news-page .victoria-pagination .page-link:hover,
+.victoria-news-page .victoria-pagination .page-link:focus {
   border-color: var(--victoria-rule) !important;
   background: transparent !important;
   box-shadow: none !important;
@@ -804,13 +809,17 @@ body:has(.victoria-secondary-page) > .container {
 
 .victoria-blog-page .victoria-pagination .page-item.active .page-link,
 .victoria-blog-page .victoria-pagination .page-item.active .page-link:hover,
-.victoria-blog-page .victoria-pagination .page-item.active .page-link:focus {
+.victoria-blog-page .victoria-pagination .page-item.active .page-link:focus,
+.victoria-news-page .victoria-pagination .page-item.active .page-link,
+.victoria-news-page .victoria-pagination .page-item.active .page-link:hover,
+.victoria-news-page .victoria-pagination .page-item.active .page-link:focus {
   border-color: var(--victoria-accent) !important;
   background: transparent !important;
   color: var(--victoria-ink) !important;
 }
 
-.victoria-blog-page .victoria-pagination .page-item.disabled .page-link {
+.victoria-blog-page .victoria-pagination .page-item.disabled .page-link,
+.victoria-news-page .victoria-pagination .page-item.disabled .page-link {
   border-color: var(--victoria-faint) !important;
   background: transparent !important;
   color: var(--victoria-muted) !important;

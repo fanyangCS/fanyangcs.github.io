@@ -2,12 +2,11 @@
 layout: default
 title: news
 browser_title: News
-permalink: /news/
-description:
-nav: true
-nav_order: 2
-news_page: 1
-news_offset: 0
+permalink: /news/page/2/
+nav: false
+news_page: 2
+news_offset: 5
+sitemap: false
 ---
 
 {% include news_editorial_page.liquid %}

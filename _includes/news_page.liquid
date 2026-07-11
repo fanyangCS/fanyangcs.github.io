@@ -1,0 +1,37 @@
+{% assign news = site.news | sort: 'date' | reverse %}
+{% assign per_page = 5 %}
+{% assign offset = include.page_number | minus: 1 | times: per_page %}
+{% assign page_news = news | slice: offset, per_page %}
+
+<div class="victoria-secondary-page victoria-news-page">
+  {% include victoria_nav.liquid current="news" %}
+
+  <h1 class="victoria-secondary-title">News</h1>
+
+  {% if page_news != blank %}
+    <div class="victoria-resource-list victoria-news-list">
+      {% for item in page_news %}
+        <article class="victoria-resource-panel victoria-news-item">
+          <h2>
+            {% if item.inline %}
+              <span>{{ item.title }}</span>
+            {% else %}
+              <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+            {% endif %}
+          </h2>
+          <p class="victoria-news-meta">
+            <time datetime="{{ item.date | date: '%Y-%m-%d' }}">{{ item.date | date: '%B %d, %Y' }}</time>
+          </p>
+        </article>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p>No news so far...</p>
+  {% endif %}
+
+  <div class="victoria-pagination">
+    {% include news_pagination.liquid current_page=include.page_number %}
+  </div>
+
+  <p class="victoria-back-link"><a href="{{ '/' | relative_url }}">&larr; Back</a></p>
+</div>

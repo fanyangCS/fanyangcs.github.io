@@ -219,6 +219,33 @@ body.layout-about .homepage-victoria .homepage-publications-list .author > span.
   cursor: pointer;
 }
 
+body.layout-about .homepage-victoria .homepage-publications-list .author,
+body.layout-about .homepage-victoria .homepage-publications-list .author a,
+body.layout-about .homepage-victoria .homepage-publications-list .author > em,
+body.layout-about .homepage-victoria .homepage-publications-list .author .author-self,
+body.layout-about .homepage-victoria .homepage-publications-list .author > span.more-authors,
+body.layout-about .homepage-victoria .homepage-publications-list .author > span.more-authors * {
+  color: var(--homepage-muted);
+  opacity: 1;
+  transition: color 0.15s ease;
+}
+
+body.layout-about .homepage-victoria .homepage-publications-list .author:hover,
+body.layout-about .homepage-victoria .homepage-publications-list .author:hover a,
+body.layout-about .homepage-victoria .homepage-publications-list .author:hover > em,
+body.layout-about .homepage-victoria .homepage-publications-list .author:hover .author-self,
+body.layout-about .homepage-victoria .homepage-publications-list .author:hover > span.more-authors,
+body.layout-about .homepage-victoria .homepage-publications-list .author:hover > span.more-authors *,
+body.layout-about .homepage-victoria .homepage-publications-list .author:focus-within,
+body.layout-about .homepage-victoria .homepage-publications-list .author:focus-within a,
+body.layout-about .homepage-victoria .homepage-publications-list .author:focus-within > em,
+body.layout-about .homepage-victoria .homepage-publications-list .author:focus-within .author-self,
+body.layout-about .homepage-victoria .homepage-publications-list .author:focus-within > span.more-authors,
+body.layout-about .homepage-victoria .homepage-publications-list .author:focus-within > span.more-authors * {
+  color: var(--homepage-ink);
+  opacity: 1;
+}
+
 body.layout-about .homepage-victoria .homepage-publications-list .author > span.more-authors.is-expanded,
 body.layout-about .homepage-victoria .homepage-publications-list .author > span.more-authors.is-expanded:hover,
 body.layout-about .homepage-victoria .homepage-publications-list .author > span.more-authors.is-expanded:focus {
@@ -236,6 +263,12 @@ body.layout-about .homepage-victoria .homepage-publications-list .periodical {
   font-size: 14px;
   font-weight: 500;
   line-height: 1.45;
+}
+
+body.layout-about .homepage-victoria .homepage-publications-list .periodical em {
+  color: inherit;
+  font-weight: inherit;
+  opacity: 1;
 }
 
 body.layout-about .homepage-victoria .homepage-publications-list .links {
@@ -1019,6 +1052,33 @@ body:has(.victoria-secondary-page) > .container {
   cursor: pointer;
 }
 
+.victoria-publications-page .author,
+.victoria-publications-page .author a,
+.victoria-publications-page .author > em,
+.victoria-publications-page .author .author-self,
+.victoria-publications-page .author > span.more-authors,
+.victoria-publications-page .author > span.more-authors * {
+  color: var(--victoria-muted);
+  opacity: 1;
+  transition: color 0.15s ease;
+}
+
+.victoria-publications-page .author:hover,
+.victoria-publications-page .author:hover a,
+.victoria-publications-page .author:hover > em,
+.victoria-publications-page .author:hover .author-self,
+.victoria-publications-page .author:hover > span.more-authors,
+.victoria-publications-page .author:hover > span.more-authors *,
+.victoria-publications-page .author:focus-within,
+.victoria-publications-page .author:focus-within a,
+.victoria-publications-page .author:focus-within > em,
+.victoria-publications-page .author:focus-within .author-self,
+.victoria-publications-page .author:focus-within > span.more-authors,
+.victoria-publications-page .author:focus-within > span.more-authors * {
+  color: var(--victoria-ink);
+  opacity: 1;
+}
+
 .victoria-publications-page .author > span.more-authors:not(.is-expanded) {
   text-decoration: underline;
   text-decoration-thickness: 1px;
@@ -1043,6 +1103,12 @@ body:has(.victoria-secondary-page) > .container {
   font-size: 13.5px;
   font-weight: 500;
   line-height: 1.45;
+}
+
+.victoria-publications-page .periodical em {
+  color: inherit;
+  font-weight: inherit;
+  opacity: 1;
 }
 
 .victoria-publications-page .periodical:empty {
@@ -1169,23 +1235,32 @@ body.layout-about .homepage-victoria .homepage-publications-list .links button.a
   vertical-align: middle;
 }
 
-body.layout-about .homepage-victoria .homepage-publications-list div.award.hidden,
-.victoria-publications-page div.award.hidden,
-.victoria-publications-page div.abstract.hidden,
+body.layout-about .homepage-victoria .homepage-publications-list ol.bibliography > li div.award.hidden,
+.victoria-publications-page ol.bibliography > li div.award.hidden,
+.victoria-publications-page ol.bibliography > li div.abstract.hidden,
 .victoria-publications-page div.bibtex.hidden {
   max-height: 0;
   margin: 0;
   overflow: hidden;
   border: 0 solid transparent;
   background: #fbfaf8;
-  color: var(--victoria-ink);
   text-align: left;
   transition: max-height 0.18s ease, margin 0.18s ease, border-width 0.18s ease;
 }
 
-body.layout-about .homepage-victoria .homepage-publications-list div.award.hidden.open,
-.victoria-publications-page div.award.hidden.open,
-.victoria-publications-page div.abstract.hidden.open,
+body.layout-about .homepage-victoria .homepage-publications-list ol.bibliography > li div.award.hidden {
+  color: var(--homepage-muted);
+  opacity: 1;
+}
+
+.victoria-publications-page ol.bibliography > li div.award.hidden {
+  color: var(--victoria-muted);
+  opacity: 1;
+}
+
+body.layout-about .homepage-victoria .homepage-publications-list ol.bibliography > li div.award.hidden.open,
+.victoria-publications-page ol.bibliography > li div.award.hidden.open,
+.victoria-publications-page ol.bibliography > li div.abstract.hidden.open,
 .victoria-publications-page div.bibtex.hidden.open {
   display: block !important;
   max-height: 38rem;
@@ -1198,9 +1273,18 @@ body.layout-about .homepage-victoria .homepage-publications-list ol.bibliography
 .victoria-publications-page ol.bibliography > li div.abstract.hidden p {
   margin: 0;
   padding: 5px 12px;
-  color: var(--victoria-ink);
   font-size: 13.5px;
   line-height: 1.5;
+  opacity: 1;
+}
+
+body.layout-about .homepage-victoria .homepage-publications-list ol.bibliography > li div.award.hidden p {
+  color: var(--homepage-muted);
+}
+
+.victoria-publications-page ol.bibliography > li div.award.hidden p,
+.victoria-publications-page ol.bibliography > li div.abstract.hidden p {
+  color: var(--victoria-muted);
 }
 
 .victoria-publications-page div.bibtex.hidden figure.highlight {
@@ -1917,4 +2001,34 @@ body.layout-about .homepage-victoria .homepage-publications-list .publications o
   overflow: hidden;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 4;
+}
+
+// Keep author expansion text deterministic across Chromium's legacy bibliography
+// hover rules: muted at rest, then darker for pointer or keyboard interaction.
+body.layout-about .homepage-victoria .homepage-publications-list ol.bibliography li .author,
+body.layout-about .homepage-victoria .homepage-publications-list ol.bibliography li .author * {
+  color: var(--homepage-muted) !important;
+  opacity: 1 !important;
+}
+
+body.layout-about .homepage-victoria .homepage-publications-list ol.bibliography li .author:hover,
+body.layout-about .homepage-victoria .homepage-publications-list ol.bibliography li .author:hover *,
+body.layout-about .homepage-victoria .homepage-publications-list ol.bibliography li .author:focus-within,
+body.layout-about .homepage-victoria .homepage-publications-list ol.bibliography li .author:focus-within * {
+  color: var(--homepage-ink) !important;
+  opacity: 1 !important;
+}
+
+.victoria-publications-page .publications ol.bibliography li .author,
+.victoria-publications-page .publications ol.bibliography li .author * {
+  color: var(--victoria-muted) !important;
+  opacity: 1 !important;
+}
+
+.victoria-publications-page .publications ol.bibliography li .author:hover,
+.victoria-publications-page .publications ol.bibliography li .author:hover *,
+.victoria-publications-page .publications ol.bibliography li .author:focus-within,
+.victoria-publications-page .publications ol.bibliography li .author:focus-within * {
+  color: var(--victoria-ink) !important;
+  opacity: 1 !important;
 }

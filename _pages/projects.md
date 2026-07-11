@@ -1,6 +1,7 @@
 ---
 layout: default
 title: projects
+browser_title: Project
 permalink: /projects/
 description: my current and past research projects.
 nav: true

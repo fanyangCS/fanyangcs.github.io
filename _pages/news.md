@@ -1,6 +1,7 @@
 ---
 layout: default
 title: news
+browser_title: News
 permalink: /news/
 description:
 nav: true

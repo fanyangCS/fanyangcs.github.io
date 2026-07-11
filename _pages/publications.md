@@ -2,6 +2,7 @@
 layout: default
 permalink: /publications/
 title: publications
+browser_title: Publications
 description:
 nav: true
 nav_order: 3

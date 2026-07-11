@@ -1506,6 +1506,21 @@ body.layout-about .homepage-victoria .homepage-publications-list ol.bibliography
   color: var(--victoria-muted);
 }
 
+// The base blockquote style uses the global theme background, but Blog entries
+// intentionally stay on a white editorial surface. Keep quotations readable
+// when WebKit selects the dark global palette from the OS preference.
+body.layout-post .post article.victoria-entry-content blockquote {
+  background: #fbfaf8;
+  color: var(--victoria-ink);
+  opacity: 1;
+}
+
+body.layout-post .post article.victoria-entry-content blockquote p {
+  color: var(--victoria-ink);
+  -webkit-text-fill-color: currentColor;
+  opacity: 1;
+}
+
 .victoria-entry-content pre,
 .victoria-entry-content code {
   border-radius: 0;

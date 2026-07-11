@@ -1358,7 +1358,10 @@ body.layout-about .homepage-victoria .homepage-publications-list .publications o
 .victoria-publications-page .publications ol.bibliography li .author > span.more-authors:focus-visible,
 .victoria-publications-page .publications ol.bibliography li .author > span.more-authors.is-expanded,
 .victoria-publications-page .publications ol.bibliography li .author > span.more-authors.is-expanded * {
-  border-bottom: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
   box-shadow: none !important;
   background-image: none !important;
   text-decoration: none !important;

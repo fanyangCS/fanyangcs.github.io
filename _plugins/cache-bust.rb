@@ -20,8 +20,8 @@ module Jekyll
       private
 
       def directory_files_content
-        target_path = File.join(directory, '**', '*')
-        Dir[target_path].map{|f| File.read(f) unless File.directory?(f) }.join
+        source_paths = Array(directory).flat_map { |path| Dir[File.join(path, '**', '*')] }
+        source_paths.sort.filter_map { |path| File.read(path) unless File.directory?(path) }.join
       end
 
       def file_content
@@ -43,7 +43,10 @@ module Jekyll
     end
 
     def bust_css_cache(file_name)
-      CacheDigester.new(file_name: file_name, directory: 'assets/_sass').digest!
+      # main.css is compiled from both the entrypoint and Sass partials. The old
+      # assets/_sass path does not exist, so every build emitted MD5(empty) and
+      # browsers could keep stale CSS under an unchanged URL.
+      CacheDigester.new(file_name: file_name, directory: ['assets/css/main.scss', '_sass']).digest!
     end
   end
 end

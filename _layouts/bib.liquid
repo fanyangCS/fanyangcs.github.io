@@ -200,7 +200,12 @@
     <!-- Links/Buttons -->
     <div class="links">
       {% if entry.award %}
-        <button class="award btn btn-sm z-depth-0" type="button" aria-expanded="false">
+        <button
+          class="award btn btn-sm z-depth-0"
+          type="button"
+          aria-expanded="false"
+          aria-controls="award-{{ entry.key }}"
+        >
           {%- if entry.award_name %}{{ entry.award_name }}{% else %}Awarded{% endif -%}
         </button>
       {% endif %}
@@ -350,8 +355,8 @@
 
     {% if entry.award %}
       <!-- Hidden Award block -->
-      <div class="award hidden d-print-inline">
-        {{ entry.award | markdownify }}
+      <div id="award-{{ entry.key }}" class="award hidden d-print-inline">
+        {{- entry.award | markdownify -}}
       </div>
     {% endif %}
 

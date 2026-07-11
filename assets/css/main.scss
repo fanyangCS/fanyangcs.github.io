@@ -35,7 +35,6 @@ body.layout-about .homepage-victoria {
   .contacts .email .contact-email-link,
   .contacts .email .contact-email-link:visited {
     color: var(--homepage-muted);
-    -webkit-text-fill-color: currentColor;
     opacity: 1;
   }
 
@@ -49,17 +48,15 @@ body.layout-about .homepage-victoria {
   .contacts .social-networks a:visited,
   .contacts .social-networks .openreview-badge {
     color: var(--homepage-ink);
-    -webkit-text-fill-color: currentColor;
     opacity: 1;
   }
 
   .contacts .social-networks .openreview-badge {
-    border: 2px solid currentColor;
+    border-width: 2px;
   }
 
   .about-me-section em {
     color: var(--homepage-ink);
-    -webkit-text-fill-color: currentColor;
     opacity: 1;
     font-style: italic;
   }
@@ -67,14 +64,12 @@ body.layout-about .homepage-victoria {
   .about-me-section .recruitment-notice,
   .about-me-section .recruitment-notice strong {
     color: var(--homepage-ink);
-    -webkit-text-fill-color: currentColor;
     opacity: 1;
   }
 
   .about-me-section .recruitment-link,
   .about-me-section .recruitment-link:visited {
     color: var(--homepage-accent);
-    -webkit-text-fill-color: currentColor;
     opacity: 1;
     text-decoration: underline;
   }

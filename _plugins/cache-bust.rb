@@ -4,13 +4,13 @@ module Jekyll
   module CacheBust
     class CacheDigester
       require 'digest/md5'
-      require 'pathname'
 
-      attr_accessor :file_name, :directory
+      attr_accessor :file_name, :directory, :additional_content
 
-      def initialize(file_name:, directory: nil)
+      def initialize(file_name:, directory: nil, additional_content: nil)
         self.file_name = file_name
         self.directory = directory
+        self.additional_content = additional_content
       end
 
       def digest!
@@ -20,33 +20,46 @@ module Jekyll
       private
 
       def directory_files_content
-        source_paths = Array(directory).flat_map { |path| Dir[File.join(path, '**', '*')] }
-        source_paths.sort.filter_map { |path| File.read(path) unless File.directory?(path) }.join
+        source_paths = Array(directory).flat_map do |path|
+          File.file?(path) ? [path] : Dir.glob(File.join(path, '**', '*')).select { |entry| File.file?(entry) }
+        end
+        source_paths = source_paths.uniq.sort
+        raise ArgumentError, 'cache digest has no source files' if source_paths.empty?
+
+        source_paths.map { |path| framed(path, File.binread(path)) }.join
+      end
+
+      def framed(path, content)
+        "#{path.bytesize}:#{path}#{content.bytesize}:#{content}"
       end
 
       def file_content
-        local_file_name = file_name.slice((file_name.index('assets/')..-1))
-        File.read(local_file_name)
+        assets_index = file_name.index('assets/')
+        raise ArgumentError, "asset URL does not contain assets/: #{file_name}" unless assets_index
+
+        File.binread(file_name.slice(assets_index..-1))
       end
 
       def file_contents
-        is_directory? ? file_content : directory_files_content
-      end
-
-      def is_directory?
-        directory.nil?
+        content = directory.nil? ? file_content : directory_files_content
+        additional_content.nil? ? content : content + framed('additional_content', additional_content.to_s)
       end
     end
 
     def bust_file_cache(file_name)
-      CacheDigester.new(file_name: file_name, directory: nil).digest!
+      CacheDigester.new(file_name: file_name).digest!
     end
 
     def bust_css_cache(file_name)
-      # main.css is compiled from both the entrypoint and Sass partials. The old
-      # assets/_sass path does not exist, so every build emitted MD5(empty) and
-      # browsers could keep stale CSS under an unchanged URL.
-      CacheDigester.new(file_name: file_name, directory: ['assets/css/main.scss', '_sass']).digest!
+      # main.css is compiled from its Liquid-rendered entrypoint and Sass partials.
+      # The old assets/_sass path does not exist, so it emitted MD5(empty).
+      config = @context.registers[:site].config
+      css_config = [config['max_width'], config['sass']]
+      CacheDigester.new(
+        file_name: file_name,
+        directory: ['assets/css/main.scss', '_sass'],
+        additional_content: Marshal.dump(css_config)
+      ).digest!
     end
   end
 end

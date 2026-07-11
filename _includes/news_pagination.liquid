@@ -1,0 +1,35 @@
+<nav aria-label="News page navigation">
+  <ul class="pagination pagination-lg justify-content-center">
+    <li class="page-item {% if include.current_page == 1 %}disabled{% endif %}">
+      {% if include.current_page == 1 %}
+        <span class="page-link" aria-disabled="true">Newer</span>
+      {% elsif include.current_page == 2 %}
+        <a class="page-link" href="{{ '/news/' | relative_url }}" rel="prev">Newer</a>
+      {% else %}
+        {% assign previous_page = include.current_page | minus: 1 %}
+        <a class="page-link" href="{{ '/news/page/' | append: previous_page | append: '/' | relative_url }}" rel="prev">Newer</a>
+      {% endif %}
+    </li>
+    {% for page_number in (1..3) %}
+      <li class="page-item {% if include.current_page == page_number %}active{% endif %}">
+        {% if include.current_page == page_number %}
+          <span class="page-link" aria-current="page">{{ page_number }}</span>
+        {% elsif page_number == 1 %}
+          <a class="page-link" href="{{ '/news/' | relative_url }}" title="News page 1">{{ page_number }}</a>
+        {% else %}
+          <a class="page-link" href="{{ '/news/page/' | append: page_number | append: '/' | relative_url }}" title="News page {{ page_number }}">
+            {{- page_number -}}
+          </a>
+        {% endif %}
+      </li>
+    {% endfor %}
+    <li class="page-item {% if include.current_page == 3 %}disabled{% endif %}">
+      {% if include.current_page == 3 %}
+        <span class="page-link" aria-disabled="true">Older</span>
+      {% else %}
+        {% assign next_page = include.current_page | plus: 1 %}
+        <a class="page-link" href="{{ '/news/page/' | append: next_page | append: '/' | relative_url }}" rel="next">Older</a>
+      {% endif %}
+    </li>
+  </ul>
+</nav>

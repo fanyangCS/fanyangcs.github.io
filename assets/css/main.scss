@@ -745,7 +745,12 @@ body:has(.victoria-secondary-page) > .container {
 
 .victoria-publications-page .publications h2.bibliography {
   padding-top: 17px;
-  border-top: 1px solid var(--victoria-rule);
+  border-top: 1px solid var(--victoria-faint);
+}
+
+.victoria-publications-page .publications h2.bibliography:first-of-type {
+  padding-top: 0;
+  border-top: 0;
 }
 
 .victoria-publications-page .publications h2.bibliography span {
@@ -1420,7 +1425,6 @@ body.layout-about .homepage-victoria .homepage-publications-list .publications o
   margin: 30px 0 0;
   padding: 17px 0 0;
   border: 0;
-  border-top: 1px solid var(--victoria-rule);
   color: var(--victoria-ink) !important;
   font-family: inherit;
   font-size: 18px;

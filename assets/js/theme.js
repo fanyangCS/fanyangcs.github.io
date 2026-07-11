@@ -236,17 +236,20 @@ let initTheme = () => {
 
   setThemeSetting(themeSetting);
 
-  // Add event listener to the theme toggle button.
+  // Add event listener to the theme toggle button when the page includes it.
   document.addEventListener("DOMContentLoaded", function () {
-    const mode_toggle = document.getElementById("light-toggle");
+    const modeToggle = document.getElementById("light-toggle");
 
-    mode_toggle.addEventListener("click", function () {
-      toggleThemeSetting();
-    });
+    if (modeToggle) {
+      modeToggle.addEventListener("click", function () {
+        toggleThemeSetting();
+      });
+    }
   });
 
-  // Add event listener to the system theme preference change.
-  window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", ({ matches }) => {
-    applyTheme();
-  });
+  // Add event listener to the system theme preference change when supported.
+  const systemThemePreference = window.matchMedia("(prefers-color-scheme: dark)");
+  if (systemThemePreference.addEventListener) {
+    systemThemePreference.addEventListener("change", applyTheme);
+  }
 };

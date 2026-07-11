@@ -13,7 +13,7 @@ footer_text: >
 
 keywords: jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: icon.jpg #⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+icon: icon-transparent.png #⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 url: https://fanyangcs.github.io # the base hostname & protocol for your site
 baseurl: # /al-folio # the subpath of your site, e.g. /blog/. Leave blank for root
@@ -76,7 +76,7 @@ dblp_url: https://dblp.org/pid/29/3081-24.html # your DBLP profile url
 discord_id: # your discord id (18-digit unique numerical identifier)
 facebook_id: # your facebook id
 flickr_id: # your flickr id
-github_username: # your GitHub user name
+github_username: fanyangCS # your GitHub user name
 gitlab_username: # your GitLab user name
 ieee_id: # your ieeexplore.ieee.org/author/id
 inspirehep_id: # Inspire HEP author ID

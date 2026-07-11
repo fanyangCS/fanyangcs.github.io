@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: project
 title: Graph engine
 description:
 img: assets/img/graphengine.jpg

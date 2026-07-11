@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: project
 title: AI hardware
 description:
 img: assets/img/ai_hw.jpg

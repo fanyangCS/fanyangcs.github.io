@@ -16,9 +16,11 @@
   </head>
 
   <!-- Body -->
-  <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
+  <body class="layout-{{ page.layout }} {% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
     <!-- Header -->
-    {% include header.liquid %}
+    {% unless page.layout == 'about' %}
+      {% include header.liquid %}
+    {% endunless %}
 
     <!-- Content -->
     <div class="container mt-5" role="main">
@@ -48,7 +50,9 @@
     </div>
 
     <!-- Footer -->
-    {% include footer.liquid %}
+    {% unless page.layout == 'about' %}
+      {% include footer.liquid %}
+    {% endunless %}
 
     <!-- JavaScripts -->
     {% include scripts/jquery.liquid %}

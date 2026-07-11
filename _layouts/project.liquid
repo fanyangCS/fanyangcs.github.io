@@ -1,0 +1,55 @@
+---
+layout: default
+---
+{% if page._styles %}
+  <!-- Page style -->
+  <style type="text/css">
+    {{ page._styles }}
+  </style>
+{% endif %}
+
+<div class="post victoria-secondary-page victoria-entry-page victoria-project-entry-page victoria-publications-page">
+  {% include victoria_nav.liquid current="projects" %}
+
+  <header class="post-header victoria-entry-header">
+    <p class="victoria-entry-kicker">Project</p>
+    <h1 class="post-title victoria-secondary-title victoria-entry-title">{{ page.title }}</h1>
+    <p class="post-meta victoria-entry-meta">
+      {% if page.category -%}
+        <span>{{ page.category | capitalize }}</span>
+      {%- endif %}
+      {% if page.importance -%}
+        <span>Priority {{ page.importance }}</span>
+      {%- endif %}
+      {% if page.related_publications -%}
+        <span>Related publications</span>
+      {%- endif %}
+    </p>
+    {% if page.description %}
+      <p class="victoria-project-entry-description">{{ page.description }}</p>
+    {% endif %}
+  </header>
+
+  <article class="post-content victoria-entry-content victoria-project-entry-content">
+    <div id="markdown-content">
+      {{ content }}
+    </div>
+  </article>
+
+  {% if page.related_publications %}
+    <section class="victoria-project-references" aria-labelledby="project-references-heading">
+      <h2 id="project-references-heading" class="victoria-project-section-heading">References</h2>
+      <div class="publications victoria-publications-list">
+        {% bibliography --cited_in_order %}
+      </div>
+    </section>
+  {% endif %}
+
+  {% if site.giscus and page.giscus_comments %}
+    {% include giscus.liquid %}
+  {% endif %}
+
+  <p class="victoria-back-link victoria-entry-back-link">
+    <a href="{{ '/projects/' | relative_url }}">&larr; Back to Projects</a>
+  </p>
+</div>

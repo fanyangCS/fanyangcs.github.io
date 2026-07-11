@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: project
 title: Agentic AI
 description:
 img: assets/img/agentic_ai.jpg

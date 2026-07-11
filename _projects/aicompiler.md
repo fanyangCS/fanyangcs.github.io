@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: project
 title: AI compiler
 description:
 img: assets/img/aicompiler.png

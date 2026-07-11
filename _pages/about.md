@@ -2,18 +2,13 @@
 layout: about
 title: about
 permalink: /
-subtitle: Systems researcher, <a href="https://www.microsoft.com/en-us/research/people/fanyang/">Research Manager</a> of SRG@MSR-Asia
-
+subtitle: Systems Researcher
 profile:
-  align: right
-  image: my_pic.jpg
-  image_circular: false # crops the image to make it circular
-  more_info: >
-    <p> 📬 <small> yang DOT fan AT acm DOT org </small> </p>
-
-news: true # includes a list of news items
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+  image: fan-yang-profile.png
+  image_circular: true
+news: false
+selected_papers: false
+social: false
 ---
 
 My name is Fan Yang (杨凡 in Chinese). I am a systems researcher and research manager of the [Systems Research Group](https://www.microsoft.com/en-us/research/group/systems-research-group-asia/) (SRG) at [Microsoft Research Asia](https://www.microsoft.com/en-us/research/lab/microsoft-research-asia/) (MSR-Asia).

@@ -1,80 +1,131 @@
 ---
 layout: default
 ---
-<div class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      {% if site.title == 'blank' %}
-        <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
-        {{ site.last_name }}
-      {% else %}
-        {{ site.title }}
-      {% endif %}
-    </h1>
-    <p class="desc">{{ page.subtitle }}</p>
-  </header>
+<div class="homepage-victoria">
+  <div class="homepage-nav-panel">
+    <nav class="homepage-top-nav" aria-label="Homepage navigation">
+      <a href="#about-me">About</a>
+      <a href="{{ '/blog/' | relative_url }}">Blog</a>
+      <a href="{{ '/news/' | relative_url }}">News</a>
+      <a href="{{ '/publications/' | relative_url }}">Publications</a>
+      <a href="{{ '/projects/' | relative_url }}">Projects</a>
+    </nav>
+    <details class="homepage-mobile-menu">
+      {%- comment -%} Mobile hamburger menu mirrors the Victoria Lin reference. {%- endcomment -%}
+      <summary aria-label="Open homepage navigation">
+        <span class="homepage-menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+      </summary>
+      <nav class="homepage-mobile-menu-panel" aria-label="Homepage navigation">
+        <a href="#about-me">About</a>
+        <a href="{{ '/blog/' | relative_url }}">Blog</a>
+        <a href="{{ '/news/' | relative_url }}">News</a>
+        <a href="{{ '/publications/' | relative_url }}">Publications</a>
+        <a href="{{ '/projects/' | relative_url }}">Projects</a>
+      </nav>
+    </details>
+  </div>
 
-  <article>
-    {% if page.profile %}
-      <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
-        {% if page.profile.image %}
+  <div class="row">
+    <div class="identity-row">
+      <h1><span class="english-name">Fan Yang</span></h1>
+      <div class="contact-card">
+        {% if page.profile and page.profile.image %}
           {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-          {% if page.profile.image_circular %}
-            {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
+          <img class="profile-avatar" src="{{ profile_image_path | relative_url }}" alt="Fan Yang">
+        {% endif %}
+        <div class="contacts">
+          <div class="title">Systems Researcher</div>
+          <div class="affiliation">Microsoft Research Asia</div>
+          <div class="email">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+            <span>yang DOT fan AT acm DOT org</span>
+          </div>
+          <div class="social-networks" aria-label="Profile links">
+            {% if site.work_url %}
+              <a href="{{ site.work_url }}" aria-label="Microsoft Research work page"><i class="fa-solid fa-briefcase" aria-hidden="true"></i></a>
+            {% endif %}
+            {% if site.scholar_userid %}
+              <a href="https://scholar.google.com/citations?user={{ site.scholar_userid }}" aria-label="Google Scholar"
+                ><i class="ai ai-google-scholar" aria-hidden="true"></i
+              ></a>
+            {% endif %}
+            {% if site.orcid_id %}
+              <a href="https://orcid.org/{{ site.orcid_id }}" aria-label="ORCID"><i class="ai ai-orcid" aria-hidden="true"></i></a>
+            {% endif %}
+            <a href="https://openreview.net/profile?id=%7EFan_Yang28" aria-label="OpenReview"
+              ><span class="openreview-badge" aria-hidden="true">OR</span></a
+            >
+            {% if site.semanticscholar_id %}
+              <a href="https://www.semanticscholar.org/author/{{ site.semanticscholar_id }}" aria-label="Semantic Scholar"
+                ><i class="ai ai-semantic-scholar" aria-hidden="true"></i
+              ></a>
+            {% endif %}
+            {% if site.dblp_url %}
+              <a href="{{ site.dblp_url }}" aria-label="DBLP"><i class="ai ai-dblp" aria-hidden="true"></i></a>
+            {% endif %}
+            {% if site.github_username %}
+              <a href="https://github.com/{{ site.github_username }}" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+            {% endif %}
+            {% if site.linkedin_username %}
+              <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" aria-label="LinkedIn"
+                ><i class="fa-brands fa-linkedin" aria-hidden="true"></i
+              ></a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-body">
+      <div>
+        <div class="section about-me-section">
+          <h3 id="about-me">
+            <a class="anchor" href="#about-me" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>About Me
+          </h3>
+          {{ content }}
+        </div>
+        <div class="section homepage-news-section">
+          <h3 id="news">
+            <a class="anchor" href="#news" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>News
+          </h3>
+          {% if site.news != blank %}
+            {% assign homepage_news = site.news | reverse %}
+            {% if site.announcements.limit %}
+              {% assign homepage_news_limit = site.announcements.limit %}
+            {% else %}
+              {% assign homepage_news_limit = 5 %}
+            {% endif %}
+            <ul class="homepage-news-list">
+              {% for item in homepage_news limit: homepage_news_limit %}
+                <li>
+                  <time datetime="{{ item.date | date: '%Y-%m-%d' }}">{{ item.date | date: '%b %d, %Y' }}</time>
+                  <span>
+                    {% if item.inline %}
+                      {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
+                    {% else %}
+                      <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+                    {% endif %}
+                  </span>
+                </li>
+              {% endfor %}
+            </ul>
+            <p class="homepage-section-link"><a href="{{ '/news/' | relative_url }}">All news</a></p>
           {% else %}
-            {% assign profile_image_class = 'img-fluid z-depth-1
-      rounded' %}
+            <p>No news so far...</p>
           {% endif %}
-          {% capture sizes %}(min-width: {{site.max_width}}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
-      30vw, 95vw"{% endcapture %}
-          {%
-            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
-            cache_bust=true
-          %}
-        {% endif %}
-        {% if page.profile.more_info %}
-          <div class="more-info">{{ page.profile.more_info }}</div>
-        {% endif %}
+        </div>
+        <div class="section homepage-publications-section">
+          <h3 id="publications">
+            <a class="anchor" href="#publications" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Publications
+          </h3>
+          <div class="homepage-publications-list">
+            {% bibliography --group_by none --query @*[selected=true]* %}
+          </div>
+          <p class="homepage-section-link"><a href="{{ '/publications/' | relative_url }}">Complete publication list</a></p>
+        </div>
       </div>
-    {% endif %}
+    </div>
+  </div>
 
-    <div class="clearfix">{{ content }}</div>
-
-    <!-- News -->
-    {% if page.news and site.announcements.enabled %}
-      <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
-      </h2>
-      {% include news.liquid limit=true %}
-    {% endif %}
-
-    <!-- Latest posts -->
-    {% if site.latest_posts.enabled %}
-      <h2>
-        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
-      </h2>
-      {% include latest_posts.liquid %}
-    {% endif %}
-
-    <!-- Selected papers -->
-    {% if page.selected_papers %}
-      <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
-      </h2>
-      {% include selected_papers.liquid %}
-    {% endif %}
-
-    <!-- Social -->
-    {% if page.social %}
-      <div class="social">
-        <div class="contact-icons">{% include social.liquid %}</div>
-
-        <div class="contact-note">{{ site.contact_note }}</div>
-      </div>
-    {% endif %}
-
-    {% if site.newsletter.enabled and site.footer_fixed %}
-      {% include scripts/newsletter.liquid center=true %}
-    {% endif %}
-  </article>
+  <div class="homepage-footer">© All right reserved. Last updated on July 10, 2026</div>
 </div>

@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: project
 title: project 7
 description: with background image
 img: assets/img/4.jpg

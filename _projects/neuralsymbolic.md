@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: project
 title: Neuro-Symbolic AI
 description:
 img: assets/img/neurosymbolic.png

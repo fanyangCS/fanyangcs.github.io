@@ -1526,6 +1526,25 @@ body.layout-about .homepage-victoria .homepage-publications-list ol.bibliography
   color: var(--victoria-ink);
 }
 
+// Blog entries intentionally keep a white editorial surface in both OS color
+// schemes. The global typography rules assign dark-theme foregrounds directly
+// to emphasis elements, so reassert this surface's palette for WebKit and other
+// engines instead of relying on inheritance from the article container.
+.victoria-blog-entry-page .victoria-entry-title,
+.victoria-blog-entry-page .post-title {
+  color: var(--victoria-accent) !important;
+  -webkit-text-fill-color: currentColor;
+  opacity: 1;
+}
+
+.victoria-blog-entry-page .victoria-entry-content em,
+.victoria-blog-entry-page .victoria-entry-content i,
+.victoria-blog-entry-page .victoria-entry-content strong {
+  color: var(--victoria-ink);
+  -webkit-text-fill-color: currentColor;
+  opacity: 1;
+}
+
 .victoria-entry-page > h2,
 .victoria-entry-page .related-posts h2 {
   margin-top: 34px;

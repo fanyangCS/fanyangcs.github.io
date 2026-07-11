@@ -148,10 +148,31 @@ body.layout-about .homepage-victoria .homepage-publications-list .author {
 
 body.layout-about .homepage-victoria .homepage-publications-list .author a,
 body.layout-about .homepage-victoria .homepage-publications-list .author > em,
+body.layout-about .homepage-victoria .homepage-publications-list .author .author-self,
 body.layout-about .homepage-victoria .homepage-publications-list .author > span.more-authors {
   border-bottom: 0;
   color: inherit;
   font-style: normal;
+  text-decoration: none;
+}
+
+body.layout-about .homepage-victoria .homepage-publications-list .author .author-self {
+  font-weight: 700;
+}
+
+body.layout-about .homepage-victoria .homepage-publications-list .author > span.more-authors {
+  cursor: pointer;
+}
+
+body.layout-about .homepage-victoria .homepage-publications-list .author > span.more-authors.is-expanded,
+body.layout-about .homepage-victoria .homepage-publications-list .author > span.more-authors.is-expanded:hover,
+body.layout-about .homepage-victoria .homepage-publications-list .author > span.more-authors.is-expanded:focus {
+  text-decoration: none;
+}
+
+body.layout-about .homepage-victoria .homepage-publications-list .author > span.more-authors:focus-visible {
+  outline: 2px solid var(--homepage-accent);
+  outline-offset: 2px;
 }
 
 body.layout-about .homepage-victoria .homepage-publications-list .periodical {
@@ -796,17 +817,37 @@ body:has(.victoria-secondary-page) > .container {
 
 .victoria-publications-page .author a,
 .victoria-publications-page .author > em,
+.victoria-publications-page .author .author-self,
 .victoria-publications-page .author > span.more-authors {
   border-bottom: 0;
   color: inherit;
   font-style: normal;
+  text-decoration: none;
+}
+
+.victoria-publications-page .author .author-self {
+  font-weight: 700;
 }
 
 .victoria-publications-page .author > span.more-authors {
   cursor: pointer;
+}
+
+.victoria-publications-page .author > span.more-authors:not(.is-expanded) {
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.18em;
+}
+
+.victoria-publications-page .author > span.more-authors.is-expanded,
+.victoria-publications-page .author > span.more-authors.is-expanded:hover,
+.victoria-publications-page .author > span.more-authors.is-expanded:focus {
+  text-decoration: none;
+}
+
+.victoria-publications-page .author > span.more-authors:focus-visible {
+  outline: 2px solid var(--victoria-accent);
+  outline-offset: 2px;
 }
 
 .victoria-publications-page .periodical {

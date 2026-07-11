@@ -82,10 +82,10 @@
           {%- if forloop.last and author_array_limit == author_array_size %}and&nbsp;{% endif -%}
         {% endif %}
         {%- if author_is_self -%}
-          <em>
+          <strong class="author-self">
             {{- author.first }}
             {{ author_last_html -}}
-          </em>
+          </strong>
         {%- else -%}
           {%- if coauthor_url -%}
             <a href="{{ coauthor_url }}">
@@ -107,28 +107,43 @@
         {%- endif -%}
         {% assign more_authors_show = '' %}
         {%- for author in entry.author_array offset: author_array_limit -%}
-          {% assign more_authors_show = more_authors_show | append: author.first | append: ' ' | append: author.last %}
+          {% assign author_is_self = false %}
+          {%- assign author_last_name = author.last | regex_replace: '[*∗†‡§¶‖&^]', '' -%}
+          {%- assign author_last_html = author.last | regex_replace: '([*∗†‡§¶‖&^]+)', '<sup>\1</sup>' -%}
+          {% if site.scholar.last_name contains author_last_name %}
+            {% if site.scholar.first_name contains author.first %}
+              {% assign author_is_self = true %}
+            {% endif %}
+          {%- endif -%}
+          {% capture more_author_name -%}
+            {{- author.first }}
+            {{ author_last_html -}}
+          {%- endcapture %}
+          {%- if author_is_self -%}
+            {% capture more_author_name -%}<strong class="author-self">{{ more_author_name }}</strong>{%- endcapture %}
+          {%- endif -%}
+          {% assign more_authors_show = more_authors_show | append: more_author_name %}
           {% unless forloop.last %}
             {% assign more_authors_show = more_authors_show | append: ', ' %}
           {% endunless %}
         {%- endfor -%}
-        {%- assign more_authors_show = more_authors_show | regex_replace: '([*∗†‡§¶‖&^]+)', '<sup>\1</sup>' -%}
         , and
         <span
           class="more-authors"
+          role="button"
+          tabindex="0"
+          aria-expanded="false"
           title="click to view {{ more_authors_hide }}"
+          data-collapsed="{{ more_authors_hide | escape }}"
+          data-expanded="{{ more_authors_show | strip | escape }}"
           onclick="
-              var element = $(this);
-              element.attr('title', '');
-              var more_authors_text = element.text() == '{{ more_authors_hide }}' ? '{{ more_authors_show }}' : '{{ more_authors_hide }}';
-              var cursorPosition = 0;
-              var textAdder = setInterval(function(){
-                element.html(more_authors_text.substring(0, cursorPosition + 1));
-                if (++cursorPosition == more_authors_text.length){
-                  clearInterval(textAdder);
-                }
-            }, '{{ site.more_authors_animation_delay }}');
+            var expanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+            this.classList.toggle('is-expanded', !expanded);
+            this.title = expanded ? 'click to view {{ more_authors_hide }}' : '';
+            this.innerHTML = expanded ? this.getAttribute('data-collapsed') : this.getAttribute('data-expanded');
           "
+          onkeydown="if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); this.click(); }"
         >
           {{- more_authors_hide -}}
         </span>

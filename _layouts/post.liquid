@@ -25,25 +25,7 @@ layout: default
 {% endif %}
 
 <div class="post victoria-secondary-page victoria-entry-page victoria-{{ entry_section }}-entry-page">
-  <nav class="victoria-secondary-nav" aria-label="Site navigation">
-    <a href="{{ '/' | relative_url }}">About</a>
-    <a
-      href="{{ '/blog/' | relative_url }}"
-      {% if entry_section == 'blog' %}
-        aria-current="page"
-      {% endif %}
-      >Blog</a
-    >
-    <a
-      href="{{ '/news/' | relative_url }}"
-      {% if entry_section == 'news' %}
-        aria-current="page"
-      {% endif %}
-      >News</a
-    >
-    <a href="{{ '/publications/' | relative_url }}">Publications</a>
-    <a href="{{ '/projects/' | relative_url }}">Projects</a>
-  </nav>
+  {% include victoria_nav.liquid current=entry_section %}
 
   <header class="post-header victoria-entry-header">
     <p class="victoria-entry-kicker">{{ entry_label }}</p>

@@ -27,7 +27,7 @@ $max-content-width: {{ site.max_width }};
 ;
 
 // AI-assisted homepage preview override: keep section headings prominent and unruled.
-// The desktop masthead contact spacing lives in _sass/_layout.scss.
+// The desktop masthead contact spacing (10px gap) lives in _sass/_layout.scss.
 body.layout-about .section h3 {
   border-bottom: 0 !important;
   padding-bottom: 0 !important;

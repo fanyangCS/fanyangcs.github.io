@@ -14,9 +14,18 @@ h6,
 em,
 div,
 li,
-span,
-strong {
+span {
   color: var(--global-text-color);
+}
+
+// Bold is semantic emphasis within the surrounding surface. Inherit that
+// surface's foreground instead of rebinding it to the global theme palette.
+// This also lets links nested in bold text keep their own link color.
+strong,
+b {
+  color: inherit;
+  opacity: 1;
+  -webkit-text-fill-color: currentColor;
 }
 
 hr {

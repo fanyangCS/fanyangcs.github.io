@@ -27,8 +27,8 @@ $max-content-width: {{ site.max_width }};
 ;
 
 // Homepage contrast: the base typography rules below assign --global-text-color
-// directly to spans, emphasis, and strong text. Reassert the homepage palette on
-// these exact components so they do not depend on inherited-color behavior.
+// directly to spans and emphasis. Reassert the homepage palette on these exact
+// components so they do not depend on inherited-color behavior.
 body.layout-about .homepage-victoria {
   .contacts .email,
   .contacts .email i,
@@ -52,32 +52,6 @@ body.layout-about .homepage-victoria {
     color: var(--homepage-ink);
     opacity: 1;
     font-style: italic;
-  }
-
-  // Markdown emphasis must use the homepage palette rather than the global
-  // theme palette. Keep nested emphasis readable while letting links retain
-  // their own interactive color.
-  .about-me-section strong,
-  .about-me-section strong * {
-    color: var(--homepage-ink);
-    opacity: 1;
-    -webkit-text-fill-color: currentColor;
-    font-size: inherit;
-    font-weight: 700;
-    line-height: inherit;
-  }
-
-  .about-me-section strong a,
-  .about-me-section strong a * {
-    color: var(--homepage-accent);
-    -webkit-text-fill-color: currentColor;
-  }
-
-  .about-me-section strong a:hover,
-  .about-me-section strong a:hover *,
-  .about-me-section strong a:focus,
-  .about-me-section strong a:focus * {
-    color: #2f536f;
   }
 }
 
@@ -1540,7 +1514,7 @@ body.layout-post .post article.victoria-entry-content blockquote p {
 
 // Blog entries intentionally keep a white editorial surface in both OS color
 // schemes. The global typography rules assign dark-theme foregrounds directly
-// to emphasis elements, so reassert this surface's palette for WebKit and other
+// to italic emphasis, so reassert this surface's palette for WebKit and other
 // engines instead of relying on inheritance from the article container.
 .victoria-blog-entry-page .victoria-entry-title,
 .victoria-blog-entry-page .post-title {
@@ -1550,8 +1524,7 @@ body.layout-post .post article.victoria-entry-content blockquote p {
 }
 
 .victoria-blog-entry-page .victoria-entry-content em,
-.victoria-blog-entry-page .victoria-entry-content i,
-.victoria-blog-entry-page .victoria-entry-content strong {
+.victoria-blog-entry-page .victoria-entry-content i {
   color: var(--victoria-ink);
   -webkit-text-fill-color: currentColor;
   opacity: 1;

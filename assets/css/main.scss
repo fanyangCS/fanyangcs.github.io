@@ -825,6 +825,28 @@ body:has(.victoria-secondary-page) > .container {
   color: inherit;
 }
 
+// Keep the denser Blog/News list scale on desktop without changing the
+// established mobile typography or individual entry pages.
+@media screen and (min-width: 769px) {
+  .victoria-news-list .victoria-news-item > h2,
+  .victoria-blog-list .victoria-blog-item > h2 {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.35;
+  }
+
+  .victoria-blog-list .victoria-resource-copy {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .victoria-news-list .victoria-news-meta,
+  .victoria-blog-list .victoria-post-meta {
+    font-size: 12px;
+    font-weight: 500;
+  }
+}
+
 .victoria-blog-page .victoria-pagination,
 .victoria-news-page .victoria-pagination {
   margin-top: 24px;

@@ -30,30 +30,22 @@ layout: default
       <h1><span class="english-name">Fan Yang</span></h1>
       <div class="contact-card">
         {% if page.profile and page.profile.image %}
+          {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
           <picture>
-            <source
-              type="image/avif"
-              srcset="
-                {{ '/assets/img/fan-yang-profile-256.avif' | relative_url }} 256w,
-                {{ '/assets/img/fan-yang-profile-400.avif' | relative_url }} 400w,
-                {{ '/assets/img/fan-yang-profile-512.avif' | relative_url }} 512w
-              "
-              sizes="(max-width: 575px) 106px, 139px"
-            >
             <source
               type="image/webp"
               srcset="
-                {{ '/assets/img/fan-yang-profile-256.webp' | relative_url }} 256w,
-                {{ '/assets/img/fan-yang-profile-400.webp' | relative_url }} 400w,
-                {{ '/assets/img/fan-yang-profile-512.webp' | relative_url }} 512w
+                {{ '/assets/img/fan-yang-profile-512.webp' | relative_url }} 512w,
+                {{ '/assets/img/fan-yang-profile-768.webp' | relative_url }} 768w,
+                {{ '/assets/img/fan-yang-profile-1200.webp' | relative_url }} 1200w
               "
               sizes="(max-width: 575px) 106px, 139px"
             >
             <img
               class="profile-avatar"
-              src="{{ '/assets/img/fan-yang-profile-512.png' | relative_url }}"
-              width="512"
-              height="512"
+              src="{{ profile_image_path | relative_url }}"
+              width="1254"
+              height="1254"
               alt="Fan Yang"
             >
           </picture>

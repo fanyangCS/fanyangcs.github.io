@@ -54,21 +54,29 @@ body.layout-about .homepage-victoria {
     font-style: italic;
   }
 
-  .about-me-section .recruitment-notice,
-  .about-me-section .recruitment-notice strong {
+  // Markdown emphasis must use the homepage palette rather than the global
+  // theme palette. Keep nested emphasis readable while letting links retain
+  // their own interactive color.
+  .about-me-section strong,
+  .about-me-section strong * {
     color: var(--homepage-ink);
     opacity: 1;
+    -webkit-text-fill-color: currentColor;
+    font-size: inherit;
+    font-weight: 700;
+    line-height: inherit;
   }
 
-  .about-me-section .recruitment-link,
-  .about-me-section .recruitment-link:visited {
+  .about-me-section strong a,
+  .about-me-section strong a * {
     color: var(--homepage-accent);
-    opacity: 1;
-    text-decoration: underline;
+    -webkit-text-fill-color: currentColor;
   }
 
-  .about-me-section .recruitment-link:hover,
-  .about-me-section .recruitment-link:focus {
+  .about-me-section strong a:hover,
+  .about-me-section strong a:hover *,
+  .about-me-section strong a:focus,
+  .about-me-section strong a:focus * {
     color: #2f536f;
   }
 }

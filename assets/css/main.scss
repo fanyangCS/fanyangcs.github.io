@@ -32,16 +32,9 @@ $max-content-width: {{ site.max_width }};
 body.layout-about .homepage-victoria {
   .contacts .email,
   .contacts .email i,
-  .contacts .email .contact-email-link,
-  .contacts .email .contact-email-link:visited {
+  .contacts .email .contact-email-text {
     color: var(--homepage-muted);
     opacity: 1;
-  }
-
-  .contacts .email .contact-email-link:hover,
-  .contacts .email .contact-email-link:focus {
-    color: var(--homepage-accent);
-    text-decoration: underline;
   }
 
   .contacts .social-networks a,

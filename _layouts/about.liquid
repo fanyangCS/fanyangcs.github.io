@@ -31,7 +31,24 @@ layout: default
       <div class="contact-card">
         {% if page.profile and page.profile.image %}
           {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-          <img class="profile-avatar" src="{{ profile_image_path | relative_url }}" alt="Fan Yang">
+          <picture>
+            <source
+              type="image/webp"
+              srcset="
+                {{ '/assets/img/fan-yang-profile-512.webp' | relative_url }} 512w,
+                {{ '/assets/img/fan-yang-profile-768.webp' | relative_url }} 768w,
+                {{ '/assets/img/fan-yang-profile-1200.webp' | relative_url }} 1200w
+              "
+              sizes="(max-width: 575px) 106px, 139px"
+            >
+            <img
+              class="profile-avatar"
+              src="{{ profile_image_path | relative_url }}"
+              width="1254"
+              height="1254"
+              alt="Fan Yang"
+            >
+          </picture>
         {% endif %}
         <div class="contacts">
           <div class="title">Systems Researcher</div>

@@ -1192,6 +1192,17 @@ body.layout-about .homepage-victoria .homepage-publications-list .links button.a
   color: var(--award-interactive-text) !important;
 }
 
+// Touch browsers can keep :hover after a tap. Once a collapsed Award is no
+// longer expanded, restore its default palette instead of leaving it highlighted.
+@media (hover: none) {
+  body.layout-about .homepage-victoria .homepage-publications-list .links button.award.btn:hover[aria-expanded="false"],
+  .victoria-publications-page .links button.award.btn:hover[aria-expanded="false"] {
+    border-color: var(--award-bg);
+    background: var(--award-bg);
+    color: var(--award-text) !important;
+  }
+}
+
 body.layout-about .homepage-victoria .homepage-publications-list .links button.award.btn:focus,
 .victoria-publications-page .links button.award.btn:focus {
   outline: 0;

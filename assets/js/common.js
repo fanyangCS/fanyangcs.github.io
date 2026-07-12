@@ -5,24 +5,39 @@ $(document).ready(function () {
     $entry.find("button.award[aria-expanded='true']").attr("aria-expanded", "false");
   }
 
+  function closeAbstract($entry) {
+    $entry.find(".abstract.hidden.open").removeClass("open");
+    $entry.find("a.abstract[aria-expanded='true']").attr("aria-expanded", "false");
+  }
+
+  function closeBibtex($entry) {
+    $entry.find(".bibtex.hidden.open").removeClass("open");
+    $entry.find("a.bibtex[aria-expanded='true']").attr("aria-expanded", "false");
+  }
+
   $("a.abstract").click(function () {
     const $entry = $(this).parent().parent();
-    $entry.find(".abstract.hidden").toggleClass("open");
+    const willOpen = !$entry.find(".abstract.hidden").hasClass("open");
+    $entry.find(".abstract.hidden").toggleClass("open", willOpen);
+    $(this).attr("aria-expanded", willOpen ? "true" : "false");
     closeAward($entry);
-    $entry.find(".bibtex.hidden.open").removeClass("open");
+    closeBibtex($entry);
   });
   $("button.award").click(function () {
     const $entry = $(this).parent().parent();
     const willOpen = !$entry.find(".award.hidden").hasClass("open");
-    $entry.find(".abstract.hidden.open, .bibtex.hidden.open").removeClass("open");
+    closeAbstract($entry);
+    closeBibtex($entry);
     $entry.find(".award.hidden").toggleClass("open", willOpen);
     $(this).attr("aria-expanded", willOpen ? "true" : "false");
   });
   $("a.bibtex").click(function () {
     const $entry = $(this).parent().parent();
-    $entry.find(".abstract.hidden.open").removeClass("open");
+    const willOpen = !$entry.find(".bibtex.hidden").hasClass("open");
+    closeAbstract($entry);
     closeAward($entry);
-    $entry.find(".bibtex.hidden").toggleClass("open");
+    $entry.find(".bibtex.hidden").toggleClass("open", willOpen);
+    $(this).attr("aria-expanded", willOpen ? "true" : "false");
   });
   $("a").removeClass("waves-effect waves-light");
 

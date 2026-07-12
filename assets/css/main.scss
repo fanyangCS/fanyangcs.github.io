@@ -1154,7 +1154,11 @@ body:has(.victoria-secondary-page) > .container {
 
 // Shared Award palette and interaction states for both publication surfaces.
 // Option B contrast: default 6.90:1; hover/expanded 9.43:1.
+body.layout-about .homepage-victoria .homepage-publications-list .links a.abstract.btn,
+body.layout-about .homepage-victoria .homepage-publications-list .links a.bibtex.btn,
 body.layout-about .homepage-victoria .homepage-publications-list .links button.award.btn,
+.victoria-publications-page .links a.abstract.btn,
+.victoria-publications-page .links a.bibtex.btn,
 .victoria-publications-page .links button.award.btn {
   --award-bg: #86453f;
   --award-text: #fffaf7;
@@ -1167,7 +1171,9 @@ body.layout-about .homepage-victoria .homepage-publications-list .links button.a
   padding: 4px 16px;
   border: 1px solid var(--award-bg);
   border-radius: 0;
-  background: var(--award-bg);
+  border-color: var(--award-bg) !important;
+  background: var(--award-bg) !important;
+  background-color: var(--award-bg) !important;
   color: var(--award-text) !important;
   font-family: inherit;
   font-size: 11px;
@@ -1185,47 +1191,81 @@ body.layout-about .homepage-victoria .homepage-publications-list .links button.a
   padding: 2px 7px;
 }
 
+body.layout-about .homepage-victoria .homepage-publications-list .links a.abstract.btn:hover,
+body.layout-about .homepage-victoria .homepage-publications-list .links a.bibtex.btn:hover,
 body.layout-about .homepage-victoria .homepage-publications-list .links button.award.btn:hover,
+.victoria-publications-page .links a.abstract.btn:hover,
+.victoria-publications-page .links a.bibtex.btn:hover,
 .victoria-publications-page .links button.award.btn:hover {
-  border-color: var(--award-interactive-bg);
-  background: var(--award-interactive-bg);
+  border-color: var(--award-interactive-bg) !important;
+  background: var(--award-interactive-bg) !important;
+  background-color: var(--award-interactive-bg) !important;
   color: var(--award-interactive-text) !important;
 }
 
 // Touch browsers can keep :hover after a tap. Once a collapsed Award is no
 // longer expanded, restore its default palette instead of leaving it highlighted.
 @media (hover: none) {
+  body.layout-about .homepage-victoria .homepage-publications-list .links a.abstract.btn[aria-expanded="false"],
+  body.layout-about .homepage-victoria .homepage-publications-list .links a.bibtex.btn[aria-expanded="false"],
+  body.layout-about .homepage-victoria .homepage-publications-list .links button.award.btn[aria-expanded="false"],
+  .victoria-publications-page .links a.abstract.btn[aria-expanded="false"],
+  .victoria-publications-page .links a.bibtex.btn[aria-expanded="false"],
+  .victoria-publications-page .links button.award.btn[aria-expanded="false"],
+  body.layout-about .homepage-victoria .homepage-publications-list .links a.abstract.btn:hover[aria-expanded="false"],
+  body.layout-about .homepage-victoria .homepage-publications-list .links a.bibtex.btn:hover[aria-expanded="false"],
   body.layout-about .homepage-victoria .homepage-publications-list .links button.award.btn:hover[aria-expanded="false"],
+  .victoria-publications-page .links a.abstract.btn:hover[aria-expanded="false"],
+  .victoria-publications-page .links a.bibtex.btn:hover[aria-expanded="false"],
   .victoria-publications-page .links button.award.btn:hover[aria-expanded="false"] {
-    border-color: var(--award-bg);
-    background: var(--award-bg);
+    border-color: var(--award-bg) !important;
+    background: var(--award-bg) !important;
+    background-color: var(--award-bg) !important;
     color: var(--award-text) !important;
   }
 }
 
+body.layout-about .homepage-victoria .homepage-publications-list .links a.abstract.btn:focus,
+body.layout-about .homepage-victoria .homepage-publications-list .links a.bibtex.btn:focus,
 body.layout-about .homepage-victoria .homepage-publications-list .links button.award.btn:focus,
+.victoria-publications-page .links a.abstract.btn:focus,
+.victoria-publications-page .links a.bibtex.btn:focus,
 .victoria-publications-page .links button.award.btn:focus {
   outline: 0;
 }
 
+body.layout-about .homepage-victoria .homepage-publications-list .links a.abstract.btn:focus-visible,
+body.layout-about .homepage-victoria .homepage-publications-list .links a.bibtex.btn:focus-visible,
 body.layout-about .homepage-victoria .homepage-publications-list .links button.award.btn:focus-visible,
+.victoria-publications-page .links a.abstract.btn:focus-visible,
+.victoria-publications-page .links a.bibtex.btn:focus-visible,
 .victoria-publications-page .links button.award.btn:focus-visible {
-  border-color: var(--award-interactive-bg);
-  background: var(--award-interactive-bg);
+  border-color: var(--award-interactive-bg) !important;
+  background: var(--award-interactive-bg) !important;
+  background-color: var(--award-interactive-bg) !important;
   color: var(--award-interactive-text) !important;
   outline: 2px solid var(--award-interactive-text);
   outline-offset: 2px;
 }
 
+body.layout-about .homepage-victoria .homepage-publications-list .links a.abstract.btn[aria-expanded="true"],
+body.layout-about .homepage-victoria .homepage-publications-list .links a.bibtex.btn[aria-expanded="true"],
 body.layout-about .homepage-victoria .homepage-publications-list .links button.award.btn[aria-expanded="true"],
+.victoria-publications-page .links a.abstract.btn[aria-expanded="true"],
+.victoria-publications-page .links a.bibtex.btn[aria-expanded="true"],
 .victoria-publications-page .links button.award.btn[aria-expanded="true"] {
-  border-color: var(--award-interactive-bg);
-  background: var(--award-interactive-bg);
+  border-color: var(--award-interactive-bg) !important;
+  background: var(--award-interactive-bg) !important;
+  background-color: var(--award-interactive-bg) !important;
   color: var(--award-interactive-text) !important;
   box-shadow: inset 0 -2px 0 rgba(56, 32, 29, 0.14) !important;
 }
 
+body.layout-about .homepage-victoria .homepage-publications-list .links a.abstract.btn[aria-expanded="true"]:focus-visible,
+body.layout-about .homepage-victoria .homepage-publications-list .links a.bibtex.btn[aria-expanded="true"]:focus-visible,
 body.layout-about .homepage-victoria .homepage-publications-list .links button.award.btn[aria-expanded="true"]:focus-visible,
+.victoria-publications-page .links a.abstract.btn[aria-expanded="true"]:focus-visible,
+.victoria-publications-page .links a.bibtex.btn[aria-expanded="true"]:focus-visible,
 .victoria-publications-page .links button.award.btn[aria-expanded="true"]:focus-visible {
   outline-color: var(--award-interactive-text);
 }

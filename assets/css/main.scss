@@ -1192,6 +1192,31 @@ body.layout-about .homepage-victoria .homepage-publications-list .links button.a
   color: var(--award-interactive-text) !important;
 }
 
+// Touch browsers can keep :hover after a tap. Restore each collapsed control's
+// own base palette without changing its desktop or expanded colors.
+@media (hover: none) {
+  body.layout-about .homepage-victoria .homepage-publications-list .links a.abstract.btn:hover[aria-expanded="false"],
+  body.layout-about .homepage-victoria .homepage-publications-list .links a.bibtex.btn:hover[aria-expanded="false"] {
+    border-color: #d9d4cc;
+    background: #ffffff;
+    color: var(--homepage-accent) !important;
+  }
+
+  .victoria-publications-page .links a.abstract.btn:hover[aria-expanded="false"],
+  .victoria-publications-page .links a.bibtex.btn:hover[aria-expanded="false"] {
+    border-color: #d9d4cc;
+    background: #ffffff;
+    color: var(--victoria-accent) !important;
+  }
+
+  body.layout-about .homepage-victoria .homepage-publications-list .links button.award.btn:hover[aria-expanded="false"],
+  .victoria-publications-page .links button.award.btn:hover[aria-expanded="false"] {
+    border-color: var(--award-bg);
+    background: var(--award-bg);
+    color: var(--award-text) !important;
+  }
+}
+
 body.layout-about .homepage-victoria .homepage-publications-list .links button.award.btn:focus,
 .victoria-publications-page .links button.award.btn:focus {
   outline: 0;

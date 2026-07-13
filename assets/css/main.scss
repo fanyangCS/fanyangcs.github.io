@@ -1063,6 +1063,14 @@ body.layout-about .homepage-victoria .homepage-publications-list .publication-me
   min-width: 0;
 }
 
+// Keep publication search hits distinct from the purple global theme while
+// matching the site's warm editorial palette. The publication surface remains
+// white across light, dark, and system theme preferences.
+::highlight(search) {
+  background-color: #f7e2c4;
+  color: #5b3a23;
+}
+
 .victoria-publications-page .author a,
 .victoria-publications-page .author > em,
 .victoria-publications-page .author .author-self,

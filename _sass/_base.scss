@@ -1308,10 +1308,8 @@ ninja-keys::part(ninja-input-wrapper) {
   }
 }
 
-// Keep publication search hits distinct from the purple global theme while
-// matching the site's warm editorial palette. The publication surface remains
-// white across light, dark, and system theme preferences.
+// highlight-search-term
 ::highlight(search) {
-  background-color: #f7e2c4;
-  color: #5b3a23;
+  background-color: var(--global-theme-color);
+  color: var(--global-text-color);
 }

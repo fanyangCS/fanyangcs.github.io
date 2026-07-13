@@ -160,44 +160,71 @@
       {% endif %}
     </div>
 
-    <!-- Journal/Book title and date -->
+    <!-- Venue, date, and publication metadata -->
     {% assign proceedings = 'inproceedings,incollection' | split: ',' %}
     {% assign thesis = 'thesis,mastersthesis,phdthesis' | split: ',' %}
-    {% if entry.type == 'article' %}
-      {% capture entrytype %}<em>{{ entry.journal }}</em>{% endcapture %}
-    {% elsif proceedings contains entry.type %}
-      {% capture entrytype %}<em>In {{ entry.booktitle }}</em>{% endcapture %}
-    {% elsif thesis contains entry.type %}
-      {% capture entrytype %}<em>{{ entry.school }}</em>{% endcapture %}
-    {% else %}
-      {% capture entrytype %}{% endcapture %}
+    {% assign abbr_text = entry.abbr | default: '' | strip %}
+    {% assign location_text = entry.location | default: '' | strip %}
+    {% assign status_text = entry.status | default: '' | strip %}
+    {% assign additional_info_text = entry.additional_info | default: '' | strip %}
+    {% assign note_text = entry.note | default: '' | strip %}
+    {% assign award_text = entry.award | default: '' | strip %}
+    {% assign award_name_downcase = entry.award_name | default: '' | downcase %}
+    {% if award_text != '' and award_name_downcase contains 'oral' %}
+      {% assign status_text = '' %}
     {% endif %}
-    {% if entry.month %}
-      {% capture entrymonth %}{{ " " }}{{ entry.month | capitalize }}{% endcapture %}
-    {% endif %}
-    {% if entry.year %}
-      {% capture entryyear %}{{ " " }}{{ entry.year }}{% endcapture %}
-    {% endif %}
-    {% if entry.location %}
-      {% capture entrytype %}{{ entrytype }}{{ ", " }}{{ entry.location }}{% endcapture %}
-    {% endif -%}
-    {% if entry.additional_info %}
-      {% capture entrytype %}{{ entrytype }}{{ entry.additional_info | markdownify | remove: '<p>' | remove: '</p>' }}{% endcapture %}
-    {% endif %}
+    {% assign abbreviated_months = 'jan,feb,mar,apr,aug,sep,sept,oct,nov,dec' | split: ',' %}
+    {% assign month_text = entry.month | default: '' | strip %}
+    {% assign month_downcase = month_text | downcase %}
+    {% capture publication_date -%}
+      {%- if month_text != '' -%}{{ month_text | capitalize }}{%- if abbreviated_months contains month_downcase -%}.{%- endif %} {% endif -%}{{ entry.year }}
+    {%- endcapture %}
+    {% assign publication_date_text = publication_date | strip %}
+    {% capture periodical -%}
+      {%- if abbr_text == '' -%}
+        {%- if entry.type == 'article' and entry.journal != blank -%}<em>{{ entry.journal }}</em>{%- assign has_full_venue = true -%}
+        {%- elsif proceedings contains entry.type and entry.booktitle != blank -%}<em>In {{ entry.booktitle }}</em>{%- assign has_full_venue = true -%}
+        {%- elsif thesis contains entry.type and entry.school != blank -%}<em>{{ entry.school }}</em>{%- assign has_full_venue = true -%}
+        {%- endif -%}
+      {%- endif -%}
+      {%- if has_full_venue and publication_date_text != '' -%}, {% endif -%}{{ publication_date_text }}
+      {%- if location_text != '' -%}{%- if has_full_venue or publication_date_text != '' -%}, {% endif -%}{{ entry.location }}{%- endif -%}
+      {%- if status_text != '' -%}{%- if has_full_venue or publication_date_text != '' or location_text != '' -%}, {% endif -%}{{ entry.status }}{%- endif -%}
+      {%- if additional_info_text != '' -%}
+        {%- assign additional_info_first_character = additional_info_text | slice: 0, 1 -%}
+        {%- unless additional_info_first_character == '.' or additional_info_first_character == '!' or additional_info_first_character == '?' or additional_info_first_character == ',' or additional_info_first_character == ';' or additional_info_first_character == ':' -%}
+          {%- if has_full_venue or publication_date_text != '' or location_text != '' or status_text != '' -%}. {% endif -%}
+        {%- endunless -%}
+        {{- entry.additional_info | markdownify | remove: '<p>' | remove: '</p>' -}}
+      {%- endif -%}
+    {%- endcapture %}
+    {% assign periodical_text = periodical | strip_html | strip %}
+    {% assign periodical_last_character = periodical_text | slice: -1, 1 %}
+    {% assign note_last_character = note_text | slice: -1, 1 %}
+
     {% capture hook_exists %}{% file_exists _includes/hook/bib.liquid %}{% endcapture %}
     {% if hook_exists == 'true' %}
       {% include hook/bib.liquid %}
     {% endif %}
-    {% assign entrytype_text = entrytype | strip_html | strip %}
-    {% capture periodical %}{{ entrytype }}{% if entrytype_text != "" and entryyear != "" %}, {% endif %}{{ entrymonth }}{{ entryyear }}{% endcapture %}
+
     <div class="publication-meta">
-      {% if entry.abbr %}
+      {% if abbr_text != '' %}
         <abbr class="publication-venue">{{ entry.abbr }}</abbr>
       {% endif %}
-      <span class="periodical">{{ periodical | strip }}</span>
+      <span class="periodical">
+        {{- periodical | strip -}}
+        {%- unless periodical_text == ''
+          or periodical_last_character == '.'
+          or periodical_last_character == '!'
+          or periodical_last_character == '?'
+        -%}
+          .
+        {%- endunless -%}
+      </span>
     </div>
     <div class="periodical">
-      {{ entry.note | strip }}
+      {{ entry.note | strip -}}
+      {%- unless note_text == '' or note_last_character == '.' or note_last_character == '!' or note_last_character == '?' %}.{% endunless %}
     </div>
 
     <!-- Links/Buttons -->

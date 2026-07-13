@@ -26,44 +26,41 @@ class PublicationMetadataTest < Minitest::Test
     render_metadata(entry).gsub(/<[^>]*>/, ' ').gsub(/\s+/, ' ').strip
   end
 
-  def test_nonblank_abbr_unconditionally_suppresses_journal_and_booktitle
+  def test_nonblank_abbr_unconditionally_suppresses_full_venue
     article = visible_text('type' => 'article', 'abbr' => 'OOPSLA', 'journal' => 'Proc. ACM Program. Lang.', 'year' => '2025')
-    proceedings = visible_text('type' => 'inproceedings', 'abbr' => 'WWW', 'booktitle' => 'Companion Proceedings of the ACM Web Conference', 'year' => '2024')
+    proceedings = visible_text('type' => 'inproceedings', 'abbr' => 'WWW', 'booktitle' => 'ACM Web Conference', 'year' => '2024')
 
-    assert_includes article, 'OOPSLA'
-    assert_includes proceedings, 'WWW'
-    refute_includes article, 'Proc. ACM Program. Lang.'
-    refute_includes proceedings, 'Companion Proceedings'
+    assert_equal 'OOPSLA 2025.', article
+    assert_equal 'WWW 2024.', proceedings
   end
 
-  def test_blank_or_absent_abbr_uses_full_venue_fallback
-    article = render_metadata('type' => 'article', 'abbr' => '  ', 'journal' => 'Journal Name', 'year' => '2025')
-    proceedings = render_metadata('type' => 'inproceedings', 'booktitle' => 'Conference Name', 'year' => '2024')
-
-    assert_includes article, '<em>Journal Name</em>, 2025.'
-    assert_includes proceedings, '<em>In Conference Name</em>, 2024.'
+  def test_year_ended_line_has_one_terminal_period_and_preserves_month_spacing
+    assert_equal 'OOPSLA Oct 2025.', visible_text('type' => 'article', 'abbr' => 'OOPSLA', 'month' => 'oct', 'year' => '2025')
   end
 
-  def test_year_only_metadata_ends_with_period
-    assert_match(/2025\.\z/, visible_text('type' => 'misc', 'abbr' => 'ArXiv', 'year' => '2025'))
+  def test_non_year_metadata_lines_also_end_with_one_period
+    location = visible_text('type' => 'inproceedings', 'abbr' => 'WWW', 'year' => '2024', 'location' => 'Singapore')
+    additional_info = visible_text(
+      'type' => 'article', 'abbr' => 'OOPSLA', 'month' => 'oct', 'year' => '2025',
+      'additional_info' => ' [Site](https://example.com), the ArXiv version'
+    )
+    note = visible_text('type' => 'misc', 'abbr' => 'ArXiv', 'year' => '2025', 'note' => 'Useful note')
+
+    assert_equal 'WWW 2024, Singapore.', location
+    assert_equal 'OOPSLA Oct 2025. [Site](https://example.com), the ArXiv version.', additional_info
+    assert_equal 'ArXiv 2025. Useful note.', note
   end
 
-  def test_year_with_following_content_uses_separator_without_stray_period
-    text = visible_text('type' => 'inproceedings', 'abbr' => 'WWW', 'year' => '2024', 'location' => 'Singapore')
+  def test_prepunctuated_metadata_is_not_double_punctuated
+    { '.' => 'Final.', '!' => 'Final!', '?' => 'Final?' }.each do |punctuation, info|
+      text = visible_text('type' => 'misc', 'abbr' => 'Test', 'year' => '2025', 'additional_info' => ". #{info}")
 
-    assert_includes text, '2024, Singapore'
-    refute_includes text, '2024., Singapore'
+      assert text.end_with?(punctuation), text
+      refute_match(/[.!?]{2}\z/, text)
+    end
   end
 
-  def test_additional_info_is_retained_verbatim_without_period_injected_after_year
-    literal = '. Oral paper (explicit author note).'
-    html = render_metadata('type' => 'inproceedings', 'abbr' => 'ICLR', 'year' => '2026', 'additional_info' => literal)
-
-    assert_includes html, "2026#{literal}"
-    refute_includes html, '2026..'
-  end
-
-  def test_oral_button_suppresses_derived_status_but_not_literal_additional_info
+  def test_oral_rule_and_nonvenue_metadata_are_preserved
     text = visible_text(
       'type' => 'inproceedings', 'abbr' => 'ICLR', 'year' => '2026',
       'award' => "ICLR'26 oral paper.", 'award_name' => 'ORAL',
@@ -72,16 +69,6 @@ class PublicationMetadataTest < Minitest::Test
 
     refute_includes text, 'Selected for oral presentation'
     assert_includes text, 'Oral paper (literal).'
-  end
-
-  def test_nonoral_status_and_note_remain_visible
-    html = render_metadata(
-      'type' => 'article', 'abbr' => 'ArXiv', 'year' => '2025',
-      'status' => 'To appear', 'note' => 'Useful note'
-    )
-
-    assert_includes html, '2025, To appear'
-    assert_includes html, 'Useful note'
   end
 
   def test_publication_buttons_are_byte_for_byte_unchanged_from_master

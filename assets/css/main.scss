@@ -1027,6 +1027,42 @@ body:has(.victoria-secondary-page) > .container {
   line-height: 1.45;
 }
 
+// Keep the venue legible without competing with the publication title. The
+// warm tint is derived from the page accent and remains readable on the site's
+// intentionally white editorial surface in both light and dark OS themes.
+.publication-meta {
+  display: flex;
+  min-width: 0;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 7px;
+}
+
+.publication-meta .publication-venue {
+  display: inline-flex;
+  max-width: 100%;
+  padding: 1px 7px 2px;
+  border: 1px solid rgba(107, 79, 41, 0.22);
+  border-radius: 4px;
+  background: rgba(107, 79, 41, 0.09);
+  color: var(--victoria-accent, var(--homepage-accent, #6b4f29));
+  font-size: 0.78em;
+  font-weight: 700;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+  text-decoration: none;
+  white-space: normal;
+}
+
+.victoria-publications-page .publication-meta,
+body.layout-about .homepage-victoria .homepage-publications-list .publication-meta {
+  margin-top: 3px;
+}
+
+.victoria-publications-page .publication-meta .periodical {
+  min-width: 0;
+}
+
 .victoria-publications-page .author a,
 .victoria-publications-page .author > em,
 .victoria-publications-page .author .author-self,

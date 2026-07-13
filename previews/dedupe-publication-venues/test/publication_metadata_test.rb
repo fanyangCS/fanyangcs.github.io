@@ -2,65 +2,91 @@
 
 require 'digest'
 require 'minitest/autorun'
+require 'liquid'
 
-module Liquid
-  class Template
-    def self.register_filter(_filter); end
+class FileExistsTag < Liquid::Tag
+  def render(_context)
+    'false'
   end
 end
-
-require_relative '../_plugins/publication_metadata'
+Liquid::Template.register_tag('file_exists', FileExistsTag)
 
 class PublicationMetadataTest < Minitest::Test
-  Metadata = Jekyll::PublicationMetadata
-  TEMPLATE = File.expand_path('../_layouts/bib.liquid', __dir__)
+  TEMPLATE_PATH = File.expand_path('../_layouts/bib.liquid', __dir__)
+  TEMPLATE_SOURCE = File.read(TEMPLATE_PATH)
+  METADATA_SOURCE = TEMPLATE_SOURCE[/    <!-- Venue, date, and publication metadata -->.*?(?=    <!-- Links\/Buttons -->)/m]
+  BUTTON_SOURCE = TEMPLATE_SOURCE[/    <!-- Links\/Buttons -->.*?(?=    \{% if site\.enable_publication_badges %\})/m]
+  MASTER_BUTTON_SHA256 = 'e066afb79731deff79de68a946081564c007cdccde8642749a8f2915909d6edd'
 
-  def test_redundant_conference_expansions_are_suppressed
-    refute Metadata.venue_distinct('International Conference on Learning Representations, {ICLR}', 'ICLR')
-    refute Metadata.venue_distinct('Advances in Neural Information Processing Systems, {NeurIPS}', 'NeurIPS')
-    refute Metadata.venue_distinct('ICML 2026', 'ICML')
+  def render_metadata(entry)
+    Liquid::Template.parse(METADATA_SOURCE, error_mode: :strict).render!('entry' => entry)
   end
 
-  def test_redundant_journal_and_preprint_names_are_suppressed
-    refute Metadata.venue_distinct('ArXiv', 'ArXiv')
-    refute Metadata.venue_distinct('IEEE Network', 'IEEENetwork')
-    refute Metadata.venue_distinct('ACM Transactions on Storage', 'ToS')
+  def visible_text(entry)
+    render_metadata(entry).gsub(/<[^>]*>/, ' ').gsub(/\s+/, ' ').strip
   end
 
-  def test_semantically_distinct_secondary_venue_is_retained
-    assert Metadata.venue_distinct('Proc. ACM Program. Lang.', 'OOPSLA')
-    assert Metadata.venue_distinct('Proceedings of the ACM Symposium on Cloud Computing Poster', 'Poster')
+  def test_nonblank_abbr_unconditionally_suppresses_journal_and_booktitle
+    article = visible_text('type' => 'article', 'abbr' => 'OOPSLA', 'journal' => 'Proc. ACM Program. Lang.', 'year' => '2025')
+    proceedings = visible_text('type' => 'inproceedings', 'abbr' => 'WWW', 'booktitle' => 'Companion Proceedings of the ACM Web Conference', 'year' => '2024')
+
+    assert_includes article, 'OOPSLA'
+    assert_includes proceedings, 'WWW'
+    refute_includes article, 'Proc. ACM Program. Lang.'
+    refute_includes proceedings, 'Companion Proceedings'
   end
 
-  def test_year_and_additional_info_are_rendered_without_filtering_literal_prose
-    template = File.read(TEMPLATE)
+  def test_blank_or_absent_abbr_uses_full_venue_fallback
+    article = render_metadata('type' => 'article', 'abbr' => '  ', 'journal' => 'Journal Name', 'year' => '2025')
+    proceedings = render_metadata('type' => 'inproceedings', 'booktitle' => 'Conference Name', 'year' => '2024')
 
-    assert_includes template, '{{ entry.year }}'
-    assert_includes template, "entry.additional_info | markdownify"
-    refute_includes template, 'entry.additional_info | visible_derived_status'
+    assert_includes article, '<em>Journal Name</em>, 2025.'
+    assert_includes proceedings, '<em>In Conference Name</em>, 2024.'
   end
 
-  def test_explicit_additional_info_oral_text_is_preserved_exactly
+  def test_year_only_metadata_ends_with_period
+    assert_match(/2025\.\z/, visible_text('type' => 'misc', 'abbr' => 'ArXiv', 'year' => '2025'))
+  end
+
+  def test_year_with_following_content_uses_separator_without_stray_period
+    text = visible_text('type' => 'inproceedings', 'abbr' => 'WWW', 'year' => '2024', 'location' => 'Singapore')
+
+    assert_includes text, '2024, Singapore'
+    refute_includes text, '2024., Singapore'
+  end
+
+  def test_additional_info_is_retained_verbatim_without_period_injected_after_year
     literal = '. Oral paper (explicit author note).'
+    html = render_metadata('type' => 'inproceedings', 'abbr' => 'ICLR', 'year' => '2026', 'additional_info' => literal)
 
-    assert_equal literal, literal # The template appends additional_info directly.
-    assert_includes File.read(TEMPLATE), "{% if entry.additional_info %}{{ entry.additional_info | markdownify"
+    assert_includes html, "2026#{literal}"
+    refute_includes html, '2026..'
   end
 
-  def test_derived_oral_status_is_suppressed_when_oral_button_exists
-    assert_equal '', Metadata.visible_derived_status('Oral paper', 'Oral')
-    assert_equal '', Metadata.visible_derived_status('Selected for oral presentation', 'ORAL')
-    assert_equal 'ECCV', Metadata.visible_derived_status('ECCV Oral presentation', 'Oral')
-    assert_equal 'Spotlight', Metadata.visible_derived_status('Spotlight', 'Oral')
-    assert_equal 'Oral paper', Metadata.visible_derived_status('Oral paper', 'Best paper')
+  def test_oral_button_suppresses_derived_status_but_not_literal_additional_info
+    text = visible_text(
+      'type' => 'inproceedings', 'abbr' => 'ICLR', 'year' => '2026',
+      'award' => "ICLR'26 oral paper.", 'award_name' => 'ORAL',
+      'status' => 'Selected for oral presentation', 'additional_info' => '. Oral paper (literal).'
+    )
+
+    refute_includes text, 'Selected for oral presentation'
+    assert_includes text, 'Oral paper (literal).'
   end
 
-  def test_publication_button_markup_and_labels_remain_unchanged
-    template = File.read(TEMPLATE)
-    links = template[/    <!-- Links\/Buttons -->.*?(?=    \{% if site\.enable_publication_badges %\})/m]
+  def test_nonoral_status_and_note_remain_visible
+    html = render_metadata(
+      'type' => 'article', 'abbr' => 'ArXiv', 'year' => '2025',
+      'status' => 'To appear', 'note' => 'Useful note'
+    )
 
-    assert_equal 'e066afb79731deff79de68a946081564c007cdccde8642749a8f2915909d6edd', Digest::SHA256.hexdigest(links)
-    %w[Abs arXiv Bib PAPER PDF Supp Video Blog Code Poster Slides Website].each { |label| assert_includes links, ">#{label}<" }
-    assert_includes links, "{%- if entry.award_name %}{{ entry.award_name }}{% else %}Awarded{% endif -%}"
+    assert_includes html, '2025, To appear'
+    assert_includes html, 'Useful note'
+  end
+
+  def test_publication_buttons_are_byte_for_byte_unchanged_from_master
+    assert_equal MASTER_BUTTON_SHA256, Digest::SHA256.hexdigest(BUTTON_SOURCE)
+    %w[Abs arXiv Bib PAPER PDF Supp Video Blog Code Poster Slides Website].each { |label| assert_includes BUTTON_SOURCE, ">#{label}<" }
+    assert_includes BUTTON_SOURCE, '{%- if entry.award_name %}{{ entry.award_name }}{% else %}Awarded{% endif -%}'
   end
 end

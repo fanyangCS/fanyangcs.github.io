@@ -173,7 +173,12 @@
     {% if award_text != '' and award_name_downcase contains 'oral' %}
       {% assign status_text = '' %}
     {% endif %}
-    {% capture publication_date -%}{%- if entry.month -%}{{ entry.month | capitalize }} {% endif -%}{{ entry.year }}{%- endcapture %}
+    {% assign abbreviated_months = 'jan,feb,mar,apr,aug,sep,sept,oct,nov,dec' | split: ',' %}
+    {% assign month_text = entry.month | default: '' | strip %}
+    {% assign month_downcase = month_text | downcase %}
+    {% capture publication_date -%}
+      {%- if month_text != '' -%}{{ month_text | capitalize }}{%- if abbreviated_months contains month_downcase -%}.{%- endif %} {% endif -%}{{ entry.year }}
+    {%- endcapture %}
     {% assign publication_date_text = publication_date | strip %}
     {% capture periodical -%}
       {%- if abbr_text == '' -%}

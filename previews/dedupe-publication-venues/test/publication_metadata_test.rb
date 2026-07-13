@@ -34,8 +34,9 @@ class PublicationMetadataTest < Minitest::Test
     assert_equal 'WWW 2024.', proceedings
   end
 
-  def test_year_ended_line_has_one_terminal_period_and_preserves_month_spacing
-    assert_equal 'OOPSLA Oct 2025.', visible_text('type' => 'article', 'abbr' => 'OOPSLA', 'month' => 'oct', 'year' => '2025')
+  def test_year_ended_line_has_one_terminal_period_and_preserves_month_style
+    assert_equal 'OOPSLA Oct. 2025.', visible_text('type' => 'article', 'abbr' => 'OOPSLA', 'month' => 'oct', 'year' => '2025')
+    assert_equal 'Test July 2025.', visible_text('type' => 'misc', 'abbr' => 'Test', 'month' => 'July', 'year' => '2025')
   end
 
   def test_non_year_metadata_lines_also_end_with_one_period
@@ -47,7 +48,7 @@ class PublicationMetadataTest < Minitest::Test
     note = visible_text('type' => 'misc', 'abbr' => 'ArXiv', 'year' => '2025', 'note' => 'Useful note')
 
     assert_equal 'WWW 2024, Singapore.', location
-    assert_equal 'OOPSLA Oct 2025. [Site](https://example.com), the ArXiv version.', additional_info
+    assert_equal 'OOPSLA Oct. 2025. [Site](https://example.com), the ArXiv version.', additional_info
     assert_equal 'ArXiv 2025. Useful note.', note
   end
 

@@ -42,6 +42,12 @@ class RepositoryLastUpdatedGeneratorTest < Minitest::Test
     assert_equal '2026-07-13T12:35:52+08:00', site.config['repository_last_updated_at']
   end
 
+  def test_homepage_footer_terminates_repository_update_date_with_period
+    layout = File.read(File.expand_path('../_layouts/about.liquid', __dir__))
+
+    assert_includes layout, "{{ site.repository_last_updated_at | date: '%B %-d, %Y' }}.</div>"
+  end
+
   private
 
   def git(*arguments, env: {})

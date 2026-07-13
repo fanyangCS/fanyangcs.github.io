@@ -64,6 +64,7 @@ jobs:
         run: |
           pip3 install --upgrade jupyter
           ruby test/cache_bust_test.rb
+          ruby test/repository_last_updated_test.rb
           export JEKYLL_ENV=production
           bundle exec jekyll build
       - name: Purge unused CSS 🧹

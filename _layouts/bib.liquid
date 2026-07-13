@@ -160,44 +160,52 @@
       {% endif %}
     </div>
 
-    <!-- Journal/Book title and date -->
+    <!-- Compact venue, date, and nonduplicative publication metadata -->
     {% assign proceedings = 'inproceedings,incollection' | split: ',' %}
     {% assign thesis = 'thesis,mastersthesis,phdthesis' | split: ',' %}
+    {% assign full_venue = '' %}
     {% if entry.type == 'article' %}
-      {% capture entrytype %}<em>{{ entry.journal }}</em>{% endcapture %}
+      {% assign full_venue = entry.journal %}
     {% elsif proceedings contains entry.type %}
-      {% capture entrytype %}<em>In {{ entry.booktitle }}</em>{% endcapture %}
+      {% assign full_venue = entry.booktitle %}
     {% elsif thesis contains entry.type %}
-      {% capture entrytype %}<em>{{ entry.school }}</em>{% endcapture %}
-    {% else %}
-      {% capture entrytype %}{% endcapture %}
+      {% assign full_venue = entry.school %}
     {% endif %}
-    {% if entry.month %}
-      {% capture entrymonth %}{{ " " }}{{ entry.month | capitalize }}{% endcapture %}
-    {% endif %}
-    {% if entry.year %}
-      {% capture entryyear %}{{ " " }}{{ entry.year }}{% endcapture %}
-    {% endif %}
-    {% if entry.location %}
-      {% capture entrytype %}{{ entrytype }}{{ ", " }}{{ entry.location }}{% endcapture %}
-    {% endif -%}
-    {% if entry.additional_info %}
-      {% capture entrytype %}{{ entrytype }}{{ entry.additional_info | markdownify | remove: '<p>' | remove: '</p>' }}{% endcapture %}
-    {% endif %}
+    {% assign full_venue = full_venue | visible_derived_status: entry.award_name %}
+    {% assign show_full_venue = full_venue | venue_distinct: entry.abbr %}
+    {% assign derived_status = entry.status | visible_derived_status: entry.award_name %}
+    {% assign display_location = entry.location | visible_derived_status: entry.award_name %}
+    {% assign display_note = entry.note | visible_derived_status: entry.award_name %}
+
+    {% capture venue_accessible_name %}{% if full_venue != blank %}{{ full_venue | strip }}{% else %}{{ entry.abbr }}{% endif %}{% endcapture %}
+    {% capture publication_date %}{% if entry.month %}{{ entry.month | capitalize }} {% endif %}{{ entry.year }}{% endcapture %}
+    {% capture primary_details %}
+      {{ publication_date | strip }}
+      {% if display_location != blank %}{% if publication_date != blank %}, {% endif %}{{ display_location }}{% endif %}
+      {% if derived_status != blank %}{% if publication_date != blank or display_location != blank %}, {% endif %}{{ derived_status }}{% endif %}
+      {% if entry.additional_info %}{{ entry.additional_info | markdownify | remove: '<p>' | remove: '</p>' }}{% endif %}
+    {% endcapture %}
+
     {% capture hook_exists %}{% file_exists _includes/hook/bib.liquid %}{% endcapture %}
     {% if hook_exists == 'true' %}
       {% include hook/bib.liquid %}
     {% endif %}
-    {% assign entrytype_text = entrytype | strip_html | strip %}
-    {% capture periodical %}{{ entrytype }}{% if entrytype_text != "" and entryyear != "" %}, {% endif %}{{ entrymonth }}{{ entryyear }}{% endcapture %}
+
     <div class="publication-meta">
       {% if entry.abbr %}
-        <abbr class="publication-venue">{{ entry.abbr }}</abbr>
+        <abbr class="publication-venue" title="{{ venue_accessible_name | escape }}" aria-label="{{ venue_accessible_name | escape }}">
+          {{- entry.abbr -}}
+        </abbr>
       {% endif %}
-      <span class="periodical">{{ periodical | strip }}</span>
+      <span class="periodical">{{ primary_details | strip }}</span>
     </div>
+    {% if show_full_venue %}
+      <div class="periodical publication-venue-detail">
+        <em>{{ full_venue }}</em>
+      </div>
+    {% endif %}
     <div class="periodical">
-      {{ entry.note | strip }}
+      {{ display_note | strip }}
     </div>
 
     <!-- Links/Buttons -->

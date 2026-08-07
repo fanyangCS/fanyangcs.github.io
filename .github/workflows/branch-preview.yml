@@ -106,23 +106,34 @@ jobs:
         with:
           ref: gh-pages
           path: gh-pages
-      - name: Remove deleted branch preview 🧹
-        env:
-          BRANCH_NAME: ${{ github.event.ref }}
+      - name: Remove orphaned branch previews 🧹
         run: |
           set -euo pipefail
           cd gh-pages
-          target="previews/${BRANCH_NAME}"
-          if [ ! -d "$target" ]; then
-            echo "No preview directory found for ${BRANCH_NAME}."
+
+          live_branches=$(mktemp)
+          trap 'rm -f "$live_branches"' EXIT
+          while IFS=$'\t' read -r _ ref; do
+            printf '%s\n' "${ref#refs/heads/}" >> "$live_branches"
+          done < <(git ls-remote --heads origin)
+
+          removed=0
+          while IFS= read -r -d '' not_found; do
+            preview_dir="${not_found%/404.html}"
+            [ -f "${preview_dir}/index.html" ] || continue
+            branch_name="${preview_dir#previews/}"
+            if ! grep -Fqx -- "$branch_name" "$live_branches"; then
+              echo "Removing orphaned preview for ${branch_name}."
+              git rm -r --ignore-unmatch -- "$preview_dir"
+              removed=1
+            fi
+          done < <(find previews -type f -name 404.html -print0)
+
+          if (( removed == 0 )) || git diff --cached --quiet; then
+            echo "No orphaned preview directories found."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git rm -r --ignore-unmatch -- "$target"
-          if git diff --cached --quiet; then
-            echo "No preview files to remove."
-            exit 0
-          fi
-          git commit -m "Remove preview for ${BRANCH_NAME}"
+          git commit -m "Remove orphaned branch previews"
           git push origin gh-pages

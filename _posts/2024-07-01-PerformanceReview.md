@@ -2,7 +2,7 @@
 layout: post
 title: On annual performance review
 date: 2024-07-01 12:00:00
-description: performance review is hard ...
+description: Performance review is hard ...
 tags:
 categories:
 featured: false

@@ -2,7 +2,7 @@
 layout: post
 title: Recent trends on computing
 date: 2026-07-02 12:00:00
-description: Some thoughs on the recent computing trends
+description: Some thoughts on the recent computing trends
 tags:
 categories:
 featured: false

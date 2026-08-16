@@ -51,6 +51,6 @@ A mature agent is therefore neither obedient in the narrow sense nor autonomous 
 
 ## A Different Research Target
 
-This reframes the research agenda. Can an agent infer when a target is only a proxy? Can it act cautiously to test its interpretation, expose conflicts among human purposes, and explain why it recommends changing course? Evaluation should measure not only task completion, but also whether the agent recognizes a misspecified objective and helps the human determine what is actually worth completing.
+This reframes the research agenda. Can an agent infer when a target is only a proxy? Can it act properly to test its interpretation, expose conflicts among human purposes, and explain why it recommends changing course? Evaluation should measure not only task completion, but also whether the agent recognizes a misspecified objective and helps the human determine what is actually worth completing.
 
 The next generation of agents should not merely resist goal drift. They should resist devotion to the wrong goal and approach the true intent in a delicate, balanced way.

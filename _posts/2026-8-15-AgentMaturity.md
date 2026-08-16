@@ -8,7 +8,6 @@ categories:
 featured: false
 ---
 
-
 Agent research usually asks how to make systems work harder toward a preset objective. People care about coding, tool use, benchmarks, planning, and task completion. They worry about goal drift: will the agent stay on task?
 
 This line of thought assumes the hardest part has already been solved: the human knows what the task really is.
@@ -45,7 +44,7 @@ Unlike a common misreading, **中庸之道** is not mediocrity or always choosin
 
 Human intent is rarely singular. A person asking for the “earliest possible meeting” may also care about sleep, fairness across time zones, preparation quality, and not appearing inconsiderate. These purposes may be unstated, shifting, and in tension. A superficial reading of the request can hardly resolve the tension.
 
-This is why mature agency requires **taste**: the capacity to know when to advance, retreat, ask, stop, or pivot. The agent should distinguish firm constraints from negotiable preferences, notice who bears the costs, and choose the right act at the right time. 
+This is why mature agency requires **taste**: the capacity to know when to advance, retreat, ask, stop, or pivot. The agent should distinguish firm constraints from negotiable preferences, notice who bears the costs, and choose the right act at the right time.
 
 A mature agent is therefore neither obedient in the narrow sense nor autonomous in the reckless sense. It evolves the operational goal while remaining accountable to the human purposes that justify it.
 

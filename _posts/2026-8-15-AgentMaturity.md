@@ -19,7 +19,7 @@ In reality, however, people often omit constraints, confuse means with ends, and
 
 This suggests three levels of agent maturity, illuminated by three Chinese ideas. Each level expands the agent's role.
 
-## 1. 实事求是: Grounded in Reality
+#### 1. 实事求是: Grounded in Reality
 
 **实事求是** means seeking truth from facts. For agents, reality should correct not only beliefs about the world, but also beliefs about the goal.
 
@@ -29,7 +29,7 @@ At this level, an agent treats instructions as hypotheses about intent, not sacr
 
 Grounding is more than factual accuracy. It is willingness to let the world revise the assignment.
 
-## 2. 知行合一: Unity of Knowing and Doing
+#### 2. 知行合一: Unity of Knowing and Doing
 
 **知行合一** is often translated as the unity of knowing and doing. Its relevance to agents goes beyond “make a plan, then execute it.” Action is itself a way of knowing. We learn what the goal means by trying to realize it, observing what happens, and refining our understanding.
 
@@ -39,7 +39,7 @@ A mature agent therefore works in a loop: form an interpretation, take a bounded
 
 Knowing and doing are unified when execution becomes disciplined inquiry into what should be done.
 
-## 3. 中庸之道: Wisdom of Right Measure
+#### 3. 中庸之道: Wisdom of Right Measure
 
 Unlike a common misreading, **中庸之道** is not mediocrity or always choosing the midpoint. It is the wisdom to find the fitting response in a particular situation: the right aim, degree, timing, and balance.
 
@@ -49,7 +49,7 @@ This is why mature agency requires **taste**: the capacity to know when to advan
 
 A mature agent is therefore neither obedient in the narrow sense nor autonomous in the reckless sense. It evolves the operational goal while remaining accountable to the human purposes that justify it.
 
-## A Different Research Target
+#### A Different Research Target
 
 This reframes the research agenda. Can an agent infer when a target is only a proxy? Can it act properly to test its interpretation, expose conflicts among human purposes, and explain why it recommends changing course? Evaluation should measure not only task completion, but also whether the agent recognizes a misspecified objective and helps the human determine what is actually worth completing.
 

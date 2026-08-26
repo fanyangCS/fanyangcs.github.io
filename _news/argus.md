@@ -10,4 +10,4 @@ We release <a href="https://github.com/microsoft/ArgusAgent">Argus</a>, a genera
 
 Argus helps you think more clearly what you really want to accomplish.
 
-I hope Argus will become a critical component towards an AI-native society.
+Argus is our first step to realize our vision on <a href="https://fanyangcs.github.io/blog/2026/AgentMaturity/">agent</a>. I hope it will become a key component towards an AI-native society.

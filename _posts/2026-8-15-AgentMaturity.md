@@ -8,7 +8,7 @@ categories:
 featured: false
 ---
 
-Agent research usually asks how to make systems work harder toward a preset objective. People care about coding, tool use, benchmarks, planning, and task completion. They worry about goal drift: will the agent stay on task?
+Agent research usually asks how to make systems work harder toward a preset objective. People care about coding, tool use, benchmarks, planning, and task completion. They worry about goal drift: will the agent stay on course?
 
 This line of thought assumes the hardest part has already been solved: the human knows what the task really is.
 

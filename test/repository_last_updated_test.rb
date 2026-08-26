@@ -17,6 +17,7 @@ class RepositoryLastUpdatedGeneratorTest < Minitest::Test
   def setup
     @tmpdir = Dir.mktmpdir('repository-last-updated-test')
     git('init', '--quiet')
+    git('config', 'maintenance.auto', 'false')
     git('config', 'user.name', 'Test User')
     git('config', 'user.email', 'test@example.com')
     File.write(File.join(@tmpdir, 'index.md'), 'test')

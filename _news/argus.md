@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Argus agent, our general-purpose reasoning engine, released
+title: Argus agent, our general-purpose reasoning engine, is released
 date: 2026-08-25
 inline: false
 related_posts: false

@@ -16,7 +16,7 @@ The frustrating part is not only that the optimization failed. It is that the av
 
 I increasingly think this familiar systems problem points to a larger question for AI.
 
-AI is quickly absorbing the knowledge we have already written down about software and hardware. It can use that knowledge to generate kernels, modify runtimes, propose compiler transformations, and search configuration spaces. But [system intelligence](https://www.sigops.org/2025/the-next-horizon-of-system-intelligence/) can hardly grow from existing knowledge alone. It also needs new experience: what actually happens when an idea meets a workload, a software stack, and a machine.
+AI is quickly absorbing the knowledge we have already written down about software and hardware. It can use that knowledge to generate kernels, modify runtimes, propose compiler transformations, and search configuration spaces. But [system intelligence](https://www.sigops.org/2025/the-next-horizon-of-system-intelligence/) can hardly grow from existing knowledge alone. It also needs *new* experience: what actually happens when an idea meets a workload, a software stack, and a machine.
 
 Interaction creates that experience. **Observability makes the experience legible.**
 

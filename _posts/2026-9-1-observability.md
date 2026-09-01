@@ -16,7 +16,7 @@ The frustrating part is not only that the optimization failed. It is that the av
 
 I increasingly think this familiar systems problem points to a larger question for AI.
 
-AI is quickly absorbing the knowledge we have already written down about software and hardware. It can use that knowledge to generate kernels, modify runtimes, propose compiler transformations, and search configuration spaces. But systems intelligence can hardly grow from existing knowledge alone. It also needs new experience: what actually happens when an idea meets a workload, a software stack, and a machine.
+AI is quickly absorbing the knowledge we have already written down about software and hardware. It can use that knowledge to generate kernels, modify runtimes, propose compiler transformations, and search configuration spaces. But [system intelligence](https://www.sigops.org/2025/defining-system-intelligence/) can hardly grow from existing knowledge alone. It also needs new experience: what actually happens when an idea meets a workload, a software stack, and a machine.
 
 Interaction creates that experience. **Observability makes the experience legible.**
 
@@ -64,7 +64,7 @@ The loop becomes:
 
 **observe → hypothesize → experiment → redesign → validate → learn**
 
-[Argus](https://fanyangcs.github.io/news/argus/) is one exploratory research direction for studying a systems reasoning agent or platform organized around this loop, not a claim that the loop is already solved.
+[Argus](https://fanyangcs.github.io/news/argus/) is one exploratory research direction for studying a system reasoning agent or platform organized around this loop, not a claim that the loop is already solved.
 
 ## Back to the Result That Made No Sense
 
@@ -74,4 +74,4 @@ Still, the goal is clear. We do not need another dashboard with more charts. We 
 
 Then the optimization that looks good alone but fails end to end is no longer just a frustrating anomaly. It becomes useful experience. Existing knowledge proposes the change. Interaction tests it. Observability tells us why it worked or failed. And that grounded lesson returns to the next round of reasoning.
 
-That is how systems intelligence grows: not by avoiding failure, but by making every execution teach us something.
+That is how system intelligence grows: not by avoiding failure, but by making every execution teach us something.

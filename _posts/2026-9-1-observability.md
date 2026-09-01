@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Observability in the AI era - Turning execution into experience
+title: Observability in the AI era - Turning execution into useful experience
 date: 2026-09-01 12:00:00
 description: Growing system intelligence through observability.
 tags:

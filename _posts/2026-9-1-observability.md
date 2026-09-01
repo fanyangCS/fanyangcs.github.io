@@ -22,7 +22,7 @@ Interaction creates that experience. **Observability makes the experience legibl
 
 ## Why Does This Matter Now?
 
-As generation becomes cheaper, trying another implementation is no longer the hard part. Understanding the result may become the bottleneck.
+As generation becomes cheaper, trying another implementation is (or soon will be) no longer the hard part. Understanding the result may become the bottleneck.
 
 Execution alone does not teach much. An agent must connect an action to its consequences, separate correlation from cause, and gather evidence strong enough to guide the next decision. Otherwise, a thousand experiments produce a thousand benchmark rows, not better systems judgment.
 

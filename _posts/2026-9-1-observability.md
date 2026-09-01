@@ -22,13 +22,11 @@ Interaction creates that experience. **Observability makes the experience legibl
 
 ## Why Does This Matter Now?
 
-As generation becomes cheaper, trying another implementation is (or soon will be) no longer the hard part. Understanding the result may become the bottleneck.
+As generation becomes cheaper, trying another implementation is becoming the easy part. And understanding the result is becoming the bottleneck.
 
-Execution alone does not teach much. An agent must connect an action to its consequences, separate correlation from cause, and gather evidence strong enough to guide the next decision. Otherwise, a thousand experiments produce a thousand benchmark rows, not better system judgment.
+Execution alone does not teach much. Without observability, this is blind execution: the agent can act, but it cannot reliably learn from what happened. An agent must connect an action to its consequences, separate correlation from cause, and gather evidence strong enough to guide the next decision. Otherwise, a thousand experiments produce a thousand benchmark rows, not better system judgment.
 
-This makes observability central in the AI era. It is of course still useful for debugging failures. But for an agent, or for a human working with one, it also becomes the feedback interface to the real system. It turns execution into grounded evidence.
-
-This means that system agents, in addition to creating an experience-and-feedback loop, rely on observability to ensure the quality of the loop. If the feedback is incomplete, delayed, or distorted, the agent will learn the same blind spots.
+This makes observability central in the AI era. It is still useful for debugging failures. But for an agent, or for a human working with one, it also becomes the feedback interface to the real system. This creates an experience-and-feedback loop, where observability is the key to ensure the experience accurate, interpretable, and useful for learning. Without observability, the feedback would be incomplete, delayed, or distorted, and the agent may learn the wrong lesson, or nothing at all.
 
 ## Which Old Problems Get Harder, and Which Get Easier?
 

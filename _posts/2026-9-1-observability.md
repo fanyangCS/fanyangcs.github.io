@@ -16,7 +16,7 @@ The frustrating part is not only that the optimization failed. It is that the av
 
 I increasingly think this familiar systems problem points to a larger question for AI.
 
-AI is quickly absorbing the knowledge we have already written down about software and hardware. It can use that knowledge to generate kernels, modify runtimes, propose compiler transformations, and search configuration spaces. But [system intelligence](https://www.sigops.org/2025/the-next-horizon-of-system-intelligence/) can hardly grow from existing knowledge alone. It also needs *new* experience: what actually happens when an idea meets a workload, a software stack, and a machine.
+AI is quickly absorbing the knowledge we have already written down about software and hardware. It can use that knowledge to generate kernels, modify runtimes, propose compiler transformations, and search configuration spaces. But [system intelligence](https://www.sigops.org/2025/the-next-horizon-of-system-intelligence/) can hardly grow from existing knowledge alone. It also needs new experience: what actually happens when an idea meets a workload, a software stack, and a machine.
 
 Interaction creates that experience. **Observability makes the experience legible.**
 
@@ -24,11 +24,11 @@ Interaction creates that experience. **Observability makes the experience legibl
 
 As generation becomes cheaper, trying another implementation is (or soon will be) no longer the hard part. Understanding the result may become the bottleneck.
 
-Execution alone does not teach much. An agent must connect an action to its consequences, separate correlation from cause, and gather evidence strong enough to guide the next decision. Otherwise, a thousand experiments produce a thousand benchmark rows, not better systems judgment.
+Execution alone does not teach much. An agent must connect an action to its consequences, separate correlation from cause, and gather evidence strong enough to guide the next decision. Otherwise, a thousand experiments produce a thousand benchmark rows, not better system judgment.
 
 This makes observability central in the AI era. It is of course still useful for debugging failures. But for an agent, or for a human working with one, it also becomes the feedback interface to the real system. It turns execution into grounded evidence.
 
-This does not mean experience is the only constraint on AI progress. It means that systems agents need an experience-and-feedback loop, and the quality of that loop limits what they can learn. If the feedback is incomplete, delayed, or distorted, the agent will learn the same blind spots.
+This means that systems agents, in addition to creating an experience-and-feedback loop, relies on observability to ensure the quality of the loop. If the feedback is incomplete, delayed, or distorted, the agent will learn the same blind spots.
 
 ## Which Old Problems Get Harder, and Which Get Easier?
 
@@ -56,7 +56,7 @@ The obvious answer is to put an LLM on top of a dashboard. I do not think that g
 
 A more interesting direction is **reasoning-directed observability**. The idea is simple: the AI should not only read whatever telemetry happens to exist. It should form competing hypotheses, ask what evidence would distinguish them, and choose the next observation or experiment.
 
-Return to our failed optimization. Suppose the agent suspects either cache pressure or disrupted communication overlap. Instead of requesting a full trace, it might *synthesize* and compare two controlled variants, inspect one targeted event pair, or hold a fusion boundary constant while changing the memory layout. The variants are no longer just candidate optimizations. They are experiments designed to reveal hidden behavior. Doing this manually is slow and demands scarce systems expertise. AI makes it practical to conduct such experiments at much greater breadth and speed.
+Return to our failed optimization. Suppose the agent suspects either cache pressure or disrupted communication overlap. Instead of requesting a full trace, it might *synthesize* and compare two controlled variants, inspect one targeted event pair, or hold a fusion boundary constant while changing the memory layout. The variants are no longer just candidate optimizations. They are experiments designed to reveal hidden behavior. Doing this manually is slow and demands scarce systems expertise. AI is making it practical to conduct such experiments at much greater breadth and speed.
 
 This also makes measurement cost part of the reasoning. The best observation is not the largest one. It is the least intrusive observation that can decide between plausible explanations. When hardware state is unavailable, simulation or a digital twin may help test whether a mechanism is consistent with the outcome. It does not need to reproduce the machine perfectly, as long as the conclusion is checked against real execution.
 

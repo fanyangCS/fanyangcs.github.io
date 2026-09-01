@@ -28,7 +28,7 @@ Execution alone does not teach much. An agent must connect an action to its cons
 
 This makes observability central in the AI era. It is of course still useful for debugging failures. But for an agent, or for a human working with one, it also becomes the feedback interface to the real system. It turns execution into grounded evidence.
 
-This means that systems agents, in addition to creating an experience-and-feedback loop, relies on observability to ensure the quality of the loop. If the feedback is incomplete, delayed, or distorted, the agent will learn the same blind spots.
+This means that system agents, in addition to creating an experience-and-feedback loop, rely on observability to ensure the quality of the loop. If the feedback is incomplete, delayed, or distorted, the agent will learn the same blind spots.
 
 ## Which Old Problems Get Harder, and Which Get Easier?
 

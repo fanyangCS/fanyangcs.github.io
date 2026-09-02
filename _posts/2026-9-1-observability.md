@@ -22,15 +22,15 @@ Interaction creates that experience. **Observability makes the experience legibl
 
 ## Why Does This Matter Now?
 
-As generation becomes cheaper, trying another implementation is becoming the easy part. And understanding the result is becoming the bottleneck. This is true both for human and agent.
+As generation becomes cheaper, trying another implementation is becoming the easy part. And understanding the result is becoming the bottleneck. This is true for both humans and AI.
 
 Execution alone does not teach much. Without observability, this is blind execution: the agent can act, but it cannot reliably learn from what happened. An agent must connect an action to its consequences, separate correlation from cause, and gather evidence strong enough to guide the next decision. Otherwise, a thousand experiments produce a thousand benchmark rows, not better system judgment.
 
-This makes observability central in the AI era. It is still useful for debugging failures. But for an agent, or for a human working with one, it also becomes the feedback interface to the real system. This creates an experience-and-feedback loop, where observability is the key to ensure the experience accurate, interpretable, and useful for learning. Without observability, the feedback would be incomplete, delayed, or distorted, and the agent may learn the wrong lesson, or nothing at all.
+This makes observability central in the AI era. It is still useful for debugging failures. But for an agent, or for a human working with one, it also becomes the feedback interface to the real system. This creates an experience-and-feedback loop, where observability is key to making the experience accurate, interpretable, and useful for learning. Without it, the feedback would be incomplete, delayed, or distorted, and the agent may learn the wrong lesson, or nothing at all.
 
 ## Which Old Problems Get Harder, and Which Get Easier?
 
-The old measurement problem gets harder near the limits of the machine. AI workloads already push compute, memory bandwidth, interconnects, pipelines, and asynchronous execution. Conventional instrumentation becomes less effective as it can perturb the highly optimized behavior agent is trying to understand. A trace can alter timing. A counter can consume bandwidth. Added synchronization can erase the behavior agent wanted to study.
+The old measurement problem gets harder near the limits of the machine. AI workloads already push compute, memory bandwidth, interconnects, pipelines, and asynchronous execution. Conventional instrumentation becomes less effective as it can perturb the highly optimized behavior the agent is trying to understand. A trace can alter timing. A counter can consume bandwidth. Added synchronization can erase the behavior the agent wanted to study.
 
 At the same time, causality is spread across more layers. A slowdown may begin in the model, framework scheduler, compiler, kernel library, cache, collective, or cluster. Each layer has its own identifiers, clocks, and abstractions. Most dashboards show a symptom from one layer, not the path that produced it.
 

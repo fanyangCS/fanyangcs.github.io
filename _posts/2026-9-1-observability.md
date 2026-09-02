@@ -22,7 +22,7 @@ Interaction creates that experience. **Observability makes the experience legibl
 
 ## Why Does This Matter Now?
 
-As generation becomes cheaper, trying another implementation is becoming the easy part. And understanding the result is becoming the bottleneck.
+As generation becomes cheaper, trying another implementation is becoming the easy part. And understanding the result is becoming the bottleneck. This is true both for human and agent.
 
 Execution alone does not teach much. Without observability, this is blind execution: the agent can act, but it cannot reliably learn from what happened. An agent must connect an action to its consequences, separate correlation from cause, and gather evidence strong enough to guide the next decision. Otherwise, a thousand experiments produce a thousand benchmark rows, not better system judgment.
 
@@ -30,7 +30,7 @@ This makes observability central in the AI era. It is still useful for debugging
 
 ## Which Old Problems Get Harder, and Which Get Easier?
 
-The old measurement problem gets harder near the limits of the machine. AI workloads already push compute, memory bandwidth, interconnects, pipelines, and asynchronous execution. Conventional instrumentation becomes less effective as it can perturb the highly optimized behavior we are trying to understand. A trace can alter timing. A counter can consume bandwidth. Added synchronization can erase the behavior we wanted to study.
+The old measurement problem gets harder near the limits of the machine. AI workloads already push compute, memory bandwidth, interconnects, pipelines, and asynchronous execution. Conventional instrumentation becomes less effective as it can perturb the highly optimized behavior agent is trying to understand. A trace can alter timing. A counter can consume bandwidth. Added synchronization can erase the behavior agent wanted to study.
 
 At the same time, causality is spread across more layers. A slowdown may begin in the model, framework scheduler, compiler, kernel library, cache, collective, or cluster. Each layer has its own identifiers, clocks, and abstractions. Most dashboards show a symptom from one layer, not the path that produced it.
 
@@ -40,11 +40,11 @@ There is one important condition: the observations must be trustworthy, and the 
 
 ## What Is Genuinely New?
 
-The hardware surface is changing. New accelerators, scale-up fabrics, SmartNICs, and offload components couple computation, memory movement, topology, congestion, power, and thermals. Important state may be aggregated, undocumented, proprietary, or visible only through vendor-specific tools.
+The hardware landscape is changing fast. New accelerators, scale-up fabrics, SmartNICs, and offload components couple computation, memory movement, topology, congestion, power, and thermals. Important state may be aggregated, undocumented, proprietary, or visible only through vendor-specific tools.
 
-The software stack is changing too. A model now passes through graph capture, compilation, scheduling, kernel libraries, communication, serving, and orchestration. These modules can evolve independently, which is good for innovation but bad for a stable end-to-end story. Following one request or training step may require evidence across machines, timescales, and semantic levels.
+The software stack is changing rapidly too. A model now passes through graph capture, compilation, scheduling, kernel libraries, communication, serving, and orchestration. These modules can evolve independently, which is good for innovation but bad for observability. Following one request or training step may require evidence across machines, timescales, and semantic levels.
 
-AI-generated optimization adds another twist. It can produce more kernel variants, schedules, compiler rewrites, and configurations than humans can inspect one by one. That is useful only if verification grows with generation. Otherwise, faster optimization simply creates validation debt.
+AI-generated optimization adds another twist. It can produce more kernel variants, schedules, compiler rewrites, and configurations than humans or AI can reliably inspect one by one. That is useful only if verification grows with generation. Otherwise, faster optimization simply creates validation debt.
 
 So the new problem is not just collecting more telemetry. It is preserving attribution and reproducibility while both the system and the proposed changes become more dynamic.
 

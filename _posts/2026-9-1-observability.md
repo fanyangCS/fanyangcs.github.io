@@ -26,7 +26,7 @@ As generation becomes cheaper, trying another implementation is becoming the eas
 
 Execution alone does not teach much. Without observability, this is blind execution: the agent can act, but it cannot reliably learn from what happened. An agent must connect an action to its consequences, separate correlation from cause, and gather evidence strong enough to guide the next decision. Otherwise, a thousand experiments produce a thousand benchmark rows, not better system judgment.
 
-This makes observability central in the AI era. For an agent, or for a human working with one, observability becomes the feedback interface to the real system. This creates an experience-and-feedback loop, where observability is key to making the experience accurate, interpretable, and useful for learning. Without it, the feedback would be incomplete, delayed, or distorted, and the agent may learn the wrong lesson, or nothing at all.
+This makes observability central in the AI era. For an agent, or for a human working with one, observability becomes the feedback interface to the real system. This creates an experience-and-feedback loop, where observability is key to making the experience accurate, interpretable, and useful for learning. Observability is particularly important in reinforcement learning. It gives the agent accurate feedback needed to assign credit, distinguish competing explanations, and decide what to try next.
 
 ## Which Old Problems Get Harder, and Which Get Easier?
 

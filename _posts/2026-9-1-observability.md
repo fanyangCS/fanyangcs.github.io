@@ -16,7 +16,7 @@ The frustration is not only that the optimization failed. The available metrics 
 
 I increasingly think this familiar systems problem points to a larger question for AI.
 
-AI is quickly absorbing what we have written about software and hardware. It can use that knowledge to generate kernels, modify runtimes, propose compiler transformations, and search configuration spaces. But [system intelligence](https://www.sigops.org/2025/the-next-horizon-of-system-intelligence/) can hardly grow from existing knowledge alone. It also needs new experience: what happens when an idea meets a workload, a software stack, and a machine.
+AI is quickly absorbing what we have written about software and hardware. It can use that knowledge to generate kernels, modify runtimes, propose compiler transformations, and search configuration spaces. But [system intelligence](https://www.sigops.org/2025/the-next-horizon-of-system-intelligence/) cannot grow from existing knowledge alone. It also needs new experience: what happens when an idea meets a workload, a software stack, and a machine.
 
 Interaction creates that experience. **Observability makes it legible.**
 
@@ -30,7 +30,7 @@ Observability is therefore the feedback interface to the real system. It makes e
 
 ## Which Old Problems Get Harder, and Which Get Easier?
 
-Measurement gets harder near the limits of the machine. AI workloads already push compute, memory bandwidth, interconnects, pipelines, and asynchronous execution. In such extreme condition, instrumentation are more likely to perturb the behavior it is meant to explain: a trace alters timing, a counter consumes bandwidth, or added synchronization erases the effect under study.
+Measurement gets harder near the limits of the machine. AI workloads already push compute, memory bandwidth, interconnects, pipelines, and asynchronous execution. Under such extreme conditions, instrumentation is more likely to perturb the behavior it is meant to explain: a trace alters timing, a counter consumes bandwidth, or added synchronization erases the effect under study.
 
 Causality also spans more layers. A slowdown may begin in the model, framework scheduler, compiler, kernel library, cache, collective, or cluster. Each has its own identifiers, clocks, and abstractions. Most dashboards show a symptom from one layer, not the path that produced it.
 

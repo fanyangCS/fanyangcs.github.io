@@ -10,51 +10,51 @@ featured: false
 
 We have all seen some version of this result.
 
-An optimization looks great in a microbenchmark. The kernel is faster. Memory allocation drops. One stage of the pipeline finishes sooner. Then we run the whole application, and nothing improves. Sometimes it gets worse.
+An optimization looks great in a microbenchmark. The kernel is faster. Memory allocation drops. One pipeline stage finishes sooner. Then we run the whole application, and nothing improves. Sometimes it gets worse.
 
-The frustrating part is not only that the optimization failed. It is that the available metrics cannot tell us why. Did the new kernel disrupt communication overlap? Did lower memory pressure introduce synchronization somewhere else? Did the compiler choose a different path? We have many numbers, but no coherent story.
+The frustration is not only that the optimization failed. The available metrics cannot tell us why. Did the new kernel disrupt communication overlap? Did lower memory pressure introduce synchronization elsewhere? Did the compiler choose a different path? We have many numbers, but no clues.
 
 I increasingly think this familiar systems problem points to a larger question for AI.
 
-AI is quickly absorbing the knowledge we have already written down about software and hardware. It can use that knowledge to generate kernels, modify runtimes, propose compiler transformations, and search configuration spaces. But [system intelligence](https://www.sigops.org/2025/the-next-horizon-of-system-intelligence/) can hardly grow from existing knowledge alone. It also needs new experience: what actually happens when an idea meets a workload, a software stack, and a machine.
+AI is quickly absorbing what we have written about software and hardware. It can use that knowledge to generate kernels, modify runtimes, propose compiler transformations, and search configuration spaces. But [system intelligence](https://www.sigops.org/2025/the-next-horizon-of-system-intelligence/) can hardly grow from existing knowledge alone. It also needs new experience: what happens when an idea meets a workload, a software stack, and a machine.
 
-Interaction creates that experience. **Observability makes the experience legible.**
+Interaction creates that experience. **Observability makes it legible.**
 
 ## Why Does This Matter Now?
 
-As generation becomes cheaper, trying another implementation is becoming the easy part. And understanding the result is becoming the bottleneck. This is true for both humans and AI.
+As generation becomes cheaper, trying another implementation is becoming the easy part. Understanding the result is becoming the bottleneck — for humans and AI.
 
-Execution alone does not teach much. Without observability, this is blind execution: the agent can act, but it cannot reliably learn from what happened. An agent must connect an action to its consequences, separate correlation from cause, and gather evidence strong enough to guide the next decision. Otherwise, a thousand experiments produce a thousand benchmark rows, not better system judgment.
+Execution alone does not teach much. Without observability, it is blind execution: an agent can act but cannot reliably learn what happened. It must connect an action to its consequences, separate correlation from cause, and gather enough evidence to guide the next decision. Otherwise, a thousand experiments produce a thousand benchmark rows, not better system judgment.
 
-This makes observability central in the AI era. For an agent, or for a human working with one, observability becomes the feedback interface to the real system. This creates an experience-and-feedback loop, where observability is key to making the experience accurate, interpretable, and useful for learning. Observability is particularly important in reinforcement learning. It gives the agent accurate feedback needed to assign credit, distinguish competing explanations, and decide what to try next.
+Observability is therefore the feedback interface to the real system. It makes experience accurate, interpretable, and useful for learning. This is especially important in reinforcement learning, where an agent needs reliable feedback to assign credit, distinguish competing explanations, and choose what to try next.
 
 ## Which Old Problems Get Harder, and Which Get Easier?
 
-The old measurement problem gets harder near the limits of the machine. AI workloads already push compute, memory bandwidth, interconnects, pipelines, and asynchronous execution. Conventional instrumentation becomes less effective as it can perturb the highly optimized behavior the agent is trying to understand. A trace can alter timing. A counter can consume bandwidth. Added synchronization can erase the behavior the agent wanted to study.
+Measurement gets harder near the limits of the machine. AI workloads already push compute, memory bandwidth, interconnects, pipelines, and asynchronous execution. In such extreme condition, instrumentation are more likely to perturb the behavior it is meant to explain: a trace alters timing, a counter consumes bandwidth, or added synchronization erases the effect under study.
 
-At the same time, causality is spread across more layers. A slowdown may begin in the model, framework scheduler, compiler, kernel library, cache, collective, or cluster. Each layer has its own identifiers, clocks, and abstractions. Most dashboards show a symptom from one layer, not the path that produced it.
+Causality also spans more layers. A slowdown may begin in the model, framework scheduler, compiler, kernel library, cache, collective, or cluster. Each has its own identifiers, clocks, and abstractions. Most dashboards show a symptom from one layer, not the path that produced it.
 
-But one part may get easier: analysis. AI can inspect more code and telemetry than earlier tools and follow a longer chain from source intent to framework behavior, compiler IR, PTX or assembly, hardware counters, and distributed traces. Cross-layer investigation that once required several specialists could become more routine.
+But analysis may get easier. AI can inspect more code and telemetry than earlier tools and follow a longer chain—from source intent through framework behavior, compiler IR, PTX or assembly, hardware counters, and distributed traces. Investigations that once required several specialists could become more routine.
 
-There is one important condition: the observations must be trustworthy, and the reasoning must remain checkable. A fluent explanation built on perturbed or misaligned data is still the wrong explanation.
+One condition remains: observations must be trustworthy and reasoning checkable. A fluent explanation built on perturbed or misaligned data is still wrong.
 
 ## What Is Genuinely New?
 
 The hardware landscape is changing fast. New accelerators, scale-up fabrics, SmartNICs, and offload components couple computation, memory movement, topology, congestion, power, and thermals. Important state may be aggregated, undocumented, proprietary, or visible only through vendor-specific tools.
 
-The software stack is changing rapidly too. A model now passes through graph capture, compilation, scheduling, kernel libraries, communication, serving, and orchestration. These modules can evolve independently, which is good for innovation but bad for observability. Following one request or training step may require evidence across machines, timescales, and semantic levels.
+The software stack is changing rapidly too. A model passes through graph capture, compilation, scheduling, kernel libraries, communication, serving, and orchestration. These modules evolve independently—good for innovation, bad for observability. Following one request or training step may require evidence across machines, timescales, and semantic levels.
 
-AI-generated optimization adds another twist. It can produce more kernel variants, schedules, compiler rewrites, and configurations than humans or AI can reliably inspect one by one. That is useful only if verification grows with generation. Otherwise, faster optimization simply creates validation debt.
+AI-generated optimization adds another twist. It can produce more kernel variants, schedules, compiler rewrites, and configurations than humans or AI can reliably inspect one by one. That helps only if verification scales with generation; otherwise, faster optimization creates validation debt.
 
-So the new problem is not just collecting more telemetry. It is preserving attribution and reproducibility while both the system and the proposed changes become more dynamic.
+The new problem, then, is not simply collecting more telemetry. It is preserving attribution and reproducibility while both the system and the proposed changes become more dynamic.
 
 ## What Can AI Uniquely Do Here?
 
 The obvious answer is to put an LLM on top of a dashboard. I do not think that goes far enough.
 
-A more interesting direction is **reasoning-directed observability**. The idea is simple: the AI should not only read whatever telemetry happens to exist. It should form competing hypotheses, ask what evidence would distinguish them, and choose the next observation or experiment.
+A more interesting direction is **reasoning-directed observability**. AI should not merely read whatever telemetry exists. It should form competing hypotheses, ask what evidence would distinguish them, and choose the next observation or experiment.
 
-Return to our failed optimization. Suppose the agent suspects either cache pressure or disrupted communication overlap. Instead of requesting a full trace, it might _synthesize_ and compare two controlled variants, inspect one targeted event pair, or hold a fusion boundary constant while changing the memory layout. The variants are no longer just candidate optimizations. They are experiments designed to reveal hidden behavior. Doing this manually is slow and demands scarce systems expertise. AI is making it practical to conduct such experiments at much greater breadth and speed.
+Return to our failed optimization. Suppose the agent suspects cache pressure or disrupted communication overlap. Instead of requesting a full trace, it might _synthesize_ and compare two controlled variants, inspect one targeted event pair, or hold a fusion boundary constant while changing the memory layout. The variants are no longer just candidate optimizations. They are experiments designed to reveal hidden behavior. Doing this manually is slow and demands scarce systems expertise. AI is making it practical at much greater breadth and speed.
 
 This also makes measurement cost part of the reasoning. The best observation is not the largest one. It is the least intrusive observation that can decide between plausible explanations. When hardware state is unavailable, simulation or a digital twin may help test whether a mechanism is consistent with the outcome. It does not need to reproduce the machine perfectly, as long as the conclusion is checked against real execution.
 
@@ -62,11 +62,11 @@ The loop becomes:
 
 **observe → hypothesize → experiment → redesign → validate → learn**
 
-[Argus](https://fanyangcs.github.io/news/argus/) is one exploratory research direction for studying a system reasoning agent or platform organized around this loop, not a claim that the loop is already solved.
+[Argus](https://fanyangcs.github.io/news/argus/) is one exploratory research direction for a system reasoning agent or platform organized around this loop, not a claim that the loop is already solved.
 
 ## Back to the Result That Made No Sense
 
-There is plenty of hard work left: low-perturbation measurement, cross-layer alignment, causal experiment design, uncertainty, and reproducible validation. Human judgment still matters when evidence is incomplete or a change affects safety, cost, and operability.
+Hard work remains: low-perturbation measurement, cross-layer alignment, causal experiment design, uncertainty, and reproducible validation. Human judgment still matters when evidence is incomplete or a change affects safety, cost, and operability.
 
 Still, the goal is clear. We do not need another dashboard with more charts. We need an environment in which AI can ask a precise question of a running system, gather decisive evidence, and explain what should happen next.
 

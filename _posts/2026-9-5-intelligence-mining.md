@@ -26,7 +26,7 @@ If that industry’s demand grows faster than energy efficiency improves, its ap
 
 Imagine data centers in space powered by solar or nuclear energy, searching continuously for useful tokens. Their discoveries could return as wireless signals rather than physical cargo. Launching, cooling, and maintaining the equipment would remain expensive. But could a major business like intelligence mining help make spaceflight cheaper?
 
-A credible path to competitive intelligence mining in space could attract investment in spacecraft, manufacturing, and power systems, even before spaceflight becomes cheap. Greater scale and experience could lower costs, enabling more activity and further investment. This is one of a market economy’s powerful mechanism: valuable demand can finance the innovations that make supplying it cheaper.
+A credible path to competitive intelligence mining in space could attract investment in spacecraft, manufacturing, and power systems, even before spaceflight becomes cheap. Greater scale and experience could lower costs, enabling more activity and further investment. This is the market economy’s powerful mechanism: valuable demand can finance the innovations that make supplying it cheaper.
 
 Farther into the future, robotic factories might use materials from the asteroid belt to build equipment, test designs, and expand the infrastructure itself. Space could become not just a place to generate ideas, but a place to turn them into reality.
 

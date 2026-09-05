@@ -12,7 +12,7 @@ Gold mining moves tons of earth to recover a few grams of gold. Mountains of san
 
 I suspect intelligence could have similar economics.
 
-Imagine an AI exploring billions, trillions, or even quadrillions of tokens. Most might be wrong, repetitive, or unremarkable. But a few might contain something extraordinary: a route to a new medicine, a better way to produce energy, or an insight that changes what humanity can do.
+Imagine an AI exploring billions, trillions, or even quadrillions of tokens. Most might be wrong, repetitive, or unremarkable. But a few might contain something extraordinary: a path to curing a decease, a better way to produce energy, or an insight that changes what humanity can do.
 
 These are what I would call “useful tokens.” Their value lies in the ideas they express, not simply more papers or impressive-looking content, but discoveries that genuinely advance civilization. Some might bear fruit immediately; others might take decades. These are the grams of gold among tons of sand.
 

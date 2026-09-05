@@ -8,8 +8,6 @@ categories:
 featured: false
 ---
 
-# Gold Mining vs. Intelligence Mining
-
 Gold mining moves tons of earth to recover a few grams of gold. Mountains of sand pass through machines, leaving behind something small enough to hold in your hand. Almost everything is discarded. Yet the operation can be profitable: the gold pays for the digging.
 
 I suspect intelligence could have similar economics.

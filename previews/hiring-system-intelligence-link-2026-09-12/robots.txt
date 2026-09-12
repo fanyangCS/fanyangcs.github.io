@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://fanyangcs.github.io/previews/hiring-system-intelligence-link-2026-09-12/sitemap.xml

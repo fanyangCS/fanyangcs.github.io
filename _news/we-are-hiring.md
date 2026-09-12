@@ -1,6 +1,6 @@
 ---
 layout: post
-title: We are hiring
+title: "We’re Hiring: Systems & Networking Researchers (FY27)"
 date: 2026-09-12
 inline: false
 related_posts: false

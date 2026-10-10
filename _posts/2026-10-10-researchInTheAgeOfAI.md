@@ -38,7 +38,7 @@ Research agendas often reflect the constraints under which they were formed. We 
 
 This is why I put taste first. A tenfold increase in speed is valuable, but its value depends on the direction.
 
-Some opportunities will be famous problems that have resisted generations of effort. Others will not resemble the old frontier at all. 
+Some opportunities will be famous problems that have resisted generations of effort. Others will not resemble the old frontier at all.
 
 In 1900, Hilbert articulated [23 problems](https://mathshistory.st-andrews.ac.uk/Extras/Hilbert_Problems/) that helped shape twentieth-century mathematics. A century later, the Clay Mathematics Institute selected seven [Millennium Prize Problems](https://www.claymath.org/events/millennium-prize-problems-lecture-series/). As intelligence becomes more abundant, we have another opportunity to ask not only how to solve the inherited problems, but what agenda should guide the next era of discovery.
 

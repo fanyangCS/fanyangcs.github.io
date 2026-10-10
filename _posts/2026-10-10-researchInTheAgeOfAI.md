@@ -8,7 +8,7 @@ categories:
 featured: false
 ---
 
-Recently, I spoke at the CCF 2026 Outstanding Doctoral Forum about research in the age of AI. As AI capabilities advance, more researchers—especially those early in their careers—have shared their anxiety about what these changes mean for their future. Their concerns are understandable, and I feel a responsibility to contribute to this conversation at such an important moment. I want to offer a perspective that takes those concerns seriously while looking toward the opportunities ahead.
+Recently, I spoke at the [CCF](https://www.ccf.org.cn/en/) 2026 Outstanding Doctoral Forum about research in the age of AI. As AI capabilities advance, more researchers—especially those early in their careers—have shared their anxiety about what these changes mean for their future. Their concerns are understandable, and I feel a responsibility to contribute to this conversation at such an important moment. I want to offer a perspective that takes those concerns seriously while looking toward the opportunities ahead.
 
 <hr>
 

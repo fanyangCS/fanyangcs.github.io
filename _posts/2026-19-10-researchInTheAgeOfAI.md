@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Taste, Ambition, and Rigor: Research in the Age of Abundant Intelligence
+title: Taste, Ambition, and Rigor - Research in the Age of Abundant Intelligence
 date: 2026-10-10 12:00:00
 description: Choose better with taste. Aim higher with ambition. Verify carefully with rigor.
 tags:

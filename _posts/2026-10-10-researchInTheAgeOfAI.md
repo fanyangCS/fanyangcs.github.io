@@ -30,7 +30,7 @@ As I look toward that horizon, my starting point is simple:
 
 Increasingly capable AI makes all three more important. It is not because they must remain exclusively human, but because they determine whether greater capability becomes worthwhile progress.
 
-## Taste to choose better problems
+## Taste: Choosing Better Problems
 
 With abundant intelligence, it is easy to ask, “How can AI help me finish this project faster?” or think, “We can now turn more ideas into papers!” But a much more important question is “What should I be working on?”
 
@@ -48,7 +48,7 @@ To develop research taste, it is useful to ask whether a project addresses an en
 
 Note that none of this makes incremental effort unworthy. Careful measurements, small improvements, and patient refinement are how large ideas become real. Nor must every worthy problem promise an immediate application. Understanding, elegance, and beauty are reasons to do research in their own right. The point is to choose deliberately, rather than let the ease of producing a publishable result choose for us.
 
-## Greater ambition to aim higher
+## Ambition: Aiming Higher
 
 Once we choose a worthwhile direction, we should reconsider what we can attempt. We can make easy things easier. We can make difficult things less difficult. Or we can make previously impossible things possible.
 
@@ -58,7 +58,7 @@ What excites me most is the third possibility.
 
 For example, some researchers may see costly physical experiments as a key bottleneck limiting AI's impact in their fields. Semiconductor research and drug discovery are two examples. But could better AI help choose more informative experiments, reduce wasted trials, design instruments, or coordinate automated laboratories? Some constraints will yield; others will remain. We should investigate which is which. I do believe radical AI-assisted approaches could transform entire industries.
 
-## Verify rigorously
+## Rigor: Verifying Carefully
 
 Greater ambition requires stronger evidence.
 
@@ -84,9 +84,6 @@ I do not know how quickly AI will change each discipline. I do believe that trea
 
 The most hopeful question is not “What will be left for us?” It is “What can we now set out to understand, build, and make better?”
 
-Choose better with taste. Aim higher with ambition. Verify carefully with rigor.
-
-That is how I want to approach the opportunities ahead.
-
+**Choose better with taste. Aim higher with ambition. Verify carefully with rigor.**
 
 That is how I want to approach the opportunities ahead.

@@ -14,11 +14,11 @@ Recently, I spoke at the [CCF](https://www.ccf.org.cn/en/) 2026 Outstanding Doct
 
 In recent years, AI has advanced rapidly. It now feels as though we may be approaching an inflection point.
 
-OpenAI and Anthropic have both announced results at the research frontier of mathematics. OpenAI has [released hundreds of mathematical manuscripts](https://openai.com/index/sharing-ai-progress-in-mathematics/) produced by an internal model. Anthropic has [reported an improved bound concerning the zeros of the Riemann zeta function](https://www.anthropic.com/research/riemann-zeta). Solving a frontier research problem of this kind can define a researcher's career.
+OpenAI and Anthropic have both announced results at the research frontier of mathematics. OpenAI has released hundreds of mathematical [manuscripts](https://openai.com/index/sharing-ai-progress-in-mathematics/) produced by an internal model. Anthropic has reported an improved [bound](https://www.anthropic.com/research/riemann-zeta) concerning the zeros of the Riemann zeta function. Solving a frontier research problem of this kind can define a researcher's career.
 
 If the results are proved correct, the implications are hard to ignore. For a young mathematician investing years in a problem, the possibility that a model might resolve it changes more than a research schedule. It can unsettle a thesis, a route to recognition, or a picture of an entire career.
 
-Mathematics is sometimes described as the canary in the coal mine for research. Other disciplines may feel the same pressure soon, especially those in which problems can be formulated precisely and results verified efficiently. Elsewhere, researchers whose work depends on costly physical experiments may feel safer.
+Mathematics is sometimes described as the [canary](https://www.scientificamerican.com/article/mathematicians-confront-the-ai-apocalypse/) in the coal mine for research. Other disciplines may feel the same pressure soon, especially those in which problems can be formulated precisely and results verified efficiently. Elsewhere, researchers whose work depends on costly physical experiments may feel safer.
 
 I understand both the anxiety and the sense of protection. People who have devoted themselves to scientific progress deserve more than advice to adapt. They need time, training, access to tools, and fair recognition.
 
@@ -66,7 +66,7 @@ We can delegate execution, but not responsibility. “The model said so” is no
 
 Mathematics makes this especially clear. A proof checker can establish that a formal conclusion follows from specified definitions and assumptions. We must also establish that those definitions and assumptions faithfully express the claim we intended. Formal verification is powerful precisely when we are careful about what has been formalized.
 
-We also need to know which parts have been checked. OpenAI's collection contains results at different stages of verification, and its [public revision history](https://github.com/openai/math/blob/main/history.md) records corrections and withdrawals. The Association for Human Mathematics has [rejected OpenAI's claim that the release advances mathematics](https://www.ahmath.org/statements). I believe the useful response is neither unquestioning acceptance nor blanket dismissal. It is to make the evidence, dependencies, and remaining uncertainty legible, so that others can build on solid ground.
+We also need to know which parts have been checked. OpenAI's collection contains results at different stages of verification, and its [public revision history](https://github.com/openai/math/blob/main/history.md) records corrections and withdrawals. The Association for Human Mathematics has [rejected](https://www.ahmath.org/statements) OpenAI's claim that the release advances mathematics. I believe the useful response is neither unquestioning acceptance nor blanket dismissal. It is to make the evidence, dependencies, and remaining uncertainty legible, so that others can build on solid ground.
 
 In experimental work, the corresponding questions concern measurements, controls, and reproducibility. Can an independent implementation recover the result? Does it survive evaluation on data or workloads held out from the search? Do the reported gains remain when we change the assumptions that made the original setup convenient? Can we trace a figure back to the data, code, and decisions that produced it?
 

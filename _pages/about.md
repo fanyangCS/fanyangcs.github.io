@@ -11,7 +11,7 @@ selected_papers: false
 social: false
 ---
 
-My name is Fan Yang (杨凡 in Chinese). I am a systems researcher at [Microsoft Research Asia](https://www.microsoft.com/en-us/research/lab/microsoft-research-asia/) (MSR-Asia), where I lead [Systems Research Group](https://www.microsoft.com/en-us/research/group/systems-research-group-asia/) (SRG).
+My name is Fan Yang (杨凡 in Chinese). I am a systems [researcher](https://www.microsoft.com/en-us/research/people/fanyang/) at [Microsoft Research Asia](https://www.microsoft.com/en-us/research/lab/microsoft-research-asia/) (MSR-Asia), where I lead [Systems Research Group](https://www.microsoft.com/en-us/research/group/systems-research-group-asia/) (SRG).
 
 My research focuses on intelligent computer systems. In particular, I am interested in uncovering the fundamental principles that guide the design of [systems in the age of artificial intelligence (AI)](https://fanyangcs.github.io/projects/).
 My work has helped establish several ideas now widely used in AI systems, including hardware-aligned _tile abstractions_ for [AI compilers](https://fanyangcs.github.io/projects/aicompiler/) and _relaxed monotonicity_ for [vector stores](https://fanyangcs.github.io/projects/vectorstore/). I am also exploring a general-purpose [reasoning engine](https://fanyangcs.github.io/news/argus/) for complex tasks in mathematics, systems engineering, and other domains by combining [agentic](https://fanyangcs.github.io/projects/AgenticAI/) and [neuro-symbolic](https://fanyangcs.github.io/projects/neuralsymbolic/) approaches.

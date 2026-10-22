@@ -779,6 +779,12 @@ body:has(.victoria-secondary-page) > .container {
   margin: 0 0 6px;
 }
 
+// Match the blog title's 8px bullet + 13px gap and the date's 21px inset.
+// Keep wrapped descriptions aligned on mobile, too (overriding the generic reset).
+.victoria-blog-list .victoria-resource-copy {
+  padding-left: 21px;
+}
+
 .victoria-news-list .victoria-news-item,
 .victoria-blog-list .victoria-blog-item {
   padding: 26px 0 24px;

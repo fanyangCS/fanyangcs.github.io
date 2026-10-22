@@ -64,13 +64,13 @@ Greater ambition requires stronger evidence.
 
 We can delegate execution, but not responsibility. “The model said so” is not an adequate account of why we should believe a claim.
 
-Mathematics makes this especially clear. A proof checker can establish that a formal conclusion follows from specified definitions and assumptions. We must also establish that those definitions and assumptions faithfully express the claim we intended. Formal verification is powerful precisely when we are careful about what has been formalized.
+Mathematics makes this especially clear. A proof checker can establish that a formal conclusion follows from specified definitions and assumptions. We must also ensure that those definitions and assumptions faithfully express the claim we intended. Formal verification is powerful precisely when we are careful about what has been [formalized](https://arxiv.org/abs/2610.08144).
 
 We also need to know which parts have been checked. OpenAI's collection contains results at different stages of verification, and its [public revision history](https://github.com/openai/math/blob/main/history.md) records corrections and withdrawals. The Association for Human Mathematics has [rejected](https://www.ahmath.org/statements) OpenAI's claim that the release advances mathematics. I believe the useful response is neither unquestioning acceptance nor blanket dismissal. It is to make the evidence, dependencies, and remaining uncertainty legible, so that others can build on solid ground.
 
 In experimental work, the corresponding questions concern measurements, controls, and reproducibility. Can an independent implementation recover the result? Does it survive evaluation on data or workloads held out from the search? Do the reported gains remain when we change the assumptions that made the original setup convenient? Can we trace a figure back to the data, code, and decisions that produced it?
 
-These questions should shape a project from the beginning. If we search enough possibilities and report only the best-looking outcome, we (or AI) can fool ourselves very efficiently. Designing the decisive test before searching, and preserving failed attempts as well as successes, helps distinguish true discovery from selection effects.
+These questions should shape a project from the beginning. If we search enough possibilities and report only the best-looking outcome, we (or AI) can fool ourselves very efficiently. Designing the decisive test before searching, and preserving failed attempts as well as successes, helps distinguish true discovery from selection bias.
 
 But rigorous verification cannot mean sending an ever-growing mountain of AI output to an unchanged queue of human reviewers. We need to scale our ability to check alongside our ability to generate. AI can help search for counterexamples, reproduce experiments, inspect dependencies, and construct formal proofs. Reusable test environments and independently developed checks can make confidence less dependent on any one person or model.
 
